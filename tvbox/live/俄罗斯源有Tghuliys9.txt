@@ -75,7 +75,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6027/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6041/index.m3u8
 #EXTINF:0 group-title="Общие" tvg-id="3039" tvg-logo="http://epg.one/img2/3039.png" tvg-rec="0",ТВ Центр +8
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6056/index.m3u8
-#EXTINF:0 group-title="Общие" tvg-id="649" tvg-logo="http://epg.one/img2/649.png" tvg-rec="0",ТВ Центр International
+#EXTINF:0 group-title="Общие" tvg-id="5691" tvg-logo="http://epg.one/img2/5691.png" tvg-rec="0",ТВ Центр International
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/15229/index.m3u8
 #EXTINF:0 group-title="Общие" tvg-id="427" tvg-logo="http://epg.one/img2/427.png" tvg-rec="7",Пятый канал
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/112/index.m3u8
@@ -707,31 +707,31 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11016/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11017/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="4760" tvg-logo="http://epg.one/img2/4760.png" tvg-rec="7",BCU Premiere HD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11039/index.m3u8
-#EXTINF:0 group-title="Кинозалы" tvg-id="4748" tvg-logo="http://epg.one/img2/4748.png" tvg-rec="7",BCU Action HD
+#EXTINF:0 group-title="Кинозалы" tvg-id="4748" tvg-logo="http://epg.one/img2/4748.png" tvg-rec="7",BCU Action HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11027/index.m3u8
-#EXTINF:0 group-title="Кинозалы" tvg-id="4749" tvg-logo="http://epg.one/img2/4749.png" tvg-rec="7",BCU Catastrophe HD
+#EXTINF:0 group-title="Кинозалы" tvg-id="4749" tvg-logo="http://epg.one/img2/4749.png" tvg-rec="7",BCU Catastrophe HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11028/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="4750" tvg-logo="http://epg.one/img2/4750.png" tvg-rec="7",BCU Cinema HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11029/index.m3u8
-#EXTINF:0 group-title="Кинозалы" tvg-id="4751" tvg-logo="http://epg.one/img2/4751.png" tvg-rec="7",BCU Cinema+ HD
+#EXTINF:0 group-title="Кинозалы" tvg-id="4751" tvg-logo="http://epg.one/img2/4751.png" tvg-rec="7",BCU Cinema+ HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11030/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="4753" tvg-logo="http://epg.one/img2/4753.png" tvg-rec="7",BCU Fantastic HD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11032/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="4754" tvg-logo="http://epg.one/img2/4754.png" tvg-rec="7",BCU FilMystic HD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11033/index.m3u8
-#EXTINF:0 group-title="Кинозалы" tvg-id="4755" tvg-logo="http://epg.one/img2/4755.png" tvg-rec="7",BCU History HD
+#EXTINF:0 group-title="Кинозалы" tvg-id="4755" tvg-logo="http://epg.one/img2/4755.png" tvg-rec="7",BCU History HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11034/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="8963" tvg-logo="http://epg.one/img2/8963.png" tvg-rec="7",BCU Comedy HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11031/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="5515" tvg-logo="http://epg.one/img2/5515.png" tvg-rec="0",BCU Comedy HD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/15026/index.m3u8
-#EXTINF:0 group-title="Кинозалы" tvg-id="4761" tvg-logo="http://epg.one/img2/4761.png" tvg-rec="7",BCU Romantic HD
+#EXTINF:0 group-title="Кинозалы" tvg-id="4761" tvg-logo="http://epg.one/img2/4761.png" tvg-rec="7",BCU Romantic HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11040/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="4761" tvg-logo="http://epg.one/img2/4761.png" tvg-rec="0",BCU Romantic OLD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/18052/index.m3u8
-#EXTINF:0 group-title="Кинозалы" tvg-id="4758" tvg-logo="http://epg.one/img2/4758.png" tvg-rec="7",BCU Kinorating HD
+#EXTINF:0 group-title="Кинозалы" tvg-id="4758" tvg-logo="http://epg.one/img2/4758.png" tvg-rec="7",BCU Kinorating HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11037/index.m3u8
-#EXTINF:0 group-title="Кинозалы" tvg-id="4769" tvg-logo="http://epg.one/img2/4769.png" tvg-rec="7",BCU Criminal HD
+#EXTINF:0 group-title="Кинозалы" tvg-id="4769" tvg-logo="http://epg.one/img2/4769.png" tvg-rec="7",BCU Criminal HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11048/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="8964" tvg-logo="http://epg.one/img2/8964.png" tvg-rec="7",BCU Marvel HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11038/index.m3u8
@@ -751,7 +751,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/16083/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/17019/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="6164" tvg-logo="http://epg.one/img2/6164.png" tvg-rec="0",BCU Survival OLD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/17020/index.m3u8
-#EXTINF:0 group-title="Кинозалы" tvg-id="6176" tvg-logo="http://epg.one/img2/6176.png" tvg-rec="0",BCU Cosmo HD
+#EXTINF:0 group-title="Кинозалы" tvg-rec="0",BCU Family HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/17021/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="17022" tvg-logo="http://epg.one/img2/17022.png" tvg-rec="0",Мосфильм. Золотая коллекция +4 HD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/17022/index.m3u8
@@ -761,15 +761,15 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/17054/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11045/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="5561" tvg-logo="http://epg.one/img2/5561.png" tvg-rec="0",BCU Premiere Ultra 4K
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/15023/index.m3u8
-#EXTINF:0 group-title="Кинозалы" tvg-id="4763" tvg-logo="http://epg.one/img2/4763.png" tvg-rec="7",BCU VHS HD
+#EXTINF:0 group-title="Кинозалы" tvg-id="4763" tvg-logo="http://epg.one/img2/4763.png" tvg-rec="7",BCU VHS HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11042/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="4747" tvg-logo="http://epg.one/img2/4747.png" tvg-rec="7",BCU СССР HD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11026/index.m3u8
-#EXTINF:0 group-title="Кинозалы" tvg-id="4762" tvg-logo="http://epg.one/img2/4762.png" tvg-rec="7",BCU Russian HD
+#EXTINF:0 group-title="Кинозалы" tvg-id="4762" tvg-logo="http://epg.one/img2/4762.png" tvg-rec="7",BCU Russian HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11041/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="4767" tvg-logo="http://epg.one/img2/4767.png" tvg-rec="7",BCU RuSerial HD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11046/index.m3u8
-#EXTINF:0 group-title="Кинозалы" tvg-id="4768" tvg-logo="http://epg.one/img2/4768.png" tvg-rec="7",BCU Сваты HD
+#EXTINF:0 group-title="Кинозалы" tvg-id="4768" tvg-logo="http://epg.one/img2/4768.png" tvg-rec="7",BCU Сваты HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11047/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="6696" tvg-logo="http://epg.one/img2/6696.png" tvg-rec="0",BOX Franchise HD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19274/index.m3u8
@@ -1333,7 +1333,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/18131/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/18132/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="6360" tvg-logo="http://epg.one/img2/6360.png" tvg-rec="0",Зал 8 (Триколор)
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/18133/index.m3u8
-#EXTINF:0 group-title="Кинозалы" tvg-id="6361" tvg-logo="http://epg.one/img2/6361.png" tvg-rec="0",Зал 9 (Триколор)
+#EXTINF:0 group-title="Кинозалы" tvg-rec="0",Знание ТВ
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/18134/index.m3u8
 #EXTINF:0 group-title="Кинозалы" tvg-id="6362" tvg-logo="http://epg.one/img2/6362.png" tvg-rec="0",Зал 10 (Триколор)
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/18135/index.m3u8
@@ -1543,7 +1543,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/5065/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/160/index.m3u8
 #EXTINF:0 group-title="Спорт" tvg-id="2055" tvg-logo="http://epg.one/img2/2055.png" tvg-rec="3",Viju+ Sport orig
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/9249/index.m3u8
-#EXTINF:0 group-title="Спорт" tvg-id="2821" tvg-logo="http://epg.one/img2/2821.png" tvg-rec="3",ViaPlay Football SE
+#EXTINF:0 group-title="Спорт" tvg-rec="3",V Sport Premium HD SE
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/5078/index.m3u8
 #EXTINF:0 group-title="Спорт" tvg-id="2480" tvg-logo="http://epg.one/img2/2480.png" tvg-rec="3",Удар HD orig
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/5067/index.m3u8
@@ -1705,8 +1705,6 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19035/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19036/index.m3u8
 #EXTINF:0 group-title="Спорт" tvg-id="6496" tvg-logo="http://epg.one/img2/6496.png" tvg-rec="0",Sky Sport 10 HD DE
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19037/index.m3u8
-#EXTINF:0 group-title="Спорт" tvg-id="2878" tvg-logo="http://epg.one/img2/2878.png" tvg-rec="0",Sky Sport UHD DE
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19044/index.m3u8
 #EXTINF:0 group-title="Спорт" tvg-id="6507" tvg-logo="http://epg.one/img2/6507.png" tvg-rec="0",TNT Sports 4 HD UK
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19054/index.m3u8
 #EXTINF:0 group-title="Спорт" tvg-id="6513" tvg-logo="http://epg.one/img2/6513.png" tvg-rec="0",ESPN HD BR
@@ -1739,7 +1737,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19076/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19104/index.m3u8
 #EXTINF:0 group-title="Спорт" tvg-id="6555" tvg-logo="http://epg.one/img2/6555.png" tvg-rec="0",Sky Sport 24 FHD IT
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19107/index.m3u8
-#EXTINF:0 group-title="Спорт" tvg-id="6536" tvg-logo="http://epg.one/img2/6536.png" tvg-rec="0",Sportitalia Plus HD IT
+#EXTINF:0 group-title="Спорт" tvg-rec="0",SportItalia Calcio HD IT
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19108/index.m3u8
 #EXTINF:0 group-title="Спорт" tvg-id="3117" tvg-logo="http://epg.one/img2/3117.png" tvg-rec="0",Super Tennis HD IT
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19111/index.m3u8
@@ -2423,8 +2421,6 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/18101/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/18097/index.m3u8
 #EXTINF:0 group-title="Развлекательные" tvg-id="7664" tvg-logo="http://epg.one/img2/7664.png" tvg-rec="0",VF КВН
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/14170/index.m3u8
-#EXTINF:0 group-title="Развлекательные" tvg-id="7506" tvg-logo="http://epg.one/img2/7506.png" tvg-rec="0",Танцуй!
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/14023/index.m3u8
 #EXTINF:0 group-title="Детские" tvg-id="1332" tvg-logo="http://epg.one/img2/1332.png" tvg-rec="7",Мульт HD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/921/index.m3u8
 #EXTINF:0 group-title="Детские" tvg-id="1332" tvg-logo="http://epg.one/img2/1332.png" tvg-rec="3",Мульт orig
@@ -2459,11 +2455,11 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/15340/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/9184/index.m3u8
 #EXTINF:0 group-title="Детские" tvg-id="923" tvg-logo="http://epg.one/img2/923.png" tvg-rec="7",Детский мир
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/543/index.m3u8
-#EXTINF:0 group-title="Детские" tvg-id="66" tvg-logo="http://epg.one/img2/66.png" tvg-rec="3",Уникум HD orig
+#EXTINF:0 group-title="Детские" tvg-rec="3",Детский HD orig
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/9077/index.m3u8
-#EXTINF:0 group-title="Детские" tvg-id="66" tvg-logo="http://epg.one/img2/66.png" tvg-rec="3",Уникум HD
+#EXTINF:0 group-title="Детские" tvg-rec="3",Детский HD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/9191/index.m3u8
-#EXTINF:0 group-title="Детские" tvg-id="66" tvg-logo="http://epg.one/img2/66.png" tvg-rec="7",Уникум
+#EXTINF:0 group-title="Детские" tvg-rec="7",Детский
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/730/index.m3u8
 #EXTINF:0 group-title="Детские" tvg-id="7597" tvg-logo="http://epg.one/img2/7597.png" tvg-rec="0",Чижик HD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/14034/index.m3u8
@@ -2589,7 +2585,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/17007/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/15523/index.m3u8
 #EXTINF:0 group-title="Детские" tvg-id="4756" tvg-logo="http://epg.one/img2/4756.png" tvg-rec="7",BCU Kids HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11035/index.m3u8
-#EXTINF:0 group-title="Детские" tvg-id="4757" tvg-logo="http://epg.one/img2/4757.png" tvg-rec="7",BCU Kids+ HD
+#EXTINF:0 group-title="Детские" tvg-id="4757" tvg-logo="http://epg.one/img2/4757.png" tvg-rec="7",BCU Kids+ HDR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11036/index.m3u8
 #EXTINF:0 group-title="Детские" tvg-id="4746" tvg-logo="http://epg.one/img2/4746.png" tvg-rec="7",BCU Мультсериал HD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/11025/index.m3u8
@@ -2865,7 +2861,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/16020/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/16036/index.m3u8
 #EXTINF:0 group-title="Музыка" tvg-id="2637" tvg-logo="http://epg.one/img2/2637.png" tvg-rec="0",Idman TV HD AZ
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/16044/index.m3u8
-#EXTINF:0 group-title="Музыка" tvg-id="9011" tvg-logo="http://epg.one/img2/9011.png" tvg-rec="0",Сочный Music
+#EXTINF:0 group-title="Музыка" tvg-rec="0",Горящий камин
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/16070/index.m3u8
 #EXTINF:0 group-title="Музыка" tvg-id="6191" tvg-logo="http://epg.one/img2/6191.png" tvg-rec="0",Радио Хит HD (Орск)
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/17048/index.m3u8
@@ -3011,7 +3007,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/9223/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/830/index.m3u8
 #EXTINF:0 group-title="Новостные" tvg-id="2267" tvg-logo="http://epg.one/img2/2267.png" tvg-rec="3",CGTN orig
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/9217/index.m3u8
-#EXTINF:0 group-title="Новостные" tvg-id="2269" tvg-logo="http://epg.one/img2/2269.png" tvg-rec="3",RT News orig
+#EXTINF:0 group-title="Новостные" tvg-id="2269" tvg-logo="http://epg.one/img2/2269.png" tvg-rec="3",RT orig
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/9220/index.m3u8
 #EXTINF:0 group-title="Новостные" tvg-id="921" tvg-logo="http://epg.one/img2/921.png" tvg-rec="7",NHK World HD JP
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/729/index.m3u8
@@ -3577,8 +3573,6 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/15126/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/930/index.m3u8
 #EXTINF:0 group-title="Украина | Українські" tvg-id="2227" tvg-logo="http://epg.one/img2/2227.png" tvg-rec="3",Київ UA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/1045/index.m3u8
-#EXTINF:0 group-title="Украина | Українські" tvg-id="2101" tvg-logo="http://epg.one/img2/2101.png" tvg-rec="3",Kvartal TV UA
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/932/index.m3u8
 #EXTINF:0 group-title="Украина | Українські" tvg-id="2145" tvg-logo="http://epg.one/img2/2145.png" tvg-rec="0",Star Cinema FHD UA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/15262/index.m3u8
 #EXTINF:0 group-title="Украина | Українські" tvg-id="2145" tvg-logo="http://epg.one/img2/2145.png" tvg-rec="3",Star Cinema HD UA
@@ -3587,8 +3581,6 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/992/index
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6326/index.m3u8
 #EXTINF:0 group-title="Украина | Українські" tvg-id="2138" tvg-logo="http://epg.one/img2/2138.png" tvg-rec="3",Bolt Россия HD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6322/index.m3u8
-#EXTINF:0 group-title="Украина | Українські" tvg-id="2144" tvg-logo="http://epg.one/img2/2138.png" tvg-rec="3",Bolt FHD UA
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/991/index.m3u8
 #EXTINF:0 group-title="Украина | Українські" tvg-id="2181" tvg-logo="http://epg.one/img2/2181.png" tvg-rec="0",FilmBox+ One UA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/15266/index.m3u8
 #EXTINF:0 group-title="Украина | Українські" tvg-id="2182" tvg-logo="http://epg.one/img2/2182.png" tvg-rec="0",FilmBox+ Festival orig
@@ -3653,8 +3645,6 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/1004/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/1072/index.m3u8
 #EXTINF:0 group-title="Украина | Українські" tvg-id="2355" tvg-logo="http://epg.one/img2/2355.png" tvg-rec="3",Тернопіль 1 UA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/5041/index.m3u8
-#EXTINF:0 group-title="Украина | Українські" tvg-id="2148" tvg-logo="http://epg.one/img2/2148.png" tvg-rec="3",Суспільне Крим HD UA
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/1017/index.m3u8
 #EXTINF:0 group-title="Украина | Українські" tvg-id="3317" tvg-logo="http://epg.one/img2/3317.png" tvg-rec="3",Sport 1 UA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6313/index.m3u8
 #EXTINF:0 group-title="Украина | Українські" tvg-id="3318" tvg-logo="http://epg.one/img2/3318.png" tvg-rec="3",Sport 2 UA
@@ -3717,9 +3707,9 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2212/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2213/index.m3u8
 #EXTINF:0 group-title="Казахстан | Қазақстан" tvg-id="2573" tvg-logo="http://epg.one/img2/2573.png" tvg-rec="3",Astana TV KZ
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2214/index.m3u8
-#EXTINF:0 group-title="Казахстан | Қазақстан" tvg-id="2574" tvg-logo="http://epg.one/img2/2574.png" tvg-rec="3",TV1 KZ
+#EXTINF:0 group-title="Казахстан | Қазақстан" tvg-id="2574" tvg-logo="http://epg.one/img2/2574.png" tvg-rec="3",Первый Карагандинский KZ
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2215/index.m3u8
-#EXTINF:0 group-title="Казахстан | Қазақстан" tvg-id="2639" tvg-logo="http://epg.one/img2/2639.png" tvg-rec="3",31 канал KZ
+#EXTINF:0 group-title="Казахстан | Қазақстан" tvg-id="2639" tvg-logo="http://epg.one/img2/2639.png" tvg-rec="3",31 арна KZ
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2217/index.m3u8
 #EXTINF:0 group-title="Казахстан | Қазақстан" tvg-id="2640" tvg-logo="http://epg.one/img2/2640.png" tvg-rec="3",НТК KZ
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2218/index.m3u8
@@ -3731,7 +3721,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2222/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2225/index.m3u8
 #EXTINF:0 group-title="Казахстан | Қазақстан" tvg-id="2576" tvg-logo="http://epg.one/img2/2576.png" tvg-rec="3",Хабар HD KZ
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2223/index.m3u8
-#EXTINF:0 group-title="Казахстан | Қазақстан" tvg-id="9768" tvg-logo="http://epg.one/img2/9768.png" tvg-rec="3",Alatau TV KZ
+#EXTINF:0 group-title="Казахстан | Қазақстан" tvg-id="9768" tvg-logo="http://epg.one/img2/9768.png" tvg-rec="3",Алау ТВ KZ
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2219/index.m3u8
 #EXTINF:0 group-title="Киргизия | Кыргызстан" tvg-id="1031" tvg-logo="http://epg.one/img2/1031.png" tvg-rec="0",FX HD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19216/index.m3u8
@@ -3779,8 +3769,6 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19443/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/5008/index.m3u8
 #EXTINF:0 group-title="Молдавия | Moldovenească" tvg-id="2843" tvg-logo="http://epg.one/img2/2843.png" tvg-rec="3",Jurnal TV MD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2446/index.m3u8
-#EXTINF:0 group-title="Молдавия | Moldovenească" tvg-id="88054" tvg-logo="http://epg.one/img2/88054.png" tvg-rec="3",TV Nord HD MD
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2459/index.m3u8
 #EXTINF:0 group-title="Молдавия | Moldovenească" tvg-id="9772" tvg-logo="http://epg.one/img2/9772.png" tvg-rec="3",7TV MD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2455/index.m3u8
 #EXTINF:0 group-title="Молдавия | Moldovenească" tvg-id="2850" tvg-logo="http://epg.one/img2/2850.png" tvg-rec="3",Exclusiv TV MD
@@ -3793,7 +3781,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2460/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2458/index.m3u8
 #EXTINF:0 group-title="Молдавия | Moldovenească" tvg-id="9779" tvg-logo="http://epg.one/img2/9779.png" tvg-rec="3",Busuioc TV MD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2461/index.m3u8
-#EXTINF:0 group-title="Молдавия | Moldovenească" tvg-id="2795" tvg-logo="http://epg.one/img2/2795.png" tvg-rec="3",TVR 1 MD
+#EXTINF:0 group-title="Молдавия | Moldovenească" tvg-rec="3",DIGI 24 MD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/5026/index.m3u8
 #EXTINF:0 group-title="Молдавия | Moldovenească" tvg-id="7824" tvg-logo="http://epg.one/img2/7824.png" tvg-rec="3",TVR Moldova MD
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2464/index.m3u8
@@ -4001,7 +3989,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/7049/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/7051/index.m3u8
 #EXTINF:0 group-title="Румыния | Romania" tvg-id="3794" tvg-logo="http://epg.one/img2/3794.png" tvg-rec="3",Credo TV RO
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/7052/index.m3u8
-#EXTINF:0 group-title="Румыния | Romania" tvg-id="3796" tvg-logo="http://epg.one/img2/3796.png" tvg-rec="3",BollywooD RO
+#EXTINF:0 group-title="Румыния | Romania" tvg-rec="3",BollywooD Clasic RO
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/7054/index.m3u8
 #EXTINF:0 group-title="Румыния | Romania" tvg-id="3797" tvg-logo="http://epg.one/img2/3797.png" tvg-rec="3",Pro TV International RO
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/7055/index.m3u8
@@ -4105,7 +4093,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6407/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6410/index.m3u8
 #EXTINF:0 group-title="Латвия | Latvia" tvg-id="3378" tvg-logo="http://epg.one/img2/3378.png" tvg-rec="3",TV3 Mini HD LV
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6414/index.m3u8
-#EXTINF:0 group-title="Латвия | Latvia" tvg-id="3381" tvg-logo="http://epg.one/img2/3381.png" tvg-rec="3",Go3 Sport 2 FHD LT
+#EXTINF:0 group-title="Латвия | Latvia" tvg-rec="3",Go3 Sport 2 FHD LV
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6418/index.m3u8
 #EXTINF:0 group-title="Латвия | Latvia" tvg-id="7007" tvg-logo="http://epg.one/img2/7007.png" tvg-rec="3",Go3 Sport 3 HD LV
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6408/index.m3u8
@@ -4489,13 +4477,13 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19001/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19003/index.m3u8
 #EXTINF:0 group-title="Германия | Germany" tvg-id="6445" tvg-logo="http://epg.one/img2/6445.png" tvg-rec="0",Sky Cinema Classics DE
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19005/index.m3u8
-#EXTINF:0 group-title="Германия | Germany" tvg-id="6434" tvg-logo="http://epg.one/img2/6434.png" tvg-rec="0",Sky Replay HD DE
+#EXTINF:0 group-title="Германия | Germany" tvg-rec="0",Sky One DE
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19006/index.m3u8
 #EXTINF:0 group-title="Германия | Germany" tvg-id="2868" tvg-logo="http://epg.one/img2/2868.png" tvg-rec="0",Sky Atlantic FHD DE
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19009/index.m3u8
 #EXTINF:0 group-title="Германия | Germany" tvg-id="6474" tvg-logo="http://epg.one/img2/6474.png" tvg-rec="0",Sky Cinema Action HD DE
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19098/index.m3u8
-#EXTINF:0 group-title="Германия | Germany" tvg-id="6442" tvg-logo="http://epg.one/img2/6442.png" tvg-rec="0",Sky Cinema Premieren HD DE
+#EXTINF:0 group-title="Германия | Germany" tvg-id="6442" tvg-logo="http://epg.one/img2/6442.png" tvg-rec="0",Sky Cinema Premiere HD DE
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19014/index.m3u8
 #EXTINF:0 group-title="Германия | Germany" tvg-id="2871" tvg-logo="http://epg.one/img2/2871.png" tvg-rec="0",Sky Krimi FHD DE
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19019/index.m3u8
@@ -4605,7 +4593,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2349/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2350/index.m3u8
 #EXTINF:0 group-title="Израиль | ישראלי" tvg-id="2965" tvg-logo="http://epg.one/img2/2965.png" tvg-rec="3",Yes Movies Drama IL
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2351/index.m3u8
-#EXTINF:0 group-title="Израиль | ישראלי" tvg-id="2685" tvg-logo="http://epg.one/img2/2685.png" tvg-rec="3",HOT HBO HD IL
+#EXTINF:0 group-title="Израиль | ישראלי" tvg-rec="3",HOT Drama IL
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2354/index.m3u8
 #EXTINF:0 group-title="Израиль | ישראלי" tvg-id="2686" tvg-logo="http://epg.one/img2/2686.png" tvg-rec="3",Good Life IL
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2355/index.m3u8
@@ -4625,7 +4613,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2362/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2363/index.m3u8
 #EXTINF:0 group-title="Израиль | ישראלי" tvg-id="2695" tvg-logo="http://epg.one/img2/2695.png" tvg-rec="3",Luli IL
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2364/index.m3u8
-#EXTINF:0 group-title="Израиль | ישראלי" tvg-id="2967" tvg-logo="http://epg.one/img2/2967.png" tvg-rec="3",Yes Movies Kids IL
+#EXTINF:0 group-title="Израиль | ישראלי" tvg-id="2967" tvg-logo="http://epg.one/img2/2967.png" tvg-rec="3",Yes Movies Kids HD IL
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2365/index.m3u8
 #EXTINF:0 group-title="Израиль | ישראלי" tvg-id="2697" tvg-logo="http://epg.one/img2/2697.png" tvg-rec="3",Junior HD IL
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2366/index.m3u8
@@ -4727,7 +4715,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/12262/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/12264/index.m3u8
 #EXTINF:0 group-title="Израиль | ישראלי" tvg-id="4014" tvg-logo="http://epg.one/img2/4014.png" tvg-rec="0",History FHD IL
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/12265/index.m3u8
-#EXTINF:0 group-title="Израиль | ישראלי" tvg-id="5071" tvg-logo="http://epg.one/img2/5071.png" tvg-rec="0",BollywooD Indian Films IL
+#EXTINF:0 group-title="Израиль | ישראלי" tvg-rec="0",BollywooD Indian Movies HD IN
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/12267/index.m3u8
 #EXTINF:0 group-title="Израиль | ישראלי" tvg-id="4306" tvg-logo="http://epg.one/img2/4306.png" tvg-rec="0",Knesset Channel IL
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/12269/index.m3u8
@@ -5281,7 +5269,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/842/index
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/545/index.m3u8
 #EXTINF:0 group-title="Европа | Europe" tvg-id="2295" tvg-logo="http://epg.one/img2/2295.png" tvg-rec="3",RT Док
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/839/index.m3u8
-#EXTINF:0 group-title="Европа | Europe" tvg-id="2269" tvg-logo="http://epg.one/img2/2269.png" tvg-rec="3",RT News
+#EXTINF:0 group-title="Европа | Europe" tvg-id="2269" tvg-logo="http://epg.one/img2/2269.png" tvg-rec="3",RT
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/840/index.m3u8
 #EXTINF:0 group-title="Франция | France" tvg-id="3042" tvg-logo="http://epg.one/img2/3042.png" tvg-rec="3",Paris Premiere HD FR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6146/index.m3u8
@@ -5365,7 +5353,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19088/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19089/index.m3u8
 #EXTINF:0 group-title="Италия | Italia" tvg-id="6466" tvg-logo="http://epg.one/img2/6466.png" tvg-rec="0",Rai Scuola HD IT
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19090/index.m3u8
-#EXTINF:0 group-title="Италия | Italia" tvg-id="5120" tvg-logo="http://epg.one/img2/5120.png" tvg-rec="0",Rai 4K IT
+#EXTINF:0 group-title="Италия | Italia" tvg-rec="0",Offener Kanal Wernigerode DE
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19091/index.m3u8
 #EXTINF:0 group-title="Италия | Italia" tvg-id="6468" tvg-logo="http://epg.one/img2/6468.png" tvg-rec="0",Rai Gulp HD IT
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19092/index.m3u8
@@ -5375,7 +5363,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19093/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19094/index.m3u8
 #EXTINF:0 group-title="Италия | Italia" tvg-id="6471" tvg-logo="http://epg.one/img2/6471.png" tvg-rec="0",Sky Cinema Uno HD IT
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19095/index.m3u8
-#EXTINF:0 group-title="Италия | Italia" tvg-id="6472" tvg-logo="http://epg.one/img2/6472.png" tvg-rec="0",Sky Cinema Due HD IT
+#EXTINF:0 group-title="Италия | Italia" tvg-rec="0",Sky Cinema Stories HD IT
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19096/index.m3u8
 #EXTINF:0 group-title="Италия | Italia" tvg-id="6473" tvg-logo="http://epg.one/img2/6473.png" tvg-rec="0",Sky Cinema Comedy HD IT
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/19097/index.m3u8
@@ -5647,7 +5635,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6443/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6445/index.m3u8
 #EXTINF:0 group-title="Канада | Canada" tvg-id="3666" tvg-logo="http://epg.one/img2/3666.png" tvg-rec="0",TLC HD CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6446/index.m3u8
-#EXTINF:0 group-title="Канада | Canada" tvg-id="3590" tvg-logo="http://epg.one/img2/3590.png" tvg-rec="0",OLN HD CA
+#EXTINF:0 group-title="Канада | Canada" tvg-rec="0",Bravo HD CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6447/index.m3u8
 #EXTINF:0 group-title="Канада | Canada" tvg-id="3591" tvg-logo="http://epg.one/img2/3591.png" tvg-rec="0",CMT Canada CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6448/index.m3u8
@@ -5667,13 +5655,11 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6454/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6455/index.m3u8
 #EXTINF:0 group-title="Канада | Canada" tvg-id="3600" tvg-logo="http://epg.one/img2/3600.png" tvg-rec="0",Peachtree TV HD CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6457/index.m3u8
-#EXTINF:0 group-title="Канада | Canada" tvg-id="3601" tvg-logo="http://epg.one/img2/3601.png" tvg-rec="0",TCM HD CA
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6458/index.m3u8
 #EXTINF:0 group-title="Канада | Canada" tvg-id="3602" tvg-logo="http://epg.one/img2/3602.png" tvg-rec="0",CTV SCI-FI HD CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6459/index.m3u8
 #EXTINF:0 group-title="Канада | Canada" tvg-id="3605" tvg-logo="http://epg.one/img2/3605.png" tvg-rec="0",Sportsnet 360 HD CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6462/index.m3u8
-#EXTINF:0 group-title="Канада | Canada" tvg-id="3607" tvg-logo="http://epg.one/img2/3607.png" tvg-rec="0",Food Network HD CA
+#EXTINF:0 group-title="Канада | Canada" tvg-rec="0",Flavour Network HD CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6464/index.m3u8
 #EXTINF:0 group-title="Канада | Canada" tvg-id="3608" tvg-logo="http://epg.one/img2/3608.png" tvg-rec="0",BNN Bloomberg HD CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6465/index.m3u8
@@ -5727,11 +5713,11 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6499/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6500/index.m3u8
 #EXTINF:0 group-title="Канада | Canada" tvg-id="3643" tvg-logo="http://epg.one/img2/3643.png" tvg-rec="0",CP 24 CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6501/index.m3u8
-#EXTINF:0 group-title="Канада | Canada" tvg-id="3644" tvg-logo="http://epg.one/img2/3644.png" tvg-rec="0",Treehouse TV CA
+#EXTINF:0 group-title="Канада | Canada" tvg-id="3644" tvg-logo="http://epg.one/img2/3644.png" tvg-rec="0",Treehouse CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6502/index.m3u8
 #EXTINF:0 group-title="Канада | Canada" tvg-id="3645" tvg-logo="http://epg.one/img2/3645.png" tvg-rec="0",Disney XD CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6503/index.m3u8
-#EXTINF:0 group-title="Канада | Canada" tvg-id="3646" tvg-logo="http://epg.one/img2/3646.png" tvg-rec="0",Nickelodeon CA
+#EXTINF:0 group-title="Канада | Canada" tvg-rec="0",Nickelodeon HR
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6504/index.m3u8
 #EXTINF:0 group-title="Канада | Canada" tvg-id="3648" tvg-logo="http://epg.one/img2/3648.png" tvg-rec="0",Crime + Investigation CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6506/index.m3u8
@@ -5747,8 +5733,6 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6510/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6512/index.m3u8
 #EXTINF:0 group-title="Канада | Canada" tvg-id="3640" tvg-logo="http://epg.one/img2/3640.png" tvg-rec="0",CBC Toronto HD CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6513/index.m3u8
-#EXTINF:0 group-title="Канада | Canada" tvg-id="3657" tvg-logo="http://epg.one/img2/3657.png" tvg-rec="0",ICI Radio-Canada Télé CA
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6515/index.m3u8
 #EXTINF:0 group-title="Канада | Canada" tvg-id="88030" tvg-logo="http://epg.one/img2/88030.png" tvg-rec="0",TSN 5 HD CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6517/index.m3u8
 #EXTINF:0 group-title="Канада | Canada" tvg-id="3662" tvg-logo="http://epg.one/img2/3662.png" tvg-rec="0",History CA
@@ -5763,9 +5747,9 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6523/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6524/index.m3u8
 #EXTINF:0 group-title="Канада | Canada" tvg-id="3668" tvg-logo="http://epg.one/img2/3668.png" tvg-rec="0",Showcase CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6526/index.m3u8
-#EXTINF:0 group-title="Канада | Canada" tvg-id="3674" tvg-logo="http://epg.one/img2/3674.png" tvg-rec="0",Unis TV HD CA
+#EXTINF:0 group-title="Канада | Canada" tvg-rec="0",TV5 Unis CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6532/index.m3u8
-#EXTINF:0 group-title="Канада | Canada" tvg-id="3679" tvg-logo="http://epg.one/img2/3679.png" tvg-rec="0",FOX Buffalo HD CA
+#EXTINF:0 group-title="Канада | Canada" tvg-rec="0",Star Channel HD CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6537/index.m3u8
 #EXTINF:0 group-title="Канада | Canada" tvg-id="3641" tvg-logo="http://epg.one/img2/3641.png" tvg-rec="0",CNN HD CA
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6538/index.m3u8
@@ -5811,8 +5795,6 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/15202/ind
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/15203/index.m3u8
 #EXTINF:0 group-title="Египет | Egypt" tvg-id="88055" tvg-logo="http://epg.one/img2/88055.png" tvg-rec="3",ON Sport 1 HD EG
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2512/index.m3u8
-#EXTINF:0 group-title="Индия | India" tvg-id="3400" tvg-logo="http://epg.one/img2/3400.png" tvg-rec="0",MTV India IN
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6582/index.m3u8
 #EXTINF:0 group-title="Индия | India" tvg-id="2892" tvg-logo="http://epg.one/img2/2892.png" tvg-rec="3",Star Sports 1 IN
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/2508/index.m3u8
 #EXTINF:0 group-title="Индия | India" tvg-id="2891" tvg-logo="http://epg.one/img2/2891.png" tvg-rec="3",Star Sports 2 IN
@@ -5839,7 +5821,7 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6589/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6591/index.m3u8
 #EXTINF:0 group-title="Индия | India" tvg-id="3410" tvg-logo="http://epg.one/img2/3410.png" tvg-rec="0",Colors Cineplex IN
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6592/index.m3u8
-#EXTINF:0 group-title="Индия | India" tvg-id="3415" tvg-logo="http://epg.one/img2/3415.png" tvg-rec="0",Zee Anmol IN
+#EXTINF:0 group-title="Индия | India" tvg-id="3415" tvg-logo="http://epg.one/img2/3415.png" tvg-rec="0",Anmol TV IN
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6597/index.m3u8
 #EXTINF:0 group-title="Индия | India" tvg-id="3417" tvg-logo="http://epg.one/img2/3417.png" tvg-rec="0",Zee Business IN
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6599/index.m3u8
@@ -5851,22 +5833,14 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6606/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6620/index.m3u8
 #EXTINF:0 group-title="Индия | India" tvg-id="3439" tvg-logo="http://epg.one/img2/3439.png" tvg-rec="0",Shubhsandesh IN
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6623/index.m3u8
-#EXTINF:0 group-title="Индия | India" tvg-id="3441" tvg-logo="http://epg.one/img2/3441.png" tvg-rec="0",Sony Max 2 IN
+#EXTINF:0 group-title="Индия | India" tvg-rec="0",Sony Max 1 HD IN
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6625/index.m3u8
-#EXTINF:0 group-title="Индия | India" tvg-id="3442" tvg-logo="http://epg.one/img2/3442.png" tvg-rec="0",Sony Pal IN
+#EXTINF:0 group-title="Индия | India" tvg-rec="0",Sony Pix HD IN
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6626/index.m3u8
 #EXTINF:0 group-title="Индия | India" tvg-id="3449" tvg-logo="http://epg.one/img2/3449.png" tvg-rec="0",Channel I IN
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6633/index.m3u8
-#EXTINF:0 group-title="Индия | India" tvg-id="3452" tvg-logo="http://epg.one/img2/3452.png" tvg-rec="0",Zee Bangla IN
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6636/index.m3u8
-#EXTINF:0 group-title="Индия | India" tvg-id="3453" tvg-logo="http://epg.one/img2/3453.png" tvg-rec="0",Zee Bangla Cinema IN
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6637/index.m3u8
-#EXTINF:0 group-title="Индия | India" tvg-id="3455" tvg-logo="http://epg.one/img2/3455.png" tvg-rec="0",ZEE News 18 IN
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6639/index.m3u8
 #EXTINF:0 group-title="Индия | India" tvg-id="3457" tvg-logo="http://epg.one/img2/3457.png" tvg-rec="0",Sony AATH IN
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6641/index.m3u8
-#EXTINF:0 group-title="Индия | India" tvg-id="3458" tvg-logo="http://epg.one/img2/3458.png" tvg-rec="0",Zee Bihar Jharkhand IN
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6642/index.m3u8
 #EXTINF:0 group-title="Индия | India" tvg-id="3459" tvg-logo="http://epg.one/img2/3459.png" tvg-rec="0",TV9 Gujarati IN
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6643/index.m3u8
 #EXTINF:0 group-title="Индия | India" tvg-id="88032" tvg-logo="http://epg.one/img2/88032.png" tvg-rec="0",News7 Tamil IN
@@ -5883,8 +5857,6 @@ http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6673/inde
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6685/index.m3u8
 #EXTINF:0 group-title="Индия | India" tvg-id="3506" tvg-logo="http://epg.one/img2/3506.png" tvg-rec="0",SUN TV IN
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6692/index.m3u8
-#EXTINF:0 group-title="Индия | India" tvg-id="3511" tvg-logo="http://epg.one/img2/3511.png" tvg-rec="0",Jaya Max IN
-http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6698/index.m3u8
 #EXTINF:0 group-title="Индия | India" tvg-id="3515" tvg-logo="http://epg.one/img2/3515.png" tvg-rec="0",Raj Musix IN
 http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/EDTZN7ANS84N86/6702/index.m3u8
 #EXTINF:0 group-title="Индия | India" tvg-id="3523" tvg-logo="http://epg.one/img2/3523.png" tvg-rec="0",Gemini Movies IN
