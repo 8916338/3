@@ -41,7 +41,6 @@ jieyingshi|界影|type: 3|api: https://fastlink.cokey.xyz/f/5rMnUd/jieyingshi.py
 剧王短剧|剧王｜短剧|type: 3|api: https://gh-proxy.com/raw.githubusercontent.com/lubin776/tvbox/refs/heads/main/潇洒2026/lib/剧王短剧.py
 七猫|七猫｜短剧|type: 3|api: https://mpimg.cn/down.php/fd932d46caef0995cb0b6936f0413946.py
 qw|七味|type: 3|api: https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/七味.py
-短剧|🦛短剧|type: 3|api: https://gitee.com/PizazzXS/another-d/raw/master/movie/py/HMDJ.py
 短剧┃搜索1|🏠短剧┃搜1|type: 3|api: https://mpimg.cn/down.php/7e246e896fa4cf52866921b818d7e8cb.py
 短剧搜索|🏠短剧┃搜2|type: 3|api: https://mpimg.cn/down.php/18b8bebbf7b64d39a1e3a90c83a86642.py
 fy|♨️枫叶｜免扫|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/fy.py
@@ -246,6 +245,7 @@ py_西瓜网|☀西瓜🔹影院|type: 3|api: https://7337.kstore.vip/xw/py/西�
 py_瓜子|☀呱子🔹影拭|type: 3|api: https://7337.kstore.vip/xw/py/瓜娃子.py
 py_瓜瓜子|☀呱瓜🔹影拭|type: 3|api: https://7337.kstore.vip/xw/py/瓜子.py
 csp_AppXY|🎀️┃星牙┃短剧|type: 3|api: https://gh-proxy.com/raw.githubusercontent.com/lubin776/tvbox/refs/heads/main/肥猫2026/lib/XYDJ.py
+短剧|🦛短剧|type: 3|api: https://gitee.com/PizazzXS/another-d/raw/master/movie/py/HMDJ.py
 csp_HongGuo|🍎果子┃精选短剧|type: 3|api: https://s3plus.meituan.net/opapisdk/op_ticket_1_5673241091_1788770930556_IMPGdz5q.py
 bl|❤小哩｜4K测试|type: 3|api: https://gh-proxy.com/raw.githubusercontent.com/IY-CPU/IY/main/lib/bl.py
 多多|🌀多多｜1920|type: 3|api: https://gh-proxy.com/raw.githubusercontent.com/IY-CPU/IY/main/lib/dd.py
