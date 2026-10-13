@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>海量接口搬运备份2</title>
+<title>海量接口搬运备份</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%}
@@ -218,14 +218,14 @@ body.batch-mode .mode-batch{display:block}
 <div class="container">
 
   <div class="header-block">
-    <h1>海量接口搬运备份<span class="version-tag">v1.0.6</span></h1>
+    <h1>海量接口搬运备份<span class="version-tag">v1.0.7</span></h1>
     <div class="header-divider"></div>
-    <p class="subtitle">
-      备用数据源，防屏不迷路<br>
-       <a class="qq-link" href="https://0.wudaozhe.net/qq群" target="_blank" rel="noopener noreferrer"> 猛戳这里加入QQ群: 
+    <p class="subtitle" id="header-subtitle"> 备用数据源，防屏不迷路 
+ <br>
+ <a class="qq-link" href="./qq群" target="_blank" rel="noopener noreferrer"> 猛戳这里加入QQ群: 
   <span style="color:#00C853;">点击</span>
  </a>
-    </p>
+ </p>
   </div>
 
   <!-- 跳转模式（初始显示） -->
@@ -301,13 +301,11 @@ body.batch-mode .mode-batch{display:block}
 </footer>
 
 <script>
-// ========== 自动检测线路（/into 结尾，检测到可用直接跳转） ==========
+// ========== 自动检测线路（当前域名相对路径 /app） ==========
+// 根据访问时所在的域名，自动检测该域名的 /app 路径
 const CONFIG = {
   countdownUrls: [
-    "https://0.12yue.de5.net/into",
-    "https://0.cdz.qzz.io/into",
-    "https://0.wdzb.eu.cc/into",
-    "https://0.wudaozhe.net/into"
+    window.location.origin + "/app"
   ]
 };
 
@@ -548,7 +546,7 @@ function updateEnterButton() {
   }
 }
 
-// ========== 主动检测：检测到可用直接跳转，不等待 ==========
+// ========== 主动检测 ==========
 async function checkFirstAvailable() {
   const urls = CONFIG.countdownUrls;
   for (let i = 0; i < urls.length; i++) {
@@ -557,10 +555,7 @@ async function checkFirstAvailable() {
     const ok = await probeUrl(url, TIMEOUT_SEC);
     if (ok) {
       jumpTargetUrl = url;
-      statusEl.innerHTML = '✅ 线路可用，正在进入...<br>' +
-        '<span style="font-size:.75rem;color:#5a6f88">' + url + '</span>';
-      // 直接跳转，不等待
-      window.location.href = url;
+      startJumpCountdown(url, 5);
       return;
     }
   }
@@ -585,6 +580,46 @@ function probeUrl(url, timeoutSec) {
       .then(function() { clearTimeout(timer); resolve(true); })
       .catch(function() { clearTimeout(timer); resolve(false); });
   });
+}
+
+let jumpTimer = null;
+function startJumpCountdown(url, seconds) {
+  if (jumpTimer) clearInterval(jumpTimer);
+  let remain = seconds;
+  actionButtons.style.display = 'flex';
+  stayBtn.style.display = 'inline-flex';
+  gotoBtn.style.display = 'inline-flex';
+
+  function update() {
+    statusEl.innerHTML = '✅ 线路可用，<span class="countdown">' + remain + '</span> 秒后跳转<br>' +
+      '<span style="font-size:.75rem;color:#5a6f88">' + url + '</span>';
+  }
+  update();
+
+  jumpTimer = setInterval(function() {
+    remain--;
+    if (remain > 0) {
+      update();
+    } else {
+      clearInterval(jumpTimer);
+      jumpTimer = null;
+      window.location.href = url;
+    }
+  }, 1000);
+
+  stayBtn.onclick = function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (jumpTimer) { clearInterval(jumpTimer); jumpTimer = null; }
+    switchToBatchMode();
+  };
+
+  gotoBtn.onclick = function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (jumpTimer) { clearInterval(jumpTimer); jumpTimer = null; }
+    window.location.href = url;
+  };
 }
 
 // ========== 批量检测 ==========
