@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>海量接口搬运备份77</title>
+<title>海量接口搬运备份</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%}
@@ -84,7 +84,7 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 .status-bar{
   display:flex;justify-content:space-between;align-items:center;
   background:#f7fafd;border:1px solid #e0e8f0;border-radius:8px;
-  padding:10px 14px;margin:14px 0;font-size:.82rem;
+  padding:10px 14px;margin:0 0 14px 0;font-size:.82rem;
   flex-wrap:wrap;gap:8px;
 }
 .status-bar .stat{display:flex;gap:14px;flex-wrap:wrap}
@@ -201,6 +201,7 @@ body.batch-mode .mode-batch{display:block}
 @media (max-width:600px){
   body{padding:14px 10px 6px}
   .merged-card,.status-card,.domains-card{padding:14px 12px 10px}
+  .status-bar{flex-direction:column;gap:8px;align-items:flex-start}
   .btn-stay,.btn-goto{padding:7px 14px;font-size:.75rem;min-width:80px}
   .btn-enter-site{height:40px;padding:0 28px;font-size:.86rem}
   .contact-section{padding:8px 4px 2px}
@@ -242,15 +243,11 @@ body.batch-mode .mode-batch{display:block}
     </div>
   </div>
 
-  <!-- 批量模式（分组+检测结果一体） -->
+  <!-- 批量模式（分组 + 检测结果） -->
   <div class="mode-batch" id="modeBatch">
     <div class="merged-card">
 
-      <div class="domains-title">🌐 备份线路域名</div>
-      <div class="domains-tip">按站长分组，每组域名互为备份，任一个可用（检测结果实时刷新）：</div>
-      <div id="about-domains-list-batch"></div>
-
-      <div class="ctrl-row" style="margin-top:14px;">
+      <div class="ctrl-row" style="margin-bottom:12px;">
         <button class="btn primary" id="btnStart">重新检测</button>
         <button class="btn success" id="btnCopyOK">复制可用</button>
       </div>
@@ -266,6 +263,10 @@ body.batch-mode .mode-batch{display:block}
           <span id="stMsg">就绪</span>
         </div>
       </div>
+
+      <div class="domains-title">🌐 备份线路域名</div>
+      <div class="domains-tip">按站长分组，每组域名互为备份，任一个可用（检测结果实时刷新）：</div>
+      <div id="about-domains-list-batch"></div>
 
       <div class="batch-jump-bar">
         <button class="btn-enter-site" id="btnEnterSite">🌐 进入网站</button>
@@ -383,7 +384,7 @@ function noCacheUrl(url) {
 let mode = 'jump';
 let jumpTargetUrl = null;
 
-// 每个域名的状态：{ url, state, lat }
+// 每个域名的状态
 let domainStates = {};
 DOMAIN_GROUPS.forEach(function(g) {
   g.domains.forEach(function(u) {
@@ -459,7 +460,7 @@ function renderAboutDomains() {
   renderGroupsInto(aboutDomainsListBatchEl, true);
 }
 
-// 只更新批量模式下的分组显示（保持结构，不重建）
+// 只更新批量模式下的分组显示
 function updateBatchGroupDisplay() {
   const lines = aboutDomainsListBatchEl.querySelectorAll('.domain-line');
   lines.forEach(function(line) {
@@ -502,7 +503,6 @@ function switchToBatchMode() {
   mode = 'batch';
   bodyEl.classList.add('batch-mode');
 
-  // 重置状态
   Object.keys(domainStates).forEach(function(k) {
     domainStates[k].state = 'wait';
     domainStates[k].lat = null;
@@ -628,7 +628,6 @@ async function startBatchCheck() {
   btnStart.disabled = true;
   stMsg.textContent = '检测中…';
 
-  // 重置状态为等待
   Object.keys(domainStates).forEach(function(k) {
     domainStates[k].state = 'wait';
     domainStates[k].lat = null;
@@ -648,7 +647,6 @@ async function startBatchCheck() {
       domainStates[url].state = 'checking';
       updateBatchGroupDisplay();
       updateBatchStats();
-      stMsg.textContent = '检测中…';
 
       const r = await probeWithLatency(url);
       if (aborting) break;
@@ -745,7 +743,6 @@ document.addEventListener("click", function(e) {
     });
     return;
   }
-  // 批量模式下点击整行跳转
   if (mode === 'batch') {
     const line = e.target.closest(".domain-line");
     if (line && line.dataset.url) {
