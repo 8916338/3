@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>海量接口搬运备份66</title>
+<title>海量接口搬运备份</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%}
@@ -51,49 +51,6 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 .domains-title{font-size:.92rem;font-weight:600;color:#0b1e33;margin-bottom:6px}
 .domains-tip{font-size:.74rem;color:#5a6f88;margin-bottom:10px}
 
-.merged-card{
-  background:#fff;border-radius:8px;padding:16px 18px 14px;
-  border:1px solid #d4dbe5;margin-bottom:16px;
-}
-
-.batch-jump-bar{display:flex;justify-content:center;margin-bottom:14px}
-.btn-enter-site{
-  height:44px;padding:0 36px;border:none;border-radius:44px;font-size:.92rem;font-weight:600;
-  cursor:pointer;color:#fff;background:linear-gradient(135deg,#8b5cf6,#6366f1);
-  box-shadow:0 4px 14px rgba(99,102,241,.4);
-  transition:background .15s,transform .1s,box-shadow .15s;
-  touch-action:manipulation;-webkit-user-select:none;user-select:none;
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-}
-.btn-enter-site:active{transform:scale(.96);box-shadow:0 2px 8px rgba(99,102,241,.3)}
-.btn-enter-site:disabled{background:#cbd5e1;box-shadow:none;cursor:not-allowed;transform:none}
-
-.btn{
-  height:32px;padding:0 16px;border:none;border-radius:6px;font-size:.8rem;font-weight:500;
-  cursor:pointer;color:#fff;background:#4a9eff;white-space:nowrap;touch-action:manipulation;
-  display:inline-flex;align-items:center;justify-content:center;
-}
-.btn:active{transform:scale(.96)}
-.btn.primary{background:#2563eb}
-.btn.success{background:#10b981}
-.btn.ghost{background:#fff;color:#5a6f88;border:1px solid #d4dbe5}
-.btn:disabled{opacity:.5;cursor:not-allowed}
-
-.ctrl-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;margin-bottom:14px}
-
-.status-bar{
-  display:flex;justify-content:space-between;align-items:center;
-  background:#f7fafd;border:1px solid #e0e8f0;border-radius:8px;
-  padding:10px 14px;margin:14px 0;font-size:.82rem;
-}
-.status-bar .stat{display:flex;gap:14px;flex-wrap:wrap}
-.status-bar .stat span{font-size:.78rem;color:#5a6f88}
-.status-bar .stat b{font-weight:700}
-.b-ok{color:#10b981}.b-fail{color:#ef4444}.b-wait{color:#f59e0b}.b-total{color:#2563eb}
-
-.list-title{font-size:.92rem;font-weight:600;color:#0b1e33;margin-bottom:6px}
-.list-tip{font-size:.74rem;color:#5a6f88;margin-bottom:10px}
-
 .copy-btn{
   flex-shrink:0;background:#4a9eff;color:#fff;border:none;border-radius:30px;padding:0 12px;
   font-size:.68rem;font-weight:500;cursor:pointer;height:26px;
@@ -102,28 +59,6 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 }
 .copy-btn:active{background:#2a7ed9;transform:scale(.96)}
 .copy-btn.copied{background:#3b9b6c}
-
-.url-line{
-  display:flex;align-items:center;gap:8px;padding:8px 14px;background:#f4f8fc;
-  border:1px solid #e0e8f0;border-radius:50px;margin-top:8px;min-width:0;cursor:pointer;
-  transition:background .15s,border-color .15s;
-}
-.url-line:hover{background:#e8f1fb;border-color:#4a9eff}
-.url-line .dot{
-  width:8px;height:8px;border-radius:50%;background:#cbd5e1;flex-shrink:0;transition:background .2s;
-}
-.url-line.ok .dot{background:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,.15)}
-.url-line.fail .dot{background:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.15)}
-.url-line.checking .dot{background:#f59e0b;box-shadow:0 0 0 3px rgba(245,158,11,.15)}
-.url-line .url-text{
-  flex:1;font-size:.75rem;color:#2563eb;word-break:break-all;
-  overflow-wrap:break-word;line-height:1.4;min-width:0;
-}
-.url-line .lat{
-  flex-shrink:0;font-size:.7rem;color:#7a8fa3;
-  font-variant-numeric:tabular-nums;min-width:52px;text-align:right;
-}
-.url-line.fail .url-text{color:#94a3b8;text-decoration:line-through;text-decoration-color:#cbd5e1}
 
 /* ===== 分组站点样式 ===== */
 #about-domains-list { margin-top: 0; text-align: left; }
@@ -186,6 +121,48 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
   min-width: 0;
 }
 
+/* 状态点 */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  flex-shrink: 0;
+  transition: background .2s, box-shadow .2s;
+}
+.domain-line.ok .status-dot { background:#10b981; box-shadow:0 0 0 3px rgba(16,185,129,.15); }
+.domain-line.fail .status-dot { background:#ef4444; box-shadow:0 0 0 3px rgba(239,68,68,.15); }
+.domain-line.checking .status-dot { background:#f59e0b; box-shadow:0 0 0 3px rgba(245,158,11,.15); }
+.domain-line.fail .url-text { color:#94a3b8; text-decoration:line-through; text-decoration-color:#cbd5e1; }
+
+/* 被动检测状态条 */
+.scan-bar {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #f0f7ff;
+  border: 1px solid #c9e0f9;
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin-top: 12px;
+  font-size: .76rem;
+  color: #2563eb;
+  flex-wrap: wrap;
+}
+body.passive-mode .scan-bar { display: flex; }
+.scan-bar .scan-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #4a9eff;
+  animation: scanPulse 1.2s ease-in-out infinite;
+}
+@keyframes scanPulse {
+  0%,100% { opacity: .3; transform: scale(.85); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+.scan-bar .scan-stat { color: #10b981; font-weight: 700; }
+.scan-bar .scan-stat-fail { color: #ef4444; font-weight: 700; }
+
 .contact-section{
   text-align:left;padding:10px 4px 4px;max-width:820px;margin:0 auto;width:100%;
 }
@@ -199,17 +176,10 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 }
 .page-footer p{word-break:break-word;overflow-wrap:break-word}
 
-.mode-jump{display:block}
-.mode-batch{display:none}
-body.batch-mode .mode-jump{display:none}
-body.batch-mode .mode-batch{display:block}
-
 @media (max-width:600px){
   body{padding:14px 10px 6px}
-  .merged-card,.status-card,.domains-card{padding:14px 12px 10px}
-  .status-bar{flex-direction:column;gap:8px;align-items:flex-start}
+  .status-card,.domains-card{padding:14px 12px 10px}
   .btn-stay,.btn-goto{padding:7px 14px;font-size:.75rem;min-width:80px}
-  .btn-enter-site{height:40px;padding:0 28px;font-size:.86rem}
   .contact-section{padding:8px 4px 2px}
   .page-footer{padding:6px 4px 8px}
   .domain-group-card { padding: 12px 12px; }
@@ -231,50 +201,26 @@ body.batch-mode .mode-batch{display:block}
     </p>
   </div>
 
-  <!-- 跳转模式（初始显示） -->
-  <div class="mode-jump" id="modeJump">
-    <div class="status-card">
-      <div class="status-text" id="status">⏳ 正在检测可用线路...</div>
-      <div class="action-buttons" id="actionButtons" style="display:none;">
-        <button class="btn-stay" id="stayBtn">🧷 留在本页</button>
-        <button class="btn-goto" id="gotoBtn">🚀 立即跳转</button>
-      </div>
-    </div>
-
-    <div class="domains-card">
-      <div class="domains-title">🌐 备份线路域名</div>
-      <div class="domains-tip">按站长分组，每组域名互为备份，任一个可用：</div>
-      <div id="about-domains-list"></div>
+  <div class="status-card">
+    <div class="status-text" id="status">⏳ 正在检测可用线路...</div>
+    <div class="action-buttons" id="actionButtons" style="display:none;">
+      <button class="btn-stay" id="stayBtn">🧷 留在本页</button>
+      <button class="btn-goto" id="gotoBtn">🚀 立即跳转</button>
     </div>
   </div>
 
-  <!-- 批量模式（点击留在本页后显示） -->
-  <div class="mode-batch" id="modeBatch">
-    <div class="merged-card">
-      <div class="batch-jump-bar">
-        <button class="btn-enter-site" id="btnEnterSite">🌐 进入网站</button>
-      </div>
+  <div class="domains-card">
+    <div class="domains-title">🌐 备份线路域名</div>
+    <div class="domains-tip">按站长分组，每组域名互为备份，任一个可用：</div>
+    <div id="about-domains-list"></div>
 
-      <div class="ctrl-row">
-        <button class="btn primary" id="btnStart">重新检测</button>
-        <button class="btn success" id="btnCopyOK">复制可用</button>
-      </div>
-
-      <div class="status-bar">
-        <div class="stat">
-          <span>总数 <b class="b-total" id="stTotal">0</b></span>
-          <span>可用 <b class="b-ok" id="stOk">0</b></span>
-          <span>失败 <b class="b-fail" id="stFail">0</b></span>
-          <span>等待 <b class="b-wait" id="stWait">0</b></span>
-        </div>
-        <div class="stat">
-          <span id="stMsg">就绪</span>
-        </div>
-      </div>
-
-      <div class="list-title">🌐 线路列表</div>
-      <div class="list-tip">点整行跳转，点右侧按钮复制单条地址；检测结果与延迟实时刷新。</div>
-      <div id="list"></div>
+    <!-- 被动检测状态条 -->
+    <div class="scan-bar" id="scanBar">
+      <span class="scan-dot"></span>
+      <span>被动检测中</span>
+      <span class="scan-stat" id="scanOk">可用 0</span>
+      <span class="scan-stat-fail" id="scanFail">失败 0</span>
+      <span id="scanMsg" style="color:#7a8fa3">准备中…</span>
     </div>
   </div>
 
@@ -311,7 +257,7 @@ const CONFIG = {
   ]
 };
 
-// ========== 分组站点数据（唯一数据源） ==========
+// ========== 分组站点数据 ==========
 const DOMAIN_GROUPS = [
   {
     name: "误道者站点",
@@ -364,18 +310,6 @@ const DOMAIN_GROUPS = [
   }
 ];
 
-// ========== 从分组数据自动提取批量检测域名 ==========
-const BATCH_URLS = (function() {
-  const seen = new Set();
-  const arr = [];
-  DOMAIN_GROUPS.forEach(function(g) {
-    g.domains.forEach(function(u) {
-      if (!seen.has(u)) { seen.add(u); arr.push(u); }
-    });
-  });
-  return arr;
-})();
-
 const CONCURRENCY = 6;
 const TIMEOUT_SEC = 12;
 
@@ -398,28 +332,19 @@ function noCacheUrl(url) {
 })();
 
 let mode = 'jump';
-let items = BATCH_URLS.map(function(u) { return { url: u, state: "wait", lat: null }; });
 let jumpTargetUrl = null;
-let aborting = false;
+let passiveAbort = false;
+let passiveTimer = null;
 
 const bodyEl = document.body;
-
 const statusEl = document.getElementById('status');
 const actionButtons = document.getElementById('actionButtons');
 const stayBtn = document.getElementById('stayBtn');
 const gotoBtn = document.getElementById('gotoBtn');
 const aboutDomainsListEl = document.getElementById('about-domains-list');
-
-const listEl = document.getElementById("list");
-const stTotal = document.getElementById("stTotal");
-const stOk = document.getElementById("stOk");
-const stFail = document.getElementById("stFail");
-const stWait = document.getElementById("stWait");
-const stMsg = document.getElementById("stMsg");
-const btnStart = document.getElementById("btnStart");
-const btnEnterSite = document.getElementById("btnEnterSite");
-
-function displayUrl(u) { return u.replace(/\/$/, "").replace(/\/app$/, "").replace(/\/into$/, "") || u; }
+const scanOk = document.getElementById('scanOk');
+const scanFail = document.getElementById('scanFail');
+const scanMsg = document.getElementById('scanMsg');
 
 // ========== 渲染分组站点 ==========
 function renderAboutDomains() {
@@ -442,7 +367,9 @@ function renderAboutDomains() {
     group.domains.forEach(function(domain) {
       const line = document.createElement('div');
       line.className = 'domain-line';
+      line.dataset.url = domain;
       line.innerHTML =
+        '<span class="status-dot"></span>' +
         '<span class="url-text">' + domain + '</span>' +
         '<button class="copy-btn" data-url="' + domain + '">复制</button>';
       bodyDiv.appendChild(line);
@@ -453,45 +380,91 @@ function renderAboutDomains() {
   });
 }
 
-// ========== 批量检测 ==========
-function resetItemsToOriginalOrder() {
-  items = BATCH_URLS.map(function(u) { return { url: u, state: "wait", lat: null }; });
+// ========== 更新单个域名状态 ==========
+function setDomainState(url, state) {
+  const lines = aboutDomainsListEl.querySelectorAll('.domain-line');
+  lines.forEach(function(line) {
+    if (line.dataset.url === url) {
+      line.classList.remove('ok', 'fail', 'checking');
+      if (state) line.classList.add(state);
+    }
+  });
 }
 
-function switchToBatchMode() {
-  mode = 'batch';
-  bodyEl.classList.add('batch-mode');
-
-  resetItemsToOriginalOrder();
-  renderBatchList();
-  updateBatchStats();
-  updateEnterButton();
-
-  startBatchCheck();
+function updatePassiveStats() {
+  const all = aboutDomainsListEl.querySelectorAll('.domain-line');
+  let ok = 0, fail = 0, checking = 0;
+  all.forEach(function(line) {
+    if (line.classList.contains('ok')) ok++;
+    else if (line.classList.contains('fail')) fail++;
+    else if (line.classList.contains('checking')) checking++;
+  });
+  scanOk.textContent = '可用 ' + ok;
+  scanFail.textContent = '失败 ' + fail;
+  scanMsg.textContent = checking > 0 ? '检测中 ' + checking : (ok + fail === all.length ? '完成' : '等待…');
 }
 
+// ========== 切换到被动检测模式（保持分组显示） ==========
+function switchToPassiveMode() {
+  mode = 'passive';
+  bodyEl.classList.add('passive-mode');
+  if (jumpTimer) { clearInterval(jumpTimer); jumpTimer = null; }
+  statusEl.innerHTML = '🧷 已留在本页，被动检测已启动<br>' +
+    '<span style="font-size:.75rem;color:#5a6f88">正在后台探测各线路可用性…</span>';
+  actionButtons.style.display = 'none';
+  startPassiveCheck();
+}
+
+// ========== 被动检测（后台并发探测所有分组域名） ==========
+function startPassiveCheck() {
+  if (passiveTimer) clearTimeout(passiveTimer);
+  passiveAbort = false;
+
+  const urls = [];
+  DOMAIN_GROUPS.forEach(function(g) {
+    g.domains.forEach(function(u) { urls.push(u); });
+  });
+
+  urls.forEach(function(u) { setDomainState(u, 'checking'); });
+  updatePassiveStats();
+
+  let idx = 0;
+  const workers = Array.from({ length: CONCURRENCY }, async function() {
+    while (!passiveAbort) {
+      const i = idx++;
+      if (i >= urls.length) break;
+      const url = urls[i];
+      const ok = await probeUrl(url, TIMEOUT_SEC);
+      if (passiveAbort) break;
+      setDomainState(url, ok ? 'ok' : 'fail');
+      updatePassiveStats();
+    }
+  });
+
+  Promise.all(workers).then(function() {
+    if (passiveAbort) return;
+    scanMsg.textContent = '完成';
+    // 60秒后重新检测（被动持续检测）
+    passiveTimer = setTimeout(function() {
+      if (mode === 'passive') startPassiveCheck();
+    }, 60000);
+  });
+}
+
+// ========== 主动检测跳转 ==========
 function switchToJumpMode() {
   mode = 'jump';
-  bodyEl.classList.remove('batch-mode');
-
-  resetItemsToOriginalOrder();
+  bodyEl.classList.remove('passive-mode');
   jumpTargetUrl = null;
-
+  passiveAbort = true;
+  if (passiveTimer) { clearTimeout(passiveTimer); passiveTimer = null; }
   actionButtons.style.display = 'none';
   statusEl.textContent = '⏳ 正在检测可用线路...';
-
+  // 重置状态点
+  aboutDomainsListEl.querySelectorAll('.domain-line').forEach(function(line) {
+    line.classList.remove('ok', 'fail', 'checking');
+  });
   checkFirstAvailable();
-}
-
-function updateEnterButton() {
-  const okItems = items.filter(function(i) { return i.state === "ok"; });
-  if (okItems.length > 0) {
-    btnEnterSite.disabled = false;
-    btnEnterSite.textContent = '🌐 进入网站 (' + okItems.length + ' 条可用)';
-  } else {
-    btnEnterSite.disabled = false;
-    btnEnterSite.textContent = '🌐 进入网站';
-  }
 }
 
 async function checkFirstAvailable() {
@@ -529,6 +502,7 @@ function probeUrl(url, timeoutSec) {
   });
 }
 
+// ========== 倒计时跳转 ==========
 let jumpTimer = null;
 function startJumpCountdown(url, seconds) {
   if (jumpTimer) clearInterval(jumpTimer);
@@ -558,7 +532,7 @@ function startJumpCountdown(url, seconds) {
     e.preventDefault();
     e.stopPropagation();
     if (jumpTimer) { clearInterval(jumpTimer); jumpTimer = null; }
-    switchToBatchMode();
+    switchToPassiveMode();
   };
 
   gotoBtn.onclick = function(e) {
@@ -568,129 +542,6 @@ function startJumpCountdown(url, seconds) {
     window.location.href = url;
   };
 }
-
-// ========== 批量检测渲染 ==========
-function renderBatchList() {
-  listEl.innerHTML = "";
-  items.forEach(function(it, i) {
-    const line = document.createElement("div");
-    line.className = "url-line" + (it.state !== "wait" ? " " + it.state : "");
-    line.dataset.idx = i;
-    const latTxt = it.state === "ok" ? (it.lat + " ms")
-                 : it.state === "fail" ? "失败"
-                 : it.state === "checking" ? "探测中…" : "—";
-    line.innerHTML =
-      '<span class="dot"></span>' +
-      '<span class="url-text">' + displayUrl(it.url) + '</span>' +
-      '<span class="lat">' + latTxt + '</span>' +
-      '<button class="copy-btn" data-url="' + it.url + '">复制</button>';
-    listEl.appendChild(line);
-  });
-  updateBatchStats();
-  updateEnterButton();
-}
-
-function updateBatchStats() {
-  let ok = 0, fail = 0, wait = 0, checking = 0;
-  items.forEach(function(it) {
-    if (it.state === "ok") ok++;
-    else if (it.state === "fail") fail++;
-    else if (it.state === "checking") checking++;
-    else wait++;
-  });
-  stTotal.textContent = items.length;
-  stOk.textContent = ok;
-  stFail.textContent = fail;
-  stWait.textContent = wait + checking;
-}
-
-function setItemState(i, state, lat) {
-  items[i].state = state;
-  if (lat !== undefined) items[i].lat = lat;
-  renderBatchList();
-}
-
-async function startBatchCheck() {
-  aborting = false;
-  btnStart.disabled = true;
-
-  resetItemsToOriginalOrder();
-  renderBatchList();
-
-  let idx = 0;
-  const workers = Array.from({ length: CONCURRENCY }, async function() {
-    while (!aborting) {
-      const i = idx++;
-      if (i >= items.length) break;
-      setItemState(i, "checking");
-      const r = await probeWithLatency(items[i].url);
-      if (aborting) break;
-      setItemState(i, r.ok ? "ok" : "fail", r.lat);
-      updateBatchMsg();
-    }
-  });
-  await Promise.all(workers);
-  btnStart.disabled = false;
-  if (aborting) {
-    stMsg.textContent = "已停止";
-  } else {
-    const ok = items.filter(function(i) { return i.state === "ok"; }).length;
-    stMsg.textContent = ok ? '完成，可用 ' + ok + ' 条' : "全部不可用";
-  }
-  updateEnterButton();
-}
-
-function probeWithLatency(url) {
-  const controller = new AbortController();
-  const t0 = performance.now();
-  const to = setTimeout(function() { controller.abort(); }, TIMEOUT_SEC * 1000);
-  return new Promise(function(resolve) {
-    fetch(noCacheUrl(url), {
-      method: "GET",
-      mode: "no-cors",
-      cache: "no-store",
-      signal: controller.signal,
-      headers: {
-        'Cache-Control': 'no-cache, no-store, must-revalidate',
-        'Pragma': 'no-cache'
-      }
-    })
-      .then(function() {
-        clearTimeout(to);
-        resolve({ ok: true, lat: Math.round(performance.now() - t0) });
-      })
-      .catch(function() {
-        clearTimeout(to);
-        resolve({ ok: false });
-      });
-  });
-}
-
-function updateBatchMsg() {
-  const done = items.filter(function(i) { return i.state === "ok" || i.state === "fail"; }).length;
-  stMsg.textContent = '进度 ' + done + '/' + items.length;
-}
-
-// ========== 按钮事件 ==========
-document.getElementById("btnStart").addEventListener("click", startBatchCheck);
-
-document.getElementById("btnCopyOK").addEventListener("click", function() {
-  const ok = items
-    .filter(function(i) { return i.state === "ok"; })
-    .sort(function(a, b) { return (a.lat || 9999) - (b.lat || 9999); })
-    .map(function(i) { return i.url; });
-  if (!ok.length) {
-    stMsg.textContent = "暂无可用线路";
-    return;
-  }
-  copyText(ok.join("\n"), function() {
-    stMsg.textContent = '已复制 ' + ok.length + ' 条可用线路';
-  });
-});
-
-btnEnterSite.addEventListener("click", function() {
-  switchToJumpMode();
-});
 
 // ========== 复制功能 ==========
 document.addEventListener("click", function(e) {
@@ -708,13 +559,6 @@ document.addEventListener("click", function(e) {
         copy.classList.remove("copied");
       }, 1500);
     });
-    return;
-  }
-  if (mode === 'batch') {
-    const line = e.target.closest(".url-line");
-    if (line && line.dataset.idx !== undefined) {
-      window.open(items[line.dataset.idx].url, "_blank");
-    }
   }
 });
 
