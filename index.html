@@ -31,6 +31,8 @@ h1 { font-size:1.35rem; font-weight:700; color:#0a1a2b; }
 h1 .header-logo { width:2rem; height:2rem; border-radius:50%; border:1px solid #4a9eff; object-fit:cover; vertical-align:-.5rem; margin-right:8px; }
 .header-divider { height:1px; background:#e4ebf3; margin:12px 0; }
 .subtitle { font-size:.78rem; color:#7a8fa3; line-height:1.6; }
+.qq-link { color:#4a9eff; text-decoration:none; font-weight:600; }
+.qq-link:hover { text-decoration:underline; }
 
 .search-box { width:100%; padding:10px 16px; border:1px solid #d4dbe5; border-radius:50px; font-size:.92rem; background:#fff; outline:none; -webkit-appearance:none; }
 body.simple-mode .search-box { margin-bottom:20px; }
@@ -443,7 +445,6 @@ updateBtnText();
 
 /* ============================================================
    图标智能渲染工具
-   —— 判断 icon 值是"图片 URL"还是"emoji/文字"
    ============================================================ */
 function isImageIcon(icon) {
   if (!icon || typeof icon !== 'string') return false;
@@ -478,9 +479,6 @@ function renderIcon(icon, opts) {
 
 /* ============================================================
    外部资源智能解析
-   —— 如果字段值是"字符串路径"，则 fetch 该 JSON 文件
-   —— 如果是内联数组/对象，直接返回
-   —— 支持 config 里把 domains / customApis 等拆成独立文件
    ============================================================ */
 async function resolveExternal(value, fallback) {
   if (Array.isArray(value) || (value && typeof value === 'object')) return value;
@@ -546,7 +544,7 @@ async function fetchJSON(path) {
   return res.json();
 }
 
-/* ===== 配置加载：全部变量从此处注入 ===== */
+/* ===== 配置加载 ===== */
 async function loadConfig() {
   if (SITE_CONFIG) return SITE_CONFIG;
   const res = await fetch('config.json?t='+Date.now()+'&r='+Math.random(), {cache:'no-store'});
@@ -556,9 +554,15 @@ async function loadConfig() {
   const site = SITE_CONFIG.site || {};
   if (site.logo) headerLogo.src = site.logo;
   headerTitle.textContent = site.title || '海量接口搬运备份';
-  let sub = site.subtitle || '备用数据源，防屏不迷路';
-  if (site.qqGroup) sub += '<br>QQ交流群：' + site.qqGroup;
-  headerSubtitle.innerHTML = sub;
+
+  // 副标题：固定为下面这段 HTML（不再依赖 config）
+  headerSubtitle.innerHTML = `
+    备用数据源，防屏不迷路<br>
+    <a class="qq-link" href="https://0.wudaozhe.net/qq群" target="_blank" rel="noopener noreferrer">
+      猛戳这里加入QQ群: <span style="color:#00C853;">点击</span>
+    </a>
+  `;
+
   if (site.footer) footerText.textContent = site.footer;
 
   API_DOMAINS = Array.isArray(SITE_CONFIG.apiDomains) ? SITE_CONFIG.apiDomains : [];
@@ -588,7 +592,6 @@ async function loadConfig() {
 
   DOWNLOAD_SOURCES = Array.isArray(SITE_CONFIG.downloadSources) ? SITE_CONFIG.downloadSources : [];
 
-  // 外部资源智能解析：支持内联数组 或 字符串路径
   CUSTOM_APIS = await resolveExternal(SITE_CONFIG.customApis, []);
 
   const agg = SITE_CONFIG.liveAggregate || {};
@@ -600,7 +603,6 @@ async function loadConfig() {
   if (aggCopy) aggCopy.setAttribute('data-url', agg.url || '');
 
   const about = SITE_CONFIG.about || {};
-  // domains 也支持内联数组 或 字符串路径
   const domainsData = await resolveExternal(about.domains, []);
 
   renderContributors(about.contributors || []);
@@ -616,7 +618,7 @@ async function loadConfig() {
   return SITE_CONFIG;
 }
 
-/* ===== 关于页 · 域名分组渲染（通用模板） ===== */
+/* ===== 关于页 · 域名分组渲染 ===== */
 function renderAboutDomains(domains) {
   const box = document.getElementById('about-domains-list');
   if (!box) return;
@@ -674,7 +676,7 @@ function renderAboutText(about) {
   if (dec && about.declaration) dec.textContent = about.declaration;
   if (qq && about.qqGroup) {
     qq.textContent = about.qqGroup;
-    qq.href = 'https://qm.qq.com/q/LCBc86ZE4K';
+    qq.href = 'https://qm.qq.com/q/gmRKKPT3x0';
   }
   if (tg && about.telegram) {
     tg.textContent = about.telegram;
@@ -716,9 +718,8 @@ function renderContributors(list) {
 }
 
 /* ============================================================
-   通用渲染：三种内容类型
+   通用渲染：online / tools / api
    ============================================================ */
-
 function renderOnlineItem(item) {
   const name = item.name || '';
   const url  = item.url || '#';
@@ -798,9 +799,7 @@ function renderPanelCard(title, description, type, items) {
 </div>`;
 }
 
-/* ============================================================
-   快链面板
-   ============================================================ */
+/* ===== 快链面板 ===== */
 async function renderVideo() {
   const container = document.getElementById('video-content');
   if (!container) return;
@@ -856,9 +855,7 @@ async function renderVideo() {
   });
 }
 
-/* ============================================================
-   更多面板
-   ============================================================ */
+/* ===== 更多面板 ===== */
 async function renderMore() {
   const container = document.getElementById('more-content');
   if (!container) return;
