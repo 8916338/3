@@ -94,17 +94,6 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 .list-title{font-size:.92rem;font-weight:600;color:#0b1e33;margin-bottom:6px}
 .list-tip{font-size:.74rem;color:#5a6f88;margin-bottom:10px}
 
-.url-line-simple{
-  display:flex;align-items:center;gap:8px;padding:6px 14px;background:#f4f8fc;
-  border:1px solid #e0e8f0;border-radius:50px;margin-top:8px;min-width:0;cursor:pointer;
-  transition:background .15s,border-color .15s;
-}
-.url-line-simple:hover{background:#e8f1fb;border-color:#4a9eff}
-.url-line-simple:active{background:#dce9f8}
-.url-line-simple .url-text{
-  flex:1;font-size:.75rem;color:#2563eb;word-break:break-all;
-  overflow-wrap:break-word;line-height:1.4;min-width:0;
-}
 .copy-btn{
   flex-shrink:0;background:#4a9eff;color:#fff;border:none;border-radius:30px;padding:0 12px;
   font-size:.68rem;font-weight:500;cursor:pointer;height:26px;
@@ -114,27 +103,61 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 .copy-btn:active{background:#2a7ed9;transform:scale(.96)}
 .copy-btn.copied{background:#3b9b6c}
 
-.url-line{
-  display:flex;align-items:center;gap:8px;padding:8px 14px;background:#f4f8fc;
-  border:1px solid #e0e8f0;border-radius:50px;margin-top:8px;min-width:0;cursor:pointer;
-  transition:background .15s,border-color .15s;
+/* ====== 分组站点样式 ====== */
+.group-section-title {
+  font-size: .92rem;
+  font-weight: 600;
+  color: #0b1e33;
+  margin: 0 0 6px;
 }
-.url-line:hover{background:#e8f1fb;border-color:#4a9eff}
-.url-line .dot{
-  width:8px;height:8px;border-radius:50%;background:#cbd5e1;flex-shrink:0;transition:background .2s;
+.group-section-tip {
+  font-size: .74rem;
+  color: #5a6f88;
+  margin-bottom: 12px;
 }
-.url-line.ok .dot{background:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,.15)}
-.url-line.fail .dot{background:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.15)}
-.url-line.checking .dot{background:#f59e0b;box-shadow:0 0 0 3px rgba(245,158,11,.15)}
-.url-line .url-text{
-  flex:1;font-size:.75rem;color:#2563eb;word-break:break-all;
-  overflow-wrap:break-word;line-height:1.4;min-width:0;
+.domain-group-card {
+  background: #f7fafd;
+  border: 1px solid #d4dbe5;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
 }
-.url-line .lat{
-  flex-shrink:0;font-size:.7rem;color:#7a8fa3;
-  font-variant-numeric:tabular-nums;min-width:52px;text-align:right;
+.domain-group-head {
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  background: #eef4fb;
+  border-bottom: 1px solid #e0e8f0;
 }
-.url-line.fail .url-text{color:#94a3b8;text-decoration:line-through;text-decoration-color:#cbd5e1}
+.domain-group-info {
+  flex: 1;
+}
+.domain-group-name {
+  font-size: .88rem;
+  font-weight: 600;
+  color: #0b1e33;
+}
+.domain-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 14px;
+  border-bottom: 1px solid #eef2f7;
+  background: #fff;
+}
+.domain-line:last-child {
+  border-bottom: none;
+}
+.domain-line .url-text {
+  font-size: .75rem;
+  color: #2563eb;
+  word-break: break-all;
+  flex: 1;
+  margin-right: 8px;
+}
+.domain-line .copy-btn {
+  flex-shrink: 0;
+}
 
 .contact-section{
   text-align:left;padding:10px 4px 4px;max-width:820px;margin:0 auto;width:100%;
@@ -187,9 +210,9 @@ body.batch-mode .mode-batch{display:block}
     </div>
 
     <div class="domains-card">
-      <div class="domains-title">🌐 备份线路域名</div>
-      <div class="domains-tip">以下域名互为备份，任一个可用（点击整行跳转）：</div>
-      <div id="simpleList"></div>
+      <div class="group-section-title">🌐 按站点分组</div>
+      <div class="group-section-tip">以下按站长分组，每组域名互为备份，任一个可用（点击复制）：</div>
+      <div id="groupList"></div>
     </div>
   </div>
 
@@ -245,117 +268,109 @@ body.batch-mode .mode-batch{display:block}
 </footer>
 
 <script>
-const CONFIG = {
-  // 自动检测线路：/into 结尾
-  countdownUrls: [
-    "https://0.12yue.de5.net/into",
-    "https://0.cdz.qzz.io/into",
-    "https://0.wdzb.eu.cc/into",
-    "https://0.wudaozhe.net/into"
-  ],
-  // 批量检测线路
-  batchUrls: [
-    "https://0.12yue.de5.net",
-    "https://0.cdz.qzz.io",
-    "https://0.wdzb.eu.cc",
-    "https://0.wudaozhe.net",
-    "https://tvbox.moliys.icu",
-    "https://ym.120733.xyz",
-    "https://liujin86.ccwu.cc",
-    "https://tvthaox.cc.cd",
-    "https://nxz.de5.net",
-    "https://tvbox-api.luca.dpdns.org"
-  ]
-};
+// ========== 站点分组数据（可自由修改） ==========
+const DOMAIN_GROUPS = [
+  {
+    name: "误道者站点",
+    domains: [
+      "https://0.wudaozhe.net",
+      "https://0.12yue.de5.net",
+      "https://0.cdz.qzz.io",
+      "https://0.wdzb.eu.cc"
+    ]
+  },
+  {
+    name: "雪衣玉龙站点",
+    domains: [
+      "https://ym.120733.xyz",
+      "https://4.wudaozhe.net"
+    ]
+  },
+  {
+    name: "韧忍仁人站点",
+    domains: [
+      "https://liujin86.ccwu.cc",
+      "https://8.wudaozhe.net"
+    ]
+  },
+  {
+    name: "第五站点",
+    domains: [
+      "https://tvthaox.cc.cd",
+      "https://5.wudaozhe.net"
+    ]
+  },
+  {
+    name: "祥子站点",
+    domains: [
+      "https://nxz.de5.net",
+      "https://6.wudaozhe.net"
+    ]
+  },
+  {
+    name: "第七站点",
+    domains: [
+      "https://tvbox-api.luca.dpdns.org"
+    ]
+  }
+];
 
 let mode = 'jump';
-let items = CONFIG.batchUrls.map(function(u) { return { url: u, state: "wait", lat: null }; });
 
 const bodyEl = document.body;
-
 const statusEl = document.getElementById('status');
-const actionButtons = document.getElementById('actionButtons');
+const groupListEl = document.getElementById('groupList');
 const stayBtn = document.getElementById('stayBtn');
 const gotoBtn = document.getElementById('gotoBtn');
-const simpleListEl = document.getElementById('simpleList');
-
-const listEl = document.getElementById("list");
-const stTotal = document.getElementById("stTotal");
-const stOk = document.getElementById("stOk");
-const stFail = document.getElementById("stFail");
-const stWait = document.getElementById("stWait");
-const stMsg = document.getElementById("stMsg");
-const btnStart = document.getElementById("btnStart");
-const btnEnterSite = document.getElementById("btnEnterSite");
+const btnEnterSite = document.getElementById('btnEnterSite');
+const btnStart = document.getElementById('btnStart');
+const btnCopyOK = document.getElementById('btnCopyOK');
+const stMsg = document.getElementById('stMsg');
 
 function displayUrl(u) { return u.replace(/\/$/, "").replace(/\/app$/, "").replace(/\/into$/, "") || u; }
 
-// 渲染顶部简易线路列表
-function renderSimpleList() {
-  simpleListEl.innerHTML = '';
-  const seen = new Set();
-  CONFIG.batchUrls.forEach(function(u) {
-    const d = displayUrl(u);
-    if (!seen.has(d)) {
-      seen.add(d);
+// ========== 渲染分组站点 ==========
+function renderGroupList() {
+  groupListEl.innerHTML = '';
+  DOMAIN_GROUPS.forEach(function(group) {
+    const card = document.createElement('div');
+    card.className = 'domain-group-card';
+    card.dataset.name = group.name;
+
+    // 头部：站点名称
+    const head = document.createElement('div');
+    head.className = 'domain-group-head';
+    head.innerHTML =
+      '<div class="domain-group-info">' +
+        '<div class="domain-group-name" title="' + group.name + '">' + group.name + '</div>' +
+      '</div>';
+    card.appendChild(head);
+
+    // 域名列表
+    const bodyDiv = document.createElement('div');
+    group.domains.forEach(function(domain) {
       const line = document.createElement('div');
-      line.className = 'url-line-simple';
-      line.dataset.url = d;
+      line.className = 'domain-line';
       line.innerHTML =
-        '<span class="url-text">' + d + '</span>' +
-        '<button class="copy-btn" data-url="' + d + '">复制</button>';
-      simpleListEl.appendChild(line);
-    }
+        '<span class="url-text">' + domain + '</span>' +
+        '<button class="copy-btn" data-url="' + domain + '">复制</button>';
+      bodyDiv.appendChild(line);
+    });
+    card.appendChild(bodyDiv);
+
+    groupListEl.appendChild(card);
   });
 }
 
-// 渲染批量检测列表（初始为空状态）
-function renderBatchList() {
-  listEl.innerHTML = "";
-  items.forEach(function(it, i) {
-    const line = document.createElement("div");
-    line.className = "url-line" + (it.state !== "wait" ? " " + it.state : "");
-    line.dataset.idx = i;
-    const latTxt = it.state === "ok" ? (it.lat + " ms")
-                 : it.state === "fail" ? "失败"
-                 : it.state === "checking" ? "探测中…" : "—";
-    line.innerHTML =
-      '<span class="dot"></span>' +
-      '<span class="url-text">' + displayUrl(it.url) + '</span>' +
-      '<span class="lat">' + latTxt + '</span>' +
-      '<button class="copy-btn" data-url="' + it.url + '">复制</button>';
-    listEl.appendChild(line);
-  });
-  updateBatchStats();
-}
-
-function updateBatchStats() {
-  let ok = 0, fail = 0, wait = 0, checking = 0;
-  items.forEach(function(it) {
-    if (it.state === "ok") ok++;
-    else if (it.state === "fail") fail++;
-    else if (it.state === "checking") checking++;
-    else wait++;
-  });
-  stTotal.textContent = items.length;
-  stOk.textContent = ok;
-  stFail.textContent = fail;
-  stWait.textContent = wait + checking;
-}
-
-// 初始化渲染（不启动检测）
-renderSimpleList();
-renderBatchList();
-
-// 按钮交互占位（不执行实际检测）
-btnStart.addEventListener("click", function() {
-  stMsg.textContent = "（预览模式：检测功能暂未启用）";
+// ========== 预览模式交互占位 ==========
+stayBtn.addEventListener("click", function() {
+  mode = 'batch';
+  bodyEl.classList.add('batch-mode');
 });
-btnCopyOK.addEventListener("click", function() {
-  stMsg.textContent = "（预览模式：复制功能暂未启用）";
+gotoBtn.addEventListener("click", function() {
+  statusEl.textContent = "（预览模式：跳转功能暂未启用）";
 });
 btnEnterSite.addEventListener("click", function() {
-  // 切换显示模式预览
   if (mode === 'jump') {
     mode = 'batch';
     bodyEl.classList.add('batch-mode');
@@ -364,15 +379,14 @@ btnEnterSite.addEventListener("click", function() {
     bodyEl.classList.remove('batch-mode');
   }
 });
-stayBtn.addEventListener("click", function() {
-  mode = 'batch';
-  bodyEl.classList.add('batch-mode');
+btnStart.addEventListener("click", function() {
+  stMsg.textContent = "（预览模式：检测功能暂未启用）";
 });
-gotoBtn.addEventListener("click", function() {
-  statusEl.textContent = "（预览模式：跳转功能暂未启用）";
+btnCopyOK.addEventListener("click", function() {
+  stMsg.textContent = "（预览模式：复制功能暂未启用）";
 });
 
-// 复制按钮交互（保留可复制）
+// ========== 复制按钮 ==========
 document.addEventListener("click", function(e) {
   const copy = e.target.closest(".copy-btn");
   if (copy) {
@@ -410,6 +424,9 @@ function copyText(text, done) {
     done();
   }
 }
+
+// 初始化渲染
+renderGroupList();
 </script>
 </body>
 </html>
