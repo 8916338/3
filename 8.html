@@ -154,94 +154,6 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 body.batch-mode .mode-jump{display:none}
 body.batch-mode .mode-batch{display:block}
 
-/* ====== 伪装过渡页 ====== */
-.splash-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: #eef2f7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-}
-.splash-logo {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: linear-gradient(135deg,#4a9eff,#2563eb);
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  box-shadow: 0 8px 24px rgba(74,158,255,.35);
-  animation: pulse 2s infinite;
-}
-@keyframes pulse {
-  0%,100%{ transform: scale(1); box-shadow: 0 8px 24px rgba(74,158,255,.35); }
-  50%{ transform: scale(1.06); box-shadow: 0 10px 30px rgba(74,158,255,.5); }
-}
-.splash-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #0a1a2b;
-  margin-bottom: 8px;
-  text-align: center;
-}
-.splash-sub {
-  font-size: .8rem;
-  color: #5a6f88;
-  margin-bottom: 22px;
-  text-align: center;
-}
-.splash-count {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #4a9eff;
-  font-variant-numeric: tabular-nums;
-  line-height: 1;
-  margin-bottom: 10px;
-}
-.splash-target {
-  font-size: .72rem;
-  color: #7a8fa3;
-  word-break: break-all;
-  text-align: center;
-  max-width: 320px;
-  margin-bottom: 28px;
-}
-.splash-bar {
-  width: 200px;
-  height: 4px;
-  background: #dbe5f0;
-  border-radius: 4px;
-  overflow: hidden;
-}
-.splash-bar-inner {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg,#4a9eff,#10b981);
-  border-radius: 4px;
-  transition: width 1s linear;
-}
-.splash-skip {
-  margin-top: 26px;
-  border: 1px solid #cbd5e1;
-  background: #fff;
-  color: #3a5a7a;
-  border-radius: 40px;
-  padding: 8px 22px;
-  font-size: .78rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background .15s, transform .1s;
-}
-.splash-skip:active{ background:#eef2f7; transform: scale(.96); }
-
 @media (max-width:600px){
   body{padding:14px 10px 6px}
   .merged-card,.status-card,.domains-card{padding:14px 12px 10px}
@@ -267,8 +179,8 @@ body.batch-mode .mode-batch{display:block}
 
   <div class="mode-jump" id="modeJump">
     <div class="status-card">
-      <div class="status-text" id="status">⏳ 正在检测可用线路...</div>
-      <div class="action-buttons" id="actionButtons" style="display:none;">
+      <div class="status-text" id="status">📄 页面预览模式（未启动检测）</div>
+      <div class="action-buttons" id="actionButtons">
         <button class="btn-stay" id="stayBtn">🧷 留在本页</button>
         <button class="btn-goto" id="gotoBtn">🚀 立即跳转</button>
       </div>
@@ -341,7 +253,7 @@ const CONFIG = {
     "https://0.wdzb.eu.cc/into",
     "https://0.wudaozhe.net/into"
   ],
-  // 批量检测线路（保留原有）
+  // 批量检测线路
   batchUrls: [
     "https://0.12yue.de5.net",
     "https://0.cdz.qzz.io",
@@ -356,31 +268,8 @@ const CONFIG = {
   ]
 };
 
-const CONCURRENCY = 6;
-const TIMEOUT_SEC = 12;
-
-function noCacheUrl(url) {
-  const sep = url.includes("?") ? "&" : "?";
-  return url + sep + "_t=" + Date.now();
-}
-
-(function clearAllCaches() {
-  if (window.caches && caches.keys) {
-    caches.keys().then(function(keys) {
-      keys.forEach(function(k) { caches.delete(k); });
-    }).catch(function(){});
-  }
-  if (navigator.serviceWorker && navigator.serviceWorker.getRegistrations) {
-    navigator.serviceWorker.getRegistrations().then(function(regs) {
-      regs.forEach(function(r) { r.unregister(); });
-    }).catch(function(){});
-  }
-})();
-
 let mode = 'jump';
 let items = CONFIG.batchUrls.map(function(u) { return { url: u, state: "wait", lat: null }; });
-let jumpTargetUrl = null;
-let aborting = false;
 
 const bodyEl = document.body;
 
@@ -401,47 +290,7 @@ const btnEnterSite = document.getElementById("btnEnterSite");
 
 function displayUrl(u) { return u.replace(/\/$/, "").replace(/\/app$/, "").replace(/\/into$/, "") || u; }
 
-function resetItemsToOriginalOrder() {
-  items = CONFIG.batchUrls.map(function(u) { return { url: u, state: "wait", lat: null }; });
-}
-
-function switchToBatchMode() {
-  mode = 'batch';
-  bodyEl.classList.add('batch-mode');
-
-  resetItemsToOriginalOrder();
-
-  renderBatchList();
-  updateBatchStats();
-  updateEnterButton();
-
-  startBatchCheck();
-}
-
-function switchToJumpMode() {
-  mode = 'jump';
-  bodyEl.classList.remove('batch-mode');
-
-  resetItemsToOriginalOrder();
-  jumpTargetUrl = null;
-
-  actionButtons.style.display = 'none';
-  statusEl.textContent = '⏳ 正在检测可用线路...';
-
-  checkFirstAvailable();
-}
-
-function updateEnterButton() {
-  const okItems = items.filter(function(i) { return i.state === "ok"; });
-  if (okItems.length > 0) {
-    btnEnterSite.disabled = false;
-    btnEnterSite.textContent = '🌐 进入网站 (' + okItems.length + ' 条可用)';
-  } else {
-    btnEnterSite.disabled = false;
-    btnEnterSite.textContent = '🌐 进入网站';
-  }
-}
-
+// 渲染顶部简易线路列表
 function renderSimpleList() {
   simpleListEl.innerHTML = '';
   const seen = new Set();
@@ -460,130 +309,7 @@ function renderSimpleList() {
   });
 }
 
-// 检测线路
-async function checkFirstAvailable() {
-  const urls = CONFIG.countdownUrls;
-  for (let i = 0; i < urls.length; i++) {
-    const url = urls[i];
-    statusEl.textContent = '⏳ 正在检测第 ' + (i + 1) + ' 个线路：' + url;
-    const ok = await probeUrl(url, TIMEOUT_SEC);
-    if (ok) {
-      jumpTargetUrl = url;
-      // 使用伪装过渡页 + 5秒倒计时
-      showSplashAndJump(url);
-      return;
-    }
-  }
-  statusEl.innerHTML = '❌ 所有线路均不可用，请稍后再试';
-  actionButtons.style.display = 'none';
-}
-
-function probeUrl(url, timeoutSec) {
-  return new Promise(function(resolve) {
-    const controller = new AbortController();
-    const timer = setTimeout(function() { controller.abort(); }, timeoutSec * 1000);
-    fetch(noCacheUrl(url), {
-      method: 'GET',
-      mode: 'no-cors',
-      cache: 'no-store',
-      signal: controller.signal,
-      headers: {
-        'Cache-Control': 'no-cache, no-store, must-revalidate',
-        'Pragma': 'no-cache'
-      }
-    })
-      .then(function() { clearTimeout(timer); resolve(true); })
-      .catch(function() { clearTimeout(timer); resolve(false); });
-  });
-}
-
-// ========== 伪装过渡页 + 5秒倒计时 ==========
-let splashTimer = null;
-
-function showSplashAndJump(targetUrl) {
-  // 先更新状态栏
-  statusEl.innerHTML = '✅ 线路可用，正在进入…<br><span style="font-size:.75rem;color:#5a6f88">' + targetUrl + '</span>';
-
-  // 创建过渡层
-  const overlay = document.createElement('div');
-  overlay.className = 'splash-overlay';
-  overlay.innerHTML =
-    '<div class="splash-logo">TV</div>' +
-    '<div class="splash-title">正在进入网站</div>' +
-    '<div class="splash-sub">请稍候，正在为你加载最优线路…</div>' +
-    '<div class="splash-count" id="splashCount">5</div>' +
-    '<div class="splash-target" id="splashTarget">' + targetUrl + '</div>' +
-    '<div class="splash-bar"><div class="splash-bar-inner" id="splashBar"></div></div>' +
-    '<button class="splash-skip" id="splashSkip">跳过等待</button>';
-  document.body.appendChild(overlay);
-
-  const countEl = overlay.querySelector('#splashCount');
-  const barEl = overlay.querySelector('#splashBar');
-  const skipBtn = overlay.querySelector('#splashSkip');
-
-  let remain = 5;
-  countEl.textContent = remain;
-  setTimeout(function(){ barEl.style.width = '100%'; }, 50);
-
-  function doJump() {
-    if (splashTimer) { clearInterval(splashTimer); splashTimer = null; }
-    window.location.href = targetUrl;
-  }
-
-  skipBtn.addEventListener('click', doJump);
-
-  splashTimer = setInterval(function() {
-    remain--;
-    countEl.textContent = remain;
-    if (remain <= 0) {
-      clearInterval(splashTimer);
-      splashTimer = null;
-      doJump();
-    }
-  }, 1000);
-}
-
-// 保留原有倒计时逻辑（已不再使用，但保留以防其他调用）
-let jumpTimer = null;
-function startJumpCountdown(url, seconds) {
-  if (jumpTimer) clearInterval(jumpTimer);
-  let remain = seconds;
-  actionButtons.style.display = 'flex';
-  stayBtn.style.display = 'inline-flex';
-  gotoBtn.style.display = 'inline-flex';
-
-  function update() {
-    statusEl.innerHTML = '✅ 线路可用，<span class="countdown">' + remain + '</span> 秒后跳转<br>' +
-      '<span style="font-size:.75rem;color:#5a6f88">' + url + '</span>';
-  }
-  update();
-
-  jumpTimer = setInterval(function() {
-    remain--;
-    if (remain > 0) {
-      update();
-    } else {
-      clearInterval(jumpTimer);
-      jumpTimer = null;
-      window.location.href = url;
-    }
-  }, 1000);
-
-  stayBtn.onclick = function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (jumpTimer) { clearInterval(jumpTimer); jumpTimer = null; }
-    switchToBatchMode();
-  };
-
-  gotoBtn.onclick = function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (jumpTimer) { clearInterval(jumpTimer); jumpTimer = null; }
-    window.location.href = url;
-  };
-}
-
+// 渲染批量检测列表（初始为空状态）
 function renderBatchList() {
   listEl.innerHTML = "";
   items.forEach(function(it, i) {
@@ -601,7 +327,6 @@ function renderBatchList() {
     listEl.appendChild(line);
   });
   updateBatchStats();
-  updateEnterButton();
 }
 
 function updateBatchStats() {
@@ -618,93 +343,36 @@ function updateBatchStats() {
   stWait.textContent = wait + checking;
 }
 
-function setItemState(i, state, lat) {
-  items[i].state = state;
-  if (lat !== undefined) items[i].lat = lat;
-  renderBatchList();
-}
+// 初始化渲染（不启动检测）
+renderSimpleList();
+renderBatchList();
 
-async function startBatchCheck() {
-  aborting = false;
-  btnStart.disabled = true;
-
-  resetItemsToOriginalOrder();
-  renderBatchList();
-
-  let idx = 0;
-  const workers = Array.from({ length: CONCURRENCY }, async function() {
-    while (!aborting) {
-      const i = idx++;
-      if (i >= items.length) break;
-      setItemState(i, "checking");
-      const r = await probeWithLatency(items[i].url);
-      if (aborting) break;
-      setItemState(i, r.ok ? "ok" : "fail", r.lat);
-      updateBatchMsg();
-    }
-  });
-  await Promise.all(workers);
-  btnStart.disabled = false;
-  if (aborting) {
-    stMsg.textContent = "已停止";
-  } else {
-    const ok = items.filter(function(i) { return i.state === "ok"; }).length;
-    stMsg.textContent = ok ? '完成，可用 ' + ok + ' 条' : "全部不可用";
-  }
-  updateEnterButton();
-}
-
-function probeWithLatency(url) {
-  const controller = new AbortController();
-  const t0 = performance.now();
-  const to = setTimeout(function() { controller.abort(); }, TIMEOUT_SEC * 1000);
-  return new Promise(function(resolve) {
-    fetch(noCacheUrl(url), {
-      method: "GET",
-      mode: "no-cors",
-      cache: "no-store",
-      signal: controller.signal,
-      headers: {
-        'Cache-Control': 'no-cache, no-store, must-revalidate',
-        'Pragma': 'no-cache'
-      }
-    })
-      .then(function() {
-        clearTimeout(to);
-        resolve({ ok: true, lat: Math.round(performance.now() - t0) });
-      })
-      .catch(function() {
-        clearTimeout(to);
-        resolve({ ok: false });
-      });
-  });
-}
-
-function updateBatchMsg() {
-  const done = items.filter(function(i) { return i.state === "ok" || i.state === "fail"; }).length;
-  stMsg.textContent = '进度 ' + done + '/' + items.length;
-}
-
-document.getElementById("btnStart").addEventListener("click", startBatchCheck);
-
-document.getElementById("btnCopyOK").addEventListener("click", function() {
-  const ok = items
-    .filter(function(i) { return i.state === "ok"; })
-    .sort(function(a, b) { return (a.lat || 9999) - (b.lat || 9999); })
-    .map(function(i) { return i.url; });
-  if (!ok.length) {
-    stMsg.textContent = "暂无可用线路";
-    return;
-  }
-  copyText(ok.join("\n"), function() {
-    stMsg.textContent = '已复制 ' + ok.length + ' 条可用线路';
-  });
+// 按钮交互占位（不执行实际检测）
+btnStart.addEventListener("click", function() {
+  stMsg.textContent = "（预览模式：检测功能暂未启用）";
 });
-
+btnCopyOK.addEventListener("click", function() {
+  stMsg.textContent = "（预览模式：复制功能暂未启用）";
+});
 btnEnterSite.addEventListener("click", function() {
-  switchToJumpMode();
+  // 切换显示模式预览
+  if (mode === 'jump') {
+    mode = 'batch';
+    bodyEl.classList.add('batch-mode');
+  } else {
+    mode = 'jump';
+    bodyEl.classList.remove('batch-mode');
+  }
+});
+stayBtn.addEventListener("click", function() {
+  mode = 'batch';
+  bodyEl.classList.add('batch-mode');
+});
+gotoBtn.addEventListener("click", function() {
+  statusEl.textContent = "（预览模式：跳转功能暂未启用）";
 });
 
+// 复制按钮交互（保留可复制）
 document.addEventListener("click", function(e) {
   const copy = e.target.closest(".copy-btn");
   if (copy) {
@@ -720,18 +388,6 @@ document.addEventListener("click", function(e) {
         copy.classList.remove("copied");
       }, 1500);
     });
-    return;
-  }
-  if (mode === 'batch') {
-    const line = e.target.closest(".url-line");
-    if (line && line.dataset.idx !== undefined) {
-      window.open(items[line.dataset.idx].url, "_blank");
-    }
-  } else {
-    const simpleLine = e.target.closest(".url-line-simple");
-    if (simpleLine && simpleLine.dataset.url) {
-      window.open(simpleLine.dataset.url, "_blank");
-    }
   }
 });
 
@@ -754,10 +410,6 @@ function copyText(text, done) {
     done();
   }
 }
-
-resetItemsToOriginalOrder();
-renderSimpleList();
-checkFirstAvailable();
 </script>
 </body>
 </html>
