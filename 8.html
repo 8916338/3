@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>海量接口搬运备份9</title>
+<title>海量接口搬运备份</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%}
@@ -126,7 +126,7 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 .url-line.fail .url-text{color:#94a3b8;text-decoration:line-through;text-decoration-color:#cbd5e1}
 
 /* ===== 分组站点样式 ===== */
-#about-domains-list { margin-top: 0; text-align: left; }
+#about-domains-list, #about-domains-list-batch { margin-top: 0; text-align: left; }
 .domain-group-card {
   background: #f8fafc;
   border: 1px solid #e4ebf3;
@@ -204,6 +204,17 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 body.batch-mode .mode-jump{display:none}
 body.batch-mode .mode-batch{display:block}
 
+/* 批量模式里分组区域的样式微调 */
+.batch-domains-block {
+  background: #f8fafc;
+  border: 1px solid #e4ebf3;
+  border-radius: 10px;
+  padding: 14px 14px 10px;
+  margin-bottom: 14px;
+}
+.batch-domains-block .domains-title { margin-bottom: 4px; }
+.batch-domains-block .domains-tip { margin-bottom: 8px; }
+
 @media (max-width:600px){
   body{padding:14px 10px 6px}
   .merged-card,.status-card,.domains-card{padding:14px 12px 10px}
@@ -248,9 +259,17 @@ body.batch-mode .mode-batch{display:block}
     </div>
   </div>
 
-  <!-- 批量模式（点击留在本页后显示） -->
+  <!-- 批量模式（点击留在本页后显示，同时保留分组） -->
   <div class="mode-batch" id="modeBatch">
     <div class="merged-card">
+
+      <!-- 批量模式里的分组显示 -->
+      <div class="batch-domains-block">
+        <div class="domains-title">🌐 备份线路域名</div>
+        <div class="domains-tip">按站长分组，每组域名互为备份，任一个可用：</div>
+        <div id="about-domains-list-batch"></div>
+      </div>
+
       <div class="batch-jump-bar">
         <button class="btn-enter-site" id="btnEnterSite">🌐 进入网站</button>
       </div>
@@ -409,6 +428,7 @@ const actionButtons = document.getElementById('actionButtons');
 const stayBtn = document.getElementById('stayBtn');
 const gotoBtn = document.getElementById('gotoBtn');
 const aboutDomainsListEl = document.getElementById('about-domains-list');
+const aboutDomainsListBatchEl = document.getElementById('about-domains-list-batch');
 
 const listEl = document.getElementById("list");
 const stTotal = document.getElementById("stTotal");
@@ -421,9 +441,10 @@ const btnEnterSite = document.getElementById("btnEnterSite");
 
 function displayUrl(u) { return u.replace(/\/$/, "").replace(/\/app$/, "").replace(/\/into$/, "") || u; }
 
-// ========== 渲染分组站点 ==========
-function renderAboutDomains() {
-  aboutDomainsListEl.innerHTML = '';
+// ========== 渲染分组站点到指定容器 ==========
+function renderGroupsInto(container) {
+  if (!container) return;
+  container.innerHTML = '';
   DOMAIN_GROUPS.forEach(function(group) {
     const card = document.createElement('div');
     card.className = 'domain-group-card';
@@ -449,8 +470,13 @@ function renderAboutDomains() {
     });
     card.appendChild(bodyDiv);
 
-    aboutDomainsListEl.appendChild(card);
+    container.appendChild(card);
   });
+}
+
+function renderAboutDomains() {
+  renderGroupsInto(aboutDomainsListEl);
+  renderGroupsInto(aboutDomainsListBatchEl);
 }
 
 // ========== 批量检测 ==========
