@@ -298,13 +298,11 @@ body.batch-mode .mode-batch{display:block}
 </footer>
 
 <script>
-// ========== 自动检测线路（/into 结尾） ==========
+// ========== 自动检测线路（当前域名相对路径 /app） ==========
+// 根据访问时所在的域名，自动检测该域名的 /app 路径
 const CONFIG = {
   countdownUrls: [
-    "https://0.12yue.de5.net/into",
-    "https://0.cdz.qzz.io/into",
-    "https://0.wdzb.eu.cc/into",
-    "https://0.wudaozhe.net/into"
+    window.location.origin + "/app"
   ]
 };
 
@@ -621,7 +619,7 @@ function startJumpCountdown(url, seconds) {
   };
 }
 
-// ========== 批量检测（逐域名更新到分组中） ==========
+// ========== 批量检测 ==========
 let aborting = false;
 
 async function startBatchCheck() {
