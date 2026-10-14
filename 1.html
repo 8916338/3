@@ -67,13 +67,13 @@ h1 {
   margin:24px 0 4px;
 }
 
-/* ===== 三个并排图标入口 ===== */
+/* ===== 四个并排图标入口 ===== */
 .quick-links {
   margin-top:16px;
   display:flex;
   justify-content:center;
   align-items:flex-start;
-  gap:26px;
+  gap:24px;
   flex-wrap:wrap;
 }
 
@@ -220,7 +220,7 @@ h1 {
   h1 { font-size:1.15rem; }
   .header-block { padding-top:10px; margin-bottom:12px; }
   .home-btn { height:40px; padding:0 22px; font-size:.8rem; }
-  .quick-links { gap:20px; }
+  .quick-links { gap:14px; }
   .quick-icon { width:50px; height:50px; border-radius:13px; }
   .zsm-modal-panel { max-width:300px; }
   .zsm-modal-panel img { max-height:52vh; }
@@ -275,8 +275,28 @@ h1 {
         <span class="quick-label">微信赞赏</span>
       </button>
 
-      <!-- Telegram 频道 -->
-      <a class="quick-item" href="https://t.me/tg6603" target="_blank" rel="noopener noreferrer" aria-label="Telegram 频道">
+      <!-- QQ 群（新增） -->
+      <a class="quick-item" href="./qq" aria-label="QQ 群">
+        <svg class="quick-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="48" height="48" rx="12" fill="#12B7F5"/>
+          <!-- 翅膀 -->
+          <ellipse cx="13.6" cy="28" rx="3.4" ry="7.6" fill="#ffffff" transform="rotate(-13 13.6 28)"/>
+          <ellipse cx="34.4" cy="28" rx="3.4" ry="7.6" fill="#ffffff" transform="rotate(13 34.4 28)"/>
+          <!-- 身体 -->
+          <ellipse cx="24" cy="27.6" rx="10" ry="11.4" fill="#ffffff"/>
+          <!-- 头部 -->
+          <ellipse cx="24" cy="17.4" rx="8.2" ry="8.2" fill="#ffffff"/>
+          <!-- 眼睛 -->
+          <circle cx="21" cy="16.6" r="1.7" fill="#12B7F5"/>
+          <circle cx="27" cy="16.6" r="1.7" fill="#12B7F5"/>
+          <!-- 嘴 -->
+          <path d="M21.2 20.4 L26.8 20.4 L24 24.1 Z" fill="#FFA623"/>
+        </svg>
+        <span class="quick-label">QQ 群</span>
+      </a>
+
+      <!-- Telegram 群组 -->
+      <a class="quick-item" href="https://t.me/tg6603" target="_blank" rel="noopener noreferrer" aria-label="Telegram 群组">
         <svg class="quick-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect width="48" height="48" rx="12" fill="#29A9EB"/>
           <g transform="translate(6,6) scale(1.5)">
@@ -284,7 +304,7 @@ h1 {
                   fill="#ffffff"/>
           </g>
         </svg>
-        <span class="quick-label">TG 频道</span>
+        <span class="quick-label">TG 群组</span>
       </a>
 
       <!-- GitHub 项目 -->
@@ -303,15 +323,14 @@ h1 {
 
     <!-- 返回首页 -->
     <div class="home-btn-wrap">
-      <a class="home-btn" href="index.html">返回首页</a>
+      <a class="home-btn" href="./">返回首页</a>
     </div>
 
   </div>
 
   <!-- 页脚 -->
   <footer class="page-footer">
-    <p>本站接口资源由【误道者】整理，仅供学习交流，所有资源均来自互联网，版权归原作者所有。</p>
-    <p>支持仅代表个人自愿打赏，与接口可用性、特定资源可播性无关。</p>
+    <p>本站接口资源由【误道者】整理。所有资源均来自互联网，版权归原作者所有。仅供测试学习使用，请勿用于违法及商业用途，请勿付费购买。如涉及侵权，请联系删除。</p>
   </footer>
 
 </div>
