@@ -21,7 +21,6 @@ body {
   flex:1; display:flex; flex-direction:column;
 }
 
-/* ===== 顶部标题区 ===== */
 .header-block { text-align:center; margin-bottom:16px; padding-top:14px; }
 
 h1 {
@@ -38,7 +37,6 @@ h1 {
   font-size:.78rem; color:#7a8fa3; line-height:1.8;
 }
 
-/* ===== 卡片主体 ===== */
 .main-card {
   background:#fff; border-radius:8px;
   padding:20px 22px 18px;
@@ -47,7 +45,6 @@ h1 {
   display:flex; flex-direction:column;
 }
 
-/* ===== QQ 群 ===== */
 .qq-block {
   font-size:.76rem; color:#5a6f88; line-height:2;
   margin-top:6px;
@@ -67,7 +64,6 @@ h1 {
   margin:24px 0 4px;
 }
 
-/* ===== 四个并排图标入口（无背景，仅图标） ===== */
 .quick-links {
   margin-top:16px;
   display:flex;
@@ -115,7 +111,6 @@ h1 {
   white-space:nowrap;
 }
 
-/* ===== 弹层 ===== */
 .zsm-modal {
   position:fixed; inset:0; z-index:999;
   display:flex; align-items:center; justify-content:center;
@@ -183,7 +178,6 @@ h1 {
 .zsm-modal-close:hover { background:#2a7ed9; }
 .zsm-modal-close:active { transform:scale(.9); }
 
-/* ===== 返回首页按钮 ===== */
 .home-btn-wrap {
   text-align:center; margin-top:28px;
 }
@@ -204,7 +198,6 @@ h1 {
 .home-btn:hover { background:#2a7ed9; }
 .home-btn:active { transform:scale(.96); }
 
-/* ===== 页脚 ===== */
 .page-footer {
   text-align:center;
   padding:24px 0 10px;
@@ -212,7 +205,6 @@ h1 {
   margin-top:auto;
 }
 
-/* ===== 手机适配 ===== */
 @media (max-width: 600px) {
   body { padding:14px 8px 6px; }
   .main-card { padding:16px 14px 14px; }
@@ -231,7 +223,6 @@ h1 {
 
 <div class="container">
 
-  <!-- 顶部标题 -->
   <div class="header-block">
     <h1>海量接口搬运备份</h1>
     <div class="header-divider"></div>
@@ -241,7 +232,6 @@ h1 {
     </p>
   </div>
 
-  <!-- 主卡片 -->
   <div class="main-card">
 
     <div class="qq-block">
@@ -253,100 +243,24 @@ h1 {
       <div class="qq-row"><a href="https://qm.qq.com/q/Bq1QqyQDK0" target="_blank" rel="noopener noreferrer">五群 594253529</a></div>
     </div>
 
-    <!-- 关注与支持 -->
     <div class="section-title">🔗 关注与支持</div>
 
     <div class="quick-links">
 
-      <!-- QQ 社群（经典 QQ 企鹅样式，背景透明） -->
       <a class="quick-item" href="./qq" aria-label="QQ 社群">
-        <svg class="quick-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <!-- 脚 -->
-          <ellipse cx="16.5" cy="43.5" rx="5.2" ry="2.6" fill="#FFA623"/>
-          <ellipse cx="31.5" cy="43.5" rx="5.2" ry="2.6" fill="#FFA623"/>
-
-          <!-- 左翅膀 -->
-          <path d="M10 22 Q7 29 9 36 Q10.5 40 12.8 38 Q15 35.5 14 29 Z" fill="#1A1A1A"/>
-
-          <!-- 右翅膀 -->
-          <path d="M38 22 Q41 29 39 36 Q37.5 40 35.2 38 Q33 35.5 34 29 Z" fill="#1A1A1A"/>
-
-          <!-- 身体 -->
-          <ellipse cx="24" cy="29" rx="13" ry="15" fill="#1A1A1A"/>
-
-          <!-- 白色肚子 -->
-          <ellipse cx="24" cy="32.5" rx="8" ry="10.5" fill="#FFFFFF"/>
-
-          <!-- 头部 -->
-          <circle cx="24" cy="16" r="12.5" fill="#1A1A1A"/>
-
-          <!-- 左眼白 -->
-          <circle cx="19.2" cy="14.8" r="4.6" fill="#FFFFFF"/>
-          <!-- 右眼白 -->
-          <circle cx="28.8" cy="14.8" r="4.6" fill="#FFFFFF"/>
-
-          <!-- 左瞳孔 -->
-          <circle cx="19.8" cy="15.2" r="2.1" fill="#1A1A1A"/>
-          <!-- 右瞳孔 -->
-          <circle cx="28.2" cy="15.2" r="2.1" fill="#1A1A1A"/>
-
-          <!-- 左眼高光 -->
-          <circle cx="18.8" cy="14.2" r="0.9" fill="#FFFFFF"/>
-          <!-- 右眼高光 -->
-          <circle cx="27.2" cy="14.2" r="0.9" fill="#FFFFFF"/>
-
-          <!-- 嘴巴（上喙） -->
-          <path d="M18.5 20 Q24 17.5 29.5 20 Q24 23.5 18.5 20 Z" fill="#FFA623"/>
-          <!-- 嘴巴（下喙） -->
-          <path d="M19.5 21.5 Q24 25.5 28.5 21.5 Q24 24.5 19.5 21.5 Z" fill="#FF8C00"/>
-
-          <!-- 围巾（绕脖） -->
-          <ellipse cx="24" cy="26.5" rx="13.5" ry="4.8" fill="#E53935"/>
-          <!-- 围巾垂布 -->
-          <path d="M20.5 26.5 L20.5 38.5 Q20.5 41 24 41 Q27.5 41 27.5 38.5 L27.5 26.5 Z" fill="#E53935"/>
+        <svg class="quick-icon" fill="#12B7F5" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M21.395 15.035a40 40 0 0 0-.803-2.264l-1.079-2.695c.001-.032.014-.562.014-.836C19.526 4.632 17.351 0 12 0S4.474 4.632 4.474 9.241c0 .274.013.804.014.836l-1.08 2.695a39 39 0 0 0-.802 2.264c-1.021 3.283-.69 4.643-.438 4.673.54.065 2.103-2.472 2.103-2.472 0 1.469.756 3.387 2.394 4.771-.612.188-1.363.479-1.845.835-.434.32-.379.646-.301.778.343.578 5.883.369 7.482.189 1.6.18 7.14.389 7.483-.189.078-.132.132-.458-.301-.778-.483-.356-1.233-.646-1.846-.836 1.637-1.384 2.393-3.302 2.393-4.771 0 0 1.563 2.537 2.103 2.472.251-.03.581-1.39-.438-4.673z"/>
         </svg>
         <span class="quick-label">QQ社群</span>
       </a>
 
-      <!-- 微信赞赏（仿微信 App 双气泡图标） -->
       <button class="quick-item" type="button" id="zsmBtn" aria-label="微信赞赏">
-        <svg class="quick-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <!-- 大气泡（左） -->
-          <path d="M20 6
-                   C11 6 4 13 4 21.5
-                   C4 26.2 6.5 30.4 10.5 33.2
-                   C10.2 35.4 9.3 38.5 7.6 41
-                   C7.2 41.7 7.8 42.4 8.5 42.1
-                   C12 40.4 14.7 38.2 16.3 36.6
-                   C17.5 36.9 18.7 37 20 37
-                   C29 37 36 30 36 21.5
-                   C36 13 29 6 20 6 Z"
-                fill="#07C160"/>
-
-          <!-- 大气泡眼睛 -->
-          <circle cx="14.5" cy="20" r="2.2" fill="#FFFFFF"/>
-          <circle cx="25.5" cy="20" r="2.2" fill="#FFFFFF"/>
-
-          <!-- 小气泡（右） -->
-          <path d="M35 20
-                   C29.5 20 25 24.3 25 29.6
-                   C25 34.9 29.5 39.2 35 39.2
-                   C36 39.2 36.9 39.1 37.8 38.8
-                   C39.1 40.2 41.3 42 44 43.2
-                   C44.7 43.5 45.3 42.8 45 42.1
-                   C43.5 39.9 42.8 37.2 42.6 35.4
-                   C44.5 33.4 45 31.6 45 29.6
-                   C45 24.3 40.5 20 35 20 Z"
-                fill="#07C160"/>
-
-          <!-- 小气泡眼睛 -->
-          <circle cx="31.5" cy="29" r="1.8" fill="#FFFFFF"/>
-          <circle cx="38.5" cy="29" r="1.8" fill="#FFFFFF"/>
+        <svg class="quick-icon" fill="#07C160" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
         </svg>
         <span class="quick-label">微信赞赏</span>
       </button>
 
-      <!-- Telegram 群组（无背景） -->
       <a class="quick-item" href="https://t.me/tg6603" target="_blank" rel="noopener noreferrer" aria-label="Telegram 群组">
         <svg class="quick-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <g transform="translate(5,6) scale(1.55)">
@@ -357,7 +271,6 @@ h1 {
         <span class="quick-label">TG群组</span>
       </a>
 
-      <!-- GitHub 项目（无背景） -->
       <a class="quick-item" href="https://github.com/lubin776/tvbox-api-backup" target="_blank" rel="noopener noreferrer" aria-label="GitHub 项目">
         <svg class="quick-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <g transform="translate(8.6,8.6) scale(1.28)">
@@ -370,21 +283,18 @@ h1 {
 
     </div>
 
-    <!-- 返回首页 -->
     <div class="home-btn-wrap">
       <a class="home-btn" href="./">返回首页</a>
     </div>
 
   </div>
 
-  <!-- 页脚 -->
   <footer class="page-footer">
     <p>本站接口资源由【误道者】整理。所有资源均来自互联网，版权归原作者所有。仅供测试学习使用，请勿用于违法及商业用途，请勿付费购买。如涉及侵权，请联系删除。</p>
   </footer>
 
 </div>
 
-<!-- ===== 赞赏码弹层 ===== -->
 <div class="zsm-modal" id="zsmModal" aria-hidden="true">
   <div class="zsm-modal-mask" data-close></div>
 
@@ -437,12 +347,10 @@ h1 {
 
   btn.addEventListener('click', openModal);
 
-  // 点击遮罩或关闭按钮
   modal.addEventListener('click', function (e) {
     if (e.target.hasAttribute('data-close')) closeModal();
   });
 
-  // ESC 关闭
   document.addEventListener('keydown', function (e) {
     if ((e.key === 'Escape' || e.keyCode === 27) && modal.classList.contains('open')) {
       closeModal();
