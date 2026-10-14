@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
-<title>海量接口搬运备份</title>
+<title>海量接口搬运备份 · 随心支持</title>
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { height:100%; }
@@ -38,11 +38,6 @@ h1 {
   font-size:.78rem; color:#7a8fa3; line-height:1.8;
 }
 
-.qq-link {
-  color:#4a9eff; text-decoration:none; font-weight:600;
-}
-.qq-link:hover { text-decoration:underline; }
-
 /* ===== 卡片主体 ===== */
 .main-card {
   background:#fff; border-radius:8px;
@@ -52,6 +47,7 @@ h1 {
   display:flex; flex-direction:column;
 }
 
+/* ===== QQ 群 ===== */
 .qq-block {
   font-size:.76rem; color:#5a6f88; line-height:2;
   margin-top:6px;
@@ -65,6 +61,39 @@ h1 {
   color:#4a9eff; text-decoration:none; font-weight:600;
 }
 .qq-block a:hover { text-decoration:underline; }
+
+.section-title {
+  font-size:.85rem; font-weight:700; color:#0a1a2b;
+  margin:22px 0 4px;
+}
+
+/* ===== 赞赏码 ===== */
+.reward-block {
+  text-align:center;
+  margin-top:6px;
+}
+
+.reward-block img {
+  width:180px; max-width:60%;
+  height:auto;
+  border-radius:8px;
+  border:1px solid #d4dbe5;
+  background:#fff;
+  padding:8px;
+}
+
+.reward-tip {
+  font-size:.74rem; color:#7a8fa3; line-height:1.8;
+  margin-top:10px;
+}
+
+.reward-soft {
+  font-size:.72rem; color:#9aa8b8; line-height:1.8;
+  margin-top:8px;
+  padding:8px 12px;
+  background:#f5f8fc;
+  border-radius:6px;
+}
 
 /* ===== 返回首页按钮 ===== */
 .home-btn-wrap {
@@ -114,9 +143,9 @@ h1 {
   <div class="header-block">
     <h1>海量接口搬运备份</h1>
     <div class="header-divider"></div>
-
     <p class="subtitle">
-      备用数据源，防屏不迷路
+      备用数据源，防屏不迷路<br>
+      资源长期免费分享，能跑多久看上游，不保证永久可用
     </p>
   </div>
 
@@ -125,21 +154,28 @@ h1 {
 
     <div class="qq-block">
       QQ 交流群：
-      <div class="qq-row">
-        <a href="https://qm.qq.com/q/ApgHrgV7Y4" target="_blank" rel="noopener noreferrer">一群 1067685939</a>
-      </div>
-      <div class="qq-row">
-        <a href="https://qm.qq.com/q/LCBc86ZE4K" target="_blank" rel="noopener noreferrer">二群 963502550</a>
-      </div>
-      <div class="qq-row">
-        <a href="https://qm.qq.com/q/syZRStM2ha" target="_blank" rel="noopener noreferrer">三群 931343329</a>
-      </div>
-      <div class="qq-row">
-        <a href="https://qm.qq.com/q/KKVaXiuiOe" target="_blank" rel="noopener noreferrer">四群 616843624</a>
-      </div>
-      <div class="qq-row">
-        <a href="https://qm.qq.com/q/Bq1QqyQDK0" target="_blank" rel="noopener noreferrer">五群 594253529</a>
-      </div>
+      <div class="qq-row"><a href="https://qm.qq.com/q/ApgHrgV7Y4" target="_blank" rel="noopener noreferrer">一群 1067685939</a></div>
+      <div class="qq-row"><a href="https://qm.qq.com/q/LCBc86ZE4K" target="_blank" rel="noopener noreferrer">二群 963502550</a></div>
+      <div class="qq-row"><a href="https://qm.qq.com/q/syZRStM2ha" target="_blank" rel="noopener noreferrer">三群 931343329</a></div>
+      <div class="qq-row"><a href="https://qm.qq.com/q/KKVaXiuiOe" target="_blank" rel="noopener noreferrer">四群 616843624</a></div>
+      <div class="qq-row"><a href="https://qm.qq.com/q/Bq1QqyQDK0" target="_blank" rel="noopener noreferrer">五群 594253529</a></div>
+    </div>
+
+    <!-- 随心支持 -->
+    <div class="section-title">☕ 随心支持一下</div>
+    <div class="reward-block">
+      <!-- 把 src 换成你的微信赞赏码图片 -->
+      <img src="./vip/zsm.png" alt="微信赞赏码">
+
+      <p class="reward-tip">
+        备份、同步、更新都挺费电。<br>
+        若这个站帮过你一次，欢迎请我喝杯咖啡，金额随你。
+      </p>
+
+      <p class="reward-soft">
+        纯自愿，不打赏也完全不影响使用。<br>
+        赞赏不等于售后绑定，也不承诺接口永久可用。
+      </p>
     </div>
 
     <!-- 返回首页 -->
@@ -151,7 +187,8 @@ h1 {
 
   <!-- 页脚 -->
   <footer class="page-footer">
-    <p>本站接口资源由【误道者】整理。所有资源均来自互联网，版权归原作者所有。</p>
+    <p>本站接口资源由【误道者】整理，仅供学习交流，所有资源均来自互联网，版权归原作者所有。</p>
+    <p>支持仅代表个人自愿打赏，与接口可用性、特定资源可播性无关。</p>
   </footer>
 
 </div>
