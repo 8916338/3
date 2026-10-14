@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
-<title>海量接口搬运备份 · 随心支持</title>
+<title>海量接口搬运备份</title>
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { height:100%; }
@@ -74,7 +74,7 @@ h1 {
 }
 
 .reward-block img {
-  width: 100%;              /* ✅ 和文字一样宽 */
+  width: 100%;              /* 和文字一样宽 */
   max-width: 100%;
   height: auto;
   border-radius: 8px;
@@ -82,6 +82,7 @@ h1 {
   background:#fff;
   padding: 8px;
   display: block;
+  margin-top: 12px;          /* ✅ 新增：和上方小字拉开一点距离 */
 }
 
 .reward-tip {
@@ -166,9 +167,7 @@ h1 {
     <!-- 随心支持 -->
     <div class="section-title">☕ 随心支持一下</div>
     <div class="reward-block">
-      <!-- 把 src 换成你的微信赞赏码图片 -->
-      <img src="./vip/zsm.png" alt="微信赞赏码">
-
+      
       <p class="reward-tip">
         备份、同步、更新都挺费电。<br>
         若这个站帮过你一次，欢迎请我喝杯咖啡，金额随你。
@@ -178,6 +177,10 @@ h1 {
         纯自愿，不打赏也完全不影响使用。<br>
         赞赏不等于售后绑定，也不承诺接口永久可用。
       </p>
+
+      <!-- ✅ 图片已移动到小字下面、返回首页按钮的上面 -->
+      <img src="./vip/zsm.png" alt="微信赞赏码">
+
     </div>
 
     <!-- 返回首页 -->
