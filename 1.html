@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>海量接口搬运备份3</title>
+<title>海量接口搬运备份</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%}
@@ -563,12 +563,13 @@ async function checkFirstAvailable() {
   const urls = CONFIG.countdownUrls;
   for (let i = 0; i < urls.length; i++) {
     const url = urls[i];
-    statusEl.textContent = '⏳ 正在检测第 ' + (i + 1) + ' 个线路：' + url;
+    // 只显示“正在检测线路”，不显示第几条和网址
+    statusEl.innerHTML = '⏳ 正在检测线路...';
     const ok = await probeUrl(url, TIMEOUT_SEC);
     if (ok) {
       jumpTargetUrl = url;
-      statusEl.innerHTML = '✅ 线路可用，正在进入...<br>' +
-        '<span style="font-size:.75rem;color:#5a6f88">' + url + '</span>';
+      // 只显示“线路可用，正在进入”，不显示网址
+      statusEl.innerHTML = '✅ 线路可用，正在进入...';
       // 等待 2 秒后再跳转
       setTimeout(function() {
         window.location.href = url;
