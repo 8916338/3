@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>海量接口搬运备份</title>
+<title>海量接口搬运备份6</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%}
@@ -24,6 +24,12 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
   background:#e8f1fb;border:1px solid #c9e0f9;border-radius:20px;
   padding:1px 9px;vertical-align:middle;margin-left:6px;letter-spacing:.3px;
 }
+.version-in-card{
+  display:inline-block;font-size:.78rem;font-weight:600;color:#4a9eff;
+  background:#e8f1fb;border:1px solid #c9e0f9;border-radius:20px;
+  padding:2px 12px;letter-spacing:.3px;line-height:16px;
+  margin-bottom:6px;
+}
 .header-divider{height:1px;background:#e4ebf3;margin:12px 0}
 .subtitle{font-size:.78rem;color:#7a8fa3;line-height:1.6}
 .qq-link{color:#4a9eff;text-decoration:none;font-weight:600}
@@ -32,11 +38,18 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 .status-card{
   background:#fff;border-radius:8px;padding:16px 18px;
   border:1px solid #d4dbe5;margin-bottom:16px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  height:150px;
 }
-.status-text{font-size:.88rem;color:#2563eb;line-height:1.7}
+.status-text{
+  font-size:.88rem;color:#2563eb;line-height:1.7;
+  width:100%;height:48px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  overflow:hidden;
+}
 .countdown{color:#10b981;font-weight:700;font-size:1.05rem}
 
-.action-buttons{display:flex;justify-content:center;gap:12px;margin-top:12px;flex-wrap:wrap}
+.action-buttons{display:flex;justify-content:center;gap:12px;margin-top:12px;flex-wrap:wrap;height:36px;align-items:center}
 .btn-stay,.btn-goto{
   border:none;border-radius:40px;padding:8px 18px;font-size:.8rem;font-weight:500;
   cursor:pointer;transition:background .15s,transform .1s;touch-action:manipulation;
@@ -84,27 +97,14 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 .status-bar{
   display:flex;justify-content:space-between;align-items:center;
   background:#f7fafd;border:1px solid #e0e8f0;border-radius:8px;
-  padding:10px 14px;margin:14px 0;font-size:.82rem;
+  padding:10px 14px;margin:0 0 14px 0;font-size:.82rem;
+  flex-wrap:wrap;gap:8px;
 }
 .status-bar .stat{display:flex;gap:14px;flex-wrap:wrap}
 .status-bar .stat span{font-size:.78rem;color:#5a6f88}
 .status-bar .stat b{font-weight:700}
 .b-ok{color:#10b981}.b-fail{color:#ef4444}.b-wait{color:#f59e0b}.b-total{color:#2563eb}
 
-.list-title{font-size:.92rem;font-weight:600;color:#0b1e33;margin-bottom:6px}
-.list-tip{font-size:.74rem;color:#5a6f88;margin-bottom:10px}
-
-.url-line-simple{
-  display:flex;align-items:center;gap:8px;padding:6px 14px;background:#f4f8fc;
-  border:1px solid #e0e8f0;border-radius:50px;margin-top:8px;min-width:0;cursor:pointer;
-  transition:background .15s,border-color .15s;
-}
-.url-line-simple:hover{background:#e8f1fb;border-color:#4a9eff}
-.url-line-simple:active{background:#dce9f8}
-.url-line-simple .url-text{
-  flex:1;font-size:.75rem;color:#2563eb;word-break:break-all;
-  overflow-wrap:break-word;line-height:1.4;min-width:0;
-}
 .copy-btn{
   flex-shrink:0;background:#4a9eff;color:#fff;border:none;border-radius:30px;padding:0 12px;
   font-size:.68rem;font-weight:500;cursor:pointer;height:26px;
@@ -114,93 +114,83 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 .copy-btn:active{background:#2a7ed9;transform:scale(.96)}
 .copy-btn.copied{background:#3b9b6c}
 
-.url-line{
-  display:flex;align-items:center;gap:8px;padding:8px 14px;background:#f4f8fc;
-  border:1px solid #e0e8f0;border-radius:50px;margin-top:8px;min-width:0;cursor:pointer;
-  transition:background .15s,border-color .15s;
-}
-.url-line:hover{background:#e8f1fb;border-color:#4a9eff}
-.url-line .dot{
-  width:8px;height:8px;border-radius:50%;background:#cbd5e1;flex-shrink:0;transition:background .2s;
-}
-.url-line.ok .dot{background:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,.15)}
-.url-line.fail .dot{background:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.15)}
-.url-line.checking .dot{background:#f59e0b;box-shadow:0 0 0 3px rgba(245,158,11,.15)}
-.url-line .url-text{
-  flex:1;font-size:.75rem;color:#2563eb;word-break:break-all;
-  overflow-wrap:break-word;line-height:1.4;min-width:0;
-}
-.url-line .lat{
-  flex-shrink:0;font-size:.7rem;color:#7a8fa3;
-  font-variant-numeric:tabular-nums;min-width:52px;text-align:right;
-}
-.url-line.fail .url-text{color:#94a3b8;text-decoration:line-through;text-decoration-color:#cbd5e1}
-
-/* 新增：备份域名分组样式 (适配原有视觉) */
-#about-domains-list {
-  margin-top: 16px;
-}
+/* ===== 分组站点样式 ===== */
+#about-domains-list { margin-top: 0; text-align: left; }
 .domain-group-card {
-  background: #fff;
-  border: 1px solid #d4dbe5;
-  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e4ebf3;
+  border-radius: 10px;
+  padding: 14px 16px;
   margin-bottom: 12px;
-  overflow: hidden;
+  min-width: 0;
 }
+.domain-group-card:last-child { margin-bottom: 0; }
 .domain-group-head {
   display: flex;
   align-items: center;
-  padding: 12px 14px;
-  background: #f7fafd;
-  border-bottom: 1px solid #e0e8f0;
+  gap: 12px;
+  margin-bottom: 10px;
+  min-width: 0;
 }
-.domain-group-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #4a9eff;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1rem;
-  margin-right: 12px;
-  flex-shrink: 0;
-  overflow: hidden;
-}
-.domain-group-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.domain-group-info {
-  flex: 1;
-}
+.domain-group-info { flex: 1; min-width: 0; }
 .domain-group-name {
-  font-size: .88rem;
-  font-weight: 600;
-  color: #0b1e33;
+  font-size: .85rem;
+  font-weight: 700;
+  color: #0a1a2b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.domain-group-desc {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: .62rem;
+  font-weight: 500;
+  color: #4a9eff;
+  background: #e8f2ff;
+  padding: 2px 10px;
+  border-radius: 50px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .domain-line {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 8px 14px 8px 66px;
-  border-bottom: 1px solid #f0f4f9;
-}
-.domain-line:last-child {
-  border-bottom: none;
+  gap: 8px;
+  padding: 6px 14px;
+  background: #fff;
+  border: 1px solid #e0e8f0;
+  border-radius: 50px;
+  margin-top: 6px;
+  min-width: 0;
 }
 .domain-line .url-text {
   font-size: .75rem;
   color: #2563eb;
   word-break: break-all;
+  overflow-wrap: break-word;
+  line-height: 1.4;
   flex: 1;
-  margin-right: 8px;
+  min-width: 0;
 }
-.domain-line .copy-btn {
+
+/* 状态点 & 延迟 */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
   flex-shrink: 0;
+  transition: background .2s, box-shadow .2s;
+}
+.domain-line.ok .status-dot { background:#10b981; box-shadow:0 0 0 3px rgba(16,185,129,.15); }
+.domain-line.fail .status-dot { background:#ef4444; box-shadow:0 0 0 3px rgba(239,68,68,.15); }
+.domain-line.checking .status-dot { background:#f59e0b; box-shadow:0 0 0 3px rgba(245,158,11,.15); }
+.domain-line.fail .url-text { color:#94a3b8; text-decoration:line-through; text-decoration-color:#cbd5e1; }
+.domain-line .lat {
+  flex-shrink:0; font-size:.7rem; color:#7a8fa3;
+  font-variant-numeric:tabular-nums; min-width:52px; text-align:right;
 }
 
 .contact-section{
@@ -229,7 +219,11 @@ body.batch-mode .mode-batch{display:block}
   .btn-enter-site{height:40px;padding:0 28px;font-size:.86rem}
   .contact-section{padding:8px 4px 2px}
   .page-footer{padding:6px 4px 8px}
-  .domain-line { padding-left: 14px; }
+  .domain-group-card { padding: 12px 12px; }
+  .domain-group-name { font-size: .8rem; }
+  .domain-line { padding: 6px 10px; gap: 6px; }
+  .domain-line .url-text { font-size: .7rem; }
+  .domain-line .lat { min-width: 44px; }
 }
 </style>
 </head>
@@ -237,34 +231,38 @@ body.batch-mode .mode-batch{display:block}
 <div class="container">
 
   <div class="header-block">
-    <h1>海量接口搬运备份<span class="version-tag">v1.0.6</span></h1>
+    <h1>海量接口搬运备份</h1>
     <div class="header-divider"></div>
     <p class="subtitle">
       备用数据源，防屏不迷路<br>
-      <a class="qq-link" href="https://0.wudaozhe.net/qq群" target="_blank" rel="noopener noreferrer">猛戳这里加入QQ群: <span style="color:#00C853;">点击</span></a>
+       <a class="qq-link" href="https://0.wudaozhe.net/qq群" target="_blank" rel="noopener noreferrer"> 猛戳这里加入QQ群: 
+  <span style="color:#00C853;">点击</span>
+ </a>
     </p>
   </div>
 
+  <!-- 跳转模式（初始显示） -->
   <div class="mode-jump" id="modeJump">
-    <div class="status-card" id="jumpStatusCard">
+    <div class="status-card">
+      <span class="version-in-card">v1.0.7</span>
       <div class="status-text" id="status">⏳ 正在检测可用线路...</div>
-      <div class="action-buttons" id="actionButtons" style="display:none;">
+      <div class="action-buttons" id="actionButtons">
         <button class="btn-stay" id="stayBtn">🧷 留在本页</button>
         <button class="btn-goto" id="gotoBtn">🚀 立即跳转</button>
       </div>
-      <!-- 跳转失败时显示的备份分组列表 -->
-      <div id="about-domains-list" style="display:none;"></div>
     </div>
 
     <div class="domains-card">
       <div class="domains-title">🌐 备份线路域名</div>
-      <div class="domains-tip">以下域名互为备份，任一个可用（点击整行跳转）：</div>
-      <div id="simpleList"></div>
+      <div class="domains-tip">按站长分组，每组域名互为备份，任一个可用：</div>
+      <div id="about-domains-list"></div>
     </div>
   </div>
 
+  <!-- 批量模式（分组 + 检测结果） -->
   <div class="mode-batch" id="modeBatch">
     <div class="merged-card">
+
       <div class="batch-jump-bar">
         <button class="btn-enter-site" id="btnEnterSite">🌐 进入网站</button>
       </div>
@@ -286,18 +284,20 @@ body.batch-mode .mode-batch{display:block}
         </div>
       </div>
 
-      <div class="list-title">🌐 线路列表</div>
-      <div class="list-tip">点整行跳转，点右侧按钮复制单条地址；检测结果与延迟实时刷新。</div>
-      <div id="list"></div>
+      <div class="domains-title">🌐 备份线路域名</div>
+      <div class="domains-tip">按站长分组，每组域名互为备份，任一个可用（检测结果实时刷新）：</div>
+      <div id="about-domains-list-batch"></div>
+
     </div>
   </div>
 
 </div>
 
 <div class="contact-section">
-  <p>加入Q群请点击：
-    <a id="about-qq" href="https://qm.qq.com/q/gmRKKPT3x0" target="_blank" rel="noopener noreferrer">1067685939</a>
-  </p>
+<p><a class="qq-link" href="https://0.wudaozhe.net/qq群" target="_blank" rel="noopener noreferrer"> 猛戳这里加入QQ群: 
+  <span style="color:#00C853;">点击查看Q群列表</span>
+ </a>
+ </p>
   <p>加入tg群组请点击：
     <a id="about-tg" href="https://t.me/tg6603" target="_blank" rel="noopener noreferrer">https://t.me/tg6603</a>
   </p>
@@ -315,37 +315,24 @@ body.batch-mode .mode-batch{display:block}
 </footer>
 
 <script>
-// ========== JSON 配置区 ==========
-// 自主检测线路 (用于自动跳转 /into)
+// ========== 自动检测线路（/into 结尾，检测到可用倒计时 3 秒后跳转） ==========
 const CONFIG = {
-  // 自动跳转检测 (直接进入 /into，不等待倒计时)
   countdownUrls: [
     "https://0.12yue.de5.net/into",
     "https://0.cdz.qzz.io/into",
     "https://0.wdzb.eu.cc/into",
     "https://0.wudaozhe.net/into"
-  ],
-  // 批量检测线路 (用于手动批量检测)
-  batchUrls: [
-    "https://0.12yue.de5.net",
-    "https://0.cdz.qzz.io",
-    "https://0.wdzb.eu.cc",
-    "https://0.wudaozhe.net",
-    "https://tvbox.moliys.icu",
-    "https://ym.120733.xyz",
-    "https://liujin86.ccwu.cc",
-    "https://tvthaox.cc.cd",
-    "https://nxz.de5.net",
-    "https://tvbox-api.luca.dpdns.org"
   ]
 };
 
-// 站点分组数据 (方便修改)
+// 倒计时秒数
+const JUMP_COUNTDOWN_SEC = 3;
+
+// ========== 分组站点数据 ==========
 const DOMAIN_GROUPS = [
   {
     name: "误道者站点",
-    avatarText: "误",
-    avatarImg: "vip/jueson.jpg",
+    desc: "主站线路",
     domains: [
       "https://0.wudaozhe.net",
       "https://0.12yue.de5.net",
@@ -355,8 +342,7 @@ const DOMAIN_GROUPS = [
   },
   {
     name: "雪衣玉龙站点",
-    avatarText: "雪",
-    avatarImg: "",
+    desc: "备选线路",
     domains: [
       "https://ym.120733.xyz",
       "https://4.wudaozhe.net"
@@ -364,8 +350,7 @@ const DOMAIN_GROUPS = [
   },
   {
     name: "韧忍仁人站点",
-    avatarText: "韧",
-    avatarImg: "vip/刘军.jpg",
+    desc: "备选线路",
     domains: [
       "https://liujin86.ccwu.cc",
       "https://8.wudaozhe.net"
@@ -373,8 +358,7 @@ const DOMAIN_GROUPS = [
   },
   {
     name: "第五站点",
-    avatarText: "第",
-    avatarImg: "",
+    desc: "备选线路",
     domains: [
       "https://tvthaox.cc.cd",
       "https://5.wudaozhe.net"
@@ -382,8 +366,7 @@ const DOMAIN_GROUPS = [
   },
   {
     name: "祥子站点",
-    avatarText: "祥",
-    avatarImg: "vip/祥子.jpg",
+    desc: "备选线路",
     domains: [
       "https://nxz.de5.net",
       "https://6.wudaozhe.net"
@@ -391,15 +374,13 @@ const DOMAIN_GROUPS = [
   },
   {
     name: "第七站点",
-    avatarText: "第",
-    avatarImg: "",
+    desc: "备选线路",
     domains: [
       "https://tvbox-api.luca.dpdns.org"
     ]
   }
 ];
 
-// ========== 原有逻辑 ==========
 const CONCURRENCY = 6;
 const TIMEOUT_SEC = 12;
 
@@ -422,21 +403,25 @@ function noCacheUrl(url) {
 })();
 
 let mode = 'jump';
-let items = CONFIG.batchUrls.map(function(u) { return { url: u, state: "wait", lat: null }; });
 let jumpTargetUrl = null;
-let aborting = false;
+let jumpCountdownTimer = null;
+
+// 每个域名的状态
+let domainStates = {};
+DOMAIN_GROUPS.forEach(function(g) {
+  g.domains.forEach(function(u) {
+    domainStates[u] = { url: u, state: 'wait', lat: null };
+  });
+});
 
 const bodyEl = document.body;
-
 const statusEl = document.getElementById('status');
 const actionButtons = document.getElementById('actionButtons');
 const stayBtn = document.getElementById('stayBtn');
 const gotoBtn = document.getElementById('gotoBtn');
-const simpleListEl = document.getElementById('simpleList');
 const aboutDomainsListEl = document.getElementById('about-domains-list');
-const jumpStatusCard = document.getElementById('jumpStatusCard');
+const aboutDomainsListBatchEl = document.getElementById('about-domains-list-batch');
 
-const listEl = document.getElementById("list");
 const stTotal = document.getElementById("stTotal");
 const stOk = document.getElementById("stOk");
 const stFail = document.getElementById("stFail");
@@ -445,22 +430,107 @@ const stMsg = document.getElementById("stMsg");
 const btnStart = document.getElementById("btnStart");
 const btnEnterSite = document.getElementById("btnEnterSite");
 
-function displayUrl(u) { return u.replace(/\/$/, "").replace(/\/app$/, "") || u; }
+// ========== 渲染分组（含检测状态） ==========
+function renderGroupsInto(container, withStatus) {
+  if (!container) return;
+  container.innerHTML = '';
+  DOMAIN_GROUPS.forEach(function(group) {
+    const card = document.createElement('div');
+    card.className = 'domain-group-card';
+    card.dataset.name = group.name;
 
-function resetItemsToOriginalOrder() {
-  items = CONFIG.batchUrls.map(function(u) { return { url: u, state: "wait", lat: null }; });
+    const head = document.createElement('div');
+    head.className = 'domain-group-head';
+    head.innerHTML =
+      '<div class="domain-group-info">' +
+        '<div class="domain-group-name" title="' + group.name + '">' + group.name + '</div>' +
+        (group.desc ? '<div class="domain-group-desc">' + group.desc + '</div>' : '') +
+      '</div>';
+    card.appendChild(head);
+
+    const bodyDiv = document.createElement('div');
+    group.domains.forEach(function(domain) {
+      const line = document.createElement('div');
+      line.className = 'domain-line';
+      line.dataset.url = domain;
+
+      if (withStatus) {
+        const st = domainStates[domain] || { state: 'wait', lat: null };
+        const latTxt = st.state === 'ok' ? (st.lat + ' ms')
+                     : st.state === 'fail' ? '失败'
+                     : st.state === 'checking' ? '检测中…' : '—';
+        line.innerHTML =
+          '<span class="status-dot"></span>' +
+          '<span class="url-text">' + domain + '</span>' +
+          '<span class="lat">' + latTxt + '</span>' +
+          '<button class="copy-btn" data-url="' + domain + '">复制</button>';
+      } else {
+        line.innerHTML =
+          '<span class="url-text">' + domain + '</span>' +
+          '<button class="copy-btn" data-url="' + domain + '">复制</button>';
+      }
+      bodyDiv.appendChild(line);
+    });
+    card.appendChild(bodyDiv);
+
+    container.appendChild(card);
+  });
 }
 
+function renderAboutDomains() {
+  renderGroupsInto(aboutDomainsListEl, false);
+  renderGroupsInto(aboutDomainsListBatchEl, true);
+}
+
+// 只更新批量模式下的分组显示
+function updateBatchGroupDisplay() {
+  const lines = aboutDomainsListBatchEl.querySelectorAll('.domain-line');
+  lines.forEach(function(line) {
+    const url = line.dataset.url;
+    const st = domainStates[url];
+    if (!st) return;
+
+    line.classList.remove('ok', 'fail', 'checking');
+    if (st.state === 'ok') line.classList.add('ok');
+    else if (st.state === 'fail') line.classList.add('fail');
+    else if (st.state === 'checking') line.classList.add('checking');
+
+    const latEl = line.querySelector('.lat');
+    if (latEl) {
+      latEl.textContent = st.state === 'ok' ? (st.lat + ' ms')
+                       : st.state === 'fail' ? '失败'
+                       : st.state === 'checking' ? '检测中…' : '—';
+    }
+  });
+}
+
+// ========== 统计 ==========
+function updateBatchStats() {
+  let ok = 0, fail = 0, wait = 0, checking = 0;
+  Object.keys(domainStates).forEach(function(k) {
+    const s = domainStates[k].state;
+    if (s === 'ok') ok++;
+    else if (s === 'fail') fail++;
+    else if (s === 'checking') checking++;
+    else wait++;
+  });
+  stTotal.textContent = Object.keys(domainStates).length;
+  stOk.textContent = ok;
+  stFail.textContent = fail;
+  stWait.textContent = wait + checking;
+}
+
+// ========== 切换模式 ==========
 function switchToBatchMode() {
   mode = 'batch';
   bodyEl.classList.add('batch-mode');
 
-  // 隐藏跳转失败列表
-  aboutDomainsListEl.style.display = 'none';
+  Object.keys(domainStates).forEach(function(k) {
+    domainStates[k].state = 'wait';
+    domainStates[k].lat = null;
+  });
 
-  resetItemsToOriginalOrder();
-
-  renderBatchList();
+  updateBatchGroupDisplay();
   updateBatchStats();
   updateEnterButton();
 
@@ -471,143 +541,67 @@ function switchToJumpMode() {
   mode = 'jump';
   bodyEl.classList.remove('batch-mode');
 
-  resetItemsToOriginalOrder();
-  jumpTargetUrl = null;
+  Object.keys(domainStates).forEach(function(k) {
+    domainStates[k].state = 'wait';
+    domainStates[k].lat = null;
+  });
 
-  actionButtons.style.display = 'none';
-  aboutDomainsListEl.style.display = 'none';
+  jumpTargetUrl = null;
+  if (jumpCountdownTimer) { clearInterval(jumpCountdownTimer); jumpCountdownTimer = null; }
+  actionButtons.style.display = 'flex';
   statusEl.textContent = '⏳ 正在检测可用线路...';
 
   checkFirstAvailable();
 }
 
 function updateEnterButton() {
-  const okItems = items.filter(function(i) { return i.state === "ok"; });
-  if (okItems.length > 0) {
+  const okCount = Object.keys(domainStates).filter(function(k) {
+    return domainStates[k].state === 'ok';
+  }).length;
+  if (okCount > 0) {
     btnEnterSite.disabled = false;
-    btnEnterSite.textContent = '🌐 进入网站 (' + okItems.length + ' 条可用)';
+    btnEnterSite.textContent = '🌐 进入网站 (' + okCount + ' 条可用)';
   } else {
     btnEnterSite.disabled = false;
     btnEnterSite.textContent = '🌐 进入网站';
   }
 }
 
-function renderSimpleList() {
-  simpleListEl.innerHTML = '';
-  const seen = new Set();
-  CONFIG.batchUrls.forEach(function(u) {
-    const d = displayUrl(u);
-    if (!seen.has(d)) {
-      seen.add(d);
-      const line = document.createElement('div');
-      line.className = 'url-line-simple';
-      line.dataset.url = d;
-      line.innerHTML =
-        '<span class="url-text">' + d + '</span>' +
-        '<button class="copy-btn" data-url="' + d + '">复制</button>';
-      simpleListEl.appendChild(line);
-    }
-  });
-}
-
-// 生成备份站点分组 HTML (根据 DOMAIN_GROUPS)
-function renderAboutDomainsList() {
-  aboutDomainsListEl.innerHTML = '';
-  DOMAIN_GROUPS.forEach(function(group) {
-    const card = document.createElement('div');
-    card.className = 'domain-group-card';
-    card.dataset.name = group.name;
-
-    // head
-    let avatarHtml = '';
-    if (group.avatarImg) {
-      avatarHtml = '<img src="' + group.avatarImg + '" alt="' + group.name + '" loading="lazy" onerror="this.style.display=\'none\';this.parentNode.textContent=\'' + (group.avatarText || '') + '\';"></img>';
-    } else {
-      avatarHtml = group.avatarText || group.name.charAt(0);
-    }
-
-    const head = document.createElement('div');
-    head.className = 'domain-group-head';
-    head.innerHTML =
-      '<div class="domain-group-avatar">' + avatarHtml + '</div>' +
-      '<div class="domain-group-info">' +
-        '<div class="domain-group-name" title="' + group.name + '">' + group.name + '</div>' +
-      '</div>';
-    card.appendChild(head);
-
-    // body lines
-    const bodyDiv = document.createElement('div');
-    group.domains.forEach(function(domain) {
-      const line = document.createElement('div');
-      line.className = 'domain-line';
-      line.innerHTML =
-        '<span class="url-text">' + domain + '</span>' +
-        '<button class="copy-btn" data-url="' + domain + '">复制</button>';
-      bodyDiv.appendChild(line);
-    });
-    card.appendChild(bodyDiv);
-
-    aboutDomainsListEl.appendChild(card);
-  });
-}
-
-// 跳转失败：显示备份列表并切换到批量模式
-function showBackupAndSwitchToBatch() {
-  // 渲染备份分组
-  renderAboutDomainsList();
-  aboutDomainsListEl.style.display = 'block';
-  statusEl.innerHTML = '❌ 所有线路均不可用，请手动选择以下备份线路：';
-  actionButtons.style.display = 'none';
-
-  // 延迟一小段时间后自动切换到批量模式（保留用户看到列表的机会，立即切换可能导致列表不显示）
-  // 但需求是“显示以下的内容并且执行原来留在此页面检测”，即显示列表并留在本页，再自动执行批量检测
-  // 为了不切换界面太突兀，我们保留在跳转模式显示列表，同时自动启动批量检测并切换到批量模式？
-  // 根据分析：用户希望如果进入不成功，则显示备份列表，并执行原来“留在此页面检测”
-  // “留在此页面”即 switchToBatchMode
-  // 我们可以在显示列表后，稍微延迟自动切换到批量模式（因为批量模式会隐藏跳转列表，可能看不到列表）
-  // 但需求可能希望看到列表同时进行批量检测？但批量模式会隐藏这个列表。为了兼顾，我们延迟 500ms 再切换，让用户有机会看到列表。
-  // 或者不自动切换，由用户点击“留在本页”按钮？但原逻辑已无按钮。
-  // 根据要求：“如果进入不成功则显示以下的内容并且执行原来留在此页面检测”，意思是显示列表，并且执行批量检测（即原来的留在本页检测）。
-  // 但批量检测是在批量模式下进行的，所以应该切换到批量模式。但为了能看到列表，可以保留列表在跳转模式下显示，并同时切换到批量模式并开始检测？界面会冲突。
-  // 更合理的做法：显示列表，并自动切换到批量模式（批量模式也包含了检测），但用户可能看不到列表？可以把列表复制到批量模式？但批量模式已有线路列表。
-  // 我们可以在跳转模式下显示列表，并同时触发批量检测但不切换界面？不行，检测结果需要显示在批量列表。
-  // 因此：我们在跳转模式下显示备份列表，并告知用户即将切换到检测界面，或者直接切换到批量模式但把备份列表也保留在批量模式中？
-  // 简化：显示列表后，延迟一小段时间（如1.5秒）自动执行 switchToBatchMode，用户可以看到短暂列表，然后进入批量检测。
-  // 这样既满足“显示内容”，也满足“执行检测”。
-
-  // 显示备份列表
-  aboutDomainsListEl.style.display = 'block';
-
-  // 1.5秒后切换到批量模式并开始检测
-  setTimeout(function() {
-    // 如果用户在此期间没有手动操作，则切换
-    if (mode === 'jump') {
-      switchToBatchMode();
-    }
-  }, 1800);
-}
-
-// 修改 checkFirstAvailable: 直接跳转，不等待倒计时
+// ========== 主动检测：检测到可用后倒计时 3 秒跳转 ==========
 async function checkFirstAvailable() {
-  // 隐藏备份列表
-  aboutDomainsListEl.style.display = 'none';
-  actionButtons.style.display = 'none';
-
   const urls = CONFIG.countdownUrls;
   for (let i = 0; i < urls.length; i++) {
     const url = urls[i];
-    statusEl.textContent = '⏳ 正在检测第 ' + (i + 1) + ' 个线路：' + url;
+    statusEl.innerHTML = '⏳ 正在检测线路...';
     const ok = await probeUrl(url, TIMEOUT_SEC);
     if (ok) {
       jumpTargetUrl = url;
-      statusEl.innerHTML = '✅ 线路可用，正在跳转...<br><span style="font-size:.75rem;color:#5a6f88">' + url + '</span>';
-      // 直接跳转，不等待
-      window.location.href = url;
+      startJumpCountdown(url, JUMP_COUNTDOWN_SEC);
       return;
     }
   }
-  // 全部失败
-  showBackupAndSwitchToBatch();
+  statusEl.innerHTML = '❌ 所有线路均不可用，请稍后再试';
+}
+
+function startJumpCountdown(url, seconds) {
+  if (jumpCountdownTimer) clearInterval(jumpCountdownTimer);
+  let remain = seconds;
+
+  function update() {
+    statusEl.innerHTML = '<span style="white-space:nowrap;">即将进入 <span class="countdown">' + remain + '</span> 秒后跳转</span>';
+  }
+  update();
+
+  jumpCountdownTimer = setInterval(function() {
+    remain--;
+    if (remain > 0) {
+      update();
+    } else {
+      clearInterval(jumpCountdownTimer);
+      jumpCountdownTimer = null;
+      window.location.href = url;
+    }
+  }, 1000);
 }
 
 function probeUrl(url, timeoutSec) {
@@ -629,75 +623,59 @@ function probeUrl(url, timeoutSec) {
   });
 }
 
-// 原有倒计时逻辑不再使用，但保留 jumpTimer 和 startJumpCountdown 以防调用，但不会被调用
-let jumpTimer = null;
-
-function renderBatchList() {
-  listEl.innerHTML = "";
-  items.forEach(function(it, i) {
-    const line = document.createElement("div");
-    line.className = "url-line" + (it.state !== "wait" ? " " + it.state : "");
-    line.dataset.idx = i;
-    const latTxt = it.state === "ok" ? (it.lat + " ms")
-                 : it.state === "fail" ? "失败"
-                 : it.state === "checking" ? "探测中…" : "—";
-    line.innerHTML =
-      '<span class="dot"></span>' +
-      '<span class="url-text">' + displayUrl(it.url) + '</span>' +
-      '<span class="lat">' + latTxt + '</span>' +
-      '<button class="copy-btn" data-url="' + it.url + '">复制</button>';
-    listEl.appendChild(line);
-  });
-  updateBatchStats();
-  updateEnterButton();
-}
-
-function updateBatchStats() {
-  let ok = 0, fail = 0, wait = 0, checking = 0;
-  items.forEach(function(it) {
-    if (it.state === "ok") ok++;
-    else if (it.state === "fail") fail++;
-    else if (it.state === "checking") checking++;
-    else wait++;
-  });
-  stTotal.textContent = items.length;
-  stOk.textContent = ok;
-  stFail.textContent = fail;
-  stWait.textContent = wait + checking;
-}
-
-function setItemState(i, state, lat) {
-  items[i].state = state;
-  if (lat !== undefined) items[i].lat = lat;
-  renderBatchList();
-}
+// ========== 批量检测 ==========
+let aborting = false;
 
 async function startBatchCheck() {
   aborting = false;
   btnStart.disabled = true;
+  stMsg.textContent = '检测中…';
 
-  resetItemsToOriginalOrder();
-  renderBatchList();
+  Object.keys(domainStates).forEach(function(k) {
+    domainStates[k].state = 'wait';
+    domainStates[k].lat = null;
+  });
+  updateBatchGroupDisplay();
+  updateBatchStats();
+
+  const urls = Object.keys(domainStates);
 
   let idx = 0;
   const workers = Array.from({ length: CONCURRENCY }, async function() {
     while (!aborting) {
       const i = idx++;
-      if (i >= items.length) break;
-      setItemState(i, "checking");
-      const r = await probeWithLatency(items[i].url);
+      if (i >= urls.length) break;
+      const url = urls[i];
+
+      domainStates[url].state = 'checking';
+      updateBatchGroupDisplay();
+      updateBatchStats();
+
+      const r = await probeWithLatency(url);
       if (aborting) break;
-      setItemState(i, r.ok ? "ok" : "fail", r.lat);
-      updateBatchMsg();
+
+      domainStates[url].state = r.ok ? 'ok' : 'fail';
+      domainStates[url].lat = r.lat || null;
+      updateBatchGroupDisplay();
+      updateBatchStats();
+
+      const done = Object.keys(domainStates).filter(function(k) {
+        return domainStates[k].state === 'ok' || domainStates[k].state === 'fail';
+      }).length;
+      stMsg.textContent = '进度 ' + done + '/' + urls.length;
     }
   });
+
   await Promise.all(workers);
   btnStart.disabled = false;
+
   if (aborting) {
     stMsg.textContent = "已停止";
   } else {
-    const ok = items.filter(function(i) { return i.state === "ok"; }).length;
-    stMsg.textContent = ok ? '完成，可用 ' + ok + ' 条' : "全部不可用";
+    const okCount = Object.keys(domainStates).filter(function(k) {
+      return domainStates[k].state === 'ok';
+    }).length;
+    stMsg.textContent = okCount ? '完成，可用 ' + okCount + ' 条' : "全部不可用";
   }
   updateEnterButton();
 }
@@ -728,18 +706,15 @@ function probeWithLatency(url) {
   });
 }
 
-function updateBatchMsg() {
-  const done = items.filter(function(i) { return i.state === "ok" || i.state === "fail"; }).length;
-  stMsg.textContent = '进度 ' + done + '/' + items.length;
-}
-
+// ========== 按钮事件 ==========
 document.getElementById("btnStart").addEventListener("click", startBatchCheck);
 
 document.getElementById("btnCopyOK").addEventListener("click", function() {
-  const ok = items
-    .filter(function(i) { return i.state === "ok"; })
-    .sort(function(a, b) { return (a.lat || 9999) - (b.lat || 9999); })
-    .map(function(i) { return i.url; });
+  const ok = Object.keys(domainStates)
+    .filter(function(k) { return domainStates[k].state === 'ok'; })
+    .sort(function(a, b) {
+      return (domainStates[a].lat || 9999) - (domainStates[b].lat || 9999);
+    });
   if (!ok.length) {
     stMsg.textContent = "暂无可用线路";
     return;
@@ -753,6 +728,27 @@ btnEnterSite.addEventListener("click", function() {
   switchToJumpMode();
 });
 
+// “留在本页”按钮：取消倒计时，进入批量模式
+stayBtn.onclick = function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  if (jumpCountdownTimer) { clearInterval(jumpCountdownTimer); jumpCountdownTimer = null; }
+  switchToBatchMode();
+};
+
+// “立即跳转”按钮：已检测到可用线路则跳转；否则执行“留在本页”的功能
+gotoBtn.onclick = function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  if (jumpCountdownTimer) { clearInterval(jumpCountdownTimer); jumpCountdownTimer = null; }
+  if (jumpTargetUrl) {
+    window.location.href = jumpTargetUrl;
+  } else {
+    switchToBatchMode();
+  }
+};
+
+// ========== 复制功能 ==========
 document.addEventListener("click", function(e) {
   const copy = e.target.closest(".copy-btn");
   if (copy) {
@@ -770,17 +766,10 @@ document.addEventListener("click", function(e) {
     });
     return;
   }
-  // 点击备份分组中的整行也跳转？原需求未明确，但保留复制功能即可，点击行不跳转，避免误触。
-  // 只处理原有模式的点击跳转
   if (mode === 'batch') {
-    const line = e.target.closest(".url-line");
-    if (line && line.dataset.idx !== undefined) {
-      window.open(items[line.dataset.idx].url, "_blank");
-    }
-  } else {
-    const simpleLine = e.target.closest(".url-line-simple");
-    if (simpleLine && simpleLine.dataset.url) {
-      window.open(simpleLine.dataset.url, "_blank");
+    const line = e.target.closest(".domain-line");
+    if (line && line.dataset.url) {
+      window.open(line.dataset.url, "_blank");
     }
   }
 });
@@ -805,11 +794,8 @@ function copyText(text, done) {
   }
 }
 
-// 初始化
-resetItemsToOriginalOrder();
-renderSimpleList();
-renderAboutDomainsList(); // 预渲染，但默认隐藏
-aboutDomainsListEl.style.display = 'none';
+// ========== 初始化 ==========
+renderAboutDomains();
 checkFirstAvailable();
 </script>
 </body>
