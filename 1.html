@@ -29,14 +29,26 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 .qq-link{color:#4a9eff;text-decoration:none;font-weight:600}
 .qq-link:active{opacity:.7}
 
+/* ===== 状态卡片：固定高度，A/B 两版完全一致 ===== */
 .status-card{
   background:#fff;border-radius:8px;padding:16px 18px;
   border:1px solid #d4dbe5;margin-bottom:16px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  height:150px;                    /* 固定高度 */
 }
-.status-text{font-size:.88rem;color:#2563eb;line-height:1.7}
+.status-text{
+  font-size:.88rem;color:#2563eb;line-height:1.7;
+  width:100%;height:48px;          /* 固定两行高度 */
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  overflow:hidden;
+}
 .countdown{color:#10b981;font-weight:700;font-size:1.05rem}
 
-.action-buttons{display:flex;justify-content:center;gap:12px;margin-top:12px;flex-wrap:wrap}
+/* 按钮行：固定占位，A 版用 visibility 隐藏，B 版显示 */
+.action-buttons{
+  display:flex;justify-content:center;gap:12px;margin-top:12px;
+  height:36px;align-items:center;width:100%;
+}
 .btn-stay,.btn-goto{
   border:none;border-radius:40px;padding:8px 18px;font-size:.8rem;font-weight:500;
   cursor:pointer;transition:background .15s,transform .1s;touch-action:manipulation;
@@ -51,47 +63,6 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 .domains-title{font-size:.92rem;font-weight:600;color:#0b1e33;margin-bottom:6px}
 .domains-tip{font-size:.74rem;color:#5a6f88;margin-bottom:10px}
 
-.merged-card{
-  background:#fff;border-radius:8px;padding:16px 18px 14px;
-  border:1px solid #d4dbe5;margin-bottom:16px;
-}
-
-.batch-jump-bar{display:flex;justify-content:center;margin-bottom:14px}
-.btn-enter-site{
-  height:44px;padding:0 36px;border:none;border-radius:44px;font-size:.92rem;font-weight:600;
-  cursor:pointer;color:#fff;background:linear-gradient(135deg,#8b5cf6,#6366f1);
-  box-shadow:0 4px 14px rgba(99,102,241,.4);
-  transition:background .15s,transform .1s,box-shadow .15s;
-  touch-action:manipulation;-webkit-user-select:none;user-select:none;
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-}
-.btn-enter-site:active{transform:scale(.96);box-shadow:0 2px 8px rgba(99,102,241,.3)}
-.btn-enter-site:disabled{background:#cbd5e1;box-shadow:none;cursor:not-allowed;transform:none}
-
-.btn{
-  height:32px;padding:0 16px;border:none;border-radius:6px;font-size:.8rem;font-weight:500;
-  cursor:pointer;color:#fff;background:#4a9eff;white-space:nowrap;touch-action:manipulation;
-  display:inline-flex;align-items:center;justify-content:center;
-}
-.btn:active{transform:scale(.96)}
-.btn.primary{background:#2563eb}
-.btn.success{background:#10b981}
-.btn.ghost{background:#fff;color:#5a6f88;border:1px solid #d4dbe5}
-.btn:disabled{opacity:.5;cursor:not-allowed}
-
-.ctrl-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;margin-bottom:14px}
-
-.status-bar{
-  display:flex;justify-content:space-between;align-items:center;
-  background:#f7fafd;border:1px solid #e0e8f0;border-radius:8px;
-  padding:10px 14px;margin:0 0 14px 0;font-size:.82rem;
-  flex-wrap:wrap;gap:8px;
-}
-.status-bar .stat{display:flex;gap:14px;flex-wrap:wrap}
-.status-bar .stat span{font-size:.78rem;color:#5a6f88}
-.status-bar .stat b{font-weight:700}
-.b-ok{color:#10b981}.b-fail{color:#ef4444}.b-wait{color:#f59e0b}.b-total{color:#2563eb}
-
 .copy-btn{
   flex-shrink:0;background:#4a9eff;color:#fff;border:none;border-radius:30px;padding:0 12px;
   font-size:.68rem;font-weight:500;cursor:pointer;height:26px;
@@ -104,85 +75,32 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 /* ===== 分组站点样式 ===== */
 #about-domains-list { margin-top: 0; text-align: left; }
 .domain-group-card {
-  background: #f8fafc;
-  border: 1px solid #e4ebf3;
-  border-radius: 10px;
-  padding: 14px 16px;
-  margin-bottom: 12px;
-  min-width: 0;
+  background: #f8fafc;border: 1px solid #e4ebf3;
+  border-radius: 10px;padding: 14px 16px;margin-bottom: 12px;min-width: 0;
 }
 .domain-group-card:last-child { margin-bottom: 0; }
-.domain-group-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
-  min-width: 0;
-}
+.domain-group-head {display: flex;align-items: center;gap: 12px;margin-bottom: 10px;min-width: 0;}
 .domain-group-info { flex: 1; min-width: 0; }
 .domain-group-name {
-  font-size: .85rem;
-  font-weight: 700;
-  color: #0a1a2b;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: .85rem;font-weight: 700;color: #0a1a2b;
+  white-space: nowrap;overflow: hidden;text-overflow: ellipsis;
 }
 .domain-group-desc {
-  display: inline-block;
-  margin-top: 4px;
-  font-size: .62rem;
-  font-weight: 500;
-  color: #4a9eff;
-  background: #e8f2ff;
-  padding: 2px 10px;
-  border-radius: 50px;
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-word;
+  display: inline-block;margin-top: 4px;font-size: .62rem;font-weight: 500;
+  color: #4a9eff;background: #e8f2ff;padding: 2px 10px;border-radius: 50px;
+  max-width: 100%;overflow-wrap: break-word;word-break: break-word;
 }
 .domain-line {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  background: #fff;
-  border: 1px solid #e0e8f0;
-  border-radius: 50px;
-  margin-top: 6px;
-  min-width: 0;
+  display: flex;align-items: center;gap: 8px;padding: 6px 14px;
+  background: #fff;border: 1px solid #e0e8f0;border-radius: 50px;
+  margin-top: 6px;min-width: 0;
 }
 .domain-line .url-text {
-  font-size: .75rem;
-  color: #2563eb;
-  word-break: break-all;
-  overflow-wrap: break-word;
-  line-height: 1.4;
-  flex: 1;
-  min-width: 0;
+  font-size: .75rem;color: #2563eb;word-break: break-all;
+  overflow-wrap: break-word;line-height: 1.4;flex: 1;min-width: 0;
 }
 
-/* 状态点 & 延迟 */
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #cbd5e1;
-  flex-shrink: 0;
-  transition: background .2s, box-shadow .2s;
-}
-.domain-line.ok .status-dot { background:#10b981; box-shadow:0 0 0 3px rgba(16,185,129,.15); }
-.domain-line.fail .status-dot { background:#ef4444; box-shadow:0 0 0 3px rgba(239,68,68,.15); }
-.domain-line.checking .status-dot { background:#f59e0b; box-shadow:0 0 0 3px rgba(245,158,11,.15); }
-.domain-line.fail .url-text { color:#94a3b8; text-decoration:line-through; text-decoration-color:#cbd5e1; }
-.domain-line .lat {
-  flex-shrink:0; font-size:.7rem; color:#7a8fa3;
-  font-variant-numeric:tabular-nums; min-width:52px; text-align:right;
-}
-
-.contact-section{
-  text-align:left;padding:10px 4px 4px;max-width:820px;margin:0 auto;width:100%;
-}
+.contact-section{text-align:left;padding:10px 4px 4px;max-width:820px;margin:0 auto;width:100%;}
 .contact-section p{margin-top:8px;font-size:.76rem;color:#5a6f88;line-height:1.6}
 .contact-section a{color:#4a9eff;text-decoration:none;font-weight:600;word-break:break-all}
 .contact-section a:active{opacity:.7}
@@ -193,24 +111,17 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 }
 .page-footer p{word-break:break-word;overflow-wrap:break-word}
 
-.mode-jump{display:block}
-.mode-batch{display:none}
-body.batch-mode .mode-jump{display:none}
-body.batch-mode .mode-batch{display:block}
-
 @media (max-width:600px){
   body{padding:14px 10px 6px}
-  .merged-card,.status-card,.domains-card{padding:14px 12px 10px}
-  .status-bar{flex-direction:column;gap:8px;align-items:flex-start}
+  .domains-card{padding:14px 12px 10px}
+  .status-card{padding:12px 12px;height:150px}
   .btn-stay,.btn-goto{padding:7px 14px;font-size:.75rem;min-width:80px}
-  .btn-enter-site{height:40px;padding:0 28px;font-size:.86rem}
   .contact-section{padding:8px 4px 2px}
   .page-footer{padding:6px 4px 8px}
   .domain-group-card { padding: 12px 12px; }
   .domain-group-name { font-size: .8rem; }
   .domain-line { padding: 6px 10px; gap: 6px; }
   .domain-line .url-text { font-size: .7rem; }
-  .domain-line .lat { min-width: 44px; }
 }
 </style>
 </head>
@@ -228,53 +139,20 @@ body.batch-mode .mode-batch{display:block}
     </p>
   </div>
 
-  <!-- 跳转模式（初始显示） -->
-  <div class="mode-jump" id="modeJump">
-    <div class="status-card">
-      <div class="status-text" id="status">⏳ 正在检测可用线路...</div>
-      <div class="action-buttons" id="actionButtons" style="display:none;">
-        <button class="btn-stay" id="stayBtn">🧷 留在本页</button>
-        <button class="btn-goto" id="gotoBtn">🚀 立即跳转</button>
-      </div>
-    </div>
-
-    <div class="domains-card">
-      <div class="domains-title">🌐 备份线路域名</div>
-      <div class="domains-tip">按站长分组，每组域名互为备份，任一个可用：</div>
-      <div id="about-domains-list"></div>
+  <!-- 检测卡片 -->
+  <div class="status-card">
+    <div class="status-text" id="status">⏳ 正在检测可用线路...</div>
+    <!-- 按钮行保持占位但隐藏，确保与 B 版高度一致 -->
+    <div class="action-buttons" id="actionButtons" style="visibility:hidden;">
+      <button class="btn-stay">🧷 留在本页</button>
+      <button class="btn-goto">🚀 立即跳转</button>
     </div>
   </div>
 
-  <!-- 批量模式（分组 + 检测结果） -->
-  <div class="mode-batch" id="modeBatch">
-    <div class="merged-card">
-
-      <div class="batch-jump-bar">
-        <button class="btn-enter-site" id="btnEnterSite">🌐 进入网站</button>
-      </div>
-
-      <div class="ctrl-row">
-        <button class="btn primary" id="btnStart">重新检测</button>
-        <button class="btn success" id="btnCopyOK">复制可用</button>
-      </div>
-
-      <div class="status-bar">
-        <div class="stat">
-          <span>总数 <b class="b-total" id="stTotal">0</b></span>
-          <span>可用 <b class="b-ok" id="stOk">0</b></span>
-          <span>失败 <b class="b-fail" id="stFail">0</b></span>
-          <span>等待 <b class="b-wait" id="stWait">0</b></span>
-        </div>
-        <div class="stat">
-          <span id="stMsg">就绪</span>
-        </div>
-      </div>
-
-      <div class="domains-title">🌐 备份线路域名</div>
-      <div class="domains-tip">按站长分组，每组域名互为备份，任一个可用（检测结果实时刷新）：</div>
-      <div id="about-domains-list-batch"></div>
-
-    </div>
+  <div class="domains-card">
+    <div class="domains-title">🌐 备份线路域名</div>
+    <div class="domains-tip">按站长分组，每组域名互为备份，任一个可用：</div>
+    <div id="about-domains-list"></div>
   </div>
 
 </div>
@@ -301,78 +179,28 @@ body.batch-mode .mode-batch{display:block}
 </footer>
 
 <script>
-// ========== 自动检测线路（/into 结尾，检测到可用等待 2 秒后跳转） ==========
+// ========== 检测配置 ==========
 const CONFIG = {
-  countdownUrls: [
+  // 检测这些 /into 端点，第一个可用的用于跳转
+  probeUrls: [
     "https://0.12yue.de5.net/into",
     "https://0.cdz.qzz.io/into",
     "https://0.wdzb.eu.cc/into",
     "https://0.wudaozhe.net/into"
-  ]
+  ],
+  // 跳转到 B 页面的路径（相对于可用服务器的根路径）
+  jumpPath: "/"
 };
 
-// 检测到可用线路后，等待多久再跳转（毫秒）
-const JUMP_DELAY_MS = 2000;
-
-// ========== 分组站点数据 ==========
-const DOMAIN_GROUPS = [
-  {
-    name: "误道者站点",
-    desc: "主站线路",
-    domains: [
-      "https://0.wudaozhe.net",
-      "https://0.12yue.de5.net",
-      "https://0.cdz.qzz.io",
-      "https://0.wdzb.eu.cc"
-    ]
-  },
-  {
-    name: "雪衣玉龙站点",
-    desc: "备选线路",
-    domains: [
-      "https://ym.120733.xyz",
-      "https://4.wudaozhe.net"
-    ]
-  },
-  {
-    name: "韧忍仁人站点",
-    desc: "备选线路",
-    domains: [
-      "https://liujin86.ccwu.cc",
-      "https://8.wudaozhe.net"
-    ]
-  },
-  {
-    name: "第五站点",
-    desc: "备选线路",
-    domains: [
-      "https://tvthaox.cc.cd",
-      "https://5.wudaozhe.net"
-    ]
-  },
-  {
-    name: "祥子站点",
-    desc: "备选线路",
-    domains: [
-      "https://nxz.de5.net",
-      "https://6.wudaozhe.net"
-    ]
-  },
-  {
-    name: "第七站点",
-    desc: "备选线路",
-    domains: [
-      "https://tvbox-api.luca.dpdns.org"
-    ]
-  }
-];
-
-const CONCURRENCY = 6;
 const TIMEOUT_SEC = 12;
 
 function noCacheUrl(url) {
   const sep = url.includes("?") ? "&" : "?";
   return url + sep + "_t=" + Date.now();
+}
+
+function hostOf(url) {
+  try { return new URL(url).host; } catch (e) { return url; }
 }
 
 (function clearAllCaches() {
@@ -388,41 +216,32 @@ function noCacheUrl(url) {
   }
 })();
 
-let mode = 'jump';
-let jumpTargetUrl = null;
+// ========== 分组站点数据 ==========
+const DOMAIN_GROUPS = [
+  { name: "误道者站点", desc: "主站线路",
+    domains: ["https://0.wudaozhe.net","https://0.12yue.de5.net","https://0.cdz.qzz.io","https://0.wdzb.eu.cc"] },
+  { name: "雪衣玉龙站点", desc: "备选线路",
+    domains: ["https://ym.120733.xyz","https://4.wudaozhe.net"] },
+  { name: "韧忍仁人站点", desc: "备选线路",
+    domains: ["https://liujin86.ccwu.cc","https://8.wudaozhe.net"] },
+  { name: "第五站点", desc: "备选线路",
+    domains: ["https://tvthaox.cc.cd","https://5.wudaozhe.net"] },
+  { name: "祥子站点", desc: "备选线路",
+    domains: ["https://nxz.de5.net","https://6.wudaozhe.net"] },
+  { name: "第七站点", desc: "备选线路",
+    domains: ["https://tvbox-api.luca.dpdns.org"] }
+];
 
-// 每个域名的状态
-let domainStates = {};
-DOMAIN_GROUPS.forEach(function(g) {
-  g.domains.forEach(function(u) {
-    domainStates[u] = { url: u, state: 'wait', lat: null };
-  });
-});
-
-const bodyEl = document.body;
 const statusEl = document.getElementById('status');
-const actionButtons = document.getElementById('actionButtons');
-const stayBtn = document.getElementById('stayBtn');
-const gotoBtn = document.getElementById('gotoBtn');
 const aboutDomainsListEl = document.getElementById('about-domains-list');
-const aboutDomainsListBatchEl = document.getElementById('about-domains-list-batch');
 
-const stTotal = document.getElementById("stTotal");
-const stOk = document.getElementById("stOk");
-const stFail = document.getElementById("stFail");
-const stWait = document.getElementById("stWait");
-const stMsg = document.getElementById("stMsg");
-const btnStart = document.getElementById("btnStart");
-const btnEnterSite = document.getElementById("btnEnterSite");
-
-// ========== 渲染分组（含检测状态） ==========
-function renderGroupsInto(container, withStatus) {
+// ========== 渲染分组 ==========
+function renderGroupsInto(container) {
   if (!container) return;
   container.innerHTML = '';
   DOMAIN_GROUPS.forEach(function(group) {
     const card = document.createElement('div');
     card.className = 'domain-group-card';
-    card.dataset.name = group.name;
 
     const head = document.createElement('div');
     head.className = 'domain-group-head';
@@ -438,139 +257,38 @@ function renderGroupsInto(container, withStatus) {
       const line = document.createElement('div');
       line.className = 'domain-line';
       line.dataset.url = domain;
-
-      if (withStatus) {
-        const st = domainStates[domain] || { state: 'wait', lat: null };
-        const latTxt = st.state === 'ok' ? (st.lat + ' ms')
-                     : st.state === 'fail' ? '失败'
-                     : st.state === 'checking' ? '检测中…' : '—';
-        line.innerHTML =
-          '<span class="status-dot"></span>' +
-          '<span class="url-text">' + domain + '</span>' +
-          '<span class="lat">' + latTxt + '</span>' +
-          '<button class="copy-btn" data-url="' + domain + '">复制</button>';
-      } else {
-        line.innerHTML =
-          '<span class="url-text">' + domain + '</span>' +
-          '<button class="copy-btn" data-url="' + domain + '">复制</button>';
-      }
+      line.innerHTML =
+        '<span class="url-text">' + domain + '</span>' +
+        '<button class="copy-btn" data-url="' + domain + '">复制</button>';
       bodyDiv.appendChild(line);
     });
     card.appendChild(bodyDiv);
-
     container.appendChild(card);
   });
 }
 
-function renderAboutDomains() {
-  renderGroupsInto(aboutDomainsListEl, false);
-  renderGroupsInto(aboutDomainsListBatchEl, true);
-}
-
-// 只更新批量模式下的分组显示
-function updateBatchGroupDisplay() {
-  const lines = aboutDomainsListBatchEl.querySelectorAll('.domain-line');
-  lines.forEach(function(line) {
-    const url = line.dataset.url;
-    const st = domainStates[url];
-    if (!st) return;
-
-    line.classList.remove('ok', 'fail', 'checking');
-    if (st.state === 'ok') line.classList.add('ok');
-    else if (st.state === 'fail') line.classList.add('fail');
-    else if (st.state === 'checking') line.classList.add('checking');
-
-    const latEl = line.querySelector('.lat');
-    if (latEl) {
-      latEl.textContent = st.state === 'ok' ? (st.lat + ' ms')
-                       : st.state === 'fail' ? '失败'
-                       : st.state === 'checking' ? '检测中…' : '—';
-    }
-  });
-}
-
-// ========== 统计 ==========
-function updateBatchStats() {
-  let ok = 0, fail = 0, wait = 0, checking = 0;
-  Object.keys(domainStates).forEach(function(k) {
-    const s = domainStates[k].state;
-    if (s === 'ok') ok++;
-    else if (s === 'fail') fail++;
-    else if (s === 'checking') checking++;
-    else wait++;
-  });
-  stTotal.textContent = Object.keys(domainStates).length;
-  stOk.textContent = ok;
-  stFail.textContent = fail;
-  stWait.textContent = wait + checking;
-}
-
-// ========== 切换模式 ==========
-function switchToBatchMode() {
-  mode = 'batch';
-  bodyEl.classList.add('batch-mode');
-
-  Object.keys(domainStates).forEach(function(k) {
-    domainStates[k].state = 'wait';
-    domainStates[k].lat = null;
-  });
-
-  updateBatchGroupDisplay();
-  updateBatchStats();
-  updateEnterButton();
-
-  startBatchCheck();
-}
-
-function switchToJumpMode() {
-  mode = 'jump';
-  bodyEl.classList.remove('batch-mode');
-
-  Object.keys(domainStates).forEach(function(k) {
-    domainStates[k].state = 'wait';
-    domainStates[k].lat = null;
-  });
-
-  jumpTargetUrl = null;
-  actionButtons.style.display = 'none';
-  statusEl.textContent = '⏳ 正在检测可用线路...';
-
-  checkFirstAvailable();
-}
-
-function updateEnterButton() {
-  const okCount = Object.keys(domainStates).filter(function(k) {
-    return domainStates[k].state === 'ok';
-  }).length;
-  if (okCount > 0) {
-    btnEnterSite.disabled = false;
-    btnEnterSite.textContent = '🌐 进入网站 (' + okCount + ' 条可用)';
-  } else {
-    btnEnterSite.disabled = false;
-    btnEnterSite.textContent = '🌐 进入网站';
-  }
-}
-
-// ========== 主动检测：检测到可用后等待 2 秒再跳转 ==========
+// ========== 检测并跳转 ==========
 async function checkFirstAvailable() {
-  const urls = CONFIG.countdownUrls;
+  const urls = CONFIG.probeUrls;
   for (let i = 0; i < urls.length; i++) {
     const url = urls[i];
-    statusEl.textContent = '⏳ 正在检测第 ' + (i + 1) + ' 个线路：' + url;
+    // 两行显示，固定 48px 高度内
+    statusEl.innerHTML = '⏳ 正在检测线路 ' + (i + 1) + '/' + urls.length + '<br>' +
+      '<span style="font-size:.75rem;color:#5a6f88">' + hostOf(url) + '</span>';
+
     const ok = await probeUrl(url, TIMEOUT_SEC);
     if (ok) {
-      jumpTargetUrl = url;
       statusEl.innerHTML = '✅ 线路可用，正在进入...<br>' +
-        '<span style="font-size:.75rem;color:#5a6f88">' + url + '</span>';
-      // 等待 2 秒后再跳转
+        '<span style="font-size:.75rem;color:#5a6f88">' + hostOf(url) + '</span>';
+      // 跳转到 B 页面
+      const bUrl = new URL(CONFIG.jumpPath, url).href;
       setTimeout(function() {
-        window.location.href = url;
-      }, JUMP_DELAY_MS);
+        window.location.href = bUrl;
+      }, 1200);
       return;
     }
   }
   statusEl.innerHTML = '❌ 所有线路均不可用，请稍后再试';
-  actionButtons.style.display = 'none';
 }
 
 function probeUrl(url, timeoutSec) {
@@ -592,111 +310,6 @@ function probeUrl(url, timeoutSec) {
   });
 }
 
-// ========== 批量检测 ==========
-let aborting = false;
-
-async function startBatchCheck() {
-  aborting = false;
-  btnStart.disabled = true;
-  stMsg.textContent = '检测中…';
-
-  Object.keys(domainStates).forEach(function(k) {
-    domainStates[k].state = 'wait';
-    domainStates[k].lat = null;
-  });
-  updateBatchGroupDisplay();
-  updateBatchStats();
-
-  const urls = Object.keys(domainStates);
-
-  let idx = 0;
-  const workers = Array.from({ length: CONCURRENCY }, async function() {
-    while (!aborting) {
-      const i = idx++;
-      if (i >= urls.length) break;
-      const url = urls[i];
-
-      domainStates[url].state = 'checking';
-      updateBatchGroupDisplay();
-      updateBatchStats();
-
-      const r = await probeWithLatency(url);
-      if (aborting) break;
-
-      domainStates[url].state = r.ok ? 'ok' : 'fail';
-      domainStates[url].lat = r.lat || null;
-      updateBatchGroupDisplay();
-      updateBatchStats();
-
-      const done = Object.keys(domainStates).filter(function(k) {
-        return domainStates[k].state === 'ok' || domainStates[k].state === 'fail';
-      }).length;
-      stMsg.textContent = '进度 ' + done + '/' + urls.length;
-    }
-  });
-
-  await Promise.all(workers);
-  btnStart.disabled = false;
-
-  if (aborting) {
-    stMsg.textContent = "已停止";
-  } else {
-    const okCount = Object.keys(domainStates).filter(function(k) {
-      return domainStates[k].state === 'ok';
-    }).length;
-    stMsg.textContent = okCount ? '完成，可用 ' + okCount + ' 条' : "全部不可用";
-  }
-  updateEnterButton();
-}
-
-function probeWithLatency(url) {
-  const controller = new AbortController();
-  const t0 = performance.now();
-  const to = setTimeout(function() { controller.abort(); }, TIMEOUT_SEC * 1000);
-  return new Promise(function(resolve) {
-    fetch(noCacheUrl(url), {
-      method: "GET",
-      mode: "no-cors",
-      cache: "no-store",
-      signal: controller.signal,
-      headers: {
-        'Cache-Control': 'no-cache, no-store, must-revalidate',
-        'Pragma': 'no-cache'
-      }
-    })
-      .then(function() {
-        clearTimeout(to);
-        resolve({ ok: true, lat: Math.round(performance.now() - t0) });
-      })
-      .catch(function() {
-        clearTimeout(to);
-        resolve({ ok: false });
-      });
-  });
-}
-
-// ========== 按钮事件 ==========
-document.getElementById("btnStart").addEventListener("click", startBatchCheck);
-
-document.getElementById("btnCopyOK").addEventListener("click", function() {
-  const ok = Object.keys(domainStates)
-    .filter(function(k) { return domainStates[k].state === 'ok'; })
-    .sort(function(a, b) {
-      return (domainStates[a].lat || 9999) - (domainStates[b].lat || 9999);
-    });
-  if (!ok.length) {
-    stMsg.textContent = "暂无可用线路";
-    return;
-  }
-  copyText(ok.join("\n"), function() {
-    stMsg.textContent = '已复制 ' + ok.length + ' 条可用线路';
-  });
-});
-
-btnEnterSite.addEventListener("click", function() {
-  switchToJumpMode();
-});
-
 // ========== 复制功能 ==========
 document.addEventListener("click", function(e) {
   const copy = e.target.closest(".copy-btn");
@@ -713,13 +326,6 @@ document.addEventListener("click", function(e) {
         copy.classList.remove("copied");
       }, 1500);
     });
-    return;
-  }
-  if (mode === 'batch') {
-    const line = e.target.closest(".domain-line");
-    if (line && line.dataset.url) {
-      window.open(line.dataset.url, "_blank");
-    }
   }
 });
 
@@ -744,7 +350,7 @@ function copyText(text, done) {
 }
 
 // ========== 初始化 ==========
-renderAboutDomains();
+renderGroupsInto(aboutDomainsListEl);
 checkFirstAvailable();
 </script>
 </body>
