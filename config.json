@@ -3,21 +3,45 @@
     "title": "海量接口搬运备份",
     "logo": "vip/jueson.jpg",
     "subtitle": "备用数据源，防屏不迷路",
-    "qqGroup": "963502550",
-    "footer": "本站接口资源由【误道者】整理。所有资源均来自互联网，版权归原作者所有。仅供测试学习使用，请勿用于违法及商业用途，请勿付费购买。如涉及侵权，请联系删除。 QQ 群：963502550。"
+    "qqText": "猛戳这里加入QQ群: ",
+    "qqHighlight": "点击",
+    "qqUrl": "./qq",
+    "footer": "本站接口资源由【误道者】整理。所有资源均来自互联网，版权归原作者所有。仅供测试学习使用，请勿用于违法及商业用途，请勿付费购买。如涉及侵权，请联系删除。"
   },
 
   "about": {
     "domains": "cy/站点域名分组.json",
     "declaration": "本站接口资源由【误道者】整理。所有资源均来自互联网，版权归原作者所有。仅供测试学习使用，请勿用于违法及商业用途，请勿付费购买。如涉及侵权，请联系删除。",
-    "qqGroup": "963502550",
-    "telegram": "https://t.me/tg6603",
-    "projectUrl": "https://github.com/lubin776/tvbox-api-backup",
     "contributorsNote": "* 还有部分贡献者因未留下署名信息而未在此列出，同样感谢你们的默默付出。如有遗漏请联系站长补充。",
     "contributors": [
       { "name": "误道者", "role": "站长 / 资源整理", "desc": "站点发起与接口资源整理", "avatar": "vip/jueson.jpg" },
       { "name": "沫离", "role": "弹幕分页", "desc": "贡献弹幕书源音乐源漫画源等模块", "avatar": "vip/沫离.jpg" },
       { "name": "简约风<格>", "role": "推广贡献", "desc": "将本网页内嵌 APP 进行推广分发", "avatar": "vip/简约风格.jpg" }
+    ],
+    "quickLinks": [
+      {
+        "icon": "vip/qq.svg",
+        "label": "加入Q群",
+        "url": "./qq"
+      },
+      {
+        "icon": "vip/wc.svg",
+        "label": "微信赞赏",
+        "type": "modal",
+        "title": "微信赞赏码",
+        "image": "vip/zsm.png",
+        "tip": "长按图片识别，或保存到相册后扫码"
+      },
+      {
+        "icon": "vip/tg.svg",
+        "label": "TG群组",
+        "url": "https://t.me/tg6603"
+      },
+      {
+        "icon": "vip/gh.svg",
+        "label": "GitHub",
+        "url": "https://github.com/lubin776/tvbox-api-backup"
+      }
     ]
   },
 
@@ -108,7 +132,6 @@
 
   "sourceFiles": {
     "list": "list.txt",
-    "live": "livelist.txt",
-    "config": "config.json"
+    "live": "livelist.txt"
   }
 }
