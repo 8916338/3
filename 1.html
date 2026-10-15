@@ -24,6 +24,12 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
   background:#e8f1fb;border:1px solid #c9e0f9;border-radius:20px;
   padding:1px 9px;vertical-align:middle;margin-left:6px;letter-spacing:.3px;
 }
+.version-in-card{
+  display:inline-block;font-size:.6rem;font-weight:600;color:#4a9eff;
+  background:#e8f1fb;border:1px solid #c9e0f9;border-radius:20px;
+  padding:1px 8px;letter-spacing:.3px;line-height:14px;
+  margin-top:4px;
+}
 .header-divider{height:1px;background:#e4ebf3;margin:12px 0}
 .subtitle{font-size:.78rem;color:#7a8fa3;line-height:1.6}
 .qq-link{color:#4a9eff;text-decoration:none;font-weight:600}
@@ -225,7 +231,7 @@ body.batch-mode .mode-batch{display:block}
 <div class="container">
 
   <div class="header-block">
-    <h1>海量接口搬运备份<span class="version-tag">v1.0.7</span></h1>
+    <h1>海量接口搬运备份</h1>
     <div class="header-divider"></div>
     <p class="subtitle">
       备用数据源，防屏不迷路<br>
@@ -239,6 +245,7 @@ body.batch-mode .mode-batch{display:block}
   <div class="mode-jump" id="modeJump">
     <div class="status-card">
       <div class="status-text" id="status">⏳ 正在检测可用线路...</div>
+      <span class="version-in-card">v1.0.7</span>
       <div class="action-buttons" id="actionButtons">
         <button class="btn-stay" id="stayBtn">🧷 留在本页</button>
         <button class="btn-goto" id="gotoBtn">🚀 立即跳转</button>
@@ -308,7 +315,7 @@ body.batch-mode .mode-batch{display:block}
 </footer>
 
 <script>
-// ========== 自动检测线路（/into 结尾，检测到可用等待 2 秒后跳转） ==========
+// ========== 自动检测线路（/into 结尾，检测到可用等待 5 秒后跳转） ==========
 const CONFIG = {
   countdownUrls: [
     "https://0.12yue.de5.net/into",
@@ -319,7 +326,7 @@ const CONFIG = {
 };
 
 // 检测到可用线路后，等待多久再跳转（毫秒）
-const JUMP_DELAY_MS = 2000;
+const JUMP_DELAY_MS = 5000;
 
 // ========== 分组站点数据 ==========
 const DOMAIN_GROUPS = [
@@ -560,7 +567,7 @@ function updateEnterButton() {
   }
 }
 
-// ========== 主动检测：检测到可用后等待 2 秒再跳转 ==========
+// ========== 主动检测：检测到可用后等待 5 秒再跳转 ==========
 async function checkFirstAvailable() {
   const urls = CONFIG.countdownUrls;
   for (let i = 0; i < urls.length; i++) {
@@ -572,7 +579,7 @@ async function checkFirstAvailable() {
       jumpTargetUrl = url;
       // 只显示“线路可用，正在进入”，不显示网址
       statusEl.innerHTML = '✅ 线路可用，正在进入...';
-      // 等待 2 秒后再跳转
+      // 等待 5 秒后再跳转
       autoJumpTimer = setTimeout(function() {
         window.location.href = url;
       }, JUMP_DELAY_MS);
