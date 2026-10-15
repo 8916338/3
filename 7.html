@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>海量接口搬运备份7</title>
+<title>海量接口搬运备份</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%}
@@ -32,11 +32,18 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 .status-card{
   background:#fff;border-radius:8px;padding:16px 18px;
   border:1px solid #d4dbe5;margin-bottom:16px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  height:150px;
 }
-.status-text{font-size:.88rem;color:#2563eb;line-height:1.7}
-.countdown{color:#10b981;font-weight:700;font-size:1.05rem}
+.status-text{
+  font-size:.88rem;color:#2563eb;line-height:24px;
+  width:100%;height:48px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.countdown{color:#10b981;font-weight:700;font-size:1.05rem;line-height:24px}
 
-.action-buttons{display:flex;justify-content:center;gap:12px;margin-top:12px;flex-wrap:wrap}
+.action-buttons{display:flex;justify-content:center;gap:12px;margin-top:12px;flex-wrap:wrap;height:36px;align-items:center}
 .btn-stay,.btn-goto{
   border:none;border-radius:40px;padding:8px 18px;font-size:.8rem;font-weight:500;
   cursor:pointer;transition:background .15s,transform .1s;touch-action:manipulation;
@@ -218,18 +225,20 @@ body.batch-mode .mode-batch{display:block}
 <div class="container">
 
   <div class="header-block">
-    <h1>海量接口搬运备份<span class="version-tag">v1.0.6</span></h1>
+    <h1>海量接口搬运备份</h1>
     <div class="header-divider"></div>
-    <p class="subtitle">
-      备用数据源，防屏不迷路<br>
-      <a class="qq-link" href="https://qm.qq.com/q/gmRKKPT3x0" target="_blank" rel="noopener noreferrer">猛戳这里加入QQ群: <span style="color:#00C853;">点击</span></a>
-    </p>
+    <p class="subtitle" id="header-subtitle"> 备用数据源，防屏不迷路 
+ <br>
+ <a class="qq-link" href="https://0.wudaozhe.net/qq群" target="_blank" rel="noopener noreferrer"> 猛戳这里加入QQ群: 
+  <span style="color:#00C853;">点击</span>
+ </a>
+ </p>
   </div>
 
   <!-- 跳转模式（初始显示） -->
   <div class="mode-jump" id="modeJump">
     <div class="status-card">
-      <div class="status-text" id="status">⏳ 正在检测可用线路...</div>
+      <div class="status-text" id="status">正在跳转进入...</div>
       <div class="action-buttons" id="actionButtons" style="display:none;">
         <button class="btn-stay" id="stayBtn">🧷 留在本页</button>
         <button class="btn-goto" id="gotoBtn">🚀 立即跳转</button>
@@ -278,9 +287,10 @@ body.batch-mode .mode-batch{display:block}
 </div>
 
 <div class="contact-section">
-  <p>加入Q群请点击：
-    <a id="about-qq" href="https://qm.qq.com/q/gmRKKPT3x0" target="_blank" rel="noopener noreferrer">1067685939</a>
-  </p>
+<p><a class="qq-link" href="https://0.wudaozhe.net/qq群" target="_blank" rel="noopener noreferrer"> 猛戳这里加入QQ群: 
+  <span style="color:#00C853;">点击查看Q群列表</span>
+ </a>
+ </p>
   <p>加入tg群组请点击：
     <a id="about-tg" href="https://t.me/tg6603" target="_blank" rel="noopener noreferrer">https://t.me/tg6603</a>
   </p>
@@ -298,15 +308,15 @@ body.batch-mode .mode-batch{display:block}
 </footer>
 
 <script>
-// ========== 自动检测线路（/into 结尾） ==========
+// ========== 自动跳转目标（当前域名相对路径 /app） ==========
 const CONFIG = {
   countdownUrls: [
-    "https://0.12yue.de5.net/into",
-    "https://0.cdz.qzz.io/into",
-    "https://0.wdzb.eu.cc/into",
-    "https://0.wudaozhe.net/into"
+    window.location.origin + "/app"
   ]
 };
+
+// 等待多久再跳转（毫秒），不显示倒计时数字
+const JUMP_DELAY_MS = 2000;
 
 // ========== 分组站点数据 ==========
 const DOMAIN_GROUPS = [
@@ -527,7 +537,6 @@ function switchToJumpMode() {
 
   jumpTargetUrl = null;
   actionButtons.style.display = 'none';
-  statusEl.textContent = '⏳ 正在检测可用线路...';
 
   checkFirstAvailable();
 }
@@ -545,83 +554,16 @@ function updateEnterButton() {
   }
 }
 
-// ========== 主动检测 ==========
-async function checkFirstAvailable() {
-  const urls = CONFIG.countdownUrls;
-  for (let i = 0; i < urls.length; i++) {
-    const url = urls[i];
-    statusEl.textContent = '⏳ 正在检测第 ' + (i + 1) + ' 个线路：' + url;
-    const ok = await probeUrl(url, TIMEOUT_SEC);
-    if (ok) {
-      jumpTargetUrl = url;
-      startJumpCountdown(url, 5);
-      return;
-    }
-  }
-  statusEl.innerHTML = '❌ 所有线路均不可用，请稍后再试';
-  actionButtons.style.display = 'none';
-}
-
-function probeUrl(url, timeoutSec) {
-  return new Promise(function(resolve) {
-    const controller = new AbortController();
-    const timer = setTimeout(function() { controller.abort(); }, timeoutSec * 1000);
-    fetch(noCacheUrl(url), {
-      method: 'GET',
-      mode: 'no-cors',
-      cache: 'no-store',
-      signal: controller.signal,
-      headers: {
-        'Cache-Control': 'no-cache, no-store, must-revalidate',
-        'Pragma': 'no-cache'
-      }
-    })
-      .then(function() { clearTimeout(timer); resolve(true); })
-      .catch(function() { clearTimeout(timer); resolve(false); });
-  });
-}
-
-let jumpTimer = null;
-function startJumpCountdown(url, seconds) {
-  if (jumpTimer) clearInterval(jumpTimer);
-  let remain = seconds;
-  actionButtons.style.display = 'flex';
-  stayBtn.style.display = 'inline-flex';
-  gotoBtn.style.display = 'inline-flex';
-
-  function update() {
-    statusEl.innerHTML = '✅ 线路可用，<span class="countdown">' + remain + '</span> 秒后跳转<br>' +
-      '<span style="font-size:.75rem;color:#5a6f88">' + url + '</span>';
-  }
-  update();
-
-  jumpTimer = setInterval(function() {
-    remain--;
-    if (remain > 0) {
-      update();
-    } else {
-      clearInterval(jumpTimer);
-      jumpTimer = null;
-      window.location.href = url;
-    }
-  }, 1000);
-
-  stayBtn.onclick = function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (jumpTimer) { clearInterval(jumpTimer); jumpTimer = null; }
-    switchToBatchMode();
-  };
-
-  gotoBtn.onclick = function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (jumpTimer) { clearInterval(jumpTimer); jumpTimer = null; }
+// ========== 等待 2 秒后跳转，不显示倒计时数字 ==========
+function checkFirstAvailable() {
+  const url = CONFIG.countdownUrls[0];
+  statusEl.textContent = '正在跳转进入...';
+  setTimeout(function() {
     window.location.href = url;
-  };
+  }, JUMP_DELAY_MS);
 }
 
-// ========== 批量检测（逐域名更新到分组中） ==========
+// ========== 批量检测 ==========
 let aborting = false;
 
 async function startBatchCheck() {
