@@ -238,7 +238,7 @@ body.batch-mode .mode-batch{display:block}
   <!-- 跳转模式（初始显示） -->
   <div class="mode-jump" id="modeJump">
     <div class="status-card">
-      <div class="status-text" id="status"></div>
+      <div class="status-text" id="status">正在跳转进入...</div>
       <div class="action-buttons" id="actionButtons" style="display:none;">
         <button class="btn-stay" id="stayBtn">🧷 留在本页</button>
         <button class="btn-goto" id="gotoBtn">🚀 立即跳转</button>
@@ -308,12 +308,15 @@ body.batch-mode .mode-batch{display:block}
 </footer>
 
 <script>
-// ========== 自动跳转目标（当前域名相对路径 /app），直接跳转不倒数 ==========
+// ========== 自动跳转目标（当前域名相对路径 /app） ==========
 const CONFIG = {
   countdownUrls: [
     window.location.origin + "/app"
   ]
 };
+
+// 等待多久再跳转（毫秒），不显示倒计时数字
+const JUMP_DELAY_MS = 2000;
 
 // ========== 分组站点数据 ==========
 const DOMAIN_GROUPS = [
@@ -551,10 +554,13 @@ function updateEnterButton() {
   }
 }
 
-// ========== 直接跳转，不再倒计时 ==========
+// ========== 等待 2 秒后跳转，不显示倒计时数字 ==========
 function checkFirstAvailable() {
   const url = CONFIG.countdownUrls[0];
-  window.location.href = url;
+  statusEl.textContent = '正在跳转进入...';
+  setTimeout(function() {
+    window.location.href = url;
+  }, JUMP_DELAY_MS);
 }
 
 // ========== 批量检测 ==========
