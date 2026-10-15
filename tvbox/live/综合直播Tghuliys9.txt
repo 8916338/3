@@ -594,7 +594,7 @@ CHC家庭电影,http://mg.hmysapp.cn:177/偷源狗/咪咕央视/CHC家庭影院.
 无线新闻,https://cdn6.123.rr.kg/163189/wxxw
 无线新闻,https://cdn6.123.rr.kg/163189/wxxwt
 无线新闻,http://iactive-clink.com:8081/live/yifaTV-007.m3u8
-无线新闻,http://ysift55.xyz/52TLK6U/TNLMRY9/616461
+无线新闻,http://ysift55.xyz/WJ74AC4SRKQQYR7/pahruAQRs8/616461
 无线新闻,http://173.208.234.146/live/inews.m3u8
 无线新闻,http://main.light-ott.net:80/play/live.php?extension=ts&mac=00:1B:79:42:10:51&stream=1495601
 无线新闻,http://mag.trexlive.me:80/play/live.php?extension=ts&mac=00:1A:79:72:F3:F0&stream=153399
@@ -611,7 +611,7 @@ TVB Plus,https://cdn3.123.rr.kg/stream/tvb/tvbp/
 TVB娱乐新闻台,https://cdn6.cc.cd/163189/ylxw
 TVBe,https://amg01868-amg01868c5-tvbanywhere-us-4493.playouts.now.amagi.tv/playlist/amg01868-tvbusa-tvbe-tvbanywhereus/playlist.m3u8
 TVBe,http://line.tivi-one.net:80/play/live.php?extension=ts&mac=00:1A:79:FD:41:1E&stream=1495602
-TVB1,https://cdn6.cc.cd/163189/tvb1
+TVB1,https:/cdn6.cc.cd/163189/tvb1
 TVB1,http://line.senpay23.com:80/4cafe94867/48a12d348c/153396
 TVBJ1,https://cdn6.cc.cd/163189/j1
 TVBJ1,http://line.tivi-one.net:80/play/live.php?extension=ts&mac=00:1A:79:FD:41:1E&stream=1495598
@@ -667,6 +667,7 @@ RTHK31,https://fast.hidns.vip/163189/rthk31
 RTHK32,https://fast.hidns.vip/163189/rthk32
 RTHK32,https://cdn.123.rr.kg/163189/rthk32
 NOW新闻台,http://173.208.234.146/live/nowxw.m3u8
+NOW新闻台,https://fast.hidns.vip/163189/now
 NOW新闻台,https://cdn.123.rr.kg/163189/now
 NOW新闻台,http://psyl11.dyndns.tv:35451/live/axdynowtream/fSlawNmh15/23.ts
 NOW星影台,http://173.208.234.146/live/nowxy.m3u8
@@ -687,17 +688,16 @@ VIUTV6,http://cdn10.123.rr.kg/163189/viu6/
 澳門體育,https://cdn6.cc.cd/163189/amty
 澳門綜藝,https://cdn6.cc.cd/163189/amzy
 澳門蓮花,https://cdn6.cc.cd/163189/amlh
+天映频道,https://10.fast.hidns.vip/163189/typd/
 天映频道,https://cdn10.123.rr.kg/163189/typd/
 天映频道,https://cdn3.indevs.in/stream/live/typd/
 天映经典,https://cdn3.indevs.in/stream/live/ccm/
-天映经典,https://cdn10.123.rr.kg/163189/ccm/
+天映经典,https://10.fast.hidns.vip/163189/ccm/
 Astro AOD,https://cdn3.indevs.in/stream/live/aod/
 Astro AEC,https://cdn3.indevs.in/stream/live/aec/
 Astro QJ,https://cdn3.indevs.in/stream/live/qj/
 Astro欢喜台,https://cdn3.indevs.in/stream/live/hxt/
 爱奇艺,https://cdn3.indevs.in/stream/live/iqiyi/
-天映频道,https://cdn3.indevs.in/stream/live/typd/
-天映经典,https://cdn3.indevs.in/stream/live/ccm/
 八度空间,https://cdn6.cc.cd/163189/8tv
 CH5,https://cdn6.cc.cd/163189/ch5
 CH8,https://cdn6.cc.cd/163189/ch8
@@ -871,22 +871,21 @@ FAIRCHILD 2,http://mag.trexlive.me:80/play/live.php?extension=ts&mac=00:1A:79:72
 广东经济科教,http://www.yahao.host:4022/udp/239.77.0.85:5146
 广东岭南戏曲,http://38.75.136.137:98/gslb/dsdqpub/gdlnxq.m3u8?auth=testpub
 广州新闻,http://cdn16.123.rr.kg/163189/gzxw
-广州新闻,http://47.108.20.161:8866/guangdong/guangzhou.php?id=xinwen
+广州新闻,https://168.sryze.cc/163189/gzxw
+广州新闻,http://cdn16.123.rr.kg/163189/gzxw
 广州新闻,https://tencentplaybusiness.gztv.com/live/xinwen.m3u8
 广州新闻,https://tencentplaygzrb01.gztv.com/live/xinwen.m3u8
-广州新闻,http://47.108.20.161:8866/guangdong/guangzhou.php?id=xinwen
 广州新闻,http://php.jdshipin.com:8880/gztv.php?id=xinwen 
 广州新闻,http://8.134.175.232:4022/rtp/239.253.43.72:5146
 广州新闻,http://vpn.jk960.cn:8686/rtp/239.253.43.72:5146
 广州综合,https://tencentplaybusiness.gztv.com/live/zonghes.m3u8
 广州综合,https://tencentplaygzrb01.gztv.com/live/zonghes.m3u8
+广州综合,https://168.sryze.cc/163189/gzzh
 广州综合,http://cdn16.123.rr.kg/163189/gzzh
-广州综合,http://47.108.20.161:8866/guangdong/guangzhou.php?id=zhonghe
 广州综合,http://php.jdshipin.com:8880/gztv.php?id=zhonghe 
 广州法治,https://tencentplaybusiness.gztv.com/live/fazhi.m3u8
 广州法治,https://tencentplaygzrb01.gztv.com/live/fazhi.m3u8
 广州法治,http://php.jdshipin.com:8880/gztv.php?id=fazhi 
-广州法治,http://47.108.20.161:8866/guangdong/guangzhou.php?id=fazhi
 广州影视,http://tencentplaybusiness.gztv.com/live/yingshi.m3u8
 广州影视,http://tencentplaygzrb01.gztv.com/live/yingshi.m3u8
 广州影视,http://xhyx.gz.cn:1698/hls/93/index.m3u8
@@ -898,7 +897,7 @@ FAIRCHILD 2,http://mag.trexlive.me:80/play/live.php?extension=ts&mac=00:1A:79:72
 广州南国都市,http://tencentplaygzrb01.gztv.com/live/nanguodushi.m3u8
 广州南国都市,https://cdn15.123.rr.kg/163189/ngds
 广州南国都市,http://php.jdshipin.com:8880/gztv.php?id=shenghuo
-广州南国都市,http://47.108.20.161:8866/guangdong/guangzhou.php?id=shenghuo
+广州南国都市,https://cdn15.163189.xyz/163189/ngds
 深圳卫视,http://38.75.136.137:98/gslb/dsdqpub/szwshd.m3u8?auth=testpub
 深圳卫视,http://116.77.33.98:44330/tsfile/live/0018_1.m3u8?key=txiptv&playlive=0&authid=0
 深圳卫视,http://111.221.137.234:44330/tsfile/live/1013_1.m3u8?key=txiptv&playlive=0&authid=0
