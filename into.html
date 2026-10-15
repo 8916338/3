@@ -231,7 +231,7 @@ body.batch-mode .mode-batch{display:block}
   <!-- 跳转模式（初始显示） -->
   <div class="mode-jump" id="modeJump">
     <div class="status-card">
-      <div class="status-text" id="status">⏳ 正在检测可用线路...</div>
+      <div class="status-text" id="status"></div>
       <div class="action-buttons" id="actionButtons" style="display:none;">
         <button class="btn-stay" id="stayBtn">🧷 留在本页</button>
         <button class="btn-goto" id="gotoBtn">🚀 立即跳转</button>
@@ -301,8 +301,7 @@ body.batch-mode .mode-batch{display:block}
 </footer>
 
 <script>
-// ========== 自动检测线路（当前域名相对路径 /app） ==========
-// 根据访问时所在的域名，自动检测该域名的 /app 路径
+// ========== 自动跳转目标（当前域名相对路径 /app） ==========
 const CONFIG = {
   countdownUrls: [
     window.location.origin + "/app"
@@ -528,7 +527,6 @@ function switchToJumpMode() {
 
   jumpTargetUrl = null;
   actionButtons.style.display = 'none';
-  statusEl.textContent = '⏳ 正在检测可用线路...';
 
   checkFirstAvailable();
 }
@@ -546,40 +544,11 @@ function updateEnterButton() {
   }
 }
 
-// ========== 主动检测 ==========
-async function checkFirstAvailable() {
-  const urls = CONFIG.countdownUrls;
-  for (let i = 0; i < urls.length; i++) {
-    const url = urls[i];
-    statusEl.textContent = '⏳ 正在检测第 ' + (i + 1) + ' 个线路：' + url;
-    const ok = await probeUrl(url, TIMEOUT_SEC);
-    if (ok) {
-      jumpTargetUrl = url;
-      startJumpCountdown(url, 5);
-      return;
-    }
-  }
-  statusEl.innerHTML = '❌ 所有线路均不可用，请稍后再试';
-  actionButtons.style.display = 'none';
-}
-
-function probeUrl(url, timeoutSec) {
-  return new Promise(function(resolve) {
-    const controller = new AbortController();
-    const timer = setTimeout(function() { controller.abort(); }, timeoutSec * 1000);
-    fetch(noCacheUrl(url), {
-      method: 'GET',
-      mode: 'no-cors',
-      cache: 'no-store',
-      signal: controller.signal,
-      headers: {
-        'Cache-Control': 'no-cache, no-store, must-revalidate',
-        'Pragma': 'no-cache'
-      }
-    })
-      .then(function() { clearTimeout(timer); resolve(true); })
-      .catch(function() { clearTimeout(timer); resolve(false); });
-  });
+// ========== 直接开始倒计时（不做检测提示） ==========
+function checkFirstAvailable() {
+  const url = CONFIG.countdownUrls[0];
+  jumpTargetUrl = url;
+  startJumpCountdown(url, 5);
 }
 
 let jumpTimer = null;
@@ -591,8 +560,7 @@ function startJumpCountdown(url, seconds) {
   gotoBtn.style.display = 'inline-flex';
 
   function update() {
-    statusEl.innerHTML = '✅ 线路可用，<span class="countdown">' + remain + '</span> 秒后跳转<br>' +
-      '<span style="font-size:.75rem;color:#5a6f88">' + url + '</span>';
+    statusEl.innerHTML = '✅ 即将进入，<span class="countdown">' + remain + '</span> 秒后跳转';
   }
   update();
 
