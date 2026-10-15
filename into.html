@@ -308,7 +308,7 @@ body.batch-mode .mode-batch{display:block}
 </footer>
 
 <script>
-// ========== 自动跳转目标（当前域名相对路径 /app） ==========
+// ========== 自动跳转目标（当前域名相对路径 /app），直接跳转不倒数 ==========
 const CONFIG = {
   countdownUrls: [
     window.location.origin + "/app"
@@ -551,50 +551,10 @@ function updateEnterButton() {
   }
 }
 
-// ========== 直接开始倒计时（不做检测提示） ==========
+// ========== 直接跳转，不再倒计时 ==========
 function checkFirstAvailable() {
   const url = CONFIG.countdownUrls[0];
-  jumpTargetUrl = url;
-  startJumpCountdown(url, 3);
-}
-
-let jumpTimer = null;
-function startJumpCountdown(url, seconds) {
-  if (jumpTimer) clearInterval(jumpTimer);
-  let remain = seconds;
-  actionButtons.style.display = 'flex';
-  stayBtn.style.display = 'inline-flex';
-  gotoBtn.style.display = 'inline-flex';
-
-  function update() {
-    statusEl.innerHTML = '<span>✅ 即将进入<br><span class="countdown">' + remain + '</span> 秒后跳转</span>';
-  }
-  update();
-
-  jumpTimer = setInterval(function() {
-    remain--;
-    if (remain > 0) {
-      update();
-    } else {
-      clearInterval(jumpTimer);
-      jumpTimer = null;
-      window.location.href = url;
-    }
-  }, 1000);
-
-  stayBtn.onclick = function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (jumpTimer) { clearInterval(jumpTimer); jumpTimer = null; }
-    switchToBatchMode();
-  };
-
-  gotoBtn.onclick = function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (jumpTimer) { clearInterval(jumpTimer); jumpTimer = null; }
-    window.location.href = url;
-  };
+  window.location.href = url;
 }
 
 // ========== 批量检测 ==========
