@@ -239,7 +239,7 @@ body.batch-mode .mode-batch{display:block}
   <div class="mode-jump" id="modeJump">
     <div class="status-card">
       <div class="status-text" id="status">⏳ 正在检测可用线路...</div>
-      <div class="action-buttons" id="actionButtons" style="display:none;">
+      <div class="action-buttons" id="actionButtons">
         <button class="btn-stay" id="stayBtn">🧷 留在本页</button>
         <button class="btn-goto" id="gotoBtn">🚀 立即跳转</button>
       </div>
@@ -397,6 +397,7 @@ function noCacheUrl(url) {
 
 let mode = 'jump';
 let jumpTargetUrl = null;
+let autoJumpTimer = null;
 
 // 每个域名的状态
 let domainStates = {};
@@ -539,7 +540,8 @@ function switchToJumpMode() {
   });
 
   jumpTargetUrl = null;
-  actionButtons.style.display = 'none';
+  if (autoJumpTimer) { clearTimeout(autoJumpTimer); autoJumpTimer = null; }
+  actionButtons.style.display = 'flex';
   statusEl.textContent = '⏳ 正在检测可用线路...';
 
   checkFirstAvailable();
@@ -571,14 +573,13 @@ async function checkFirstAvailable() {
       // 只显示“线路可用，正在进入”，不显示网址
       statusEl.innerHTML = '✅ 线路可用，正在进入...';
       // 等待 2 秒后再跳转
-      setTimeout(function() {
+      autoJumpTimer = setTimeout(function() {
         window.location.href = url;
       }, JUMP_DELAY_MS);
       return;
     }
   }
   statusEl.innerHTML = '❌ 所有线路均不可用，请稍后再试';
-  actionButtons.style.display = 'none';
 }
 
 function probeUrl(url, timeoutSec) {
@@ -704,6 +705,26 @@ document.getElementById("btnCopyOK").addEventListener("click", function() {
 btnEnterSite.addEventListener("click", function() {
   switchToJumpMode();
 });
+
+// “留在本页”按钮：取消自动跳转，进入批量模式
+stayBtn.onclick = function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  if (autoJumpTimer) { clearTimeout(autoJumpTimer); autoJumpTimer = null; }
+  switchToBatchMode();
+};
+
+// “立即跳转”按钮：已检测到可用线路则跳转；否则执行“留在本页”的功能
+gotoBtn.onclick = function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  if (autoJumpTimer) { clearTimeout(autoJumpTimer); autoJumpTimer = null; }
+  if (jumpTargetUrl) {
+    window.location.href = jumpTargetUrl;
+  } else {
+    switchToBatchMode();
+  }
+};
 
 // ========== 复制功能 ==========
 document.addEventListener("click", function(e) {
