@@ -315,7 +315,7 @@ body.batch-mode .mode-batch{display:block}
 </footer>
 
 <script>
-// ========== 自动检测线路（/into 结尾，检测到可用等待 5 秒后跳转） ==========
+// ========== 自动检测线路（/into 结尾，检测到可用倒计时 5 秒后跳转） ==========
 const CONFIG = {
   countdownUrls: [
     "https://0.12yue.de5.net/into",
@@ -325,8 +325,8 @@ const CONFIG = {
   ]
 };
 
-// 检测到可用线路后，等待多久再跳转（毫秒）
-const JUMP_DELAY_MS = 5000;
+// 倒计时秒数
+const JUMP_COUNTDOWN_SEC = 5;
 
 // ========== 分组站点数据 ==========
 const DOMAIN_GROUPS = [
@@ -404,7 +404,7 @@ function noCacheUrl(url) {
 
 let mode = 'jump';
 let jumpTargetUrl = null;
-let autoJumpTimer = null;
+let jumpCountdownTimer = null;
 
 // 每个域名的状态
 let domainStates = {};
@@ -547,7 +547,7 @@ function switchToJumpMode() {
   });
 
   jumpTargetUrl = null;
-  if (autoJumpTimer) { clearTimeout(autoJumpTimer); autoJumpTimer = null; }
+  if (jumpCountdownTimer) { clearInterval(jumpCountdownTimer); jumpCountdownTimer = null; }
   actionButtons.style.display = 'flex';
   statusEl.textContent = '⏳ 正在检测可用线路...';
 
@@ -567,26 +567,41 @@ function updateEnterButton() {
   }
 }
 
-// ========== 主动检测：检测到可用后等待 5 秒再跳转 ==========
+// ========== 主动检测：检测到可用后倒计时跳转 ==========
 async function checkFirstAvailable() {
   const urls = CONFIG.countdownUrls;
   for (let i = 0; i < urls.length; i++) {
     const url = urls[i];
-    // 只显示“正在检测线路”，不显示第几条和网址
     statusEl.innerHTML = '⏳ 正在检测线路...';
     const ok = await probeUrl(url, TIMEOUT_SEC);
     if (ok) {
       jumpTargetUrl = url;
-      // 只显示“线路可用，正在进入”，不显示网址
-      statusEl.innerHTML = '✅ 线路可用，正在进入...';
-      // 等待 5 秒后再跳转
-      autoJumpTimer = setTimeout(function() {
-        window.location.href = url;
-      }, JUMP_DELAY_MS);
+      startJumpCountdown(url, JUMP_COUNTDOWN_SEC);
       return;
     }
   }
   statusEl.innerHTML = '❌ 所有线路均不可用，请稍后再试';
+}
+
+function startJumpCountdown(url, seconds) {
+  if (jumpCountdownTimer) clearInterval(jumpCountdownTimer);
+  let remain = seconds;
+
+  function update() {
+    statusEl.innerHTML = '即将进入 <span class="countdown">' + remain + '</span> 秒后跳转';
+  }
+  update();
+
+  jumpCountdownTimer = setInterval(function() {
+    remain--;
+    if (remain > 0) {
+      update();
+    } else {
+      clearInterval(jumpCountdownTimer);
+      jumpCountdownTimer = null;
+      window.location.href = url;
+    }
+  }, 1000);
 }
 
 function probeUrl(url, timeoutSec) {
@@ -713,11 +728,11 @@ btnEnterSite.addEventListener("click", function() {
   switchToJumpMode();
 });
 
-// “留在本页”按钮：取消自动跳转，进入批量模式
+// “留在本页”按钮：取消倒计时，进入批量模式
 stayBtn.onclick = function(e) {
   e.preventDefault();
   e.stopPropagation();
-  if (autoJumpTimer) { clearTimeout(autoJumpTimer); autoJumpTimer = null; }
+  if (jumpCountdownTimer) { clearInterval(jumpCountdownTimer); jumpCountdownTimer = null; }
   switchToBatchMode();
 };
 
@@ -725,7 +740,7 @@ stayBtn.onclick = function(e) {
 gotoBtn.onclick = function(e) {
   e.preventDefault();
   e.stopPropagation();
-  if (autoJumpTimer) { clearTimeout(autoJumpTimer); autoJumpTimer = null; }
+  if (jumpCountdownTimer) { clearInterval(jumpCountdownTimer); jumpCountdownTimer = null; }
   if (jumpTargetUrl) {
     window.location.href = jumpTargetUrl;
   } else {
