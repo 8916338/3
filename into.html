@@ -32,11 +32,18 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
 .status-card{
   background:#fff;border-radius:8px;padding:16px 18px;
   border:1px solid #d4dbe5;margin-bottom:16px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  height:150px;
 }
-.status-text{font-size:.88rem;color:#2563eb;line-height:1.7}
-.countdown{color:#10b981;font-weight:700;font-size:1.05rem}
+.status-text{
+  font-size:.88rem;color:#2563eb;line-height:24px;
+  width:100%;height:48px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.countdown{color:#10b981;font-weight:700;font-size:1.05rem;line-height:24px}
 
-.action-buttons{display:flex;justify-content:center;gap:12px;margin-top:12px;flex-wrap:wrap}
+.action-buttons{display:flex;justify-content:center;gap:12px;margin-top:12px;flex-wrap:wrap;height:36px;align-items:center}
 .btn-stay,.btn-goto{
   border:none;border-radius:40px;padding:8px 18px;font-size:.8rem;font-weight:500;
   cursor:pointer;transition:background .15s,transform .1s;touch-action:manipulation;
@@ -560,7 +567,7 @@ function startJumpCountdown(url, seconds) {
   gotoBtn.style.display = 'inline-flex';
 
   function update() {
-    statusEl.innerHTML = '✅ 即将进入，<span class="countdown">' + remain + '</span> 秒后跳转';
+    statusEl.innerHTML = '<span>✅ 即将进入<br><span class="countdown">' + remain + '</span> 秒后跳转</span>';
   }
   update();
 
