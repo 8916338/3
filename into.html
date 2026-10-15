@@ -308,7 +308,7 @@ body.batch-mode .mode-batch{display:block}
   <div class="mode-jump" id="modeJump">
     <div class="status-card">
       <div class="status-text" id="status">正在跳转进入...</div>
-      <div class="action-buttons" id="actionButtons" style="display:none;">
+      <div class="action-buttons" id="actionButtons">
         <button class="btn-stay" id="stayBtn">🧷 留在本页</button>
         <button class="btn-goto" id="gotoBtn">🚀 立即跳转</button>
       </div>
@@ -355,7 +355,7 @@ body.batch-mode .mode-batch{display:block}
 
 </div>
 
-<!-- 底部快捷图标（替换原 TG群组 + 项目地址 文字链接） -->
+<!-- 底部快捷图标 -->
 <div class="contact-section">
   <div class="quick-links">
     <a class="quick-item" href="https://0.wudaozhe.net/qq群" target="_blank" rel="noopener noreferrer" aria-label="QQ 社群">
@@ -505,6 +505,7 @@ function noCacheUrl(url) {
 
 let mode = 'jump';
 let jumpTargetUrl = null;
+let autoJumpTimer = null;
 
 // 每个域名的状态
 let domainStates = {};
@@ -647,7 +648,8 @@ function switchToJumpMode() {
   });
 
   jumpTargetUrl = null;
-  actionButtons.style.display = 'none';
+  if (autoJumpTimer) { clearTimeout(autoJumpTimer); autoJumpTimer = null; }
+  actionButtons.style.display = 'flex';
 
   checkFirstAvailable();
 }
@@ -668,8 +670,9 @@ function updateEnterButton() {
 // ========== 等待 2 秒后跳转，不显示倒计时数字 ==========
 function checkFirstAvailable() {
   const url = CONFIG.countdownUrls[0];
+  jumpTargetUrl = url;
   statusEl.textContent = '正在跳转进入...';
-  setTimeout(function() {
+  autoJumpTimer = setTimeout(function() {
     window.location.href = url;
   }, JUMP_DELAY_MS);
 }
@@ -778,6 +781,24 @@ document.getElementById("btnCopyOK").addEventListener("click", function() {
 btnEnterSite.addEventListener("click", function() {
   switchToJumpMode();
 });
+
+// “留在本页”按钮：取消自动跳转，进入批量模式
+stayBtn.onclick = function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  if (autoJumpTimer) { clearTimeout(autoJumpTimer); autoJumpTimer = null; }
+  switchToBatchMode();
+};
+
+// “立即跳转”按钮：立即跳转到目标 URL
+gotoBtn.onclick = function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  if (autoJumpTimer) { clearTimeout(autoJumpTimer); autoJumpTimer = null; }
+  if (jumpTargetUrl) {
+    window.location.href = jumpTargetUrl;
+  }
+};
 
 // ========== 复制功能 ==========
 document.addEventListener("click", function(e) {
