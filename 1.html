@@ -25,7 +25,7 @@ h1{font-size:1.35rem;font-weight:700;color:#0a1a2b}
   padding:1px 9px;vertical-align:middle;margin-left:6px;letter-spacing:.3px;
 }
 .version-in-card{
-  display:inline-block;font-size:.78rem;font-weight:600;color:#4a9eff;
+  display:inline-block;font-size:.98rem;font-weight:600;color:#4a9eff;
   background:#e8f1fb;border:1px solid #c9e0f9;border-radius:20px;
   padding:2px 12px;letter-spacing:.3px;line-height:16px;
   margin-bottom:6px;
@@ -588,7 +588,8 @@ function startJumpCountdown(url, seconds) {
   let remain = seconds;
 
   function update() {
-    statusEl.innerHTML = '即将进入 <span class="countdown">' + remain + '</span> 秒后跳转';
+    // 用外层 span 包裹，避免 flex-column 把文本和 span 拆成多行
+    statusEl.innerHTML = '<span>即将进入 <span class="countdown">' + remain + '</span> 秒后跳转</span>';
   }
   update();
 
