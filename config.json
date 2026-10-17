@@ -106,6 +106,7 @@
   },
 
   "downloadSources": [
+    { "id": "online-video",   "icon": "📱", "label": "本站APP", "file": "cy/本站APP.json", "type": "online" },
     { "name": "菠菜园",   "url": "ry/菠菜园下载.json",   "icon": "🥬", "description": "整理者：误道者" },
     { "name": "奇奇副本", "url": "ry/奇奇副本.json",     "icon": "📦", "description": "整理者：误道者" },
     { "name": "无忧",     "url": "ry/无忧下载.json",     "icon": "☁️", "description": "云星" },
