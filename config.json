@@ -106,14 +106,14 @@
   },
 
   "downloadSources": [
-    { "id": "online-video",   "icon": "📱", "label": "本站APP", "file": "cy/本站APP.json", "type": "online" },
-    { "name": "菠菜园",   "url": "ry/菠菜园下载.json",   "icon": "🥬", "description": "整理者：误道者" },
-    { "name": "奇奇副本", "url": "ry/奇奇副本.json",     "icon": "📦", "description": "整理者：误道者" },
-    { "name": "无忧",     "url": "ry/无忧下载.json",     "icon": "☁️", "description": "云星" },
-    { "name": "潇洒",     "url": "ry/潇洒下载.json",     "icon": "🕶️", "description": "潇洒" },
-    { "name": "柒豪下载", "url": "ry/柒豪下载.json",     "icon": "📦", "description": "" },
-    { "name": "应用下载", "url": "ry/应用市场二.json",   "icon": "📱", "description": "" },
-    { "name": "应用市场", "url": "ry/应用市场一.json",   "icon": "🛒", "description": "" }
+  { "name": "本站APP", "url": "cy/本站APP.json", "icon": "📱", "description": "官方客户端", "type": "online" },
+  { "name": "菠菜园", "url": "ry/菠菜园下载.json", "icon": "🥬", "description": "整理者：误道者", "type": "download" },
+  { "name": "奇奇副本", "url": "ry/奇奇副本.json", "icon": "📦", "description": "整理者：误道者", "type": "download" },
+  { "name": "无忧", "url": "ry/无忧下载.json", "icon": "☁️", "description": "云星", "type": "download" },
+  { "name": "潇洒", "url": "ry/潇洒下载.json", "icon": "🕶️", "description": "潇洒", "type": "download" },
+  { "name": "柒豪下载", "url": "ry/柒豪下载.json", "icon": "📦", "description": "", "type": "download" },
+  { "name": "应用下载", "url": "ry/应用市场二.json", "icon": "📱", "description": "", "type": "download" },
+  { "name": "应用市场", "url": "ry/应用市场一.json", "icon": "🛒", "description": "", "type": "download" }
   ],
 
   "videoTabs": [
