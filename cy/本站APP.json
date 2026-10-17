@@ -1,0 +1,7 @@
+{
+  "title": "站长精选",
+  "description": "精选站点，点击卡片直达。",
+  "items": [
+    { "name": "接口大全", "url": "https://", "icon": "vip/jueson.jpg", "": "尚未建设完,敬请期待" },
+  ]
+}
