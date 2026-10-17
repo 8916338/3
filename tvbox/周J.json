@@ -79,6 +79,16 @@
       }
     },
     {
+      "key": "体育",
+      "name": "🏆瓜子┃体育",
+      "type": 3,
+      "api": "csp_GuaziLiveAmns",
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 1,
+      "ext": "GuaziLive"
+    },
+    {
       "name": "🚀瓜子┃秒播",
       "key": "线路1",
       "type": 3,
