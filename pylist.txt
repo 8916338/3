@@ -106,7 +106,7 @@ py_duoduo|多多影视[py]|type: 3|api: https://clun.top/py/duoduo.py
 py_juok3|剧OK[py]|type: 3|api: https://clun.top/py/juok3.py
 py_fqdm|番茄动漫[py]|type: 3|api: https://clun.top/py/fqdm.py
 py_高清电影|高清电影[py]|type: 3|api: https://clun.top/py/高清电影.py
-py_金牌影院|金牌影院[py]|type: 3|api: https://clun.top/py/金牌.py
+py_金牌影院|金牌影院[py]|type: 3|api: https://clun.top/py/goldmedal.py
 py_奇优动漫|奇优动漫[py]|type: 3|api: https://clun.top/py/奇优动漫.py
 py_粤漫动漫|粤漫动漫[py]|type: 3|api: https://clun.top/py/粤漫.py
 py_jieyingshi|☀七星🔹影界|type: 3|api: https://7337.kstore.vip/xw/py/jieyingshi.py
@@ -133,7 +133,13 @@ py_pianku4k|片库[py]|type: 3|api: https://clun.top/py/pianku4k.py
 py_huavod|华视[py]|type: 3|api: https://clun.top/py/huavod.py
 py_如意|如意[py]|type: 3|api: https://clun.top/py/ruyishipin.py
 py_8kvod|酷客[py]|type: 3|api: https://clun.top/py/8kvod.py
+py_yysub|人人[py]|type: 3|api: https://clun.top/py/yysub.py
+py_ppnix|PPnix[py]|type: 3|api: https://clun.top/py/ppnix.py
+py_wbbb|歪比巴卜[py]|type: 3|api: https://clun.top/py/wbbb.py
 py_oule|欧乐影院[py]|type: 3|api: https://clun.top/py/oule.py
+py_guowaiju|国外剧情[py]|type: 3|api: https://clun.top/py/guowaiju.py
+py_mifun|MiFun｜动漫|type: 3|api: https://clun.top/py/mifun.py
+py_yinhuaone|樱花｜动漫|type: 3|api: https://clun.top/py/yinhuaone.py
 采集合集py|🦋采集合集(py)｜Tg：@huliys9|type: 3|api: https://gh-proxy.com/https://raw.githubusercontent.com/ediart/tvbox/refs/heads/main/lz/py/采集合集.py
 YK|🦋 优酷视频.py｜Tg：@huliys9|type: 3|api: https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/优酷视频.py
 txvm|🦋 腾讯视频.py|type: 3|api: https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/腾讯视频.py

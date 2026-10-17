@@ -204,6 +204,7 @@ aidan|爱蛋资源|type: 1|api: https://lovedan.net/api.php/provide/vod
 moduzy|魔都影视|type: 1|api: https://www.moduzy.com/api.php/provide/vod
 yilingba2|1080JSON|type: 1|api: https://api.1080zyku.com/inc/apijson.php
 MV_vod|电视┃MTV|type: 1|api: https://mv.wogg.link/mv/vod
+创享|创享 | 采集|type: 1|api: https://ys.cxkjg.cn/api/provide/vod/
 天涯资源|🦋 天涯资源(有三级片)|type: 0|api: https://tyyszyapi.com/api.php/provide/vod/at/xml/?ac=list
 iKun资源|🦋 iKun资源(有三级片)|type: 0|api: https://ikunzyapi.com/api.php/provide/vod/at/xml
 slyzy|🦋 湿乐园｜🔞|type: 1|api: https://xxavs.com/api.php/provide/vod

@@ -1,415 +1,907 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="平台直播",平台直播
-#EXTM3U x-tvg-url="https://gitee.com/taksssss/tv/raw/main/epg/112114.xml.gz"
+    <!-- ===== 顶部悬浮 ===== -->
+<!-- ===== jiuyou cpm ===== -->
+<!--<script src="https://r8quse.icu/api/s/s3db7daa558b.js"></script>-->
+<!-- ===== jiuyou cpc ===== -->
+<!--<script src="https://r8quse.icu/api/s/sedd1082a78b.js"></script>-->
+<!-- ===== 88 cpm ===== -->
+<!--<script src="https://k2n2fzb.com:866/slot?8225462100335650212-42428"></script>-->
+<!-- ===== jiuyou侧边悬浮 ===== -->
+<!--<script src="https://r8quse.icu/api/s/s2deff4a5a2c.js"></script>-->
+<!--<script src="https://r8quse.icu/api/s/s9d19f2bbe38.js"></script>-->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>影视仓 · 4K聚合</title>
+    <!-- Font Awesome 6 (免费图标库) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Fonts (高端影视风格字体) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        /* ============================================================
+                   1. CSS 变量 & 重置
+                   ============================================================ */
+        :root {
+            --gold: #f6b83d;
+            --gold-light: #fce181;
+            --gold-dark: #d48d2b;
+            --red-accent: #e50914;
+            --bg-deep: #0a0a0f;
+            --bg-card: rgba(255, 255, 255, 0.04);
+            --border-glow: rgba(246, 184, 61, 0.15);
+            --text-primary: #f3f7fc;
+            --text-secondary: #a8b9d4;
+            --shadow-heavy: 0 25px 50px -8px rgba(0, 0, 0, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-deep);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            /* 模拟影院暗光环境 */
+            background-image: radial-gradient(circle at 10% 20%, rgba(255, 215, 0, 0.03) 0%, transparent 30%),
+                radial-gradient(circle at 90% 80%, rgba(229, 9, 20, 0.05) 0%, transparent 40%),
+                linear-gradient(135deg, #0a0a0f 0%, #141824 100%);
+            background-attachment: fixed;
+        }
+
+        /* 背景动态光晕 (高端影院氛围) */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(246, 184, 61, 0.03) 0%, transparent 50%);
+            animation: ambientGlow 15s ease-in-out infinite alternate;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        @keyframes ambientGlow {
+            0% {
+                transform: translate(0, 0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translate(5%, 10%);
+                opacity: 1;
+            }
+        }
+
+        /* ============================================================
+                   2. 主容器 (高级玻璃质感)
+                   ============================================================ */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 480px;
+            width: 100%;
+            background: rgba(18, 22, 36, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 48px 48px 32px 32px;
+            padding: 32px 24px 28px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: var(--shadow-heavy), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+        }
+
+        /* 顶部金色装饰线 */
+        .container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10%;
+            width: 80%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0.6;
+        }
+
+        /* ============================================================
+                   3. 头部 (影视仓品牌标识)
+                   ============================================================ */
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 28px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .header-left .tv {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            font-style: italic;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(246, 184, 61, 0.3), 0 0 60px rgba(246, 184, 61, 0.1);
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+
+        .header-left .tv-sub {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: #ffffff;
+            letter-spacing: 6px;
+            opacity: 0.9;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            margin-left: -2px;
+        }
+
+        /* 装饰性分隔符 */
+        .header-divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+            margin: -10px auto 20px;
+            border-radius: 2px;
+        }
+
+        /* ============================================================
+                   4. 提示条 (电影风格字幕)
+                   ============================================================ */
+        .notice {
+            background: rgba(246, 184, 61, 0.06);
+            border-left: 3px solid var(--gold);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(246, 184, 61, 0.08);
+            border-left-width: 4px;
+        }
+
+        .notice i {
+            color: var(--gold);
+            font-size: 16px;
+            margin-top: 1px;
+            flex-shrink: 0;
+        }
+
+        .notice p {
+            color: var(--text-secondary);
+            font-size: 13px;
+            line-height: 1.7;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        .notice p strong {
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+
+        .notice .highlight {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* ============================================================
+                   5. 卡片网格 (高端大气电影感)
+                   ============================================================ */
+        .grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .card-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 18px;
+            padding: 14px 18px 14px 18px;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            backdrop-filter: blur(4px);
+            overflow: hidden;
+        }
+
+        /* 卡片悬停高级效果 */
+        .card-link:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(246, 184, 61, 0.25);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(246, 184, 61, 0.1);
+        }
+
+        .card-link:active {
+            transform: scale(0.98);
+        }
+
+        /* 卡片左侧内容 */
+        .card-link .left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        /* 图标容器 (流光玻璃质感) */
+        .card-link .icon-wrap {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #fff;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card-link:hover .icon-wrap {
+            background: rgba(246, 184, 61, 0.15);
+            border-color: var(--gold);
+            box-shadow: 0 0 20px rgba(246, 184, 61, 0.15);
+        }
+
+        /* 不同卡片的图标颜色 (柔和高级) */
+        .icon-main i {
+            color: var(--gold);
+        }
+        .icon-backup i {
+            color: #60a5fa;
+        }
+        .icon-multi i {
+            color: #a78bfa;
+        }
+        .icon-tvbox i {
+            color: #34d399;
+        }
+        .icon-ok i {
+            color: #f472b6;
+        }
+        .icon-old i {
+            color: #fb923c;
+        }
+        .icon-tutorial i {
+            color: #22d3ee;
+        }
+
+        /* 文字信息 */
+        .card-link .info {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .card-link .info .title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+
+        .card-link:hover .info .title {
+            color: #ffffff;
+        }
+
+        .card-link .info .sub {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        /* 右侧标签 (电影分级风格) */
+        .card-link .badge {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 40px;
+            padding: 4px 14px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-left: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .card-link:hover .badge {
+            background: rgba(246, 184, 61, 0.1);
+            border-color: var(--gold);
+            color: var(--gold-light);
+        }
+
+        .card-link .badge-primary {
+            color: var(--gold);
+            border-color: rgba(246, 184, 61, 0.2);
+        }
+
+        /* 箭头 */
+        .card-link .arrow {
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 14px;
+            margin-left: 6px;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .card-link:hover .arrow {
+            color: var(--gold);
+            transform: translateX(4px);
+        }
+
+        /* 卡片底部光晕 (悬停时出现) */
+        .card-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card-link:hover::after {
+            opacity: 0.6;
+        }
+
+        /* ============================================================
+                   6. 底部 (网盘4K资源标识)
+                   ============================================================ */
+        .footer-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 0 4px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            margin-top: 8px;
+        }
+
+        .footer-link .tag {
+            font-size: 12px;
+            color: var(--text-secondary);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 6px 18px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(4px);
+        }
+
+        .footer-link .tag i {
+            font-size: 12px;
+            color: var(--gold);
+        }
+
+        /* ============================================================
+                   7. 复制弹窗 (高端影院票务风格)
+                   ============================================================ */
+        .copy-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 24px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .copy-modal-overlay.active {
+            display: flex;
+        }
+
+        .copy-modal {
+            background: linear-gradient(145deg, rgba(26, 35, 48, 0.95), rgba(17, 25, 34, 0.98));
+            backdrop-filter: blur(20px);
+            border-radius: 32px;
+            padding: 36px 28px 28px;
+            max-width: 400px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 50px 100px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(246, 184, 61, 0.05);
+            position: relative;
+            text-align: center;
+            animation: slideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .copy-modal .copy-close {
+            position: absolute;
+            top: 16px;
+            right: 18px;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .copy-modal .copy-close:hover {
+            color: #fff;
+            transform: rotate(90deg);
+        }
+
+        .copy-modal .copy-icon {
+            font-size: 48px;
+            color: var(--gold);
+            margin-bottom: 8px;
+            text-shadow: 0 0 30px rgba(246, 184, 61, 0.2);
+        }
+
+        .copy-modal h3 {
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+        }
+
+        .copy-modal .copy-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .copy-modal .addr-box {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 16px;
+            padding: 16px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            word-break: break-all;
+            font-size: 15px;
+            color: #eef3fc;
+            font-weight: 500;
+            font-family: 'Inter', monospace;
+            margin-bottom: 24px;
+            user-select: all;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .copy-modal .copy-btn {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            border: none;
+            border-radius: 60px;
+            padding: 14px 36px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #0b0e14;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 8px 28px rgba(246, 184, 61, 0.25);
+            letter-spacing: 0.5px;
+        }
+
+        .copy-modal .copy-btn:hover {
+            transform: scale(1.04);
+            box-shadow: 0 12px 40px rgba(246, 184, 61, 0.4);
+            filter: brightness(1.05);
+        }
+
+        .copy-modal .copy-btn:active {
+            transform: scale(0.96);
+        }
+
+        .copy-modal .copy-status {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #34d399;
+            height: 24px;
+            font-weight: 500;
+        }
+
+        /* ============================================================
+                   8. 工具 & 动画类
+                   ============================================================ */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* 响应式微调 */
+        @media (max-width: 420px) {
+            .container {
+                padding: 24px 16px 20px;
+                border-radius: 32px;
+            }
+            .header-left .tv {
+                font-size: 28px;
+            }
+            .header-left .tv-sub {
+                font-size: 20px;
+                letter-spacing: 4px;
+            }
+            .card-link {
+                padding: 12px 14px;
+            }
+            .card-link .icon-wrap {
+                width: 38px;
+                height: 38px;
+                font-size: 16px;
+            }
+            .card-link .info .title {
+                font-size: 15px;
+            }
+            .card-link .badge {
+                font-size: 10px;
+                padding: 3px 10px;
+            }
+            .copy-modal {
+                padding: 28px 18px 22px;
+            }
+            .copy-modal .addr-box {
+                font-size: 13px;
+                padding: 12px 14px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .header-left .tv {
+                font-size: 24px;
+            }
+            .header-left .tv-sub {
+                font-size: 17px;
+                letter-spacing: 2px;
+            }
+            .card-link .left {
+                gap: 10px;
+            }
+            .card-link .icon-wrap {
+                width: 32px;
+                height: 32px;
+                font-size: 14px;
+            }
+            .card-link .info .sub {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+    主容器
+    ============================================================ -->
+    <div class="container">
+
+        <!-- 头部 -->
+        <div class="header">
+            <div class="header-left">
+                <span class="tv">TV</span>
+                <span class="tv-sub">影视仓</span>
+            </div>
+        </div>
+        <div class="header-divider"></div>
+
+        <!-- 提示条 -->
+        <div class="notice">
+            <i class="fas fa-circle-exclamation"></i>
+            <p>
+                主接口如果配置失败，可换<strong>备用接口</strong>！最新软件可在下方内置
+                <span class="highlight">影视仓</span>，内置 <span class="highlight">ok影视</span> 中下载。
+                老设备可用最下方的 <strong>安卓4.x专用</strong>。
+            </p>
+        </div>
+
+        <!-- 卡片列表 -->
+        <div class="grid">
+
+            <!-- 网盘4K配置教程 (链接跳转) -->
+            <a class="card-link" href="https://www.kdocs.cn/l/clE7ivDI3NAr" target="_blank">
+                <div class="left">
+                    <div class="icon-wrap icon-tutorial"><i class="fas fa-book-open"></i></div>
+                    <div class="info">
+                        <div class="title">网盘4K配置教程</div>
+                        <div class="sub">详细教程</div>
+                    </div>
+                </div>
+                <span class="badge">教程</span>
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+
+            <!-- 主接口 (点击复制) -->
+            <div class="card-link" data-copy="https://700sjro44343.vicp.fun/240731/one/" data-name="主接口">
+                <div class="left">
+                    <div class="icon-wrap icon-main"><i class="fas fa-plug"></i></div>
+                    <div class="info">
+                        <div class="title">主接口</div>
+                        <div class="sub">配置即用</div>
+                    </div>
+                </div>
+                <span class="badge badge-primary">推荐</span>
+                <i class="fas fa-chevron-right arrow"></i>
+            </div>
+
+        <!-- ===== 固定横幅广告1  cpc ===== -->
+<!-- jiuyou cpm固定横幅 -->
+<!--<script id="gg178-scr1pt" src="https://r8quse.icu/api/s/s2d41b828098.js"></script>-->
+
+<!-- 88 cpm固定横幅 -->
+<!--<script src="https://k2n2fzb.com:866/slot?8225462100335650212-42429"></script>-->
 
 
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV1.png" group-title="央视频道",CCTV1
-http://173.208.212.130:8181/720p/cctv1.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV1.png" group-title="央视频道",CCTV1
-http://139.227.221.147:9901/tsfile/live/0001_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV2.png" group-title="央视频道",CCTV2
-http://173.208.212.130:8181/720p/cctv2.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV2.png" group-title="央视频道",CCTV2
-http://139.227.221.147:9901/tsfile/live/0002_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV3.png" group-title="央视频道",CCTV3
-http://173.208.212.130:8181/720p/cctv3.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV3.png" group-title="央视频道",CCTV3
-http://139.227.221.147:9901/tsfile/live/0003_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV4.png" group-title="央视频道",CCTV4
-http://173.208.212.130:8181/720p/cctv4.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV4.png" group-title="央视频道",CCTV4
-http://139.227.221.147:9901/tsfile/live/0004_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV4.png" group-title="央视频道",CCTV4亚洲
-http://173.208.212.130:8181/720p/cctv4.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV4.png" group-title="央视频道",CCTV4亚洲
-http://139.227.221.147:9901/tsfile/live/0004_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV5.png" group-title="央视频道",CCTV5
-http://173.208.212.130:8181/720p/cctv5.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV5.png" group-title="央视频道",CCTV5
-http://139.227.221.147:9901/tsfile/live/0005_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV5+.png" group-title="央视频道",CCTV5+
-http://173.208.212.130:8181/720p/cctv5p.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV6.png" group-title="央视频道",CCTV6
-http://173.208.212.130:8181/720p/cctv6.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV6.png" group-title="央视频道",CCTV6
-http://139.227.221.147:9901/tsfile/live/0006_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV7.png" group-title="央视频道",CCTV7
-http://173.208.212.130:8181/720p/cctv7.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV7.png" group-title="央视频道",CCTV7
-http://139.227.221.147:9901/tsfile/live/0007_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV8.png" group-title="央视频道",CCTV8
-http://173.208.212.130:8181/720p/cctv8.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV8.png" group-title="央视频道",CCTV8
-http://139.227.221.147:9901/tsfile/live/0008_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV9.png" group-title="央视频道",CCTV9
-http://173.208.212.130:8181/720p/cctv9.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV9.png" group-title="央视频道",CCTV9
-http://139.227.221.147:9901/tsfile/live/0009_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV10.png" group-title="央视频道",CCTV10
-http://173.208.212.130:8181/720p/cctv10.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV10.png" group-title="央视频道",CCTV10
-http://139.227.221.147:9901/tsfile/live/0010_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV11.png" group-title="央视频道",CCTV11
-http://173.208.212.130:8181/720p/cctv11.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV11.png" group-title="央视频道",CCTV11
-http://139.227.221.147:9901/tsfile/live/0011_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV12.png" group-title="央视频道",CCTV12
-http://173.208.212.130:8181/720p/cctv12.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV12.png" group-title="央视频道",CCTV12
-http://139.227.221.147:9901/tsfile/live/0012_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV13.png" group-title="央视频道",CCTV13
-http://173.208.212.130:8181/720p/cctv13.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV13.png" group-title="央视频道",CCTV13
-http://139.227.221.147:9901/tsfile/live/0013_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV14.png" group-title="央视频道",CCTV14
-http://173.208.212.130:8181/720p/cctv14.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV14.png" group-title="央视频道",CCTV14
-http://139.227.221.147:9901/tsfile/live/0014_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV15.png" group-title="央视频道",CCTV15
-http://173.208.212.130:8181/720p/cctv15.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV15.png" group-title="央视频道",CCTV15
-http://139.227.221.147:9901/tsfile/live/0015_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV16.png" group-title="央视频道",CCTV16
-http://173.208.212.130:8181/720p/cctv16.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV17.png" group-title="央视频道",CCTV17
-http://173.208.212.130:8181/720p/cctv17.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/第一剧场.png" group-title="央视频道",CCTV第一剧场
-http://173.208.212.130:8181/720p/dyjc.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/风云剧场.png" group-title="央视频道",CCTV风云剧场
-http://173.208.212.130:8181/720p/fyjc.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/风云音乐.png" group-title="央视频道",CCTV风云音乐
-http://173.208.212.130:8181/720p/fyyy.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/风云足球.png" group-title="央视频道",CCTV风云足球
-http://173.208.212.130:8181/720p/fyzq.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/怀旧剧场.png" group-title="央视频道",CCTV怀旧剧场
-http://173.208.212.130:8181/720p/hjjc.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/女性时尚.png" group-title="央视频道",CCTV女性时尚
-http://173.208.212.130:8181/720p/nxss.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/世界地理.png" group-title="央视频道",CCTV世界地理
-http://173.208.212.130:8181/720p/sjdl.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/卫生健康.png" group-title="央视频道",CCTV卫生健康
-http://173.208.212.130:8181/720p/wsjk.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/央视文化精品.png" group-title="央视频道",CCTV央视文化精品
-http://173.208.212.130:8181/720p/ysjp.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/央视台球.png" group-title="央视频道",CCTV央视台球
-http://173.208.212.130:8181/720p/ystq.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/安徽卫视.png" group-title="卫视频道",安徽卫视
-http://173.208.212.130:8181/720p/ahws.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/安徽卫视.png" group-title="卫视频道",安徽卫视
-http://139.227.221.147:9901/tsfile/live/0130_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/北京卫视.png" group-title="卫视频道",北京卫视
-http://173.208.212.130:8181/720p/bjws.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/北京卫视.png" group-title="卫视频道",北京卫视
-http://139.227.221.147:9901/tsfile/live/0122_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/重庆卫视.png" group-title="卫视频道",重庆卫视
-http://139.227.221.147:9901/tsfile/live/0142_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/东方卫视.png" group-title="卫视频道",东方卫视
-http://173.208.212.130:8181/720p/dfws.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/东方卫视.png" group-title="卫视频道",东方卫视
-http://139.227.221.147:9901/tsfile/live/0107_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/东南卫视.png" group-title="卫视频道",东南卫视
-http://139.227.221.147:9901/tsfile/live/0137_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东卫视.png" group-title="卫视频道",广东卫视
-http://173.208.212.130:8181/720p/gdws.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东卫视.png" group-title="卫视频道",广东卫视
-http://139.227.221.147:9901/tsfile/live/0125_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/河北卫视.png" group-title="卫视频道",河北卫视
-http://173.208.212.130:8181/720p/hews.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/河北卫视.png" group-title="卫视频道",河北卫视
-http://139.227.221.147:9901/tsfile/live/0117_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/河南卫视.png" group-title="卫视频道",河南卫视
-http://173.208.212.130:8181/720p/haws.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/湖北卫视.png" group-title="卫视频道",湖北卫视
-http://139.227.221.147:9901/tsfile/live/0132_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/湖南卫视.png" group-title="卫视频道",湖南卫视
-http://173.208.212.130:8181/720p/hnws.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/湖南卫视.png" group-title="卫视频道",湖南卫视
-http://139.227.221.147:9901/tsfile/live/0128_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/江苏卫视.png" group-title="卫视频道",江苏卫视
-http://173.208.212.130:8181/720p/jsws.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/江苏卫视.png" group-title="卫视频道",江苏卫视
-http://139.227.221.147:9901/tsfile/live/0127_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/辽宁卫视.png" group-title="卫视频道",辽宁卫视
-http://139.227.221.147:9901/tsfile/live/0121_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/山东卫视.png" group-title="卫视频道",山东卫视
-http://173.208.212.130:8181/720p/sdws.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/山东卫视.png" group-title="卫视频道",山东卫视
-http://139.227.221.147:9901/tsfile/live/0131_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/深圳卫视.png" group-title="卫视频道",深圳卫视
-http://173.208.212.130:8181/720p/szws.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/深圳卫视.png" group-title="卫视频道",深圳卫视
-http://139.227.221.147:9901/tsfile/live/0126_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/天津卫视.png" group-title="卫视频道",天津卫视
-http://173.208.212.130:8181/720p/tjws.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/天津卫视.png" group-title="卫视频道",天津卫视
-http://139.227.221.147:9901/tsfile/live/0135_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/浙江卫视.png" group-title="卫视频道",浙江卫视
-http://173.208.212.130:8181/720p/zjws.m3u8
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/浙江卫视.png" group-title="卫视频道",浙江卫视
-http://139.227.221.147:9901/tsfile/live/0124_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/旅游卫视.png" group-title="卫视频道",旅游卫视
-http://139.227.221.147:9901/tsfile/live/0114_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/睛彩广场舞.png" group-title="睛彩频道",睛彩广场舞
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011523/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011523&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/睛彩广场舞.png" group-title="睛彩频道",睛彩广场舞
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011523/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011523&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/睛彩竞技.png" group-title="睛彩频道",睛彩竞技
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011528/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011528&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/睛彩竞技.png" group-title="睛彩频道",睛彩竞技
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011528/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011528&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/睛彩篮球.png" group-title="睛彩频道",睛彩篮球
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011529/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011529&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/睛彩篮球.png" group-title="睛彩频道",睛彩篮球
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011529/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011529&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/睛彩青少.png" group-title="睛彩频道",睛彩青少
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011525/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011525&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/睛彩青少.png" group-title="睛彩频道",睛彩青少
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011525/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011525&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界4K-1
-http://gslbserv.itv.cmvideo.cn:80/3000000010000005180/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000005180&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界4K-1
-http://gslbserv.itv.cmvideo.cn:80/3000000010000005180/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000005180&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界4K-2
-http://gslbserv.itv.cmvideo.cn:80/3000000010000015686/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000015686&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界4K-2
-http://gslbserv.itv.cmvideo.cn:80/3000000010000015686/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000015686&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界1
-http://gslbserv.itv.cmvideo.cn:80/3000000001000005308/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000005308&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界1
-http://gslbserv.itv.cmvideo.cn:80/3000000001000005308/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000005308&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界2
-http://gslbserv.itv.cmvideo.cn:80/3000000001000005969/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000005969&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界2
-http://gslbserv.itv.cmvideo.cn:80/3000000001000005969/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000005969&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界3
-http://gslbserv.itv.cmvideo.cn:80/3000000001000007218/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000007218&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界3
-http://gslbserv.itv.cmvideo.cn:80/3000000001000007218/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000007218&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界4
-http://gslbserv.itv.cmvideo.cn:80/3000000001000008001/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000008001&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界4
-http://gslbserv.itv.cmvideo.cn:80/3000000001000008001/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000008001&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界5
-http://gslbserv.itv.cmvideo.cn:80/3000000001000008176/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000008176&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界5
-http://gslbserv.itv.cmvideo.cn:80/3000000001000008176/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000008176&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界6
-http://gslbserv.itv.cmvideo.cn:80/3000000001000008379/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000008379&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界6
-http://gslbserv.itv.cmvideo.cn:80/3000000001000008379/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000008379&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界7
-http://gslbserv.itv.cmvideo.cn:80/3000000001000010129/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000010129&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界7
-http://gslbserv.itv.cmvideo.cn:80/3000000001000010129/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000010129&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界8
-http://gslbserv.itv.cmvideo.cn:80/3000000001000010948/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000010948&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界8
-http://gslbserv.itv.cmvideo.cn:80/3000000001000010948/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000010948&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界9
-http://gslbserv.itv.cmvideo.cn:80/3000000001000028638/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000028638&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界9
-http://gslbserv.itv.cmvideo.cn:80/3000000001000028638/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000028638&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界10
-http://gslbserv.itv.cmvideo.cn:80/3000000001000031494/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000031494&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界10
-http://gslbserv.itv.cmvideo.cn:80/3000000001000031494/index.m3u8?channel-id=FifastbLive&Contentid=3000000001000031494&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界11
-http://gslbserv.itv.cmvideo.cn:80/3000000010000000097/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000000097&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界11
-http://gslbserv.itv.cmvideo.cn:80/3000000010000000097/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000000097&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界12
-http://gslbserv.itv.cmvideo.cn:80/3000000010000002019/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000002019&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界12
-http://gslbserv.itv.cmvideo.cn:80/3000000010000002019/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000002019&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界13
-http://gslbserv.itv.cmvideo.cn:80/3000000010000002809/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000002809&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界13
-http://gslbserv.itv.cmvideo.cn:80/3000000010000002809/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000002809&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界14
-http://gslbserv.itv.cmvideo.cn:80/3000000010000003915/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000003915&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界14
-http://gslbserv.itv.cmvideo.cn:80/3000000010000003915/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000003915&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界15
-http://gslbserv.itv.cmvideo.cn:80/3000000010000004193/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000004193&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界15
-http://gslbserv.itv.cmvideo.cn:80/3000000010000004193/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000004193&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界16
-http://gslbserv.itv.cmvideo.cn:80/3000000010000005837/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000005837&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界16
-http://gslbserv.itv.cmvideo.cn:80/3000000010000005837/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000005837&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界17
-http://gslbserv.itv.cmvideo.cn:80/3000000010000006077/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000006077&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界17
-http://gslbserv.itv.cmvideo.cn:80/3000000010000006077/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000006077&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界18
-http://gslbserv.itv.cmvideo.cn:80/3000000010000006658/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000006658&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界18
-http://gslbserv.itv.cmvideo.cn:80/3000000010000006658/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000006658&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界19
-http://gslbserv.itv.cmvideo.cn:80/3000000010000009788/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000009788&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界19
-http://gslbserv.itv.cmvideo.cn:80/3000000010000009788/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000009788&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界20
-http://gslbserv.itv.cmvideo.cn:80/3000000010000010833/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000010833&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界20
-http://gslbserv.itv.cmvideo.cn:80/3000000010000010833/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000010833&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界21
-http://gslbserv.itv.cmvideo.cn:80/3000000010000011297/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000011297&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界21
-http://gslbserv.itv.cmvideo.cn:80/3000000010000011297/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000011297&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界22
-http://gslbserv.itv.cmvideo.cn:80/3000000010000011518/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000011518&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界22
-http://gslbserv.itv.cmvideo.cn:80/3000000010000011518/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000011518&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界23
-http://gslbserv.itv.cmvideo.cn:80/3000000010000012558/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000012558&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界23
-http://gslbserv.itv.cmvideo.cn:80/3000000010000012558/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000012558&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界24
-http://gslbserv.itv.cmvideo.cn:80/3000000010000012616/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000012616&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界24
-http://gslbserv.itv.cmvideo.cn:80/3000000010000012616/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000012616&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界25
-http://gslbserv.itv.cmvideo.cn:80/3000000010000015470/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000015470&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界25
-http://gslbserv.itv.cmvideo.cn:80/3000000010000015470/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000015470&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界26
-http://gslbserv.itv.cmvideo.cn:80/3000000010000015560/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000015560&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界26
-http://gslbserv.itv.cmvideo.cn:80/3000000010000015560/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000015560&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界27
-http://gslbserv.itv.cmvideo.cn:80/3000000010000017678/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000017678&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界27
-http://gslbserv.itv.cmvideo.cn:80/3000000010000017678/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000017678&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界28
-http://gslbserv.itv.cmvideo.cn:80/3000000010000019839/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000019839&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界28
-http://gslbserv.itv.cmvideo.cn:80/3000000010000019839/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000019839&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界29
-http://gslbserv.itv.cmvideo.cn:80/3000000010000021904/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000021904&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界29
-http://gslbserv.itv.cmvideo.cn:80/3000000010000021904/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000021904&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界30
-http://gslbserv.itv.cmvideo.cn:80/3000000010000023434/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000023434&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界30
-http://gslbserv.itv.cmvideo.cn:80/3000000010000023434/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000023434&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界31
-http://gslbserv.itv.cmvideo.cn:80/3000000010000025380/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000025380&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界31
-http://gslbserv.itv.cmvideo.cn:80/3000000010000025380/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000025380&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界32
-http://gslbserv.itv.cmvideo.cn:80/3000000010000027691/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000027691&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界32
-http://gslbserv.itv.cmvideo.cn:80/3000000010000027691/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000027691&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界33
-http://gslbserv.itv.cmvideo.cn:80/3000000010000031669/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000031669&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界33
-http://gslbserv.itv.cmvideo.cn:80/3000000010000031669/index.m3u8?channel-id=FifastbLive&Contentid=3000000010000031669&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界34
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011518/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011518&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界34
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011518/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011518&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界35
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011519/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011519&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界35
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011519/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011519&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界36
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011520/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011520&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界36
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011520/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011520&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界37
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011521/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011521&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界37
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011521/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011521&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界38
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011522/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011522&livemode=1&stbId=YanG-1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/咪视界.png" group-title="咪视界",咪视界38
-http://gslbserv.itv.cmvideo.cn:80/3000000020000011522/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011522&livemode=1&stbId=BingCha
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1983
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1984
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1985
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1986
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1987
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1987
-https://txmov2.a.kwimgs.com/bs3/video-hls/5195746663405928031_hlsb.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1988
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1988
-https://txmov2.a.kwimgs.com/bs3/video-hls/5216575810935394655_hlsb.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1989
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1989
-https://txmov2.a.kwimgs.com/bs3/video-hls/5194620763762726260_hlsb.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1990
-https://cdn8.yzzy-online.com/20220704/597_e0d90c37/1000k/hls/index.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1991
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1992
-https://txmov2.a.kwimgs.com/bs3/video-hls/5256826755663896297_hlshd15.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1993
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1994
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1995
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1996
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1997
-https://txmov2.a.kwimgs.com/bs3/video-hls/5230649583590411879_hlshd15.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1998
-https://txmov2.a.kwimgs.com/bs3/video-hls/5225864507896315430_hlshd15.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚1999
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2000
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2001
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2002
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2003
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2004
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2005
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2006
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2007
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2008
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2008
-https://txmov2.a.kwimgs.com/bs3/video-hls/5210946337266019890_hlshd15.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2009
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2010
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2011
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2011
-https://txmov2.a.kwimgs.com/bs3/video-hls/5243597434070590481_hlshd15.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2012
-https://cdn8.yzzy-online.com/20220704/591_82b72f82/1000k/hls/index.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2013
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2014
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2015
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2016
-https://cdn8.yzzy-online.com/20220704/577_cda9c8d1/1000k/hls/index.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2017
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2018
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2019
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2020
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2021
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2022
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2023
-https://txmov2.a.kwimgs.com/bs3/video-hls/5251197255879398624_hlshd15.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2024
-https://p2.bdstatic.com/rtmp.liveshow.lss-user.baidubce.com/live/stream_bduid_6488563992_8982723413/merged_1707497046297_88536_25144_41936.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2025
-https://res.cctvnews.cctv.com/video/3005/record/cctv/merge1/133396667284143308839013005/8fbd6180bdef4da19f6155cf6b4652e1-4.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2025
-https://svip.high24-playback.com/20250129/17159_7bca93c4/2000k/hls/mixed.m3u8
-#EXTINF:-1 tvg-logo="http://123.57.58.70:5678/data/icon/春晚.png" group-title="历年春晚",春晚2025
-https://svipsvip.ffzyread1.com/20250129/35458_c988286f/index.m3u8
-#EXTINF:-1 group-title="轮播",成龙
-http://63.141.230.178:82/gslb/zbdq5.m3u8?id=lbcl
-#EXTINF:-1 group-title="轮播",成龙
-http://107.150.60.122/live/lbcl.m3u8
-#EXTINF:-1 group-title="轮播",周润发
-http://63.141.230.178:82/gslb/zbdq5.m3u8?id=lbzrf
-#EXTINF:-1 group-title="轮播",周润发
-http://107.150.60.122/live/lbzrf.m3u8
-#EXTINF:-1 group-title="轮播",周星驰
-http://107.150.60.122/live/lbzxc.m3u8
-#EXTINF:-1 group-title="轮播",林正英
-http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hylzy
-#EXTINF:-1 group-title="轮播",林正英
-http://107.150.60.122/live/lblzy.m3u8
-#EXTINF:-1 group-title="轮播",陈翔六点半
-http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hycxldb
-#EXTINF:-1 group-title="轮播",邵氏1
-http://63.141.230.178:82/gslb/zbdq5.m3u8?id=lbsswx
-#EXTINF:-1 group-title="轮播",邵氏2
-http://63.141.230.178:82/gslb/zbdq5.m3u8?id=lbssdz
-#EXTINF:-1 group-title="轮播",邵氏3
-http://63.141.230.178:82/gslb/zbdq5.m3u8?id=lbssxj
+            <!-- 备用接口 (点击复制) -->
+            <div class="card-link" data-copy="http://www.影视仓.com" data-name="备用接口">
+                <div class="left">
+                    <div class="icon-wrap icon-backup"><i class="fas fa-circle-nodes"></i></div>
+                    <div class="info">
+                        <div class="title">备用接口</div>
+                        <div class="sub">配置即用</div>
+                    </div>
+                </div>
+                <span class="badge">备用</span>
+                <i class="fas fa-chevron-right arrow"></i>
+            </div>
+
+            <!-- 多仓地址 (点击复制) -->
+            <div class="card-link" data-copy="https://700sjro44343.vicp.fun/vip/vip/duo.txt" data-name="多仓地址">
+                <div class="left">
+                    <div class="icon-wrap icon-multi"><i class="fas fa-layer-group"></i></div>
+                    <div class="info">
+                        <div class="title">多仓地址</div>
+                        <div class="sub">在线更新</div>
+                    </div>
+                </div>
+                <span class="badge">更新</span>
+                <i class="fas fa-chevron-right arrow"></i>
+            </div>
+
+            <!-- 内置影视仓 (链接跳转) -->
+            <a class="card-link" href="https://drive.uc.cn/s/2029e450e3544?public=1#/list/share" target="_blank">
+                <div class="left">
+                    <div class="icon-wrap icon-tvbox"><i class="fas fa-film"></i></div>
+                    <div class="info">
+                        <div class="title">内置影视仓</div>
+                        <div class="sub">安装即用</div>
+                    </div>
+                </div>
+                <span class="badge">最新</span>
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+
+            <!-- 内置OK影视 (链接跳转) -->
+            <a class="card-link" href="https://drive.uc.cn/s/780b370d1fb74?public=1#/list/share" target="_blank">
+                <div class="left">
+                    <div class="icon-wrap icon-ok"><i class="fas fa-check-circle"></i></div>
+                    <div class="info">
+                        <div class="title">内置OK影视</div>
+                        <div class="sub">安装即用</div>
+                    </div>
+                </div>
+                <span class="badge">稳定</span>
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+
+            <!-- 老设备安卓4.x专用 (链接跳转) -->
+            <a class="card-link" href="https://drive.uc.cn/s/af18def0210c4?public=1#/list/share" target="_blank">
+                <div class="left">
+                    <div class="icon-wrap icon-old"><i class="fas fa-robot"></i></div>
+                    <div class="info">
+                        <div class="title">老设备安卓4.x专用</div>
+                        <div class="sub">兼容轻量</div>
+                    </div>
+                </div>
+                <span class="badge">经典</span>
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+
+        </div>
+
+
+
+        <!-- ===== 固定横幅广告2  cpc ===== -->
+<!-- ===== jiuyo  cpc ===== -->
+<!--<script id="gg178-scr1pt" src="https://r8quse.icu/api/s/sfd4904e5bb9.js"></script>-->
+<!-- jiuyou cpm固定横幅 -->
+<!--<script id="gg178-scr1pt" src="https://r8quse.icu/api/s/s2d41b828098.js"></script>-->
+
+<!-- 88 cpm固定横幅 -->
+<!--<script src="https://k2n2fzb.com:866/slot?8225462100335650212-42429"></script>-->
+
+
+        <!-- 底部 -->
+        <div class="footer-link">
+            <span class="tag">
+                <i class="fas fa-cloud-arrow-up"></i> 网盘4K资源
+            </span>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+    复制弹窗
+    ============================================================ -->
+    <div class="copy-modal-overlay" id="copyModalOverlay">
+        <div class="copy-modal">
+            <button class="copy-close" id="copyModalClose"><i class="fas fa-times"></i></button>
+            <div class="copy-icon"><i class="fas fa-link"></i></div>
+            <h3 id="copyModalTitle">主接口</h3>
+            <p class="copy-desc">点击下方按钮复制地址，在应用中粘贴使用</p>
+            <div class="addr-box" id="copyModalAddr">http://www.影视仓.com</div>
+            <button class="copy-btn" id="copyModalBtn">
+                <i class="fas fa-copy"></i> 复制地址
+            </button>
+            <div class="copy-status" id="copyStatus"></div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    JavaScript 交互
+    ============================================================ -->
+    <script>
+        (function() {
+            'use strict';
+
+            // 获取元素
+            const copyOverlay = document.getElementById('copyModalOverlay');
+            const copyClose = document.getElementById('copyModalClose');
+            const copyTitle = document.getElementById('copyModalTitle');
+            const copyAddr = document.getElementById('copyModalAddr');
+            const copyBtn = document.getElementById('copyModalBtn');
+            const copyStatus = document.getElementById('copyStatus');
+
+            let currentCopyText = '';
+
+            // 打开弹窗
+            function openCopyModal(name, address) {
+                currentCopyText = address;
+                copyTitle.textContent = name;
+                copyAddr.textContent = address;
+                copyStatus.textContent = '';
+                copyStatus.style.color = '#34d399';
+                copyOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // 关闭弹窗
+            function closeCopyModal() {
+                copyOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+                copyStatus.textContent = '';
+            }
+
+            // 关闭事件
+            copyClose.addEventListener('click', closeCopyModal);
+            copyOverlay.addEventListener('click', function(e) {
+                if (e.target === this) closeCopyModal();
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && copyOverlay.classList.contains('active')) {
+                    closeCopyModal();
+                }
+            });
+
+            // 复制逻辑
+            function fallbackCopy(text) {
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                textarea.style.position = 'fixed';
+                textarea.style.left = '-9999px';
+                textarea.style.top = '-9999px';
+                document.body.appendChild(textarea);
+                textarea.select();
+                try {
+                    const success = document.execCommand('copy');
+                    if (success) {
+                        copyStatus.textContent = '✅ 已复制到剪贴板！';
+                        copyStatus.style.color = '#34d399';
+                    } else {
+                        copyStatus.textContent = '❌ 复制失败，请手动复制';
+                        copyStatus.style.color = '#f87171';
+                    }
+                } catch (e) {
+                    copyStatus.textContent = '❌ 复制失败，请手动复制';
+                    copyStatus.style.color = '#f87171';
+                }
+                document.body.removeChild(textarea);
+            }
+
+            copyBtn.addEventListener('click', function() {
+                if (!currentCopyText) return;
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(currentCopyText).then(() => {
+                        copyStatus.textContent = '✅ 已复制到剪贴板！';
+                        copyStatus.style.color = '#34d399';
+                    }).catch(() => {
+                        fallbackCopy(currentCopyText);
+                    });
+                } else {
+                    fallbackCopy(currentCopyText);
+                }
+            });
+
+            // 绑定 data-copy 卡片
+            document.querySelectorAll('.card-link[data-copy]').forEach(el => {
+                el.addEventListener('click', function(e) {
+                    const address = this.getAttribute('data-copy');
+                    const name = this.getAttribute('data-name') || '地址';
+                    if (address) {
+                        openCopyModal(name, address);
+                    }
+                });
+            });
+
+            console.log('🎬 影视仓 · 高端聚合页已加载');
+        })();
+    </script>
+
+</body>
+</html>
+
+
+<!-- ===== 底部悬浮 ===== -->
+<!-- ===== jiuyo cpm===== -->
+<!--<script src="https://r8quse.icu/api/s/s7d502366b8e.js"></script>-->
+<!-- ===== jiuyo cpc===== -->
+<!--<script src="https://r8quse.icu/api/s/s9dc86d02e8a.js"></script>-->
+<!-- ===== 88 cpm===== -->
+<!--<script src="https://k2n2fzb.com:866/slot?8225462100335650212-2537"></script>-->
