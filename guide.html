@@ -7,10 +7,10 @@
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { height: 100%; width: 100%; overflow: hidden; background: rgba(10, 26, 43, 0.75); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
-    
+
     /* 弹窗遮罩层 */
     .app-modal-mask { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 9999; }
-    
+
     /* 弹窗主体 */
     .app-modal-box {
       background: #fff; width: 100%; max-width: 340px; border-radius: 20px;
@@ -25,7 +25,7 @@
     .app-modal-header { padding: 24px 20px 10px; text-align: center; }
     .app-modal-icon { font-size: 48px; line-height: 1; margin-bottom: 12px; display: block; animation: bounce 2s infinite; }
     @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-    
+
     .app-modal-title { font-size: 1.15rem; font-weight: 700; color: #0a1a2b; margin-bottom: 8px; }
 
     /* 内容区 */
@@ -35,7 +35,7 @@
 
     /* 按钮区 */
     .app-modal-footer { padding: 0 20px 24px; display: flex; flex-direction: column; gap: 12px; }
-    
+
     .btn-primary {
       display: flex; align-items: center; justify-content: center;
       width: 100%; height: 46px; background: #4a9eff; color: #fff;
@@ -54,7 +54,7 @@
 
     /* 赞赏码样式 */
     .zsm-img { display: block; width: 100%; max-width: 220px; margin: 0 auto; border-radius: 12px; border: 1px solid #e4ebf3; }
-    
+
     /* 倒计时退出按钮 */
     .btn-exit {
       display: flex; align-items: center; justify-content: center;
@@ -74,7 +74,7 @@
 
   <div class="app-modal-mask">
     <div class="app-modal-box">
-      
+
       <!-- 第一步：白嫖宣言 -->
       <div class="step" id="step1">
         <div class="app-modal-header">
@@ -152,7 +152,7 @@
   <script>
     // === 状态机逻辑 ===
     const STATE_KEY = 'guide_prompt_state';
-    
+
     // 获取或初始化状态
     function getState() {
       let state = localStorage.getItem(STATE_KEY);
@@ -195,7 +195,7 @@
     function goStep(step) {
       document.querySelectorAll('.step').forEach(el => el.classList.remove('active'));
       document.getElementById('step' + step).classList.add('active');
-      
+
       if (step === 4) {
         startCountdown();
       }
@@ -207,7 +207,7 @@
       let timeLeft = 15;
       const btn = document.getElementById('cdBtn');
       btn.textContent = `立即退出 (${timeLeft}s)`;
-      
+
       // 清除可能存在的旧定时器
       if (cdTimer) clearInterval(cdTimer);
 
@@ -225,7 +225,7 @@
     // 关闭弹窗并更新状态
     function closeGuide() {
       if (cdTimer) clearInterval(cdTimer);
-      
+
       const state = getState();
       state.count += 1;
       state.lastShow = Date.now();
@@ -233,9 +233,9 @@
 
       // 根据当前阶段和次数给出提示
       if (state.phase === 'daily') {
-        if (state.count === 1) alert('提示：该弹窗本弹共出现 3 次，还剩 2 次。');
-        else if (state.count === 2) alert('提示：该弹窗本弹共出现 3 次，还剩 1 次。');
-        else if (state.count >= 3) alert('提示：本弹弹窗已完成，短期内不再出现。');
+        if (state.count === 1) alert('提示：该弹窗本次弹共出现 3 次，还剩 2 次。');
+        else if (state.count === 2) alert('提示：该弹窗本次弹窗共出现 3 次，还剩 1 次。');
+        else if (state.count >= 3) alert('提示：本次弹窗已完成，短期内不再出现。');
       } 
       else if (state.phase === 'weekly') {
         if (state.count === 1) alert('提示：本周期弹窗共出现 3 次，还剩 2 次。');
