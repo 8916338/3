@@ -5,6 +5,52 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
   <title>海量接口搬运备份</title>
   <link rel="icon" type="image/jpeg" href="vip/jueson.jpg">
+  
+  <script>
+    // =========================================================
+    // 拦截逻辑：优先读取 config.json 判断是否开启弹窗
+    // =========================================================
+    (function checkGuide() {
+      // 1. 先通过同步请求或预读缓存获取配置开关（为了不阻塞加载，这里用异步 fetch）
+      // 考虑到阻塞问题，我们用最快的方式去拿 config，或者预置一个默认开关
+      fetch('config.json?t=' + Date.now(), { cache: 'no-store' })
+        .then(res => res.json())
+        .then(cfg => {
+          const guideEnabled = cfg.site && cfg.site.enableGuide;
+          if (!guideEnabled) return; // 如果关闭了弹窗，直接返回，继续加载页面
+
+          // 2. 弹窗状态机判断
+          const STATE_KEY = 'guide_prompt_state';
+          let state = null;
+          try { state = JSON.parse(localStorage.getItem(STATE_KEY)); } catch(e) {}
+          
+          const now = Date.now();
+          const DAY_MS = 24 * 60 * 60 * 1000;
+
+          if (!state) {
+            window.location.replace('guide.html');
+            return;
+          }
+
+          const diffDays = (now - state.lastShow) / DAY_MS;
+          let needGuide = false;
+
+          if (state.phase === 'daily') {
+            if (state.count < 3 || diffDays >= 1) needGuide = true;
+          } else if (state.phase === 'weekly') {
+            if (state.count < 3 || diffDays >= 7) needGuide = true;
+          } else if (state.phase === 'monthly') {
+            if (state.count < 3 || diffDays >= 30) needGuide = true;
+          }
+
+          if (needGuide) {
+            window.location.replace('guide.html');
+          }
+        })
+        .catch(e => console.warn('检查弹窗状态失败，跳过拦截', e));
+    })();
+  </script>
+
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { height: 100%; }
@@ -68,7 +114,7 @@
     .tab-panel { display: none; width: 100%; }
     .tab-panel.active { display: block; }
 
-    /* ===== 基础列表样式（点播、直播） ===== */
+    /* ===== 基础列表样式 ===== */
     .api-list { display: flex; flex-direction: column; width: 100%; }
     .api-item { padding: 14px 0; border-bottom: 1px solid #e4ebf3; }
     .api-item:last-child { border-bottom: none; }
@@ -116,6 +162,7 @@
     .live-list { display: flex; flex-direction: column; width: 100%; }
     .live-item { padding: 14px 0; border-bottom: 1px solid #e4ebf3; }
     .live-item:last-child { border-bottom: none; }
+    .live-item.hidden { display: none !important; }
     .live-item-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
     .live-item-name { font-size: 1rem; font-weight: 700; color: #0a1a2b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; min-width: 0; }
     .live-item-meta { display: flex; align-items: center; gap: 8px; font-size: .72rem; white-space: nowrap; flex-shrink: 0; }
@@ -437,7 +484,6 @@
     let rawListText = null;
     let rawLiveText = null;
 
-    // 数据缓存池
     const PanelDataCache = new Map();
 
     document.body.className = currentMode + '-mode';
@@ -528,7 +574,7 @@
       if (!modal || !img) return;
 
       if (title) title.textContent = item.title || item.label || '赞赏码';
-      if (tip)   tip.textContent   = item.tip || '';
+      if (tip)   tip.innerHTML     = item.tip || '';
       if (item.image) {
         img.style.display = '';
         img.onerror = function () {
@@ -861,7 +907,6 @@
 
     function renderItemsByType(type, items) {
       const list = Array.isArray(items) ? items : [];
-      // 兼容处理：如果传入 more，默认当 api 渲染
       const targetType = (type === 'more') ? 'api' : type;
       switch (targetType) {
         case 'online':
@@ -882,9 +927,6 @@
       </div>`;
     }
 
-    // =========================================================
-    //  核心：通用面板渲染（快链、更多、下载 合并）
-    // =========================================================
     async function renderDynamicPanel(rawTabs, containerId, defaultType = 'api') {
       const container = document.getElementById(containerId);
       if (!container) return;
@@ -929,7 +971,6 @@
       await Promise.all(ordered.map(async t => {
         if (!t.file) { dataMap[t.id] = { items: [] }; return; }
         try {
-          // 只要包含下载相关关键字或结构，就自动按下载列表拉取并清洗
           if (t.type === 'download' || t.file.includes('下载') || t.file.includes('app')) {
             const res = await fetch(t.file + '?t=' + Date.now() + '&r=' + Math.random(), { cache: 'no-store' });
             if (!res.ok) throw new Error('HTTP ' + res.status);
@@ -1035,9 +1076,6 @@
       await renderDynamicPanel(DOWNLOAD_SOURCES, 'downloads-content', 'more');
     }
 
-    // =========================================================
-    //  基础逻辑（点播、直播）
-    // =========================================================
     async function fetchListText() {
       if (rawListText !== null) return rawListText;
       const file = (SITE_CONFIG && SITE_CONFIG.sourceFiles && SITE_CONFIG.sourceFiles.list) || 'list.txt';
@@ -1168,7 +1206,11 @@
             const u = d.base + it.name;
             urls += `<div class="live-url-line"><div class="live-url-body"><span class="live-url-tag">${d.tag}</span><span class="live-url-text">${u}</span><button class="copy-btn" data-url="${u}">复制</button></div></div>`;
           });
-          html += `<div class="live-item" data-name="${it.displayName.toLowerCase()}">
+          
+          // 【搜索增强】将来源和UA放入 data-extra 供全局搜索匹配
+          const extraStr = `${(it.source||'').toLowerCase()} ${(it.ua||'').toLowerCase()}`;
+          
+          html += `<div class="live-item" data-name="${it.displayName.toLowerCase()}" data-extra="${extraStr}">
             <div class="live-item-header">
               <div class="live-item-name" title="${it.displayName}">${it.displayName}</div>
               <div class="live-item-meta">
@@ -1185,9 +1227,6 @@
       });
     }
 
-    // =========================================================
-    //  导航及其他逻辑
-    // =========================================================
     function renderTabs() {
       if (!TABS.length) return;
       navTabs.innerHTML = TABS.map(t =>
@@ -1235,8 +1274,10 @@
         const sel = (SEARCH_CFG.selectors || {})[key];
         if (!sel) return;
         document.querySelectorAll(sel).forEach(el => {
-          const n = el.getAttribute('data-name') || '';
-          el.classList.toggle('hidden', !n.includes(kw));
+          const name = el.getAttribute('data-name') || '';
+          const extra = el.getAttribute('data-extra') || '';
+          // 【搜索增强】同时匹配 data-name 和 data-extra
+          el.classList.toggle('hidden', !(name + ' ' + extra).includes(kw));
         });
       });
     }
