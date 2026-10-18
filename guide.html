@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>系统提示</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; width: 100%; overflow: hidden; background: rgba(10, 26, 43, 0.75); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+    
+    /* 弹窗遮罩层 */
+    .app-modal-mask { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 9999; }
+    
+    /* 弹窗主体 */
+    .app-modal-box {
+      background: #fff; width: 100%; max-width: 340px; border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4); overflow: hidden;
+      display: flex; flex-direction: column;
+      transform: scale(0.9); opacity: 0;
+      animation: modalIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    @keyframes modalIn { to { transform: scale(1); opacity: 1; } }
+
+    /* 头部插图/图标 */
+    .app-modal-header { padding: 24px 20px 10px; text-align: center; }
+    .app-modal-icon { font-size: 48px; line-height: 1; margin-bottom: 12px; display: block; animation: bounce 2s infinite; }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    
+    .app-modal-title { font-size: 1.15rem; font-weight: 700; color: #0a1a2b; margin-bottom: 8px; }
+
+    /* 内容区 */
+    .app-modal-content { padding: 0 24px 20px; text-align: center; color: #5a6f88; font-size: 0.88rem; line-height: 1.6; flex: 1; }
+    .app-modal-content strong { color: #0a1a2b; font-weight: 600; }
+    .app-modal-content .highlight { color: #e08a00; font-weight: 600; }
+
+    /* 按钮区 */
+    .app-modal-footer { padding: 0 20px 24px; display: flex; flex-direction: column; gap: 12px; }
+    
+    .btn-primary {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; height: 46px; background: #4a9eff; color: #fff;
+      border: none; border-radius: 50px; font-size: 1rem; font-weight: 600;
+      cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(74,158,255,0.3);
+    }
+    .btn-primary:active { transform: scale(0.96); background: #2a7ed9; box-shadow: 0 2px 6px rgba(74,158,255,0.2); }
+
+    .btn-secondary {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; height: 46px; background: #fff; color: #7a8fa3;
+      border: 1.5px solid #d4dbe5; border-radius: 50px; font-size: 0.95rem; font-weight: 500;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .btn-secondary:active { transform: scale(0.96); background: #f4f8fc; }
+
+    /* 赞赏码样式 */
+    .zsm-img { display: block; width: 100%; max-width: 220px; margin: 0 auto; border-radius: 12px; border: 1px solid #e4ebf3; }
+    
+    /* 倒计时退出按钮 */
+    .btn-countdown {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; height: 46px; background: #e2e8f0; color: #475569;
+      border: none; border-radius: 50px; font-size: 0.95rem; font-weight: 500; cursor: not-allowed;
+    }
+    .btn-countdown.active { background: #4a9eff; color: #fff; cursor: pointer; animation: pulse 1s infinite; }
+    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.8; } 100% { opacity: 1; } }
+
+    /* 步骤切换 */
+    .step { display: none; animation: fadeIn 0.3s forwards; }
+    .step.active { display: flex; flex-direction: column; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  </style>
+</head>
+<body>
+
+  <div class="app-modal-mask">
+    <div class="app-modal-box">
+      
+      <!-- 第一步：白嫖宣言 -->
+      <div class="step" id="step1">
+        <div class="app-modal-header">
+          <span class="app-modal-icon">🕊️</span>
+          <div class="app-modal-title">白嫖宣言</div>
+        </div>
+        <div class="app-modal-content">
+          <p>站长自己就是个<strong>资深白嫖客</strong>，100% 鼓励并赞成白嫖资源！</p>
+          <br>
+          <p>站长的口号是：<br><strong style="color:#4a9eff; font-size:0.95rem;">“如果白嫖有门槛，就是对白嫖的不尊重！”</strong></p>
+          <br>
+          <p>在这里，除了你自己的电费和网费，<br>我不允许你多花 1 分钱！</p>
+        </div>
+        <div class="app-modal-footer">
+          <button class="btn-primary" onclick="goStep2()">继续</button>
+        </div>
+      </div>
+
+      <!-- 第二步：为爱发电 -->
+      <div class="step" id="step2">
+        <div class="app-modal-header">
+          <span class="app-modal-icon">❤️</span>
+          <div class="app-modal-title">为爱发电，需要续航</div>
+        </div>
+        <div class="app-modal-content">
+          <p>但说实话，为爱发电是临时的。热情虽然一直在，但不可能永远靠爱填饱肚子。</p>
+          <br>
+          <p>站长也需要一点回馈和鼓励，才能保证服务器稳定，让这个免费的小站<strong>长期运营下去</strong>。</p>
+          <br>
+          <p class="highlight">你愿意给站长加个鸡腿吗？</p>
+        </div>
+        <div class="app-modal-footer">
+          <button class="btn-primary" onclick="goStep3()">我愿意，给站长加个鸡腿 🍗</button>
+          <button class="btn-secondary" onclick="goStep4()">我拒绝，我和站长一样是个白嫖客</button>
+        </div>
+      </div>
+
+      <!-- 第三步：赞赏码 -->
+      <div class="step" id="step3">
+        <div class="app-modal-header">
+          <span class="app-modal-icon">🎉</span>
+          <div class="app-modal-title">万分感谢！</div>
+        </div>
+        <div class="app-modal-content">
+          <p>感谢你为项目的稳定做出的贡献！<br>你的这份心意，是站长坚持的最大动力。</p>
+          <br>
+          <img class="zsm-img" src="vip/zsm.png" alt="微信赞赏码" onerror="this.src='https://via.placeholder.com/220x220?text=请放置赞赏码'">
+          <br>
+          <p style="font-size:0.75rem; color:#8b9eb0; margin-top:10px;">长按图片识别，或保存到相册后扫码</p>
+        </div>
+        <div class="app-modal-footer">
+          <button class="btn-primary" onclick="closeGuide()">完成并关闭</button>
+        </div>
+      </div>
+
+      <!-- 第四步：拒绝/白嫖肯定 -->
+      <div class="step" id="step4">
+        <div class="app-modal-header">
+          <span class="app-modal-icon">👍</span>
+          <div class="app-modal-title">致敬白嫖精神！</div>
+        </div>
+        <div class="app-modal-content">
+          <p>非常欣赏你的领悟力！<br>你能完美继承站长的白嫖精神，站长深感欣慰。</p>
+          <br>
+          <p>只要你用得开心，这个站就没白建。<br>资源随便拿，不要有心理负担！</p>
+        </div>
+        <div class="app-modal-footer">
+          <button class="btn-countdown" id="cdBtn" disabled onclick="closeGuide()">立即退出</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // === 状态机逻辑 ===
+    const STATE_KEY = 'guide_prompt_state';
+    
+    // 获取或初始化状态
+    function getState() {
+      let state = localStorage.getItem(STATE_KEY);
+      if (state) {
+        try { state = JSON.parse(state); } catch(e) { state = null; }
+      }
+      if (!state) {
+        // 默认：初始阶段为 daily，次数 0，最后显示时间 0
+        state = { phase: 'daily', count: 0, lastShow: 0 };
+      }
+      return state;
+    }
+
+    // 保存状态
+    function saveState(state) {
+      localStorage.setItem(STATE_KEY, JSON.stringify(state));
+    }
+
+    // 页面加载时检查是否需要弹窗
+    window.onload = function() {
+      const state = getState();
+      const now = Date.now();
+      const DAY_MS = 24 * 60 * 60 * 1000;
+      
+      // 计算时间差
+      const diffDays = (now - state.lastShow) / DAY_MS;
+
+      let show = false;
+
+      if (state.phase === 'daily') {
+        // 首日阶段：只要次数小于 3，或者在 24 小时内刷新，都算
+        if (state.count < 3) {
+          show = true;
+        } else if (diffDays >= 1) {
+          // 如果满了3次，且过了1天，进入 weekly 阶段
+          state.phase = 'weekly';
+          state.count = 0;
+          show = true;
+        }
+      } 
+      else if (state.phase === 'weekly') {
+        // 7日阶段
+        if (state.count < 3) {
+          if (state.count === 0 || diffDays >= 7) {
+             // 首次进入，或者 7 天后再次循环（不过这里因为我们3次是连续的，通常是 count 0 时触发）
+             show = true;
+          }
+        } 
+        if (state.count >= 3 && diffDays >= 7) {
+          state.phase = 'monthly';
+          state.count = 0;
+          show = true;
+        }
+      } 
+      else if (state.phase === 'monthly') {
+        // 月度阶段
+        if (state.count < 3) {
+          if (state.count === 0 || diffDays >= 30) {
+            show = true;
+          }
+        }
+        if (state.count >= 3 && diffDays >= 30) {
+          // 循环月度
+          state.count = 0;
+          show = true;
+        }
+      }
+
+      if (show) {
+        saveState(state);
+        // 根据阶段更新第一步的“剩余次数”提示（可选，这里放在右上角或文案里）
+        // 由于你要求的是“提示用户总共出现三次，还剩两次...”，我将这个逻辑放到了关闭时。
+      } else {
+        // 如果不该展示，直接退出（或者跳回首页）
+        window.location.href = 'index.html';
+      }
+    };
+
+    // 按钮交互
+    function goStep1() {
+      document.getElementById('step1').classList.remove('active');
+      document.getElementById('step2').classList.add('active');
+    }
+
+    function goStep2() {
+      document.getElementById('step1').classList.remove('active');
+      document.getElementById('step2').classList.add('active');
+    }
+
+    function goStep3() {
+      document.getElementById('step2').classList.remove('active');
+      document.getElementById('step3').classList.add('active');
+    }
+
+    function goStep4() {
+      document.getElementById('step2').classList.remove('active');
+      document.getElementById('step4').classList.add('active');
+      startCountdown();
+    }
+
+    // 倒计时逻辑
+    let cdTimer;
+    function startCountdown() {
+      let timeLeft = 15;
+      const btn = document.getElementById('cdBtn');
+      btn.textContent = `立即退出 (${timeLeft}s)`;
+      
+      cdTimer = setInterval(() => {
+        timeLeft--;
+        if (timeLeft > 0) {
+          btn.textContent = `立即退出 (${timeLeft}s)`;
+        } else {
+          clearInterval(cdTimer);
+          btn.textContent = '立即退出';
+          btn.classList.add('active');
+          btn.disabled = false;
+          btn.onclick = closeGuide;
+        }
+      }, 1000);
+    }
+
+    // 关闭弹窗并更新状态
+    function closeGuide() {
+      if (cdTimer) clearInterval(cdTimer);
+      
+      const state = getState();
+      state.count += 1;
+      state.lastShow = Date.now();
+      saveState(state);
+
+      // 根据剩余次数给出不同的提示
+      if (state.phase === 'daily') {
+        if (state.count === 1) alert('提示：该弹窗今日共出现 3 次，还剩 2 次。');
+        else if (state.count === 2) alert('提示：该弹窗今日共出现 3 次，还剩 1 次。');
+        else if (state.count >= 3) alert('提示：今日弹窗已完成，短期内不再出现。');
+      } 
+      else if (state.phase === 'weekly') {
+        if (state.count === 1) alert('提示：本周期弹窗共出现 3 次，还剩 2 次。');
+        else if (state.count === 2) alert('提示：本周期弹窗共出现 3 次，还剩 1 次。');
+        else if (state.count >= 3) alert('提示：本周期弹窗已完成，一个月内不再出现。');
+      }
+      else if (state.phase === 'monthly') {
+        if (state.count === 1) alert('提示：本月弹窗共出现 3 次，还剩 2 次。');
+        else if (state.count === 2) alert('提示：本月弹窗共出现 3 次，还剩 1 次。');
+        else if (state.count >= 3) alert('提示：本月弹窗已完成，下个月见。');
+      }
+
+      // 重定向回首页
+      window.location.href = 'index.html';
+    }
+
+    // 默认显示第一步
+    document.getElementById('step1').classList.add('active');
+
+    // 拦截所有空白点击，防止穿透
+    document.querySelector('.app-modal-mask').addEventListener('click', function(e) {
+      // 如果点击的是背景遮罩，不做任何反应（阻断）
+      if(e.target === this) {
+         return;
+      }
+    });
+  </script>
+</body>
+</html>
