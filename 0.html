@@ -1,359 +1,264 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
-<title>海量接口搬运备份</title>
-<style>
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { height:100%; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-  background:#eef2f7; color:#1a2b3d;
-  padding:20px 14px 10px; min-height:100vh;
-  display:flex; flex-direction:column; overflow-x:hidden;
-  -webkit-tap-highlight-color:transparent;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>系统提示</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; width: 100%; overflow: hidden; background: rgba(10, 26, 43, 0.75); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+    
+    /* 弹窗遮罩层 */
+    .app-modal-mask { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 9999; }
+    
+    /* 弹窗主体 */
+    .app-modal-box {
+      background: #fff; width: 100%; max-width: 340px; border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4); overflow: hidden;
+      display: flex; flex-direction: column;
+      transform: scale(0.9); opacity: 0;
+      animation: modalIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    @keyframes modalIn { to { transform: scale(1); opacity: 1; } }
 
-.container {
-  max-width:820px; margin:0 auto; position:relative;
-  width:100%; overflow-x:hidden;
-  flex:1; display:flex; flex-direction:column;
-}
+    /* 头部插图/图标 */
+    .app-modal-header { padding: 24px 20px 10px; text-align: center; }
+    .app-modal-icon { font-size: 48px; line-height: 1; margin-bottom: 12px; display: block; animation: bounce 2s infinite; }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    
+    .app-modal-title { font-size: 1.15rem; font-weight: 700; color: #0a1a2b; margin-bottom: 8px; }
 
-/* ===== 顶部标题区 ===== */
-.header-block { text-align:center; margin-bottom:16px; padding-top:14px; }
+    /* 内容区 */
+    .app-modal-content { padding: 0 24px 20px; text-align: center; color: #5a6f88; font-size: 0.88rem; line-height: 1.6; flex: 1; }
+    .app-modal-content strong { color: #0a1a2b; font-weight: 600; }
+    .app-modal-content .highlight { color: #e08a00; font-weight: 600; }
 
-h1 {
-  font-size:1.35rem; font-weight:700; color:#0a1a2b;
-  line-height:1.4;
-}
+    /* 按钮区 */
+    .app-modal-footer { padding: 0 20px 24px; display: flex; flex-direction: column; gap: 12px; }
+    
+    .btn-primary {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; height: 46px; background: #4a9eff; color: #fff;
+      border: none; border-radius: 50px; font-size: 1rem; font-weight: 600;
+      cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(74,158,255,0.3);
+    }
+    .btn-primary:active { transform: scale(0.96); background: #2a7ed9; box-shadow: 0 2px 6px rgba(74,158,255,0.2); }
 
-.header-divider {
-  height:1px; background:#e4ebf3;
-  margin:12px 0;
-}
+    .btn-secondary {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; height: 46px; background: #fff; color: #7a8fa3;
+      border: 1.5px solid #d4dbe5; border-radius: 50px; font-size: 0.95rem; font-weight: 500;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .btn-secondary:active { transform: scale(0.96); background: #f4f8fc; }
 
-.subtitle {
-  font-size:.78rem; color:#7a8fa3; line-height:1.8;
-}
+    /* 赞赏码样式 */
+    .zsm-img { display: block; width: 100%; max-width: 220px; margin: 0 auto; border-radius: 12px; border: 1px solid #e4ebf3; }
+    
+    /* 倒计时退出按钮 */
+    .btn-exit {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; height: 46px; background: #4a9eff; color: #fff;
+      border: none; border-radius: 50px; font-size: 0.95rem; font-weight: 600;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .btn-exit:active { transform: scale(0.96); background: #2a7ed9; }
 
-/* ===== 卡片主体 ===== */
-.main-card {
-  background:#fff; border-radius:8px;
-  padding:20px 22px 18px;
-  border:1px solid #d4dbe5;
-  width:100%; overflow-x:hidden; flex:1;
-  display:flex; flex-direction:column;
-}
-
-/* ===== QQ 群 ===== */
-.qq-block {
-  font-size:.76rem; color:#5a6f88; line-height:2;
-  margin-top:6px;
-}
-
-.qq-block .qq-row {
-  margin-top:8px;
-}
-
-.qq-block a {
-  color:#4a9eff; text-decoration:none; font-weight:600;
-}
-.qq-block a:hover { text-decoration:underline; }
-
-.section-title {
-  font-size:.85rem; font-weight:700; color:#0a1a2b;
-  margin:22px 0 4px;
-}
-
-/* ===== 赞赏码 ===== */
-.reward-block {
-  text-align:center;
-  margin-top:6px;
-}
-
-.reward-tip {
-  font-size:.74rem; color:#7a8fa3; line-height:1.8;
-  margin-top:10px;
-}
-
-.reward-soft {
-  font-size:.72rem; color:#9aa8b8; line-height:1.8;
-  margin-top:8px;
-  padding:8px 12px;
-  background:#f5f8fc;
-  border-radius:6px;
-}
-
-/* ===== 赞赏码缩略图标 ===== */
-.zsm-trigger-wrap {
-  margin-top:16px;
-  display:flex; flex-direction:column; align-items:center; gap:8px;
-}
-
-.zsm-trigger {
-  position:relative;
-  width:58px; height:58px;
-  padding:0;
-  border:1px solid #d4dbe5;
-  border-radius:14px;
-  background:#fff;
-  overflow:hidden;
-  cursor:pointer;
-  display:flex; align-items:center; justify-content:center;
-  box-shadow:0 2px 8px rgba(74,158,255,.14);
-  transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
-  -webkit-user-select:none; user-select:none;
-  touch-action:manipulation;
-}
-.zsm-trigger img {
-  width:100%; height:100%;
-  object-fit:cover; display:block;
-}
-.zsm-fallback {
-  display:none;
-  font-size:1.5rem; line-height:1;
-}
-.zsm-trigger.no-img .zsm-fallback { display:block; }
-
-.zsm-trigger:hover {
-  border-color:#4a9eff;
-  transform:translateY(-2px);
-  box-shadow:0 8px 18px rgba(74,158,255,.28);
-}
-.zsm-trigger:active { transform:scale(.93); }
-
-.zsm-hint {
-  font-size:.7rem; color:#9aa8b8; line-height:1.6;
-}
-
-/* ===== 弹层 ===== */
-.zsm-modal {
-  position:fixed; inset:0; z-index:999;
-  display:flex; align-items:center; justify-content:center;
-  padding:26px 22px;
-  visibility:hidden; opacity:0;
-  transition:opacity .2s ease, visibility .2s ease;
-}
-.zsm-modal.open { visibility:visible; opacity:1; }
-
-.zsm-modal-mask {
-  position:absolute; inset:0;
-  background:rgba(10,26,43,.62);
-  -webkit-backdrop-filter:blur(2px);
-  backdrop-filter:blur(2px);
-}
-
-.zsm-modal-panel {
-  position:relative;
-  width:100%; max-width:330px;
-  background:#fff;
-  border-radius:14px;
-  padding:18px 18px 14px;
-  text-align:center;
-  box-shadow:0 18px 50px rgba(0,0,0,.32);
-  transform:scale(.9);
-  opacity:0;
-  transition:transform .22s cubic-bezier(.2,.9,.3,1.2), opacity .2s ease;
-}
-.zsm-modal.open .zsm-modal-panel { transform:scale(1); opacity:1; }
-
-.zsm-modal-panel img {
-  display:block;
-  width:auto; max-width:100%;
-  max-height:56vh;
-  margin:0 auto;
-  border-radius:8px;
-  border:1px solid #e4ebf3;
-  background:#fff;
-}
-
-.zsm-modal-title {
-  font-size:.82rem; font-weight:700; color:#0a1a2b;
-  margin-bottom:12px;
-}
-
-.zsm-modal-tip {
-  font-size:.72rem; color:#7a8fa3; line-height:1.7;
-  margin-top:12px;
-}
-
-.zsm-modal-close {
-  position:absolute; top:-11px; right:-11px;
-  width:32px; height:32px;
-  border:none; border-radius:50%;
-  background:#4a9eff; color:#fff;
-  font-size:19px; line-height:1;
-  display:flex; align-items:center; justify-content:center;
-  cursor:pointer;
-  box-shadow:0 2px 8px rgba(74,158,255,.45);
-  transition:background .15s, transform .08s;
-  touch-action:manipulation;
-}
-.zsm-modal-close:hover { background:#2a7ed9; }
-.zsm-modal-close:active { transform:scale(.9); }
-
-/* ===== 返回首页按钮 ===== */
-.home-btn-wrap {
-  text-align:center; margin-top:28px;
-}
-
-.home-btn {
-  display:inline-flex; align-items:center; justify-content:center;
-  gap:6px;
-  height:42px; padding:0 28px;
-  background:#4a9eff; color:#fff;
-  border:none; border-radius:30px;
-  font-size:.85rem; font-weight:500; line-height:1;
-  cursor:pointer; text-decoration:none;
-  transition:background .15s, transform .05s, box-shadow .15s;
-  box-shadow:0 2px 8px rgba(74,158,255,.3);
-  -webkit-user-select:none; user-select:none;
-  touch-action:manipulation;
-}
-.home-btn:hover { background:#2a7ed9; }
-.home-btn:active { transform:scale(.96); }
-
-/* ===== 页脚 ===== */
-.page-footer {
-  text-align:center;
-  padding:24px 0 10px;
-  font-size:.7rem; color:#8fa3b8; line-height:1.8;
-  margin-top:auto;
-}
-
-/* ===== 手机适配 ===== */
-@media (max-width: 600px) {
-  body { padding:14px 8px 6px; }
-  .main-card { padding:16px 14px 14px; }
-  h1 { font-size:1.15rem; }
-  .header-block { padding-top:10px; margin-bottom:12px; }
-  .home-btn { height:40px; padding:0 22px; font-size:.8rem; }
-  .zsm-trigger { width:54px; height:54px; }
-  .zsm-modal-panel { max-width:300px; }
-  .zsm-modal-panel img { max-height:52vh; }
-}
-</style>
+    /* 步骤切换 */
+    .step { display: none; animation: fadeIn 0.3s forwards; }
+    .step.active { display: flex; flex-direction: column; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <div class="app-modal-mask">
+    <div class="app-modal-box">
+      
+      <!-- 第一步：白嫖宣言 -->
+      <div class="step" id="step1">
+        <div class="app-modal-header">
+          <span class="app-modal-icon">🕊️</span>
+          <div class="app-modal-title">白嫖宣言</div>
+        </div>
+        <div class="app-modal-content">
+          <p>站长自己就是个<strong>资深白嫖客</strong>，100% 鼓励并赞成白嫖资源！</p>
+          <br>
+          <p>站长的口号是：<br><strong style="color:#4a9eff; font-size:0.95rem;">“如果白嫖有门槛，就是对白嫖的不尊重！”</strong></p>
+          <br>
+          <p>在这里，除了你自己的电费和网费，<br>我不允许你多花 1 分钱！</p>
+        </div>
+        <div class="app-modal-footer">
+          <button class="btn-primary" onclick="goStep(2)">继续</button>
+        </div>
+      </div>
 
-  <!-- 顶部标题 -->
-  <div class="header-block">
-    <h1>海量接口搬运备份</h1>
-    <div class="header-divider"></div>
-    <p class="subtitle">
-      备用数据源，防屏不迷路<br>
-      资源长期免费分享，能跑多久看上游，不保证永久可用
-    </p>
-  </div>
+      <!-- 第二步：为爱发电 -->
+      <div class="step" id="step2">
+        <div class="app-modal-header">
+          <span class="app-modal-icon">❤️</span>
+          <div class="app-modal-title">为爱发电，需要续航</div>
+        </div>
+        <div class="app-modal-content">
+          <p>但说实话，为爱发电是临时的。热情虽然一直在，但不可能永远靠爱填饱肚子。</p>
+          <br>
+          <p>站长也需要一点回馈和鼓励，才能保证服务器稳定，让这个免费的小站<strong>长期运营下去</strong>。</p>
+          <br>
+          <p class="highlight">你愿意给站长加个鸡腿吗？</p>
+        </div>
+        <div class="app-modal-footer">
+          <button class="btn-primary" onclick="goStep(3)">我愿意，给站长加个鸡腿 🍗</button>
+          <button class="btn-secondary" onclick="goStep(4)">我拒绝，我和站长一样是个白嫖客</button>
+        </div>
+      </div>
 
-  <!-- 主卡片 -->
-  <div class="main-card">
+      <!-- 第三步：赞赏码 -->
+      <div class="step" id="step3">
+        <div class="app-modal-header">
+          <span class="app-modal-icon">🎉</span>
+          <div class="app-modal-title">万分感谢！</div>
+        </div>
+        <div class="app-modal-content">
+          <p>感谢你为项目的稳定做出的贡献！<br>你的这份心意，是站长坚持的最大动力。</p>
+          <br>
+          <img class="zsm-img" src="vip/zsm.png" alt="微信赞赏码" onerror="this.src='https://via.placeholder.com/220x220?text=请放置赞赏码'">
+          <br>
+          <p style="font-size:0.75rem; color:#8b9eb0; margin-top:10px;">长按图片识别，或保存到相册后扫码</p>
+        </div>
+        <div class="app-modal-footer">
+          <button class="btn-primary" onclick="closeGuide()">完成并关闭</button>
+        </div>
+      </div>
 
-    <div class="qq-block">
-      QQ 交流群：
-      <div class="qq-row"><a href="https://qm.qq.com/q/ApgHrgV7Y4" target="_blank" rel="noopener noreferrer">一群 1067685939</a></div>
-      <div class="qq-row"><a href="https://qm.qq.com/q/LCBc86ZE4K" target="_blank" rel="noopener noreferrer">二群 963502550</a></div>
-      <div class="qq-row"><a href="https://qm.qq.com/q/syZRStM2ha" target="_blank" rel="noopener noreferrer">三群 931343329</a></div>
-      <div class="qq-row"><a href="https://qm.qq.com/q/KKVaXiuiOe" target="_blank" rel="noopener noreferrer">四群 616843624</a></div>
-      <div class="qq-row"><a href="https://qm.qq.com/q/Bq1QqyQDK0" target="_blank" rel="noopener noreferrer">五群 594253529</a></div>
-    </div>
-
-    <!-- 随心支持 -->
-    <div class="section-title">☕ 随心支持一下</div>
-    <div class="reward-block">
-
-      <p class="reward-tip">
-        备份、同步、更新都挺费电。<br>
-        若这个站帮过你一次，欢迎请我喝杯咖啡，金额随你。
-      </p>
-
-      <p class="reward-soft">
-        纯自愿，不打赏也完全不影响使用。<br>
-        赞赏不等于售后绑定，也不承诺接口永久可用。
-      </p>
-
-      <!-- ✅ 赞赏码缩略图标，点击后弹出查看 -->
-      <div class="zsm-trigger-wrap">
-        <button class="zsm-trigger" type="button" id="zsmBtn" aria-label="查看微信赞赏码">
-          <img src="./vip/zsm.png" alt="微信赞赏码"
-               onerror="this.style.display='none';this.parentNode.classList.add('no-img');">
-          <span class="zsm-fallback" aria-hidden="true">☕</span>
-        </button>
-        <span class="zsm-hint">点击图标查看赞赏码</span>
+      <!-- 第四步：拒绝/白嫖肯定 -->
+      <div class="step" id="step4">
+        <div class="app-modal-header">
+          <span class="app-modal-icon">👍</span>
+          <div class="app-modal-title">致敬白嫖精神！</div>
+        </div>
+        <div class="app-modal-content">
+          <p>非常欣赏你的领悟力！<br>你能完美继承站长的白嫖精神，站长深感欣慰。</p>
+          <br>
+          <p>只要你用得开心，这个站就没白建。<br>资源随便拿，不要有心理负担！</p>
+        </div>
+        <div class="app-modal-footer">
+          <button class="btn-exit" id="cdBtn" onclick="closeGuide()">立即退出 (15s)</button>
+        </div>
       </div>
 
     </div>
-
-    <!-- 返回首页 -->
-    <div class="home-btn-wrap">
-      <a class="home-btn" href="index.html">返回首页</a>
-    </div>
-
   </div>
 
-  <!-- 页脚 -->
-  <footer class="page-footer">
-    <p>本站接口资源由【误道者】整理，仅供学习交流，所有资源均来自互联网，版权归原作者所有。</p>
-    <p>支持仅代表个人自愿打赏，与接口可用性、特定资源可播性无关。</p>
-  </footer>
-
-</div>
-
-<!-- ===== 赞赏码弹层 ===== -->
-<div class="zsm-modal" id="zsmModal" aria-hidden="true">
-  <div class="zsm-modal-mask" data-close></div>
-
-  <div class="zsm-modal-panel" role="dialog" aria-modal="true" aria-label="微信赞赏码">
-    <button class="zsm-modal-close" type="button" data-close aria-label="关闭">×</button>
-    <div class="zsm-modal-title">微信赞赏码</div>
-    <img src="./vip/zsm.png" alt="微信赞赏码"
-         onerror="this.outerHTML='&lt;p class=&quot;zsm-modal-tip&quot;&gt;赞赏码图片未找到，请检查 ./vip/zsm.png 是否存在。&lt;/p&gt;';">
-    <p class="zsm-modal-tip">长按图片识别，或保存到相册后扫码</p>
-  </div>
-</div>
-
-<script>
-(function () {
-  var btn   = document.getElementById('zsmBtn');
-  var modal = document.getElementById('zsmModal');
-  var lastFocus = null;
-
-  function openModal() {
-    lastFocus = document.activeElement;
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    var closeBtn = modal.querySelector('.zsm-modal-close');
-    if (closeBtn) closeBtn.focus();
-  }
-
-  function closeModal() {
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    if (lastFocus && lastFocus.focus) lastFocus.focus();
-  }
-
-  btn.addEventListener('click', openModal);
-
-  // 点击遮罩或关闭按钮
-  modal.addEventListener('click', function (e) {
-    if (e.target.hasAttribute('data-close')) closeModal();
-  });
-
-  // ESC 关闭
-  document.addEventListener('keydown', function (e) {
-    if ((e.key === 'Escape' || e.keyCode === 27) && modal.classList.contains('open')) {
-      closeModal();
+  <script>
+    // === 状态机逻辑 ===
+    const STATE_KEY = 'guide_prompt_state';
+    
+    // 获取或初始化状态
+    function getState() {
+      let state = localStorage.getItem(STATE_KEY);
+      if (state) {
+        try { state = JSON.parse(state); } catch(e) { state = null; }
+      }
+      if (!state) {
+        state = { phase: 'daily', count: 0, lastShow: 0 };
+      }
+      return state;
     }
-  });
-})();
-</script>
 
+    // 保存状态
+    function saveState(state) {
+      localStorage.setItem(STATE_KEY, JSON.stringify(state));
+    }
+
+    // 页面加载时检查是否需要弹窗
+    window.onload = function() {
+      const state = getState();
+      const now = Date.now();
+      const DAY_MS = 24 * 60 * 60 * 1000;
+      const diffDays = (now - state.lastShow) / DAY_MS;
+
+      let show = false;
+      if (state.phase === 'daily') {
+        if (state.count < 3 || diffDays >= 1) show = true;
+      } else if (state.phase === 'weekly') {
+        if (state.count < 3 || diffDays >= 7) show = true;
+      } else if (state.phase === 'monthly') {
+        if (state.count < 3 || diffDays >= 30) show = true;
+      }
+
+      if (!show) {
+        window.location.href = 'index.html';
+      }
+    };
+
+    // 步骤切换
+    function goStep(step) {
+      document.querySelectorAll('.step').forEach(el => el.classList.remove('active'));
+      document.getElementById('step' + step).classList.add('active');
+      
+      if (step === 4) {
+        startCountdown();
+      }
+    }
+
+    // 倒计时逻辑
+    let cdTimer;
+    function startCountdown() {
+      let timeLeft = 15;
+      const btn = document.getElementById('cdBtn');
+      btn.textContent = `立即退出 (${timeLeft}s)`;
+      
+      // 清除可能存在的旧定时器
+      if (cdTimer) clearInterval(cdTimer);
+
+      cdTimer = setInterval(() => {
+        timeLeft--;
+        if (timeLeft > 0) {
+          btn.textContent = `立即退出 (${timeLeft}s)`;
+        } else {
+          clearInterval(cdTimer);
+          btn.textContent = '立即退出';
+        }
+      }, 1000);
+    }
+
+    // 关闭弹窗并更新状态
+    function closeGuide() {
+      if (cdTimer) clearInterval(cdTimer);
+      
+      const state = getState();
+      state.count += 1;
+      state.lastShow = Date.now();
+      saveState(state);
+
+      // 根据当前阶段和次数给出提示
+      if (state.phase === 'daily') {
+        if (state.count === 1) alert('提示：该弹窗今日共出现 3 次，还剩 2 次。');
+        else if (state.count === 2) alert('提示：该弹窗今日共出现 3 次，还剩 1 次。');
+        else if (state.count >= 3) alert('提示：今日弹窗已完成，短期内不再出现。');
+      } 
+      else if (state.phase === 'weekly') {
+        if (state.count === 1) alert('提示：本周期弹窗共出现 3 次，还剩 2 次。');
+        else if (state.count === 2) alert('提示：本周期弹窗共出现 3 次，还剩 1 次。');
+        else if (state.count >= 3) alert('提示：本周期弹窗已完成，一个月内不再出现。');
+      }
+      else if (state.phase === 'monthly') {
+        if (state.count === 1) alert('提示：本月弹窗共出现 3 次，还剩 2 次。');
+        else if (state.count === 2) alert('提示：本月弹窗共出现 3 次，还剩 1 次。');
+        else if (state.count >= 3) alert('提示：本月弹窗已完成，下个月见。');
+      }
+
+      // 重定向回首页
+      window.location.href = 'index.html';
+    }
+
+    // 默认显示第一步
+    document.getElementById('step1').classList.add('active');
+
+    // 拦截空白点击
+    document.querySelector('.app-modal-mask').addEventListener('click', function(e) {
+      if(e.target === this) return; 
+    });
+  </script>
 </body>
 </html>
