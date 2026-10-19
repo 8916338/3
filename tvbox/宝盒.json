@@ -4,12 +4,6 @@
   "logo": "https://img.fy6b.com/2024/07/15/161bacbec4079.png",
   "lives": [
     {
-      "name": "Kimentanm",
-      "type": 0,
-      "url": "https://gh.927223.xyz/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-      "playerType": 2
-    },
-    {
       "name": "范明明（需开启V6网络）",
       "type": 0,
       "url": "https://nos.netease.com/ysf/3d75a78a0fc7ede372c03598d6d10367.m3u",
@@ -51,7 +45,7 @@
   "sites": [
     {
       "key": "豆瓣",
-      "name": "中秋快乐🥮免费分享",
+      "name": "新年快乐🥮免费分享",
       "type": 3,
       "api": "csp_Douban",
       "jar": "https://gitee.com/KYSY1/dyy/raw/master/bh2601251.jar",
@@ -122,14 +116,6 @@
         "buildNumber": "2001",
         "buildSignature": "A40DA80A59D170CAA950CF15C18C454D47A39B26989D8B640ECD745BA71BF5DC"
       }
-    },
-    {
-      "key": "咕咕动漫",
-      "name": "咕咕┃十一",
-      "type": 3,
-      "searchable": 1,
-      "api": "csp_AppGet",
-      "ext": "https://www.gugu3.com|nKfZ8KX6JTNWRzTD|V119|okhttp/3.10"
     },
     {
       "key": "csp_duanju",
@@ -339,22 +325,6 @@
       }
     },
     {
-      "key": "云朵影视APP",
-      "name": "云朵┃三十",
-      "type": 3,
-      "api": "csp_AppYd",
-      "ext": {
-        "host": "https://ds3xy2yunsa.xyz",
-        "finger": "SF-F5F11CB15897115AE6BCFE063C288F730CA865588F572C780A3E8477D0DD3776",
-        "updateId": "175070c3-075c-468b-950a-bf575769f4f1",
-        "deviceBrand": "vivo",
-        "deviceModel": "V2309A",
-        "pkg": "com.tvcloud.io",
-        "sk": "SK-sk_13oXDZ7u9j2Tk1c0cawWVFfO",
-        "ver": "1"
-      }
-    },
-    {
       "key": "一碗",
       "name": "一碗┃肥二",
       "type": 3,
@@ -488,23 +458,6 @@
       "style": {
         "type": "rect",
         "ratio": 3.8
-      }
-    },
-    {
-      "key": "csp_Bili",
-      "name": "哔哩┃综合",
-      "type": 3,
-      "api": "csp_Bili",
-      "quickSearch": 0,
-      "timeout": 12,
-      "searchable": 1,
-      "ext": {
-        "json": "https://cik07-cos.7moor-fs2.com/im/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/db3b02559ec04736/bili.json",
-        "cookie": ""
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.333
       }
     },
     {
@@ -701,11 +654,6 @@
       "url": "Demo"
     },
     {
-      "name": "qiyi[官源]",
-      "type": 1,
-      "url": "http://39.104.230.177:1122/lxjx/myyk.php?url="
-    },
-    {
       "name": "-咸鱼-",
       "type": 0,
       "url": "https://jx.xymp4.cc/?url=",
@@ -723,41 +671,6 @@
         "header": {
           "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57"
         }
-      }
-    },
-    {
-      "name": "肥猫",
-      "type": 1,
-      "url": "http://xn--ihqu10cn4c.xn--z7x900a.live/jx.php?id=2&url=",
-      "ext": {
-        "flag": [
-          "qq",
-          "腾讯",
-          "qiyi",
-          "爱奇艺",
-          "奇艺",
-          "youku",
-          "优酷",
-          "tucheng",
-          "sohu",
-          "搜狐",
-          "letv",
-          "乐视",
-          "mgtv",
-          "芒果",
-          "tnmb",
-          "seven",
-          "yzm",
-          "aliyun",
-          "RJuMao",
-          "bilibili",
-          "1905",
-          "xinvip",
-          "XAL",
-          "qiqi",
-          "XALS",
-          "YuMi-vip"
-        ]
       }
     },
     {
@@ -816,16 +729,6 @@
       "name": "-77解析-",
       "type": 0,
       "url": "https://jx.77flv.cc/?url=",
-      "ext": {
-        "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
-        }
-      }
-    },
-    {
-      "name": "-zui-",
-      "type": 0,
-      "url": "https://jx.zui.cm/?url=",
       "ext": {
         "header": {
           "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
