@@ -1,24 +1,27 @@
 {
   "owned": [
     {
-      "name": "沫离分群",
-      "url": "https://qm.qq.com/q/GC3rUPFuGQ",
+      "name": "X4误道者备份总群① 1067685939",
+      "url": "https://qm.qq.com/q/MpvrKln5Wa",
       "icon": "qq"
     },
     {
-      "name": "华缘社分群",
-      "url": "https://qm.qq.com/q/ztiTOoeBXi",
+      "name": "X4误道者备份服务公告群（禁言）745790353",
+      "url": "https://qm.qq.com/q/aGsuOxA7sI",
       "icon": "qq"
     },
     {
-      "name": "白潇淩分群",
-      "url": "https://qm.qq.com/q/KKVaXiuiOe",
+      "name": "X4误道者备份分享⑤ 594253529",
+      "url": "https://qm.qq.com/q/l9TV6IIhIk",
       "icon": "qq"
-    }
-  ],
-  "partners": [
+    },
     {
-      "name": "TG 交流频道",
+      "name": "误道者备份分享顺其自然群 331511238",
+      "url": "https://qm.qq.com/q/POqRszk0UA",
+      "icon": "qq"
+    },
+    {
+      "name": "Telegram 交流群组",
       "url": "https://t.me/tg6603",
       "icon": "telegram"
     },
@@ -26,11 +29,28 @@
       "name": "GitHub 开源仓库",
       "url": "https://github.com/lubin776/tvbox-api-backup",
       "icon": "github"
+    }
+  ],
+  "partners": [
+    {
+      "name": "白凌潇分群 616843624",
+      "url": "https://qm.qq.com/q/CBa74l0tag",
+      "icon": "qq"
     },
     {
-      "name": "微信交流频道",
-      "url": "https://example.com/wechat-channel",
-      "icon": "./icons/wechat.png"
+      "name": "沫离分群 931343329",
+      "url": "https://qm.qq.com/q/hmcwPwM6nS",
+      "icon": "qq"
+    },
+    {
+      "name": "华缘社☆误道者备份②群 1053231032",
+      "url": "https://qm.qq.com/q/Ls3XoPK5qs",
+      "icon": "qq"
+    },
+    {
+      "name": "华缘社 · 腾讯频道",
+      "url": "https://pd.qq.com/s/glhjbaya9?b=5",
+      "icon": "qq_channel"
     }
   ]
 }
