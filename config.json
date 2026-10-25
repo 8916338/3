@@ -9,7 +9,7 @@
     "footer": "本站接口资源由【误道者】整理。所有资源均来自互联网，版权归原作者所有。仅供测试学习使用，请勿用于违法及商业用途，请勿付费购买。如涉及侵权，请联系删除。",
     "enableGuide": false
   },
-
+  "shgroups": "cy/社群推荐.json",
   "about": {
     "domains": "cy/站点域名分组.json",
     "declaration": "本站接口资源由【误道者】整理。所有资源均来自互联网，版权归原作者所有。仅供测试学习使用，请勿用于违法及商业用途，请勿付费购买。如涉及侵权，请联系删除。",
@@ -20,29 +20,10 @@
       { "name": "简约风<格>", "role": "推广贡献", "desc": "将本网页内嵌 APP 进行推广分发", "avatar": "vip/简约风格.jpg" }
     ],
     "quickLinks": [
-      {
-        "icon": "vip/qq.svg",
-        "label": "加入Q群",
-        "url": "./qq"
-      },
-      {
-        "icon": "vip/wc.svg",
-        "label": "微信赞赏",
-        "type": "modal",
-        "title": "微信赞赏码",
-        "image": "vip/zsm.jpg",
-        "tip": "感谢认可，你的每一次赞赏，都是我坚持的底气，万分感谢陪伴"
-      },
-      {
-        "icon": "vip/tg.svg",
-        "label": "TG群组",
-        "url": "https://t.me/tg6603"
-      },
-      {
-        "icon": "vip/gh.svg",
-        "label": "GitHub",
-        "url": "https://github.com/lubin776/tvbox-api-backup"
-      }
+      { "icon": "vip/qq.svg", "label": "加入Q群", "url": "./qq" },
+      { "icon": "vip/wc.svg", "label": "微信赞赏", "type": "modal", "title": "微信赞赏码", "image": "vip/zsm.jpg", "tip": "感谢认可，你的每一次赞赏，都是我坚持的底气，万分感谢陪伴" },
+      { "icon": "vip/tg.svg", "label": "TG群组", "url": "https://t.me/tg6603" },
+      { "icon": "vip/gh.svg", "label": "GitHub", "url": "https://github.com/lubin776/tvbox-api-backup" }
     ]
   },
 
@@ -63,7 +44,7 @@
 
   "apiDomains": [
     { "tag": "分流线路", "base": "https://0.wudaozhe.net/tvbox/" },
-    { "tag": "全球线路", "base":"https://1.wudaozhe.net/tvbox/" },
+    { "tag": "全球线路", "base": "https://1.wudaozhe.net/tvbox/" },
     { "tag": "备份三线", "base": "https://0.12yue.de5.net/tvbox/" },
     { "tag": "备份四线", "base": "https://0.cdz.qzz.io/tvbox/" },
     { "tag": "备份五线", "base": "https://0.wdzb.eu.cc/tvbox/" }
@@ -71,7 +52,7 @@
 
   "liveDomains": [
     { "tag": "分流线路", "base": "https://0.wudaozhe.net/tvbox/live/" },
-    { "tag": "全球线路", "base":"https://1.wudaozhe.net/tvbox/live/" },
+    { "tag": "全球线路", "base": "https://1.wudaozhe.net/tvbox/live/" },
     { "tag": "备份三线", "base": "https://0.12yue.de5.net/tvbox/live/" },
     { "tag": "备份四线", "base": "https://0.cdz.qzz.io/tvbox/live/" },
     { "tag": "备份五线", "base": "https://0.wdzb.eu.cc/tvbox/live/" }
@@ -89,9 +70,7 @@
     "randomRange": 10000
   },
 
-  "recent": {
-    "days": 3
-  },
+  "recent": { "days": 3 },
 
   "tabs": [
     { "id": "api",      "label": "点播" },
@@ -126,10 +105,10 @@
   ],
 
   "moreTabs": [
-    { "id": "danmu",          "icon": "💬", "label": "弹幕接口", "file": "cy/弹幕.json",     "type": "api" },
-    { "id": "book-source",    "icon": "📚", "label": "书源",     "file": "cy/书源.json",     "type": "api" },
-    { "id": "comic-source",   "icon": "📖", "label": "漫画源",   "file": "cy/漫画源.json",   "type": "api" },
-    { "id": "music-source",   "icon": "🎵", "label": "音源",     "file": "cy/音源.json",     "type": "api" }
+    { "id": "danmu",        "icon": "💬", "label": "弹幕接口", "file": "cy/弹幕.json",     "type": "api" },
+    { "id": "book-source",  "icon": "📚", "label": "书源",     "file": "cy/书源.json",     "type": "api" },
+    { "id": "comic-source", "icon": "📖", "label": "漫画源",   "file": "cy/漫画源.json",   "type": "api" },
+    { "id": "music-source", "icon": "🎵", "label": "音源",     "file": "cy/音源.json",     "type": "api" }
   ],
 
   "customApis": "cy/自定义点播混排.json",
