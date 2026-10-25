@@ -101,6 +101,12 @@
       "index": 1
     },
     {
+      "key": "SZ",
+      "name": "山楂影视",
+      "type": 3,
+      "api": "https://mpimg.cn/down.php/e02034214f0705bfe1e5f4d936f0925f.py"
+    },
+    {
       "key": "西瓜",
       "name": "西瓜",
       "type": 3,
@@ -411,15 +417,6 @@
       "name": "🥇金牌｜影视",
       "type": 3,
       "api": "https://fastlink.cokey.xyz/f/AGJeHm/%E9%87%91%E7%89%8C%E5%BD%B1%E9%99%A2.js"
-    },
-    {
-      "key": "移动",
-      "name": "九灵｜免扫4k｜移动",
-      "type": 3,
-      "jar": "https://fastlink.cokey.xyz/f/1LmEH5/yunY.jar",
-      "api": "csp_YDjisu",
-      "searchable": 1,
-      "changeable": 1
     },
     {
       "key": "哔幕",
@@ -1418,6 +1415,34 @@
         "site": [
           "https://123panfx.com",
           "https://pan1.me"
+        ]
+      },
+      "timeout": 60
+    },
+    {
+      "key": "卡卡",
+      "name": "卡卡*4K",
+      "type": 3,
+      "api": "csp_KKPan",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 0,
+      "style": {
+        "type": "list"
+      },
+      "timeout": 60
+    },
+    {
+      "key": "小丑",
+      "name": "小丑*4K",
+      "type": 3,
+      "api": "csp_4KZhinan",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "site": [
+          "https://4kxc.com"
         ]
       },
       "timeout": 60
