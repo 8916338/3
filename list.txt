@@ -52,6 +52,7 @@ X4菠菜pro.json|20261026|85.9K|https://0.wudaozhe.net/5/x4pro.json
 王二小3线.json|20261026|16.4K|http://tvbox.王二小放牛娃.top
 裤佬线路.json|20261026|5.9K|https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg
 小米.json|20261026|19.1K|https://gh-proxy.org/raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json
+香雅情.json|20261026|21.0K|https://play.iptv365.org/香雅情/api.json
 集多.json|20261006|21.4K|http://rihou.cc:88/demo.php
 集多3线.json|20261006|21.4K|http://rihou.cc:88/demoabc.json
 饭太硬4线.json|20260928|16.2K|http://fty.xxooo.cf/tv
