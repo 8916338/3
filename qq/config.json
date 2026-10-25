@@ -1,0 +1,36 @@
+{
+  "owned": [
+    {
+      "name": "沫离分群 931343329",
+      "url": "https://qm.qq.com/q/GC3rUPFuGQ",
+      "icon": "qq"
+    },
+    {
+      "name": "华缘社分群 1053231032",
+      "url": "https://qm.qq.com/q/ztiTOoeBXi",
+      "icon": "qq"
+    },
+    {
+      "name": "白潇淩分群 616843624",
+      "url": "https://qm.qq.com/q/KKVaXiuiOe",
+      "icon": "qq"
+    }
+  ],
+  "partners": [
+    {
+      "name": "TG 交流频道",
+      "url": "https://t.me/tg6603",
+      "icon": "telegram"
+    },
+    {
+      "name": "GitHub 开源仓库",
+      "url": "https://github.com/lubin776/tvbox-api-backup",
+      "icon": "github"
+    },
+    {
+      "name": "微信交流频道",
+      "url": "https://example.com/wechat-channel",
+      "icon": "./icons/wechat.png"
+    }
+  ]
+}
