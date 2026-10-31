@@ -1,5 +1,10 @@
 name: 接口扫描处理工具
 
+# 新增：并发控制，确保与其他工作流（ry下载、api下载）排队串行执行
+concurrency:
+  group: tvbox-repo-write
+  cancel-in-progress: false
+
 on:
   schedule:
     # 每天北京时间 03:00 运行（UTC 19:00）
@@ -47,6 +52,9 @@ jobs:
         env:
           PYTHONIOENCODING: utf-8
           PYTHONUNBUFFERED: "1"
+          # 直播源下载并发数与总预算（秒）；到预算自动收工，不会再把任务拖到超时
+          LIVE_WORKERS: "8"
+          LIVE_BUDGET: "1500"
 
       - name: 汇总输出产物
         run: |
