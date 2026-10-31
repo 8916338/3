@@ -109,34 +109,6 @@ https://ppv.passwdwork.us.ci/?proxy=1&id=ufc-fight-night-moicano-vs-nolan-31456
 https://ppv.passwdwork.us.ci/?proxy=1&id=247-willow
 #EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/5dfe2fc8e56d59add47afb0f6e996e55-thumbnail.jpg" group-title="Cricket",Fox Cricket
 https://ppv.passwdwork.us.ci/?proxy=1&id=247-fox-cricket
-#EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/80f639685666e66aa3f0491f48244a39-thumbnail.jpg" group-title="Football",Bayer Leverkusen vs. VfB Stuttgart (22:30 ~ 01:00)
-https://ppv.passwdwork.us.ci/?proxy=1&id=bundesliga/2026-10-31/b04-vfb
-#EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/8411c680c4192bcff85ad22b15659a24-thumbnail.jpg" group-title="Football",Borussia Mönchengladbach vs. SC Paderborn 07 (22:30 ~ 01:00)
-https://ppv.passwdwork.us.ci/?proxy=1&id=bundesliga/2026-10-31/bmg-scp
-#EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/fa4021424f85a20276386cd3d48a4e33-thumbnail.jpg" group-title="Football",FC Augsburg vs. SC Freiburg (22:30 ~ 01:00)
-https://ppv.passwdwork.us.ci/?proxy=1&id=bundesliga/2026-10-31/fca-scf
-#EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/2efd4cee9d2892a44ae9adc9fc3cc8ae-thumbnail.jpg" group-title="Football",Schalke 04 vs. RB Leipzig (22:30 ~ 01:00)
-https://ppv.passwdwork.us.ci/?proxy=1&id=bundesliga/2026-10-31/s04-rbl
-#EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/ef7542671167677c07e2bca7a7437c21-thumbnail.jpg" group-title="Football",Werder Bremen vs. TSG Hoffenheim (22:30 ~ 01:00)
-https://ppv.passwdwork.us.ci/?proxy=1&id=bundesliga/2026-10-31/svw-tsg
-#EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/2491df418b4b5b87cdd6a62b84f3f3ca-thumbnail.jpg" group-title="Football",AFC Bournemouth vs. Leeds United (23:00 ~ 01:30)
-https://ppv.passwdwork.us.ci/?proxy=1&id=pl/2026-10-31/bou-lee
-#EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/395118bc8295db2be468eaba5db9bf8c-thumbnail.jpg" group-title="Football",Brentford vs. Nottingham Forest (23:00 ~ 01:30)
-https://ppv.passwdwork.us.ci/?proxy=1&id=pl/2026-10-31/bre-nfo
-#EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/f95b657ca47aacf957a03a5e128f7339-thumbnail.jpg" group-title="Football",Coventry City vs. Sunderland (23:00 ~ 01:30)
-https://ppv.passwdwork.us.ci/?proxy=1&id=pl/2026-10-31/cov-sun
-#EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/bbc53fd1f3a925c851cd63c5d6283a10-thumbnail.jpg" group-title="Football",Hull City vs. Ipswich Town (23:00 ~ 01:30)
-https://ppv.passwdwork.us.ci/?proxy=1&id=pl/2026-10-31/hul-ips
-#EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/d913f6a0ef01a917a914149e6b3eac0b-thumbnail.jpg" group-title="Football",Manchester City vs. Brighton & Hove Albion (23:00 ~ 01:30)
-https://ppv.passwdwork.us.ci/?proxy=1&id=pl/2026-10-31/mci-bha
-#EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/6f4e6e85da3507c2549b3ec752ab13aa-thumbnail.jpg" group-title="Football",West Ham United vs. West Bromwich Albion (23:00 ~ 01:30)
-https://ppv.passwdwork.us.ci/?proxy=1&id=efl-championship/2026-10-31/whu-wba
-#EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/39c4eca1bcf88e7b76dc9aa2178ba2bb-thumbnail.jpg" group-title="Football",Tamworth vs. Woking (23:00 ~ 01:30)
-https://ppv.passwdwork.us.ci/?proxy=1&id=national-league/2026-10-31/tam-wok
-#EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/cde51bfa2c0f3938488195a21802610c-thumbnail.jpg" group-title="Football",Rayo Vallecano vs. Celta Vigo (23:15 ~ 01:45)
-https://ppv.passwdwork.us.ci/?proxy=1&id=laliga/2026-10-31/ray-cel
-#EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/86a83c76acd5ca63030c156d333212d4-thumbnail.jpg" group-title="Football",Feyenoord Rotterdam vs. Fortuna Sittard (23:30 ~ 02:00)
-https://ppv.passwdwork.us.ci/?proxy=1&id=eredivisie/2026-10-31/fey-for
 #EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/6bbac74f503697d97f391c5f6f1370ab-thumbnail.jpg" group-title="Football",Udinese vs. AS Roma (01:00 ~ 03:30)
 https://ppv.passwdwork.us.ci/?proxy=1&id=seriea/2026-10-31/udi-roma
 #EXTINF:-1 tvg-logo="https://static.ppvservices.st/assets/thumb/8616488ff4a78fee9f38ea3646b2ba34-thumbnail.jpg" group-title="Football",Charlotte FC vs. Orlando City SC (01:00 ~ 04:00)

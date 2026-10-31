@@ -253,6 +253,10 @@ lsb资源|AV|🦋 lsb资源｜🔞|type: 1|api: https://apilsbzy1.com/api.php/pr
 金蝉|金蝉｜聚合|type: 1|api: http://zy.jinchancaiji.com/api.php/provide/vod
 天翼影视|天翼｜影视|type: 1|api: http://7.qqqtv.top/api.php/provide/vod/
 MV_vod|电视┃MTV|type: 1|api: https://mv.wogg.link/mv/vod
+黄色仓库|AV|🦋 黄色仓库(旧)｜🔞|type: 1|api: https://hsckzy.vip/api.php/provide/vod/
+桃花资源|AV|🦋 桃花资源｜🔞|type: 1|api: https://thzy1.me/api.php/provide/vod/
+乐播资源|AV|🦋 乐播资源｜🔞|type: 1|api: https://lbapi9.com/api.php/provide/vod/
+lsb资源|AV|🦋 lsb资源｜🔞|type: 1|api: https://apilsbzy1.com/api.php/provide/vod/
 建安采集|影视 | 建安|type: 1|api: http://154.219.117.232:9981/jacloudapi.php/provide/vod
 率率|影视 | 率率[直连]|type: 1|api: https://suoniapi.com/api.php/provide/vod/?ac=list
 百度|百度|type: 1|api: https://api.apibdzy.com/api.php/provide/vod?ac=list
@@ -268,10 +272,6 @@ csp_xml_飞速|❤飞速资源|type: 1|api: https://www.feisuzyapi.com/api.php/p
 奇虎资源|奇虎资源┃刺桐|type: 1|api: https://caiji.qhzyapi.com/api.php/provide/vod/
 爱奇艺资源|爱奇艺资源┃刺桐|type: 1|api: https://iqiyizyapi.com/api.php/provide/vod/
 优质影视|优质影视|type: 1|api: https://api.yyzy-tv.vip/inc/apijson.php/
-黄色仓库|AV|🦋 黄色仓库(旧)｜🔞|type: 1|api: https://hsckzy.vip/api.php/provide/vod/
-桃花资源|AV|🦋 桃花资源｜🔞|type: 1|api: https://thzy1.me/api.php/provide/vod/
-乐播资源|AV|🦋 乐播资源｜🔞|type: 1|api: https://lbapi9.com/api.php/provide/vod/
-lsb资源|AV|🦋 lsb资源｜🔞|type: 1|api: https://apilsbzy1.com/api.php/provide/vod/
 虎牙资源|烂大街|type: 1|api: https://www.huyaapi.com/api.php/provide/vod/
 360|三六零|type: 1|api: https://360zy.com/api.php/provide/vod
 cj_旺旺采集|🧞旺旺|短剧|type: 1|api: https://api.wwzy.tv/api.php/provide/vod/
