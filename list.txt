@@ -13,7 +13,7 @@ X4少儿频道.json|20261102|19.2K|https://0.wudaozhe.net/5/tv少儿.json
 嗷呜.json|20261102|21.4K|http://www.英格里希嗷呜.top/tv
 嗷呜2线.json|20261102|21.5K|https://9763.kstore.vip/aowu.json
 嗷呜3线.json|20261102|21.4K|http://itv666.cc/aowu/config.webp
-肥猫.json|20261102|14.7K|http://肥猫.net/tv
+肥猫.json|20261102|15.3K|http://肥猫.net/tv
 王二小.json|20261102|24.3K|https://9280.kstore.vip/aiwex.json
 王二小2线.json|20261102|24.3K|https://9280.kstore.space/aiwex.json
 王二小3线.json|20261102|16.4K|http://tvbox.王二小放牛娃.top
