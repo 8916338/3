@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "海量接口搬运备份",
-    "logo": "vip/logo.jpg",
+    "logo": "vip/jueson.jpg",
     "subtitle": "备用数据源，防屏不迷路",
     "qqText": "猛戳这里加入QQ群: ",
     "qqHighlight": "点击",
@@ -15,13 +15,13 @@
     "declaration": "本站接口资源由【误道者】整理。所有资源均来自互联网，版权归原作者所有。仅供测试学习使用，请勿用于违法及商业用途，请勿付费购买。如涉及侵权，请联系删除。",
     "contributorsNote": "* 还有部分贡献者因未留下署名信息而未在此列出，同样感谢你们的默默付出。如有遗漏请联系站长补充。",
     "contributors": [
-      { "name": "误道者", "role": "站长 / 资源整理", "desc": "站点发起与接口资源整理", "avatar": "vip/jueson.jpeg" },
-      { "name": "沫离", "role": "弹幕分页", "desc": "贡献弹幕书源音乐源漫画源等模块", "avatar": "vip/沫离.jpeg" },
-      { "name": "简约风<格>", "role": "推广贡献", "desc": "将本网页内嵌 APP 进行推广分发", "avatar": "vip/简约风格.jpeg" }
+      { "name": "误道者", "role": "站长 / 资源整理", "desc": "站点发起与接口资源整理", "avatar": "vip/jueson.jpg" },
+      { "name": "沫离", "role": "弹幕分页", "desc": "贡献弹幕书源音乐源漫画源等模块", "avatar": "vip/沫离.jpg" },
+      { "name": "简约风<格>", "role": "推广贡献", "desc": "将本网页内嵌 APP 进行推广分发", "avatar": "vip/简约风格.jpg" }
     ],
     "quickLinks": [
       { "icon": "vip/qq.svg", "label": "加入Q群", "url": "./qq" },
-      { "icon": "vip/wc.svg", "label": "微信赞赏", "type": "modal", "title": "微信赞赏码", "image": "vip/zsm.jpeg", "tip": "感谢认可，你的每一次赞赏，都是我坚持的底气，万分感谢陪伴" },
+      { "icon": "vip/wc.svg", "label": "微信赞赏", "type": "modal", "title": "微信赞赏码", "image": "vip/zsm.jpg", "tip": "感谢认可，你的每一次赞赏，都是我坚持的底气，万分感谢陪伴" },
       { "icon": "vip/tg.svg", "label": "TG群组", "url": "https://t.me/tg6603" },
       { "icon": "vip/gh.svg", "label": "GitHub", "url": "https://github.com/lubin776/tvbox-api-backup" }
     ]
@@ -43,29 +43,21 @@
   },
 
   "apiDomains": [
-    { "tag": "分流线路", "base": "https://0.wudaozhe.net/tvbox/" },
-    { "tag": "全球线路", "base": "https://1.wudaozhe.net/tvbox/" },
-    { "tag": "备份三线", "base": "https://0.12yue.de5.net/tvbox/" },
-    { "tag": "备份四线", "base": "https://0.cdz.qzz.io/tvbox/" },
-    { "tag": "备份五线", "base": "https://0.wdzb.eu.cc/tvbox/" }
+    { "tag": "备份线路", "base": "https://此处需站长更改自定义域名.com/tvbox/" }
   ],
 
   "liveDomains": [
-    { "tag": "分流线路", "base": "https://0.wudaozhe.net/tvbox/live/" },
-    { "tag": "全球线路", "base": "https://1.wudaozhe.net/tvbox/live/" },
-    { "tag": "备份三线", "base": "https://0.12yue.de5.net/tvbox/live/" },
-    { "tag": "备份四线", "base": "https://0.cdz.qzz.io/tvbox/live/" },
-    { "tag": "备份五线", "base": "https://0.wdzb.eu.cc/tvbox/live/" }
+    { "tag": "备份线路", "base": "https://此处需站长更改自定义域名.com/tvbox/live/" }
   ],
 
   "apiWeights": {
-    "轮替占位.json": 1, "神马都没有.json": 2, "饭太硬.json": 4, "肥猫已死.json": 5,
-    "摸鱼.json": 6, "王二小.json": 7, "集多已死.json": 8, "潇洒.json": 9, "小米以死.json": 10,
-    "嗷呜.json": 11, "南风已死.json": 12, "幸福年年.json": 13
+    "轮替占位.json": 1, "神马都没有.json": 2, "饭太硬.json": 4, "肥猫.json": 5,
+    "摸鱼.json": 6, "王二小.json": 7, "集多.json": 8, "潇洒.json": 9, "小米.json": 10,
+    "嗷呜.json": 11, "南风.json": 12, "幸福年年.json": 13
   },
 
   "rotate": {
-    "keywords": ["置顶位搜索关键词"],
+    "keywords": ["搜索关键词"],
     "seed": "time-random",
     "randomRange": 10000
   },
@@ -83,7 +75,7 @@
 
   "liveAggregate": {
     "title": "海量直播聚合多线路专用接口",
-    "url": "https://0.wudaozhe.net/tvbox/海量直播聚合接口.json"
+    "url": "https://此处需站长更改自定义域名.com/tvbox/海量直播聚合接口.json"
   },
 
   "downloadSources": [
@@ -91,9 +83,9 @@
     { "name": "菠菜园", "url": "ry/菠菜园下载.json", "icon": "🥬", "description": "整理者：误道者", "type": "download" },
     { "name": "奇奇副本", "url": "ry/奇奇副本.json", "icon": "📦", "description": "整理者：误道者", "type": "download" },
     { "name": "无忧", "url": "ry/无忧下载.json", "icon": "☁️", "description": "云星", "type": "download" },
-{ "name": "天神", "url": "ry/天神下载.json", "icon": "📦", "description": "", "type": "download" },
     { "name": "潇洒", "url": "ry/潇洒下载.json", "icon": "🕶️", "description": "潇洒", "type": "download" },
     { "name": "柒豪下载", "url": "ry/柒豪下载.json", "icon": "📦", "description": "", "type": "download" },
+    { "name": "天神下载", "url": "ry/天神下载.json", "icon": "📦", "description": "", "type": "download" },
     { "name": "应用下载", "url": "ry/应用市场二.json", "icon": "📱", "description": "", "type": "download" },
     { "name": "应用市场", "url": "ry/应用市场一.json", "icon": "🛒", "description": "", "type": "download" }
   ],

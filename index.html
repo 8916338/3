@@ -69,7 +69,12 @@
     checkGuideStatus();
 
     window.addEventListener('pageshow', function(e) {
+      // 【修复】从 guide.html 返回时带上 ?t=，清理地址栏产生的 pageshow 会造成无限刷新重载，此处跳过
       if (e.persisted) {
+        if (new URLSearchParams(location.search).get('t')) {
+          history.replaceState(null, '', location.pathname.replace(/\/index\.html$/, '/') + location.hash);
+          return;
+        }
         window.location.reload();
       }
     });
