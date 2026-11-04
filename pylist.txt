@@ -1,4 +1,5 @@
 py_douban|豆瓣[py]|type: 3|api: https://clun.top/py/douban.py
+py_yangshipin|直播[py]|type: 3|api: https://clun.top/py/yangshipin.py
 py_shortfilm|短剧[py]|type: 3|api: https://clun.top/py/shortfilm.py
 py_apples|苹果[py]|type: 3|api: https://clun.top/py/apples.py
 py_maple|枫叶[py]|type: 3|api: https://clun.top/py/maple.py

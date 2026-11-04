@@ -1536,82 +1536,121 @@ CRI HIT FM,http://45.192.97.170:8880/play/1488.m3u8
 Github运行worker,http://45.192.97.170:8880/play/1513.m3u8
 注册到运行教程,http://45.192.97.170:8880/play/1514.m3u8
 体育频道,#genre#
-[LIVE] 11-04 01:45 Galatasaray vs VfB Stuttgart [TNT Sports 2],http://45.192.97.170:8880/play/6858.m3u8
-[LIVE] 11-04 01:45 Galatasaray vs VfB Stuttgart [TNT Sports 2 BU],http://45.192.97.170:8880/play/6859.m3u8
-[LIVE] 11-04 01:45 Galatasaray vs VfB Stuttgart [Liga De Campeones 3 BU],http://45.192.97.170:8880/play/6860.m3u8
-[LIVE] 11-04 01:45 Galatasaray vs VfB Stuttgart [TNT Sport 2 SD],http://45.192.97.170:8880/play/6882.m3u8
-[LIVE] 11-04 04:00 Barcelona vs Aston Villa [TNT Sports 1],http://45.192.97.170:8880/play/6864.m3u8
-[LIVE] 11-04 04:00 Barcelona vs Aston Villa [TNT Sports 1 BU],http://45.192.97.170:8880/play/6865.m3u8
-[LIVE] 11-04 04:00 Barcelona vs Aston Villa [Liga De Campeones 2 BU],http://45.192.97.170:8880/play/6866.m3u8
-[LIVE] 11-04 04:00 Barcelona vs Aston Villa [UEFA 05],http://45.192.97.170:8880/play/6886.m3u8
-[LIVE] 11-04 04:00 Barcelona vs Aston Villa [Stan Sport AU Event 4],http://45.192.97.170:8880/play/6887.m3u8
-[LIVE] 11-04 04:00 Barcelona vs Aston Villa [TNT Sport 1 SD],http://45.192.97.170:8880/play/6888.m3u8
-[LIVE] 11-04 04:00 Lask Linz vs Slovan Bratislava [UEFA 08],http://45.192.97.170:8880/play/6901.m3u8
-[LIVE] 11-04 04:00 Lask Linz vs Slovan Bratislava [Liga De Campeones 7 BU],http://45.192.97.170:8880/play/6902.m3u8
-[LIVE] 11-04 04:00 Lask Linz vs Slovan Bratislava [Stan Sport AU Event 8],http://45.192.97.170:8880/play/6903.m3u8
-[LIVE] 11-04 04:00 Lask Linz vs Slovan Bratislava [DAZN CA 11],http://45.192.97.170:8880/play/6904.m3u8
-[LIVE] 11-04 04:00 Lask Linz vs Slovan Bratislava [HBO Max UK 9],http://45.192.97.170:8880/play/6905.m3u8
-[LIVE] 11-04 04:00 Villarreal vs Paris Saint Germain [TNT Sports 4],http://45.192.97.170:8880/play/6861.m3u8
-[LIVE] 11-04 04:00 Villarreal vs Paris Saint Germain [TNT Sports 4 BU],http://45.192.97.170:8880/play/6862.m3u8
-[LIVE] 11-04 04:00 Villarreal vs Paris Saint Germain [Liga De Campeones 3 BU],http://45.192.97.170:8880/play/6863.m3u8
-[LIVE] 11-04 04:00 Villarreal vs Paris Saint Germain [UEFA 10],http://45.192.97.170:8880/play/6883.m3u8
-[LIVE] 11-04 04:00 Villarreal vs Paris Saint Germain [Stan Sport AU Event 5],http://45.192.97.170:8880/play/6884.m3u8
-[LIVE] 11-04 04:00 Villarreal vs Paris Saint Germain [TNT Sport 4 SD],http://45.192.97.170:8880/play/6885.m3u8
-[LIVE] 11-04 04:00 Atletico Madrid vs Bayern München [TNT Sports 2],http://45.192.97.170:8880/play/6867.m3u8
-[LIVE] 11-04 04:00 Atletico Madrid vs Bayern München [TNT Sports 2 BU],http://45.192.97.170:8880/play/6868.m3u8
-[LIVE] 11-04 04:00 Atletico Madrid vs Bayern München [Liga De Campeones 1 BU],http://45.192.97.170:8880/play/6869.m3u8
-[LIVE] 11-04 04:00 Atletico Madrid vs Bayern München [UEFA 04],http://45.192.97.170:8880/play/6889.m3u8
-[LIVE] 11-04 04:00 Atletico Madrid vs Bayern München [Stan Sport AU Event 1],http://45.192.97.170:8880/play/6890.m3u8
-[LIVE] 11-04 04:00 Atletico Madrid vs Bayern München [TNT Sport 2 SD],http://45.192.97.170:8880/play/6891.m3u8
-[LIVE] 11-04 04:00 Manchester United vs AS Roma [Premier Sports 1],http://45.192.97.170:8880/play/6906.m3u8
-[LIVE] 11-04 04:00 Manchester United vs AS Roma [Liga De Campeones 8 BU],http://45.192.97.170:8880/play/6907.m3u8
-[LIVE] 11-04 04:00 Manchester United vs AS Roma [Stan Sport AU Event 2],http://45.192.97.170:8880/play/6908.m3u8
-[LIVE] 11-04 04:00 Manchester United vs AS Roma [UEFA 09],http://45.192.97.170:8880/play/6909.m3u8
-[LIVE] 11-04 04:00 Manchester United vs AS Roma [DAZN CA 6],http://45.192.97.170:8880/play/6910.m3u8
-[LIVE] 11-04 04:00 Manchester United vs AS Roma [Premier Sports 1 sd],http://45.192.97.170:8880/play/6911.m3u8
-[LIVE] 11-04 04:00 Feyenoord vs Inter [TNT Sports 5],http://45.192.97.170:8880/play/6870.m3u8
-[LIVE] 11-04 04:00 Feyenoord vs Inter [Liga De Campeones 5 BU],http://45.192.97.170:8880/play/6871.m3u8
-[LIVE] 11-04 04:00 Feyenoord vs Inter [TNT Sports 5 BU],http://45.192.97.170:8880/play/6897.m3u8
-[LIVE] 11-04 04:00 Feyenoord vs Inter [UEFA 07],http://45.192.97.170:8880/play/6898.m3u8
-[LIVE] 11-04 04:00 Feyenoord vs Inter [DAZN CA 9],http://45.192.97.170:8880/play/6899.m3u8
-[LIVE] 11-04 04:00 Feyenoord vs Inter [Stan Sport AU Event 7],http://45.192.97.170:8880/play/6900.m3u8
-[LIVE] 11-04 04:00 Bodo/Glimt vs Lille [UEFA 06],http://45.192.97.170:8880/play/6892.m3u8
-[LIVE] 11-04 04:00 Bodo/Glimt vs Lille [Liga De Campeones 6 BU],http://45.192.97.170:8880/play/6893.m3u8
-[LIVE] 11-04 04:00 Bodo/Glimt vs Lille [DAZN CA 1],http://45.192.97.170:8880/play/6894.m3u8
-[LIVE] 11-04 04:00 Bodo/Glimt vs Lille [Stan Sport AU Event 6],http://45.192.97.170:8880/play/6895.m3u8
-[LIVE] 11-04 04:00 Bodo/Glimt vs Lille [HBO Max UK 7],http://45.192.97.170:8880/play/6896.m3u8
-TNT Sports 2,http://45.192.97.170:8880/play/6875.m3u8
-TNT Sports 2 BU,http://45.192.97.170:8880/play/6876.m3u8
-Liga De Campeones 3 BU,http://45.192.97.170:8880/play/6913.m3u8
-TNT Sport 2 SD,http://45.192.97.170:8880/play/6877.m3u8
-Premier Sports 1,http://45.192.97.170:8880/play/6914.m3u8
-Liga De Campeones 8 BU,http://45.192.97.170:8880/play/6915.m3u8
-Stan Sport AU Event 2,http://45.192.97.170:8880/play/6916.m3u8
-UEFA 09,http://45.192.97.170:8880/play/6917.m3u8
-DAZN CA 6,http://45.192.97.170:8880/play/6918.m3u8
-Premier Sports 1 sd,http://45.192.97.170:8880/play/6919.m3u8
-TNT Sports 5,http://45.192.97.170:8880/play/6878.m3u8
-Liga De Campeones 5 BU,http://45.192.97.170:8880/play/6920.m3u8
-TNT Sports 5 BU,http://45.192.97.170:8880/play/6879.m3u8
-UEFA 07,http://45.192.97.170:8880/play/6921.m3u8
-DAZN CA 9,http://45.192.97.170:8880/play/6922.m3u8
-Stan Sport AU Event 7,http://45.192.97.170:8880/play/6923.m3u8
-UEFA 06,http://45.192.97.170:8880/play/6924.m3u8
-Liga De Campeones 6 BU,http://45.192.97.170:8880/play/6925.m3u8
-DAZN CA 1,http://45.192.97.170:8880/play/6926.m3u8
-Stan Sport AU Event 6,http://45.192.97.170:8880/play/6927.m3u8
-HBO Max UK 7,http://45.192.97.170:8880/play/6928.m3u8
-TNT Sports 1,http://45.192.97.170:8880/play/6608.m3u8
-TNT Sports 1 BU,http://45.192.97.170:8880/play/6609.m3u8
-Liga De Campeones 2 BU,http://45.192.97.170:8880/play/6912.m3u8
-UEFA 05,http://45.192.97.170:8880/play/6929.m3u8
-Stan Sport AU Event 4,http://45.192.97.170:8880/play/6930.m3u8
-TNT Sport 1 SD,http://45.192.97.170:8880/play/6880.m3u8
-Liga De Campeones 1 BU,http://45.192.97.170:8880/play/6931.m3u8
-UEFA 04,http://45.192.97.170:8880/play/6932.m3u8
-Stan Sport AU Event 1,http://45.192.97.170:8880/play/6933.m3u8
-TNT Sports 4,http://45.192.97.170:8880/play/6872.m3u8
-TNT Sports 4 BU,http://45.192.97.170:8880/play/6873.m3u8
-UEFA 10,http://45.192.97.170:8880/play/6934.m3u8
-Stan Sport AU Event 5,http://45.192.97.170:8880/play/6935.m3u8
-TNT Sport 4 SD,http://45.192.97.170:8880/play/6874.m3u8
+11-05 01:45 AEK Athens FC vs Real Madrid (2 - 3) [TNT Sports 3],http://45.192.97.170:8880/play/7000.m3u8
+11-05 01:45 AEK Athens FC vs Real Madrid (2 - 3) [TNT Sports 3 BU],http://45.192.97.170:8880/play/7001.m3u8
+11-05 01:45 AEK Athens FC vs Real Madrid (2 - 3) [UEFA 01],http://45.192.97.170:8880/play/7002.m3u8
+11-05 01:45 AEK Athens FC vs Real Madrid (2 - 3) [Stan Sport AU Event 2],http://45.192.97.170:8880/play/7081.m3u8
+11-05 01:45 AEK Athens FC vs Real Madrid (2 - 3) [TNT Sport 3 SD],http://45.192.97.170:8880/play/7099.m3u8
+[LIVE] 11-05 04:00 Lens vs Como [UEFA 05],http://45.192.97.170:8880/play/7077.m3u8
+[LIVE] 11-05 04:00 Lens vs Como [Liga De Campeones 7 BU],http://45.192.97.170:8880/play/7089.m3u8
+[LIVE] 11-05 04:00 Lens vs Como [Stan Sport AU Event 5],http://45.192.97.170:8880/play/7103.m3u8
+[LIVE] 11-05 04:00 Lens vs Como [HBO Max UK 6],http://45.192.97.170:8880/play/7119.m3u8
+[LIVE] 11-05 04:00 Lens vs Como [DAZN CA 10],http://45.192.97.170:8880/play/7120.m3u8
+[LIVE] 11-05 04:00 PSV Eindhoven vs Club Brugge KV [UEFA 06],http://45.192.97.170:8880/play/7084.m3u8
+[LIVE] 11-05 04:00 PSV Eindhoven vs Club Brugge KV [Liga De Campeones 6 BU],http://45.192.97.170:8880/play/7085.m3u8
+[LIVE] 11-05 04:00 PSV Eindhoven vs Club Brugge KV [Stan Sport AU Event 6],http://45.192.97.170:8880/play/7104.m3u8
+[LIVE] 11-05 04:00 PSV Eindhoven vs Club Brugge KV [DAZN CA 1],http://45.192.97.170:8880/play/7118.m3u8
+[LIVE] 11-05 04:00 RB Leipzig vs Manchester City [TNT Sports 2],http://45.192.97.170:8880/play/7014.m3u8
+[LIVE] 11-05 04:00 RB Leipzig vs Manchester City [TNT Sports 2 BU],http://45.192.97.170:8880/play/7015.m3u8
+[LIVE] 11-05 04:00 RB Leipzig vs Manchester City [Liga De Campeones 5 BU],http://45.192.97.170:8880/play/7016.m3u8
+[LIVE] 11-05 04:00 RB Leipzig vs Manchester City [UEFA 08],http://45.192.97.170:8880/play/7075.m3u8
+[LIVE] 11-05 04:00 RB Leipzig vs Manchester City [Stan Sport AU Event 1],http://45.192.97.170:8880/play/7082.m3u8
+[LIVE] 11-05 04:00 RB Leipzig vs Manchester City [TNT Sport 2 SD],http://45.192.97.170:8880/play/7102.m3u8
+[LIVE] 11-05 04:00 FC Porto vs Napoli [TNT Sports 5],http://45.192.97.170:8880/play/7009.m3u8
+[LIVE] 11-05 04:00 FC Porto vs Napoli [TNT Sports 5 BU],http://45.192.97.170:8880/play/7010.m3u8
+[LIVE] 11-05 04:00 FC Porto vs Napoli [Liga De Campeones 3 BU],http://45.192.97.170:8880/play/7087.m3u8
+[LIVE] 11-05 04:00 FC Porto vs Napoli [UEFA 07],http://45.192.97.170:8880/play/7108.m3u8
+[LIVE] 11-05 04:00 FC Porto vs Napoli [Stan Sport AU Event 4],http://45.192.97.170:8880/play/7109.m3u8
+[LIVE] 11-05 04:00 Slavia Praha vs Arsenal [TNT Sports 1],http://45.192.97.170:8880/play/7011.m3u8
+[LIVE] 11-05 04:00 Slavia Praha vs Arsenal [TNT Sports 1 BU],http://45.192.97.170:8880/play/7012.m3u8
+[LIVE] 11-05 04:00 Slavia Praha vs Arsenal [Liga De Campeones 8 BU],http://45.192.97.170:8880/play/7013.m3u8
+[LIVE] 11-05 04:00 Slavia Praha vs Arsenal [UEFA 09],http://45.192.97.170:8880/play/7088.m3u8
+[LIVE] 11-05 04:00 Slavia Praha vs Arsenal [Stan Sport AU Event 2],http://45.192.97.170:8880/play/7110.m3u8
+[LIVE] 11-05 04:00 Slavia Praha vs Arsenal [TNT Sport 1 SD],http://45.192.97.170:8880/play/7111.m3u8
+[LIVE] 11-05 04:00 Viking vs Sabah FA [UEFA 10],http://45.192.97.170:8880/play/7086.m3u8
+[LIVE] 11-05 04:00 Viking vs Sabah FA [Liga De Campeones 9 BU],http://45.192.97.170:8880/play/7105.m3u8
+[LIVE] 11-05 04:00 Viking vs Sabah FA [Stan Sport AU Event 8],http://45.192.97.170:8880/play/7106.m3u8
+[LIVE] 11-05 04:00 Viking vs Sabah FA [HBO Max UK 7],http://45.192.97.170:8880/play/7107.m3u8
+[LIVE] 11-05 04:00 Viking vs Sabah FA [DAZN CA 8],http://45.192.97.170:8880/play/7121.m3u8
+[LIVE] 11-05 04:00 Borussia Dortmund vs Real Betis [TNT Sports 4],http://45.192.97.170:8880/play/7006.m3u8
+[LIVE] 11-05 04:00 Borussia Dortmund vs Real Betis [TNT Sports 4 BU],http://45.192.97.170:8880/play/7007.m3u8
+[LIVE] 11-05 04:00 Borussia Dortmund vs Real Betis [Liga De Campeones 2 BU],http://45.192.97.170:8880/play/7008.m3u8
+[LIVE] 11-05 04:00 Borussia Dortmund vs Real Betis [UEFA 04],http://45.192.97.170:8880/play/7076.m3u8
+[LIVE] 11-05 04:00 Borussia Dortmund vs Real Betis [Stan Sport AU Event 7],http://45.192.97.170:8880/play/7083.m3u8
+[LIVE] 11-05 04:00 Borussia Dortmund vs Real Betis [TNT Sport 4 SD],http://45.192.97.170:8880/play/7101.m3u8
+11-06 01:45 Crystal Palace vs 1899 Hoffenheim [TNT Sports 1],http://45.192.97.170:8880/play/7034.m3u8
+11-06 01:45 Crystal Palace vs 1899 Hoffenheim [TNT Sports 1 BU],http://45.192.97.170:8880/play/7035.m3u8
+11-06 01:45 Crystal Palace vs 1899 Hoffenheim [TNT Sport 1 SD],http://45.192.97.170:8880/play/7036.m3u8
+11-06 01:45 FC Thun vs Heart Of Midlothian [TNT Sports 3],http://45.192.97.170:8880/play/7026.m3u8
+11-06 01:45 FC Thun vs Heart Of Midlothian [TNT Sports 3 BU],http://45.192.97.170:8880/play/7027.m3u8
+11-06 01:45 FC Thun vs Heart Of Midlothian [TNT Sport 3 SD],http://45.192.97.170:8880/play/7028.m3u8
+11-06 01:45 Sparta Praha vs Bournemouth [TNT Sports 2],http://45.192.97.170:8880/play/7037.m3u8
+11-06 01:45 Sparta Praha vs Bournemouth [TNT Sports 2 BU],http://45.192.97.170:8880/play/7038.m3u8
+11-06 01:45 Sparta Praha vs Bournemouth [TNT Sport 2 SD],http://45.192.97.170:8880/play/7039.m3u8
+11-06 01:45 Real Sociedad vs Lyon [TNT Sports 5],http://45.192.97.170:8880/play/7029.m3u8
+11-06 01:45 Real Sociedad vs Lyon [TNT Sports 5 BU],http://45.192.97.170:8880/play/7030.m3u8
+11-06 01:45 AC Milan vs Ferencvarosi TC [TNT Sports 4],http://45.192.97.170:8880/play/7031.m3u8
+11-06 01:45 AC Milan vs Ferencvarosi TC [TNT Sports 4 BU],http://45.192.97.170:8880/play/7032.m3u8
+11-06 01:45 AC Milan vs Ferencvarosi TC [TNT Sport 4 SD],http://45.192.97.170:8880/play/7033.m3u8
+11-06 04:00 AZ Alkmaar vs Juventus [TNT Sports 4],http://45.192.97.170:8880/play/7045.m3u8
+11-06 04:00 AZ Alkmaar vs Juventus [TNT Sports 4 BU],http://45.192.97.170:8880/play/7046.m3u8
+11-06 04:00 AZ Alkmaar vs Juventus [TNT Sport 4 SD],http://45.192.97.170:8880/play/7047.m3u8
+11-06 04:00 Getafe vs Brighton [TNT Sports 2],http://45.192.97.170:8880/play/7048.m3u8
+11-06 04:00 Getafe vs Brighton [TNT Sports 2 BU],http://45.192.97.170:8880/play/7049.m3u8
+11-06 04:00 Getafe vs Brighton [TNT Sport 2 SD],http://45.192.97.170:8880/play/7050.m3u8
+11-06 04:00 Bayer Leverkusen vs Marseille [TNT Sports 5],http://45.192.97.170:8880/play/7040.m3u8
+11-06 04:00 Bayer Leverkusen vs Marseille [TNT Sports 5 BU],http://45.192.97.170:8880/play/7041.m3u8
+11-06 04:00 Sunderland vs Dinamo Zagreb [TNT Sports 1],http://45.192.97.170:8880/play/7051.m3u8
+11-06 04:00 Sunderland vs Dinamo Zagreb [TNT Sports 1 BU],http://45.192.97.170:8880/play/7052.m3u8
+11-06 04:00 Sunderland vs Dinamo Zagreb [TNT Sport 1 SD],http://45.192.97.170:8880/play/7053.m3u8
+11-06 04:00 Celtic vs Besiktas [TNT Sports 3],http://45.192.97.170:8880/play/7042.m3u8
+11-06 04:00 Celtic vs Besiktas [TNT Sports 3 BU],http://45.192.97.170:8880/play/7043.m3u8
+11-06 04:00 Celtic vs Besiktas [TNT Sport 3 SD],http://45.192.97.170:8880/play/7044.m3u8
+11-07 04:00 Sevilla vs Alaves [Premier Sports 1],http://45.192.97.170:8880/play/7054.m3u8
+11-07 04:00 Sevilla vs Alaves [Premier Sports 1 sd],http://45.192.97.170:8880/play/7055.m3u8
+11-07 04:00 Everton vs Coventry [Sky Sports Premier League],http://45.192.97.170:8880/play/7056.m3u8
+11-07 04:00 Everton vs Coventry [Sky Sports Main Event],http://45.192.97.170:8880/play/7057.m3u8
+11-07 04:00 Everton vs Coventry [Sky Sports Premier League BU],http://45.192.97.170:8880/play/7058.m3u8
+11-07 04:00 Everton vs Coventry [Sky Sports Main Event BU],http://45.192.97.170:8880/play/7059.m3u8
+11-07 20:30 Leeds vs Tottenham [TNT Sports 1],http://45.192.97.170:8880/play/7060.m3u8
+11-07 20:30 Leeds vs Tottenham [TNT Sports 1 BU],http://45.192.97.170:8880/play/7061.m3u8
+11-07 20:30 Leeds vs Tottenham [TNT Sport 1 SD],http://45.192.97.170:8880/play/7062.m3u8
+11-07 21:00 Malaga vs Racing Santander [Premier Sports 1],http://45.192.97.170:8880/play/7063.m3u8
+11-07 21:00 Malaga vs Racing Santander [Premier Sports 1 sd],http://45.192.97.170:8880/play/7064.m3u8
+11-08 01:30 Osasuna vs Athletic Club [Premier Sports 2],http://45.192.97.170:8880/play/7065.m3u8
+11-08 01:30 Osasuna vs Athletic Club [Premier Sports 2 sd],http://45.192.97.170:8880/play/7066.m3u8
+11-08 01:30 VfB Stuttgart vs Werder Bremen [Sky Sports Football],http://45.192.97.170:8880/play/7067.m3u8
+11-08 01:30 VfB Stuttgart vs Werder Bremen [Sky Sports Football BU],http://45.192.97.170:8880/play/7068.m3u8
+TNT Sports 3,http://45.192.97.170:8880/play/7003.m3u8
+TNT Sports 3 BU,http://45.192.97.170:8880/play/7004.m3u8
+UEFA 01,http://45.192.97.170:8880/play/7090.m3u8
+Stan Sport AU Event 2,http://45.192.97.170:8880/play/7112.m3u8
+TNT Sport 3 SD,http://45.192.97.170:8880/play/7005.m3u8
+TNT Sports 4,http://45.192.97.170:8880/play/7017.m3u8
+TNT Sports 4 BU,http://45.192.97.170:8880/play/7018.m3u8
+Liga De Campeones 2 BU,http://45.192.97.170:8880/play/7092.m3u8
+UEFA 04,http://45.192.97.170:8880/play/7078.m3u8
+Stan Sport AU Event 7,http://45.192.97.170:8880/play/7114.m3u8
+TNT Sport 4 SD,http://45.192.97.170:8880/play/7019.m3u8
+TNT Sports 5,http://45.192.97.170:8880/play/7020.m3u8
+TNT Sports 5 BU,http://45.192.97.170:8880/play/7021.m3u8
+Liga De Campeones 3 BU,http://45.192.97.170:8880/play/7115.m3u8
+UEFA 07,http://45.192.97.170:8880/play/7093.m3u8
+Stan Sport AU Event 4,http://45.192.97.170:8880/play/7116.m3u8
+TNT Sports 1,http://45.192.97.170:8880/play/7022.m3u8
+TNT Sports 1 BU,http://45.192.97.170:8880/play/7023.m3u8
+Liga De Campeones 8 BU,http://45.192.97.170:8880/play/7094.m3u8
+UEFA 09,http://45.192.97.170:8880/play/7095.m3u8
+TNT Sport 1 SD,http://45.192.97.170:8880/play/7024.m3u8
+UEFA 06,http://45.192.97.170:8880/play/7096.m3u8
+Liga De Campeones 6 BU,http://45.192.97.170:8880/play/7097.m3u8
+Stan Sport AU Event 6,http://45.192.97.170:8880/play/7117.m3u8
+DAZN CA 1,http://45.192.97.170:8880/play/7122.m3u8
+TNT Sports 2,http://45.192.97.170:8880/play/6998.m3u8
+TNT Sports 2 BU,http://45.192.97.170:8880/play/6999.m3u8
+Liga De Campeones 5 BU,http://45.192.97.170:8880/play/7098.m3u8
+UEFA 08,http://45.192.97.170:8880/play/7079.m3u8
+Stan Sport AU Event 1,http://45.192.97.170:8880/play/7113.m3u8
+TNT Sport 2 SD,http://45.192.97.170:8880/play/7025.m3u8
+Premier Sports 2,http://45.192.97.170:8880/play/7069.m3u8
+Premier Sports 2 sd,http://45.192.97.170:8880/play/7070.m3u8
