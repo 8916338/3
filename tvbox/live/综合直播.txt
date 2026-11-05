@@ -69,66 +69,66 @@ CHC家庭影院,http://45.192.97.170:8880/play/62.m3u8
 浙江卫视4K,http://45.192.97.170:8880/play/6561.m3u8
 江苏卫视4K,http://45.192.97.170:8880/play/335.m3u8
 央视网频1,#genre#
-CCTV-1 综合,http://45.192.97.170:8880/play/6672.m3u8
-CCTV-2 财经,http://45.192.97.170:8880/play/6673.m3u8
-CCTV-3 综艺,http://45.192.97.170:8880/play/6674.m3u8
-CCTV-4 中文国际,http://45.192.97.170:8880/play/6675.m3u8
-CCTV-5 体育,http://45.192.97.170:8880/play/6676.m3u8
-CCTV-5+ 体育赛事,http://45.192.97.170:8880/play/6677.m3u8
-CCTV-6 电影,http://45.192.97.170:8880/play/6678.m3u8
-CCTV-7 国防军事,http://45.192.97.170:8880/play/6679.m3u8
-CCTV-8 电视剧,http://45.192.97.170:8880/play/6680.m3u8
-CCTV-9 纪录,http://45.192.97.170:8880/play/6681.m3u8
-CCTV-10 科教,http://45.192.97.170:8880/play/6682.m3u8
-CCTV-11 戏曲,http://45.192.97.170:8880/play/6683.m3u8
-CCTV-12 社会与法,http://45.192.97.170:8880/play/6684.m3u8
-CCTV-13 新闻,http://45.192.97.170:8880/play/6685.m3u8
-CCTV-14 少儿,http://45.192.97.170:8880/play/6686.m3u8
-CCTV-15 音乐,http://45.192.97.170:8880/play/6687.m3u8
-CCTV-16 奥林匹克,http://45.192.97.170:8880/play/6688.m3u8
-CCTV-17 农业农村,http://45.192.97.170:8880/play/6689.m3u8
-CGTN,http://45.192.97.170:8880/play/6690.m3u8
-CGTN 法语,http://45.192.97.170:8880/play/6691.m3u8
-CGTN 俄语,http://45.192.97.170:8880/play/6692.m3u8
-CGTN 阿拉伯语,http://45.192.97.170:8880/play/6693.m3u8
-CGTN 西班牙语,http://45.192.97.170:8880/play/6694.m3u8
-CGTN 纪录,http://45.192.97.170:8880/play/6695.m3u8
-CCTV 风云剧场,http://45.192.97.170:8880/play/6696.m3u8
-CCTV 第一剧场,http://45.192.97.170:8880/play/6697.m3u8
-CCTV 怀旧剧场,http://45.192.97.170:8880/play/6698.m3u8
-国学频道,http://45.192.97.170:8880/play/6699.m3u8
-北京卫视,http://45.192.97.170:8880/play/6700.m3u8
-江苏卫视,http://45.192.97.170:8880/play/6701.m3u8
-东方卫视,http://45.192.97.170:8880/play/6702.m3u8
-浙江卫视,http://45.192.97.170:8880/play/6703.m3u8
-湖南卫视,http://45.192.97.170:8880/play/6704.m3u8
-湖北卫视,http://45.192.97.170:8880/play/6705.m3u8
-广东卫视,http://45.192.97.170:8880/play/6706.m3u8
-广西卫视,http://45.192.97.170:8880/play/6707.m3u8
-黑龙江卫视,http://45.192.97.170:8880/play/6708.m3u8
-海南卫视,http://45.192.97.170:8880/play/6709.m3u8
-重庆卫视,http://45.192.97.170:8880/play/6710.m3u8
-深圳卫视,http://45.192.97.170:8880/play/6711.m3u8
-四川卫视,http://45.192.97.170:8880/play/6712.m3u8
-河南卫视,http://45.192.97.170:8880/play/6713.m3u8
-东南卫视,http://45.192.97.170:8880/play/6714.m3u8
-贵州卫视,http://45.192.97.170:8880/play/6715.m3u8
-江西卫视,http://45.192.97.170:8880/play/6716.m3u8
-辽宁卫视,http://45.192.97.170:8880/play/6717.m3u8
-安徽卫视,http://45.192.97.170:8880/play/6718.m3u8
-河北卫视,http://45.192.97.170:8880/play/6719.m3u8
-山东卫视,http://45.192.97.170:8880/play/6720.m3u8
-天津卫视,http://45.192.97.170:8880/play/6721.m3u8
-吉林卫视,http://45.192.97.170:8880/play/6722.m3u8
-陕西卫视,http://45.192.97.170:8880/play/6723.m3u8
-宁夏卫视,http://45.192.97.170:8880/play/6724.m3u8
-内蒙古卫视,http://45.192.97.170:8880/play/6725.m3u8
-云南卫视,http://45.192.97.170:8880/play/6726.m3u8
-山西卫视,http://45.192.97.170:8880/play/6727.m3u8
-甘肃卫视,http://45.192.97.170:8880/play/6728.m3u8
-青海卫视,http://45.192.97.170:8880/play/6729.m3u8
-西藏卫视,http://45.192.97.170:8880/play/6730.m3u8
-新疆卫视,http://45.192.97.170:8880/play/6731.m3u8
+CCTV-1 综合,http://45.192.97.170:8880/play/7123.m3u8
+CCTV-2 财经,http://45.192.97.170:8880/play/7124.m3u8
+CCTV-3 综艺,http://45.192.97.170:8880/play/7125.m3u8
+CCTV-4 中文国际,http://45.192.97.170:8880/play/7126.m3u8
+CCTV-5 体育,http://45.192.97.170:8880/play/7127.m3u8
+CCTV-5+ 体育赛事,http://45.192.97.170:8880/play/7128.m3u8
+CCTV-6 电影,http://45.192.97.170:8880/play/7129.m3u8
+CCTV-7 国防军事,http://45.192.97.170:8880/play/7130.m3u8
+CCTV-8 电视剧,http://45.192.97.170:8880/play/7131.m3u8
+CCTV-9 纪录,http://45.192.97.170:8880/play/7132.m3u8
+CCTV-10 科教,http://45.192.97.170:8880/play/7133.m3u8
+CCTV-11 戏曲,http://45.192.97.170:8880/play/7134.m3u8
+CCTV-12 社会与法,http://45.192.97.170:8880/play/7135.m3u8
+CCTV-13 新闻,http://45.192.97.170:8880/play/7136.m3u8
+CCTV-14 少儿,http://45.192.97.170:8880/play/7137.m3u8
+CCTV-15 音乐,http://45.192.97.170:8880/play/7138.m3u8
+CCTV-16 奥林匹克,http://45.192.97.170:8880/play/7139.m3u8
+CCTV-17 农业农村,http://45.192.97.170:8880/play/7140.m3u8
+CGTN,http://45.192.97.170:8880/play/7141.m3u8
+CGTN 法语,http://45.192.97.170:8880/play/7142.m3u8
+CGTN 俄语,http://45.192.97.170:8880/play/7143.m3u8
+CGTN 阿拉伯语,http://45.192.97.170:8880/play/7144.m3u8
+CGTN 西班牙语,http://45.192.97.170:8880/play/7145.m3u8
+CGTN 纪录,http://45.192.97.170:8880/play/7146.m3u8
+CCTV 风云剧场,http://45.192.97.170:8880/play/7147.m3u8
+CCTV 第一剧场,http://45.192.97.170:8880/play/7148.m3u8
+CCTV 怀旧剧场,http://45.192.97.170:8880/play/7149.m3u8
+国学频道,http://45.192.97.170:8880/play/7150.m3u8
+北京卫视,http://45.192.97.170:8880/play/7151.m3u8
+江苏卫视,http://45.192.97.170:8880/play/7152.m3u8
+东方卫视,http://45.192.97.170:8880/play/7153.m3u8
+浙江卫视,http://45.192.97.170:8880/play/7154.m3u8
+湖南卫视,http://45.192.97.170:8880/play/7155.m3u8
+湖北卫视,http://45.192.97.170:8880/play/7156.m3u8
+广东卫视,http://45.192.97.170:8880/play/7157.m3u8
+广西卫视,http://45.192.97.170:8880/play/7158.m3u8
+黑龙江卫视,http://45.192.97.170:8880/play/7159.m3u8
+海南卫视,http://45.192.97.170:8880/play/7160.m3u8
+重庆卫视,http://45.192.97.170:8880/play/7161.m3u8
+深圳卫视,http://45.192.97.170:8880/play/7162.m3u8
+四川卫视,http://45.192.97.170:8880/play/7163.m3u8
+河南卫视,http://45.192.97.170:8880/play/7164.m3u8
+东南卫视,http://45.192.97.170:8880/play/7165.m3u8
+贵州卫视,http://45.192.97.170:8880/play/7166.m3u8
+江西卫视,http://45.192.97.170:8880/play/7167.m3u8
+辽宁卫视,http://45.192.97.170:8880/play/7168.m3u8
+安徽卫视,http://45.192.97.170:8880/play/7169.m3u8
+河北卫视,http://45.192.97.170:8880/play/7170.m3u8
+山东卫视,http://45.192.97.170:8880/play/7171.m3u8
+天津卫视,http://45.192.97.170:8880/play/7172.m3u8
+吉林卫视,http://45.192.97.170:8880/play/7173.m3u8
+陕西卫视,http://45.192.97.170:8880/play/7174.m3u8
+宁夏卫视,http://45.192.97.170:8880/play/7175.m3u8
+内蒙古卫视,http://45.192.97.170:8880/play/7176.m3u8
+云南卫视,http://45.192.97.170:8880/play/7177.m3u8
+山西卫视,http://45.192.97.170:8880/play/7178.m3u8
+甘肃卫视,http://45.192.97.170:8880/play/7179.m3u8
+青海卫视,http://45.192.97.170:8880/play/7180.m3u8
+西藏卫视,http://45.192.97.170:8880/play/7181.m3u8
+新疆卫视,http://45.192.97.170:8880/play/7182.m3u8
 央视网频2,#genre#
 北京卫视,http://45.192.97.170:8880/play/6763.m3u8
 江苏卫视,http://45.192.97.170:8880/play/6764.m3u8
@@ -834,273 +834,6 @@ LIVE三立,http://45.192.97.170:8880/play/780.m3u8
 TVBS新闻台,http://45.192.97.170:8880/play/800.m3u8
 东森新闻,http://45.192.97.170:8880/play/801.m3u8
 三立新闻,http://45.192.97.170:8880/play/802.m3u8
-广东移动,#genre#
-CCTV1,http://45.192.97.170:8880/play/4444.m3u8
-CCTV1,http://45.192.97.170:8880/play/4445.m3u8
-CCTV1,http://45.192.97.170:8880/play/4446.m3u8
-CCTV1,http://45.192.97.170:8880/play/4447.m3u8
-CCTV1,http://45.192.97.170:8880/play/4448.m3u8
-CCTV2,http://45.192.97.170:8880/play/4449.m3u8
-CCTV3,http://45.192.97.170:8880/play/4450.m3u8
-CCTV4,http://45.192.97.170:8880/play/4451.m3u8
-CCTV5,http://45.192.97.170:8880/play/4452.m3u8
-CCTV5+,http://45.192.97.170:8880/play/4453.m3u8
-CCTV6,http://45.192.97.170:8880/play/4454.m3u8
-CCTV7,http://45.192.97.170:8880/play/4455.m3u8
-CCTV8,http://45.192.97.170:8880/play/4456.m3u8
-CCTV9,http://45.192.97.170:8880/play/4457.m3u8
-CCTV9,http://45.192.97.170:8880/play/4458.m3u8
-CCTV10,http://45.192.97.170:8880/play/4459.m3u8
-CCTV11,http://45.192.97.170:8880/play/4460.m3u8
-CCTV12,http://45.192.97.170:8880/play/4461.m3u8
-CCTV12,http://45.192.97.170:8880/play/4462.m3u8
-CCTV13,http://45.192.97.170:8880/play/4463.m3u8
-CCTV14,http://45.192.97.170:8880/play/4464.m3u8
-CCTV14,http://45.192.97.170:8880/play/4465.m3u8
-CCTV15,http://45.192.97.170:8880/play/4466.m3u8
-CCTV16,http://45.192.97.170:8880/play/4467.m3u8
-CCTV17,http://45.192.97.170:8880/play/4468.m3u8
-CCTV17,http://45.192.97.170:8880/play/4469.m3u8
-CGTN,http://45.192.97.170:8880/play/4470.m3u8
-CETV1,http://45.192.97.170:8880/play/4471.m3u8
-CETV1,http://45.192.97.170:8880/play/4472.m3u8
-CETV2,http://45.192.97.170:8880/play/4473.m3u8
-CETV3,http://45.192.97.170:8880/play/4474.m3u8
-CETV4,http://45.192.97.170:8880/play/4475.m3u8
-山东教育卫视,http://45.192.97.170:8880/play/4476.m3u8
-广东卫视,http://45.192.97.170:8880/play/4477.m3u8
-安徽卫视,http://45.192.97.170:8880/play/4478.m3u8
-安徽卫视,http://45.192.97.170:8880/play/4479.m3u8
-北京卫视,http://45.192.97.170:8880/play/4480.m3u8
-北京纪实科教,http://45.192.97.170:8880/play/4481.m3u8
-北京纪实科教,http://45.192.97.170:8880/play/4482.m3u8
-北京纪实科教,http://45.192.97.170:8880/play/4483.m3u8
-四川卫视,http://45.192.97.170:8880/play/4484.m3u8
-甘肃卫视,http://45.192.97.170:8880/play/4485.m3u8
-河北卫视,http://45.192.97.170:8880/play/4486.m3u8
-河南卫视,http://45.192.97.170:8880/play/4487.m3u8
-东南卫视,http://45.192.97.170:8880/play/4488.m3u8
-东南卫视,http://45.192.97.170:8880/play/4489.m3u8
-吉林卫视,http://45.192.97.170:8880/play/4490.m3u8
-贵州卫视,http://45.192.97.170:8880/play/4491.m3u8
-贵州卫视,http://45.192.97.170:8880/play/4492.m3u8
-重庆卫视,http://45.192.97.170:8880/play/4493.m3u8
-海南卫视,http://45.192.97.170:8880/play/4494.m3u8
-海南卫视,http://45.192.97.170:8880/play/4495.m3u8
-广西卫视,http://45.192.97.170:8880/play/4496.m3u8
-江西卫视,http://45.192.97.170:8880/play/4497.m3u8
-江西卫视,http://45.192.97.170:8880/play/4498.m3u8
-河北卫视,http://45.192.97.170:8880/play/4499.m3u8
-天津卫视,http://45.192.97.170:8880/play/4500.m3u8
-内蒙古卫视,http://45.192.97.170:8880/play/4501.m3u8
-河南卫视,http://45.192.97.170:8880/play/4502.m3u8
-深圳卫视,http://45.192.97.170:8880/play/4503.m3u8
-东方卫视,http://45.192.97.170:8880/play/4504.m3u8
-浙江卫视,http://45.192.97.170:8880/play/4505.m3u8
-江苏卫视,http://45.192.97.170:8880/play/4506.m3u8
-宁夏卫视,http://45.192.97.170:8880/play/4507.m3u8
-辽宁卫视,http://45.192.97.170:8880/play/4508.m3u8
-山东卫视,http://45.192.97.170:8880/play/4509.m3u8
-厦门卫视,http://45.192.97.170:8880/play/4510.m3u8
-青海卫视,http://45.192.97.170:8880/play/4511.m3u8
-四川卫视,http://45.192.97.170:8880/play/4512.m3u8
-湖南卫视,http://45.192.97.170:8880/play/4513.m3u8
-湖北卫视,http://45.192.97.170:8880/play/4514.m3u8
-新疆卫视,http://45.192.97.170:8880/play/4515.m3u8
-兵团卫视,http://45.192.97.170:8880/play/4516.m3u8
-山西卫视,http://45.192.97.170:8880/play/4517.m3u8
-云南卫视,http://45.192.97.170:8880/play/4518.m3u8
-西藏卫视,http://45.192.97.170:8880/play/4519.m3u8
-陕西卫视,http://45.192.97.170:8880/play/4520.m3u8
-黑龙江卫视,http://45.192.97.170:8880/play/4521.m3u8
-金鹰纪实,http://45.192.97.170:8880/play/4522.m3u8
-咪咕视频,http://45.192.97.170:8880/play/4523.m3u8
-广东电信1,#genre#
-CCTV-1综合高清内网,http://45.192.97.170:8880/play/803.m3u8
-CCTV-2财经高清,http://45.192.97.170:8880/play/804.m3u8
-CCTV-7军事农业高清,http://45.192.97.170:8880/play/805.m3u8
-CCTV-10科教高清,http://45.192.97.170:8880/play/806.m3u8
-广东卫视,http://45.192.97.170:8880/play/807.m3u8
-广东珠江,http://45.192.97.170:8880/play/808.m3u8
-广东新闻,http://45.192.97.170:8880/play/809.m3u8
-广东民生,http://45.192.97.170:8880/play/810.m3u8
-广东体育,http://45.192.97.170:8880/play/811.m3u8
-经济科教,http://45.192.97.170:8880/play/812.m3u8
-大湾区卫视,http://45.192.97.170:8880/play/813.m3u8
-广东影视,http://45.192.97.170:8880/play/814.m3u8
-广东少儿,http://45.192.97.170:8880/play/815.m3u8
-嘉佳卡通,http://45.192.97.170:8880/play/816.m3u8
-广东4K超高清,http://45.192.97.170:8880/play/817.m3u8
-广东4K超高清 窄色域 30,http://45.192.97.170:8880/play/818.m3u8
-南方购物-精选,http://45.192.97.170:8880/play/819.m3u8
-广东移动,http://45.192.97.170:8880/play/820.m3u8
-广东卫视4k超高清25p,http://45.192.97.170:8880/play/821.m3u8
-广东卫视4k超高清,http://45.192.97.170:8880/play/822.m3u8
-南国都市4K,http://45.192.97.170:8880/play/823.m3u8
-广州综合高清,http://45.192.97.170:8880/play/824.m3u8
-广州新闻高清,http://45.192.97.170:8880/play/825.m3u8
-南方购物,http://45.192.97.170:8880/play/826.m3u8
-岭南戏曲,http://45.192.97.170:8880/play/827.m3u8
-现代教育,http://45.192.97.170:8880/play/828.m3u8
-CCTV-1综合,http://45.192.97.170:8880/play/829.m3u8
-CCTV-2财经,http://45.192.97.170:8880/play/830.m3u8
-CCTV-3综艺,http://45.192.97.170:8880/play/831.m3u8
-CCTV-4中文国际,http://45.192.97.170:8880/play/832.m3u8
-CCTV-5体育,http://45.192.97.170:8880/play/833.m3u8
-CCTV-6电影,http://45.192.97.170:8880/play/834.m3u8
-CCTV-7国防军事,http://45.192.97.170:8880/play/835.m3u8
-CCTV-8电视剧,http://45.192.97.170:8880/play/836.m3u8
-CCTV-9纪录,http://45.192.97.170:8880/play/837.m3u8
-CCTV-10科教,http://45.192.97.170:8880/play/838.m3u8
-CCTV-11戏曲,http://45.192.97.170:8880/play/839.m3u8
-CCTV-12社会与法,http://45.192.97.170:8880/play/840.m3u8
-CCTV-13新闻,http://45.192.97.170:8880/play/841.m3u8
-CCTV-14少儿,http://45.192.97.170:8880/play/842.m3u8
-CCTV-15音乐,http://45.192.97.170:8880/play/843.m3u8
-CGTN,http://45.192.97.170:8880/play/844.m3u8
-CCTV-17农业,http://45.192.97.170:8880/play/845.m3u8
-CCTV4K-25P,http://45.192.97.170:8880/play/846.m3u8
-CCTV4K-50P,http://45.192.97.170:8880/play/847.m3u8
-湖南卫视,http://45.192.97.170:8880/play/848.m3u8
-浙江卫视,http://45.192.97.170:8880/play/849.m3u8
-江苏卫视,http://45.192.97.170:8880/play/850.m3u8
-东方卫视,http://45.192.97.170:8880/play/851.m3u8
-安徽卫视,http://45.192.97.170:8880/play/852.m3u8
-北京卫视,http://45.192.97.170:8880/play/853.m3u8
-天津卫视,http://45.192.97.170:8880/play/854.m3u8
-山东卫视,http://45.192.97.170:8880/play/855.m3u8
-江西卫视,http://45.192.97.170:8880/play/856.m3u8
-深圳卫视,http://45.192.97.170:8880/play/857.m3u8
-湖北卫视,http://45.192.97.170:8880/play/858.m3u8
-辽宁卫视,http://45.192.97.170:8880/play/859.m3u8
-黑龙江卫视,http://45.192.97.170:8880/play/860.m3u8
-贵州卫视,http://45.192.97.170:8880/play/861.m3u8
-四川卫视,http://45.192.97.170:8880/play/862.m3u8
-河南卫视,http://45.192.97.170:8880/play/863.m3u8
-云南卫视,http://45.192.97.170:8880/play/864.m3u8
-重庆卫视,http://45.192.97.170:8880/play/865.m3u8
-河北卫视,http://45.192.97.170:8880/play/866.m3u8
-东南卫视,http://45.192.97.170:8880/play/867.m3u8
-广西卫视,http://45.192.97.170:8880/play/868.m3u8
-吉林卫视,http://45.192.97.170:8880/play/869.m3u8
-陕西卫视,http://45.192.97.170:8880/play/870.m3u8
-山西卫视,http://45.192.97.170:8880/play/871.m3u8
-内蒙古卫视,http://45.192.97.170:8880/play/872.m3u8
-青海卫视,http://45.192.97.170:8880/play/873.m3u8
-海南卫视,http://45.192.97.170:8880/play/874.m3u8
-甘肃卫视,http://45.192.97.170:8880/play/875.m3u8
-卡酷动画,http://45.192.97.170:8880/play/876.m3u8
-金鹰卡通,http://45.192.97.170:8880/play/877.m3u8
-CETV-1,http://45.192.97.170:8880/play/878.m3u8
-山东教育,http://45.192.97.170:8880/play/879.m3u8
-财富天下,http://45.192.97.170:8880/play/880.m3u8
-厦门卫视,http://45.192.97.170:8880/play/881.m3u8
-优漫卡通,http://45.192.97.170:8880/play/882.m3u8
-三沙卫视,http://45.192.97.170:8880/play/883.m3u8
-吉林延边卫视,http://45.192.97.170:8880/play/884.m3u8
-CETV2,http://45.192.97.170:8880/play/885.m3u8
-CETV4,http://45.192.97.170:8880/play/886.m3u8
-CCTV-1高清,http://45.192.97.170:8880/play/887.m3u8
-CCTV5＋体育高清-测试,http://45.192.97.170:8880/play/888.m3u8
-CCTV-2高清测试,http://45.192.97.170:8880/play/889.m3u8
-CCTV-3高清,http://45.192.97.170:8880/play/890.m3u8
-CCTV-4高清,http://45.192.97.170:8880/play/891.m3u8
-CCTV-5高清,http://45.192.97.170:8880/play/892.m3u8
-CCTV-6高清,http://45.192.97.170:8880/play/893.m3u8
-CCTV-7高清测试,http://45.192.97.170:8880/play/894.m3u8
-CCTV-8高清,http://45.192.97.170:8880/play/895.m3u8
-CCTV-9高清测试,http://45.192.97.170:8880/play/896.m3u8
-CCTV-10高清测试,http://45.192.97.170:8880/play/897.m3u8
-CCTV-11高清,http://45.192.97.170:8880/play/898.m3u8
-CCTV-12高清测试,http://45.192.97.170:8880/play/899.m3u8
-CCTV-13高清,http://45.192.97.170:8880/play/900.m3u8
-CCTV-14高清测试,http://45.192.97.170:8880/play/901.m3u8
-CCTV-15高清,http://45.192.97.170:8880/play/902.m3u8
-爱体育高清,http://45.192.97.170:8880/play/903.m3u8
-CCTV-16高清,http://45.192.97.170:8880/play/904.m3u8
-CCTV-17农业高清,http://45.192.97.170:8880/play/905.m3u8
-CCTV4中文国际欧洲高清,http://45.192.97.170:8880/play/906.m3u8
-CCTV4中文国际美洲高清,http://45.192.97.170:8880/play/907.m3u8
-CGTN英语高清,http://45.192.97.170:8880/play/908.m3u8
-CGTN英文记录高清,http://45.192.97.170:8880/play/909.m3u8
-CGTN西班牙语高清,http://45.192.97.170:8880/play/910.m3u8
-CGTN法语高清,http://45.192.97.170:8880/play/911.m3u8
-CGTN阿拉伯语高清,http://45.192.97.170:8880/play/912.m3u8
-CGTN俄语高清,http://45.192.97.170:8880/play/913.m3u8
-金鹰纪实高清测试,http://45.192.97.170:8880/play/914.m3u8
-西藏卫视,http://45.192.97.170:8880/play/915.m3u8
-新疆卫视,http://45.192.97.170:8880/play/916.m3u8
-兵团卫视,http://45.192.97.170:8880/play/917.m3u8
-宁夏卫视,http://45.192.97.170:8880/play/918.m3u8
-广东卫视时移专用,http://45.192.97.170:8880/play/919.m3u8
-东方卫视时移专用,http://45.192.97.170:8880/play/920.m3u8
-湖南卫视时移专用,http://45.192.97.170:8880/play/921.m3u8
-江苏卫视时移专用,http://45.192.97.170:8880/play/922.m3u8
-山东卫视时移专用,http://45.192.97.170:8880/play/923.m3u8
-深圳卫视时移专用,http://45.192.97.170:8880/play/924.m3u8
-四川卫视时移专用,http://45.192.97.170:8880/play/925.m3u8
-浙江卫视时移专用,http://45.192.97.170:8880/play/926.m3u8
-北京卫视时移专用,http://45.192.97.170:8880/play/927.m3u8
-茶,http://45.192.97.170:8880/play/928.m3u8
-快乐垂钓,http://45.192.97.170:8880/play/929.m3u8
-广东体育超清,http://45.192.97.170:8880/play/930.m3u8
-CCTV-1超清,http://45.192.97.170:8880/play/931.m3u8
-CCTV-5超清,http://45.192.97.170:8880/play/932.m3u8
-北京卫视4K超高清,http://45.192.97.170:8880/play/933.m3u8
-北京卫视4K超高清,http://45.192.97.170:8880/play/934.m3u8
-深圳卫视4k超高清,http://45.192.97.170:8880/play/935.m3u8
-江苏卫视4k超高清,http://45.192.97.170:8880/play/936.m3u8
-浙江卫视4k超高清,http://45.192.97.170:8880/play/937.m3u8
-东方卫视4k超高清,http://45.192.97.170:8880/play/938.m3u8
-四川卫视4k超高清,http://45.192.97.170:8880/play/939.m3u8
-山东卫视4k超高清,http://45.192.97.170:8880/play/940.m3u8
-湖南卫视4k超高清,http://45.192.97.170:8880/play/941.m3u8
-IPTV谍战剧场,http://45.192.97.170:8880/play/942.m3u8
-IPTV相声小品,http://45.192.97.170:8880/play/943.m3u8
-IPTV野外,http://45.192.97.170:8880/play/944.m3u8
-IPTV法治,http://45.192.97.170:8880/play/945.m3u8
-爱电影,http://45.192.97.170:8880/play/946.m3u8
-经典电影,http://45.192.97.170:8880/play/947.m3u8
-爱大剧,http://45.192.97.170:8880/play/948.m3u8
-热播剧场,http://45.192.97.170:8880/play/949.m3u8
-爱综艺,http://45.192.97.170:8880/play/950.m3u8
-爱体育,http://45.192.97.170:8880/play/951.m3u8
-少儿动画,http://45.192.97.170:8880/play/952.m3u8
-魅力时尚,http://45.192.97.170:8880/play/953.m3u8
-收视指南,http://45.192.97.170:8880/play/954.m3u8
-精选4k频道3,http://45.192.97.170:8880/play/955.m3u8
-求索纪录,http://45.192.97.170:8880/play/956.m3u8
-百视通体育直播室1,http://45.192.97.170:8880/play/957.m3u8
-百视通体育直播室4,http://45.192.97.170:8880/play/958.m3u8
-百视通体育直播室5,http://45.192.97.170:8880/play/959.m3u8
-百视通体育直播室6,http://45.192.97.170:8880/play/960.m3u8
-百视通体育直播室7,http://45.192.97.170:8880/play/961.m3u8
-天元围棋,http://45.192.97.170:8880/play/962.m3u8
-汽摩,http://45.192.97.170:8880/play/963.m3u8
-老故事,http://45.192.97.170:8880/play/964.m3u8
-国学,http://45.192.97.170:8880/play/965.m3u8
-卫生健康高清,http://45.192.97.170:8880/play/966.m3u8
-兵器科技高清,http://45.192.97.170:8880/play/967.m3u8
-电视指南高清,http://45.192.97.170:8880/play/968.m3u8
-风云足球高清,http://45.192.97.170:8880/play/969.m3u8
-央视台球高清,http://45.192.97.170:8880/play/970.m3u8
-高尔夫网球高清,http://45.192.97.170:8880/play/971.m3u8
-女性时尚高清,http://45.192.97.170:8880/play/972.m3u8
-世界地理高清,http://45.192.97.170:8880/play/973.m3u8
-怀旧剧场高清,http://45.192.97.170:8880/play/974.m3u8
-风云剧场高清,http://45.192.97.170:8880/play/975.m3u8
-央视精品高清,http://45.192.97.170:8880/play/976.m3u8
-第一剧场高清,http://45.192.97.170:8880/play/977.m3u8
-风云音乐高清,http://45.192.97.170:8880/play/978.m3u8
-早期教育高清,http://45.192.97.170:8880/play/979.m3u8
-PPTV-1,http://45.192.97.170:8880/play/980.m3u8
-PPTV-2,http://45.192.97.170:8880/play/981.m3u8
-PPTV-3,http://45.192.97.170:8880/play/982.m3u8
-PPTV-4,http://45.192.97.170:8880/play/983.m3u8
-精选频道2,http://45.192.97.170:8880/play/984.m3u8
-CCTV-1高清4M,http://45.192.97.170:8880/play/985.m3u8
-九频同播频道,http://45.192.97.170:8880/play/986.m3u8
-CCTV1-1M开机标清,http://45.192.97.170:8880/play/987.m3u8
 热门歌曲,#genre#
 烟雨人间,http://45.192.97.170:8880/play/1085.m3u8
 阿果吉曲,http://45.192.97.170:8880/play/1086.m3u8
@@ -1527,7 +1260,7 @@ CRI HIT FM,http://45.192.97.170:8880/play/1488.m3u8
 福建汽车音乐广播,http://45.192.97.170:8880/play/1506.m3u8
 青海交通音乐广播,http://45.192.97.170:8880/play/1326.m3u8
 更新时间,#genre#
-11/03,http://45.192.97.170:8880/play/1510.m3u8
+11/05,http://45.192.97.170:8880/play/1510.m3u8
 盲盒点歌1,http://45.192.97.170:8880/play/1510.m3u8
 盲盒点歌2,http://45.192.97.170:8880/play/1510.m3u8
 视频教程,#genre#
@@ -1536,76 +1269,59 @@ CRI HIT FM,http://45.192.97.170:8880/play/1488.m3u8
 Github运行worker,http://45.192.97.170:8880/play/1513.m3u8
 注册到运行教程,http://45.192.97.170:8880/play/1514.m3u8
 体育频道,#genre#
-11-05 01:45 AEK Athens FC vs Real Madrid (2 - 3) [TNT Sports 3],http://45.192.97.170:8880/play/7000.m3u8
-11-05 01:45 AEK Athens FC vs Real Madrid (2 - 3) [TNT Sports 3 BU],http://45.192.97.170:8880/play/7001.m3u8
-11-05 01:45 AEK Athens FC vs Real Madrid (2 - 3) [UEFA 01],http://45.192.97.170:8880/play/7002.m3u8
-11-05 01:45 AEK Athens FC vs Real Madrid (2 - 3) [Stan Sport AU Event 2],http://45.192.97.170:8880/play/7081.m3u8
-11-05 01:45 AEK Athens FC vs Real Madrid (2 - 3) [TNT Sport 3 SD],http://45.192.97.170:8880/play/7099.m3u8
-[LIVE] 11-05 04:00 Lens vs Como [UEFA 05],http://45.192.97.170:8880/play/7077.m3u8
-[LIVE] 11-05 04:00 Lens vs Como [Liga De Campeones 7 BU],http://45.192.97.170:8880/play/7089.m3u8
-[LIVE] 11-05 04:00 Lens vs Como [Stan Sport AU Event 5],http://45.192.97.170:8880/play/7103.m3u8
-[LIVE] 11-05 04:00 Lens vs Como [HBO Max UK 6],http://45.192.97.170:8880/play/7119.m3u8
-[LIVE] 11-05 04:00 Lens vs Como [DAZN CA 10],http://45.192.97.170:8880/play/7120.m3u8
-[LIVE] 11-05 04:00 PSV Eindhoven vs Club Brugge KV [UEFA 06],http://45.192.97.170:8880/play/7084.m3u8
-[LIVE] 11-05 04:00 PSV Eindhoven vs Club Brugge KV [Liga De Campeones 6 BU],http://45.192.97.170:8880/play/7085.m3u8
-[LIVE] 11-05 04:00 PSV Eindhoven vs Club Brugge KV [Stan Sport AU Event 6],http://45.192.97.170:8880/play/7104.m3u8
-[LIVE] 11-05 04:00 PSV Eindhoven vs Club Brugge KV [DAZN CA 1],http://45.192.97.170:8880/play/7118.m3u8
-[LIVE] 11-05 04:00 RB Leipzig vs Manchester City [TNT Sports 2],http://45.192.97.170:8880/play/7014.m3u8
-[LIVE] 11-05 04:00 RB Leipzig vs Manchester City [TNT Sports 2 BU],http://45.192.97.170:8880/play/7015.m3u8
-[LIVE] 11-05 04:00 RB Leipzig vs Manchester City [Liga De Campeones 5 BU],http://45.192.97.170:8880/play/7016.m3u8
-[LIVE] 11-05 04:00 RB Leipzig vs Manchester City [UEFA 08],http://45.192.97.170:8880/play/7075.m3u8
-[LIVE] 11-05 04:00 RB Leipzig vs Manchester City [Stan Sport AU Event 1],http://45.192.97.170:8880/play/7082.m3u8
-[LIVE] 11-05 04:00 RB Leipzig vs Manchester City [TNT Sport 2 SD],http://45.192.97.170:8880/play/7102.m3u8
-[LIVE] 11-05 04:00 FC Porto vs Napoli [TNT Sports 5],http://45.192.97.170:8880/play/7009.m3u8
-[LIVE] 11-05 04:00 FC Porto vs Napoli [TNT Sports 5 BU],http://45.192.97.170:8880/play/7010.m3u8
-[LIVE] 11-05 04:00 FC Porto vs Napoli [Liga De Campeones 3 BU],http://45.192.97.170:8880/play/7087.m3u8
-[LIVE] 11-05 04:00 FC Porto vs Napoli [UEFA 07],http://45.192.97.170:8880/play/7108.m3u8
-[LIVE] 11-05 04:00 FC Porto vs Napoli [Stan Sport AU Event 4],http://45.192.97.170:8880/play/7109.m3u8
-[LIVE] 11-05 04:00 Slavia Praha vs Arsenal [TNT Sports 1],http://45.192.97.170:8880/play/7011.m3u8
-[LIVE] 11-05 04:00 Slavia Praha vs Arsenal [TNT Sports 1 BU],http://45.192.97.170:8880/play/7012.m3u8
-[LIVE] 11-05 04:00 Slavia Praha vs Arsenal [Liga De Campeones 8 BU],http://45.192.97.170:8880/play/7013.m3u8
-[LIVE] 11-05 04:00 Slavia Praha vs Arsenal [UEFA 09],http://45.192.97.170:8880/play/7088.m3u8
-[LIVE] 11-05 04:00 Slavia Praha vs Arsenal [Stan Sport AU Event 2],http://45.192.97.170:8880/play/7110.m3u8
-[LIVE] 11-05 04:00 Slavia Praha vs Arsenal [TNT Sport 1 SD],http://45.192.97.170:8880/play/7111.m3u8
-[LIVE] 11-05 04:00 Viking vs Sabah FA [UEFA 10],http://45.192.97.170:8880/play/7086.m3u8
-[LIVE] 11-05 04:00 Viking vs Sabah FA [Liga De Campeones 9 BU],http://45.192.97.170:8880/play/7105.m3u8
-[LIVE] 11-05 04:00 Viking vs Sabah FA [Stan Sport AU Event 8],http://45.192.97.170:8880/play/7106.m3u8
-[LIVE] 11-05 04:00 Viking vs Sabah FA [HBO Max UK 7],http://45.192.97.170:8880/play/7107.m3u8
-[LIVE] 11-05 04:00 Viking vs Sabah FA [DAZN CA 8],http://45.192.97.170:8880/play/7121.m3u8
-[LIVE] 11-05 04:00 Borussia Dortmund vs Real Betis [TNT Sports 4],http://45.192.97.170:8880/play/7006.m3u8
-[LIVE] 11-05 04:00 Borussia Dortmund vs Real Betis [TNT Sports 4 BU],http://45.192.97.170:8880/play/7007.m3u8
-[LIVE] 11-05 04:00 Borussia Dortmund vs Real Betis [Liga De Campeones 2 BU],http://45.192.97.170:8880/play/7008.m3u8
-[LIVE] 11-05 04:00 Borussia Dortmund vs Real Betis [UEFA 04],http://45.192.97.170:8880/play/7076.m3u8
-[LIVE] 11-05 04:00 Borussia Dortmund vs Real Betis [Stan Sport AU Event 7],http://45.192.97.170:8880/play/7083.m3u8
-[LIVE] 11-05 04:00 Borussia Dortmund vs Real Betis [TNT Sport 4 SD],http://45.192.97.170:8880/play/7101.m3u8
-11-06 01:45 Crystal Palace vs 1899 Hoffenheim [TNT Sports 1],http://45.192.97.170:8880/play/7034.m3u8
-11-06 01:45 Crystal Palace vs 1899 Hoffenheim [TNT Sports 1 BU],http://45.192.97.170:8880/play/7035.m3u8
-11-06 01:45 Crystal Palace vs 1899 Hoffenheim [TNT Sport 1 SD],http://45.192.97.170:8880/play/7036.m3u8
-11-06 01:45 FC Thun vs Heart Of Midlothian [TNT Sports 3],http://45.192.97.170:8880/play/7026.m3u8
-11-06 01:45 FC Thun vs Heart Of Midlothian [TNT Sports 3 BU],http://45.192.97.170:8880/play/7027.m3u8
-11-06 01:45 FC Thun vs Heart Of Midlothian [TNT Sport 3 SD],http://45.192.97.170:8880/play/7028.m3u8
-11-06 01:45 Sparta Praha vs Bournemouth [TNT Sports 2],http://45.192.97.170:8880/play/7037.m3u8
-11-06 01:45 Sparta Praha vs Bournemouth [TNT Sports 2 BU],http://45.192.97.170:8880/play/7038.m3u8
-11-06 01:45 Sparta Praha vs Bournemouth [TNT Sport 2 SD],http://45.192.97.170:8880/play/7039.m3u8
-11-06 01:45 Real Sociedad vs Lyon [TNT Sports 5],http://45.192.97.170:8880/play/7029.m3u8
-11-06 01:45 Real Sociedad vs Lyon [TNT Sports 5 BU],http://45.192.97.170:8880/play/7030.m3u8
-11-06 01:45 AC Milan vs Ferencvarosi TC [TNT Sports 4],http://45.192.97.170:8880/play/7031.m3u8
-11-06 01:45 AC Milan vs Ferencvarosi TC [TNT Sports 4 BU],http://45.192.97.170:8880/play/7032.m3u8
-11-06 01:45 AC Milan vs Ferencvarosi TC [TNT Sport 4 SD],http://45.192.97.170:8880/play/7033.m3u8
-11-06 04:00 AZ Alkmaar vs Juventus [TNT Sports 4],http://45.192.97.170:8880/play/7045.m3u8
-11-06 04:00 AZ Alkmaar vs Juventus [TNT Sports 4 BU],http://45.192.97.170:8880/play/7046.m3u8
-11-06 04:00 AZ Alkmaar vs Juventus [TNT Sport 4 SD],http://45.192.97.170:8880/play/7047.m3u8
-11-06 04:00 Getafe vs Brighton [TNT Sports 2],http://45.192.97.170:8880/play/7048.m3u8
-11-06 04:00 Getafe vs Brighton [TNT Sports 2 BU],http://45.192.97.170:8880/play/7049.m3u8
-11-06 04:00 Getafe vs Brighton [TNT Sport 2 SD],http://45.192.97.170:8880/play/7050.m3u8
-11-06 04:00 Bayer Leverkusen vs Marseille [TNT Sports 5],http://45.192.97.170:8880/play/7040.m3u8
-11-06 04:00 Bayer Leverkusen vs Marseille [TNT Sports 5 BU],http://45.192.97.170:8880/play/7041.m3u8
-11-06 04:00 Sunderland vs Dinamo Zagreb [TNT Sports 1],http://45.192.97.170:8880/play/7051.m3u8
-11-06 04:00 Sunderland vs Dinamo Zagreb [TNT Sports 1 BU],http://45.192.97.170:8880/play/7052.m3u8
-11-06 04:00 Sunderland vs Dinamo Zagreb [TNT Sport 1 SD],http://45.192.97.170:8880/play/7053.m3u8
-11-06 04:00 Celtic vs Besiktas [TNT Sports 3],http://45.192.97.170:8880/play/7042.m3u8
-11-06 04:00 Celtic vs Besiktas [TNT Sports 3 BU],http://45.192.97.170:8880/play/7043.m3u8
-11-06 04:00 Celtic vs Besiktas [TNT Sport 3 SD],http://45.192.97.170:8880/play/7044.m3u8
+[LIVE] 11-06 01:45 Anderlecht vs Red Bull Salzburg [UEFA 02],http://45.192.97.170:8880/play/7184.m3u8
+[LIVE] 11-06 01:45 Anderlecht vs Red Bull Salzburg [Stan Sport AU Event 12],http://45.192.97.170:8880/play/7185.m3u8
+[LIVE] 11-06 01:45 FC Midtjylland vs Ajax [UEFA 22],http://45.192.97.170:8880/play/7191.m3u8
+[LIVE] 11-06 01:45 FC Midtjylland vs Ajax [Stan Sport AU Event 4],http://45.192.97.170:8880/play/7192.m3u8
+[LIVE] 11-06 01:45 Sparta Praha vs Bournemouth [TNT Sports 2],http://45.192.97.170:8880/play/7037.m3u8
+[LIVE] 11-06 01:45 Sparta Praha vs Bournemouth [TNT Sports 2 BU],http://45.192.97.170:8880/play/7038.m3u8
+[LIVE] 11-06 01:45 Sparta Praha vs Bournemouth [TNT Sport 2 SD],http://45.192.97.170:8880/play/7039.m3u8
+[LIVE] 11-06 01:45 Lincoln Red Imps FC vs HNK Hajduk Split [UEFA 21],http://45.192.97.170:8880/play/7195.m3u8
+[LIVE] 11-06 01:45 Lincoln Red Imps FC vs HNK Hajduk Split [Stan Sport AU Event 9],http://45.192.97.170:8880/play/7196.m3u8
+[LIVE] 11-06 01:45 FC Thun vs Heart Of Midlothian [TNT Sports 3],http://45.192.97.170:8880/play/7026.m3u8
+[LIVE] 11-06 01:45 FC Thun vs Heart Of Midlothian [TNT Sports 3 BU],http://45.192.97.170:8880/play/7027.m3u8
+[LIVE] 11-06 01:45 FC Thun vs Heart Of Midlothian [TNT Sport 3 SD],http://45.192.97.170:8880/play/7028.m3u8
+[LIVE] 11-06 01:45 FK Crvena Zvezda vs Inter Club d'Escaldes [UEFA 24],http://45.192.97.170:8880/play/7201.m3u8
+[LIVE] 11-06 01:45 FK Crvena Zvezda vs Inter Club d'Escaldes [Stan Sport AU Event 8],http://45.192.97.170:8880/play/7202.m3u8
+[LIVE] 11-06 01:45 Atalanta vs Kairat Almaty [UEFA 19],http://45.192.97.170:8880/play/7197.m3u8
+[LIVE] 11-06 01:45 Atalanta vs Kairat Almaty [Stan Sport AU Event 3],http://45.192.97.170:8880/play/7198.m3u8
+[LIVE] 11-06 04:00 Universitatea Craiova vs Egnatia Rrogozhinë [UEFA 35],http://45.192.97.170:8880/play/7239.m3u8
+[LIVE] 11-06 04:00 Universitatea Craiova vs Egnatia Rrogozhinë [Stan Sport AU Event 4],http://45.192.97.170:8880/play/7240.m3u8
+[LIVE] 11-06 04:00 Torreense vs Ararat-Armenia [UEFA 17],http://45.192.97.170:8880/play/7224.m3u8
+[LIVE] 11-06 04:00 Torreense vs Ararat-Armenia [DAZN CA 16],http://45.192.97.170:8880/play/7225.m3u8
+[LIVE] 11-06 04:00 Twente vs Pafos [UEFA 34],http://45.192.97.170:8880/play/7236.m3u8
+[LIVE] 11-06 04:00 Twente vs Pafos [Stan Sport AU Event 11],http://45.192.97.170:8880/play/7237.m3u8
+[LIVE] 11-06 04:00 Getafe vs Brighton [TNT Sports 2],http://45.192.97.170:8880/play/7048.m3u8
+[LIVE] 11-06 04:00 Getafe vs Brighton [TNT Sports 2 BU],http://45.192.97.170:8880/play/7049.m3u8
+[LIVE] 11-06 04:00 Getafe vs Brighton [TNT Sport 2 SD],http://45.192.97.170:8880/play/7050.m3u8
+[LIVE] 11-06 04:00 FC Copenhagen vs Saburtalo [UEFA 27],http://45.192.97.170:8880/play/7222.m3u8
+[LIVE] 11-06 04:00 FC Copenhagen vs Saburtalo [Stan Sport AU Event 9],http://45.192.97.170:8880/play/7223.m3u8
+[LIVE] 11-06 04:00 Hapoel Beer Sheva vs OFI [UEFA 14],http://45.192.97.170:8880/play/7220.m3u8
+[LIVE] 11-06 04:00 Hapoel Beer Sheva vs OFI [DAZN CA 18],http://45.192.97.170:8880/play/7221.m3u8
+[LIVE] 11-06 04:00 FC Lugano vs Kauno Žalgiris [UEFA 29],http://45.192.97.170:8880/play/7238.m3u8
+[LIVE] 11-06 04:00 Celtic vs Besiktas [TNT Sports 3],http://45.192.97.170:8880/play/7042.m3u8
+[LIVE] 11-06 04:00 Celtic vs Besiktas [TNT Sports 3 BU],http://45.192.97.170:8880/play/7043.m3u8
+[LIVE] 11-06 04:00 Celtic vs Besiktas [TNT Sport 3 SD],http://45.192.97.170:8880/play/7044.m3u8
+[LIVE] 11-06 04:00 Sturm Graz vs Celje [UEFA 15],http://45.192.97.170:8880/play/7218.m3u8
+[LIVE] 11-06 04:00 Sturm Graz vs Celje [Stan Sport AU Event 8],http://45.192.97.170:8880/play/7219.m3u8
+[LIVE] 11-06 04:00 Bayer Leverkusen vs Marseille [TNT Sports 5],http://45.192.97.170:8880/play/7040.m3u8
+[LIVE] 11-06 04:00 Bayer Leverkusen vs Marseille [TNT Sports 5 BU],http://45.192.97.170:8880/play/7041.m3u8
+[LIVE] 11-06 04:00 Riga vs FK Jablonec [UEFA 32],http://45.192.97.170:8880/play/7233.m3u8
+[LIVE] 11-06 04:00 Riga vs FK Jablonec [Stan Sport AU Event 13],http://45.192.97.170:8880/play/7234.m3u8
+[LIVE] 11-06 04:00 Sunderland vs Dinamo Zagreb [TNT Sports 1],http://45.192.97.170:8880/play/7051.m3u8
+[LIVE] 11-06 04:00 Sunderland vs Dinamo Zagreb [TNT Sports 1 BU],http://45.192.97.170:8880/play/7052.m3u8
+[LIVE] 11-06 04:00 Sunderland vs Dinamo Zagreb [TNT Sport 1 SD],http://45.192.97.170:8880/play/7053.m3u8
+[LIVE] 11-06 04:00 Celta Vigo vs Union St. Gilloise [UEFA 12],http://45.192.97.170:8880/play/7211.m3u8
+[LIVE] 11-06 04:00 Celta Vigo vs Union St. Gilloise [Stan Sport AU Event 6],http://45.192.97.170:8880/play/7228.m3u8
+[LIVE] 11-06 04:00 Monaco vs FC Nordsjaelland [UEFA 30],http://45.192.97.170:8880/play/7226.m3u8
+[LIVE] 11-06 04:00 Monaco vs FC Nordsjaelland [Stan Sport AU Event 7],http://45.192.97.170:8880/play/7227.m3u8
+[LIVE] 11-06 04:00 Panathinaikos vs CSKA Sofia [UEFA 31],http://45.192.97.170:8880/play/7232.m3u8
+[LIVE] 11-06 04:00 AZ Alkmaar vs Juventus [TNT Sports 4],http://45.192.97.170:8880/play/7045.m3u8
+[LIVE] 11-06 04:00 AZ Alkmaar vs Juventus [TNT Sports 4 BU],http://45.192.97.170:8880/play/7046.m3u8
+[LIVE] 11-06 04:00 AZ Alkmaar vs Juventus [TNT Sport 4 SD],http://45.192.97.170:8880/play/7047.m3u8
+[LIVE] 11-06 04:00 Benfica vs Lech Poznan [UEFA 11],http://45.192.97.170:8880/play/7212.m3u8
+[LIVE] 11-06 04:00 Benfica vs Lech Poznan [DAZN CA 11],http://45.192.97.170:8880/play/7213.m3u8
+[LIVE] 11-06 04:00 St. Truiden vs Brann [UEFA 33],http://45.192.97.170:8880/play/7235.m3u8
 11-07 04:00 Sevilla vs Alaves [Premier Sports 1],http://45.192.97.170:8880/play/7054.m3u8
 11-07 04:00 Sevilla vs Alaves [Premier Sports 1 sd],http://45.192.97.170:8880/play/7055.m3u8
 11-07 04:00 Everton vs Coventry [Sky Sports Premier League],http://45.192.97.170:8880/play/7056.m3u8
@@ -1621,36 +1337,30 @@ Github运行worker,http://45.192.97.170:8880/play/1513.m3u8
 11-08 01:30 Osasuna vs Athletic Club [Premier Sports 2 sd],http://45.192.97.170:8880/play/7066.m3u8
 11-08 01:30 VfB Stuttgart vs Werder Bremen [Sky Sports Football],http://45.192.97.170:8880/play/7067.m3u8
 11-08 01:30 VfB Stuttgart vs Werder Bremen [Sky Sports Football BU],http://45.192.97.170:8880/play/7068.m3u8
-TNT Sports 3,http://45.192.97.170:8880/play/7003.m3u8
-TNT Sports 3 BU,http://45.192.97.170:8880/play/7004.m3u8
-UEFA 01,http://45.192.97.170:8880/play/7090.m3u8
-Stan Sport AU Event 2,http://45.192.97.170:8880/play/7112.m3u8
-TNT Sport 3 SD,http://45.192.97.170:8880/play/7005.m3u8
+UEFA 22,http://45.192.97.170:8880/play/7193.m3u8
+Stan Sport AU Event 4,http://45.192.97.170:8880/play/7194.m3u8
+UEFA 19,http://45.192.97.170:8880/play/7203.m3u8
+Stan Sport AU Event 3,http://45.192.97.170:8880/play/7204.m3u8
 TNT Sports 4,http://45.192.97.170:8880/play/7017.m3u8
 TNT Sports 4 BU,http://45.192.97.170:8880/play/7018.m3u8
-Liga De Campeones 2 BU,http://45.192.97.170:8880/play/7092.m3u8
-UEFA 04,http://45.192.97.170:8880/play/7078.m3u8
-Stan Sport AU Event 7,http://45.192.97.170:8880/play/7114.m3u8
 TNT Sport 4 SD,http://45.192.97.170:8880/play/7019.m3u8
 TNT Sports 5,http://45.192.97.170:8880/play/7020.m3u8
 TNT Sports 5 BU,http://45.192.97.170:8880/play/7021.m3u8
-Liga De Campeones 3 BU,http://45.192.97.170:8880/play/7115.m3u8
-UEFA 07,http://45.192.97.170:8880/play/7093.m3u8
-Stan Sport AU Event 4,http://45.192.97.170:8880/play/7116.m3u8
+UEFA 11,http://45.192.97.170:8880/play/7214.m3u8
+DAZN CA 11,http://45.192.97.170:8880/play/7215.m3u8
+TNT Sports 3,http://45.192.97.170:8880/play/7003.m3u8
+TNT Sports 3 BU,http://45.192.97.170:8880/play/7004.m3u8
+TNT Sport 3 SD,http://45.192.97.170:8880/play/7005.m3u8
+UEFA 12,http://45.192.97.170:8880/play/7216.m3u8
+Stan Sport AU Event 6,http://45.192.97.170:8880/play/7217.m3u8
+UEFA 27,http://45.192.97.170:8880/play/7229.m3u8
+Stan Sport AU Event 9,http://45.192.97.170:8880/play/7241.m3u8
+UEFA 30,http://45.192.97.170:8880/play/7230.m3u8
+Stan Sport AU Event 7,http://45.192.97.170:8880/play/7231.m3u8
+UEFA 34,http://45.192.97.170:8880/play/7242.m3u8
+Stan Sport AU Event 11,http://45.192.97.170:8880/play/7243.m3u8
 TNT Sports 1,http://45.192.97.170:8880/play/7022.m3u8
 TNT Sports 1 BU,http://45.192.97.170:8880/play/7023.m3u8
-Liga De Campeones 8 BU,http://45.192.97.170:8880/play/7094.m3u8
-UEFA 09,http://45.192.97.170:8880/play/7095.m3u8
 TNT Sport 1 SD,http://45.192.97.170:8880/play/7024.m3u8
-UEFA 06,http://45.192.97.170:8880/play/7096.m3u8
-Liga De Campeones 6 BU,http://45.192.97.170:8880/play/7097.m3u8
-Stan Sport AU Event 6,http://45.192.97.170:8880/play/7117.m3u8
-DAZN CA 1,http://45.192.97.170:8880/play/7122.m3u8
-TNT Sports 2,http://45.192.97.170:8880/play/6998.m3u8
-TNT Sports 2 BU,http://45.192.97.170:8880/play/6999.m3u8
-Liga De Campeones 5 BU,http://45.192.97.170:8880/play/7098.m3u8
-UEFA 08,http://45.192.97.170:8880/play/7079.m3u8
-Stan Sport AU Event 1,http://45.192.97.170:8880/play/7113.m3u8
-TNT Sport 2 SD,http://45.192.97.170:8880/play/7025.m3u8
 Premier Sports 2,http://45.192.97.170:8880/play/7069.m3u8
 Premier Sports 2 sd,http://45.192.97.170:8880/play/7070.m3u8
