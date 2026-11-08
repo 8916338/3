@@ -1843,10 +1843,32 @@
       return String(site.email || '').trim();
     }
 
+    /* 兼容旧版 config.json：历史上第二项是「微信赞赏」（vip/wc.svg + type:modal），
+       若配置未同步更新，这里就地转换为「邮件联系」，确保页底不会残留微信图标与赞赏字样。 */
+    function normalizeQuickLinks(list) {
+      const arr = Array.isArray(list) ? list : [];
+      return arr.map(function (item) {
+        if (!item || typeof item !== 'object') return item;
+        if (item.type === 'email') return item;                 /* 已是邮件项，原样返回 */
+
+        const icon = String(item.icon || '').toLowerCase();
+        const label = String(item.label || '');
+        const title = String(item.title || '');
+        const wechatIcon = /(^|\/)(wc|wechat|weixin)\.(svg|png|jpe?g|webp)$/.test(icon)
+          || icon.indexOf('wechat') > -1 || icon.indexOf('weixin') > -1;
+        const wechatText = /微信\s*赞赏|赞赏码|打赏/.test(label) || title.indexOf('赞赏') > -1;
+
+        if (wechatIcon || wechatText) {
+          return { icon: 'vip/email.svg', label: '邮件联系', type: 'email', title: '电子邮件联系' };
+        }
+        return item;
+      });
+    }
+
     function renderQuickLinks(list) {
       const box = document.getElementById('about-quick-links');
       if (!box) return;
-      QUICK_LINKS = Array.isArray(list) ? list : [];
+      QUICK_LINKS = normalizeQuickLinks(list);
 
       if (!QUICK_LINKS.length) {
         box.innerHTML = '';
