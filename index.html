@@ -1797,6 +1797,12 @@
 
     let QUICK_LINKS = [];
 
+    /* 联系邮箱统一取自 config.json → site.email */
+    function getContactEmail() {
+      const site = (SITE_CONFIG && SITE_CONFIG.site) || {};
+      return String(site.email || '').trim();
+    }
+
     function renderQuickLinks(list) {
       const box = document.getElementById('about-quick-links');
       if (!box) return;
@@ -1809,12 +1815,25 @@
       }
       box.style.display = '';
 
+      const contactEmail = getContactEmail();
+
       box.innerHTML = QUICK_LINKS.map((item, i) => {
         const label = item.label || '';
         const iconHtml = buildQuickIcon(item.icon, item.color);
+
         if (item.type === 'modal') {
           return `<button class="quick-item" type="button" data-ql-modal="${i}" aria-label="${label}">${iconHtml}<span class="quick-label">${label}</span></button>`;
         }
+
+        /* 邮件联系：邮件地址取自 site.email，未配置时点击给出提示 */
+        if (item.type === 'email') {
+          const mail = contactEmail || String(item.email || '').trim();
+          if (!mail) {
+            return `<a class="quick-item" href="#" data-no-email="1" aria-label="${label}">${iconHtml}<span class="quick-label">${label}</span></a>`;
+          }
+          return `<a class="quick-item" href="mailto:${mail}" title="${mail}" aria-label="${label}">${iconHtml}<span class="quick-label">${label}</span></a>`;
+        }
+
         return `<a class="quick-item" href="${item.url || '#'}" target="_blank" rel="noopener noreferrer" aria-label="${label}">${iconHtml}<span class="quick-label">${label}</span></a>`;
       }).join('');
 
@@ -1822,6 +1841,13 @@
         b.addEventListener('click', () => {
           const idx = parseInt(b.getAttribute('data-ql-modal'), 10);
           openQuickModal(QUICK_LINKS[idx] || {});
+        });
+      });
+
+      box.querySelectorAll('[data-no-email]').forEach(a => {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          alert('站长尚未配置联系邮箱，请稍后再试。');
         });
       });
     }
