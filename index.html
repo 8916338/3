@@ -7,7 +7,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>海量接口搬运备份22</title>
+  <title>海量接口搬运备份</title>
   <link rel="icon" type="image/jpeg" href="vip/jueson.jpg">
   
   <script>
@@ -1354,7 +1354,7 @@
       white-space: nowrap;
     }
 
-    .zsm-modal {
+    .mail-modal {
       position: fixed;
       inset: 0;
       z-index: 999;
@@ -1367,12 +1367,12 @@
       transition: opacity 0.2s ease, visibility 0.2s ease;
     }
 
-    .zsm-modal.open {
+    .mail-modal.open {
       visibility: visible;
       opacity: 1;
     }
 
-    .zsm-modal-mask {
+    .mail-modal-mask {
       position: absolute;
       inset: 0;
       background: rgba(238, 242, 247, 0.85);
@@ -1380,7 +1380,7 @@
       backdrop-filter: blur(2px);
     }
 
-    .zsm-modal-panel {
+    .mail-modal-panel {
       position: relative;
       width: 100%;
       max-width: 330px;
@@ -1394,23 +1394,62 @@
       transition: transform 0.22s cubic-bezier(0.2, 0.9, 0.3, 1.2), opacity 0.2s ease;
     }
 
-    .zsm-modal.open .zsm-modal-panel {
+    .mail-modal.open .mail-modal-panel {
       transform: scale(1);
       opacity: 1;
     }
 
-    .zsm-modal-panel img {
-      display: block;
-      width: auto;
-      max-width: 100%;
-      max-height: 56vh;
-      margin: 0 auto;
-      border-radius: 8px;
-      border: 1px solid #e4ebf3;
-      background: #fff;
+    /* 邮件联系弹窗 */
+    .mail-address {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0a1a2b;
+      word-break: break-all;
+      background: #f4f8fd;
+      border: 1px dashed #d8e6f6;
+      border-radius: 10px;
+      padding: 11px 10px;
+      margin-bottom: 14px;
+      -webkit-user-select: all;
+      user-select: all;
     }
 
-    .zsm-modal-title {
+    .mail-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mail-btn {
+      height: 42px;
+      border: 1.5px solid #d4dbe5;
+      border-radius: 50px;
+      background: #fff;
+      color: #5a6f88;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.1s, background 0.15s;
+      -webkit-tap-highlight-color: transparent;
+      font-family: inherit;
+    }
+
+    .mail-btn:active {
+      transform: scale(0.97);
+    }
+
+    .mail-btn-primary {
+      background: #4a9eff;
+      border-color: #4a9eff;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(74, 158, 255, 0.28);
+    }
+
+    .mail-btn-primary:active {
+      background: #2a7ed9;
+    }
+
+    .mail-modal-title {
       font-size: 0.82rem !important;
       font-weight: 700;
       color: #0a1a2b;
@@ -1421,21 +1460,21 @@
       gap: 6px;
     }
 
-    .zsm-modal-icon {
+    .mail-modal-icon {
       width: 18px;
       height: 18px;
       display: block;
       border-radius: 4px;
     }
 
-    .zsm-modal-tip {
+    .mail-modal-tip {
       font-size: 0.72rem !important;
       color: #7a8fa3;
       line-height: 1.7 !important;
       margin-top: 12px !important;
     }
 
-    .zsm-modal-close {
+    .mail-modal-close {
       position: absolute;
       top: -11px;
       right: -11px;
@@ -1456,11 +1495,11 @@
       touch-action: manipulation;
     }
 
-    .zsm-modal-close:hover {
+    .mail-modal-close:hover {
       background: #2a7ed9;
     }
 
-    .zsm-modal-close:active {
+    .mail-modal-close:active {
       transform: scale(0.9);
     }
 
@@ -1597,11 +1636,8 @@
       .quick-icon-text {
         font-size: 2rem;
       }
-      .zsm-modal-panel {
+      .mail-modal-panel {
         max-width: 300px;
-      }
-      .zsm-modal-panel img {
-        max-height: 52vh;
       }
     }
   </style>
@@ -1695,16 +1731,20 @@
     </footer>
   </div>
 
-  <div class="zsm-modal" id="zsmModal" aria-hidden="true">
-    <div class="zsm-modal-mask" data-close></div>
-    <div class="zsm-modal-panel" role="dialog" aria-modal="true" aria-label="赞赏码">
-      <button class="zsm-modal-close" type="button" data-close aria-label="关闭">×</button>
-      <div class="zsm-modal-title">
-        <img src="vip/wc.svg" alt="微信赞赏" class="zsm-modal-icon">
-        <span id="zsmModalTitle">微信赞赏码</span>
+  <div class="mail-modal" id="mailModal" aria-hidden="true">
+    <div class="mail-modal-mask" data-close></div>
+    <div class="mail-modal-panel" role="dialog" aria-modal="true" aria-label="电子邮件联系">
+      <button class="mail-modal-close" type="button" data-close aria-label="关闭">×</button>
+      <div class="mail-modal-title">
+        <img src="vip/email.svg" alt="电子邮件" class="mail-modal-icon">
+        <span>电子邮件联系</span>
       </div>
-      <img id="zsmModalImg" src="" alt="赞赏码">
-      <p class="zsm-modal-tip" id="zsmModalTip"></p>
+      <div class="mail-address" id="mailAddress">your-email@example.com</div>
+      <div class="mail-actions">
+        <button class="mail-btn mail-btn-primary" type="button" id="mailOpenBtn">打开邮件客户端</button>
+        <button class="mail-btn" type="button" id="mailCopyBtn">复制邮箱地址</button>
+      </div>
+      <p class="mail-modal-tip">接口失效、内容申诉或合作事宜，欢迎来信。</p>
     </div>
   </div>
 
@@ -1817,31 +1857,24 @@
 
       const contactEmail = getContactEmail();
 
-      box.innerHTML = QUICK_LINKS.map((item, i) => {
+      box.innerHTML = QUICK_LINKS.map(item => {
         const label = item.label || '';
         const iconHtml = buildQuickIcon(item.icon, item.color);
 
-        if (item.type === 'modal') {
-          return `<button class="quick-item" type="button" data-ql-modal="${i}" aria-label="${label}">${iconHtml}<span class="quick-label">${label}</span></button>`;
-        }
-
-        /* 邮件联系：邮件地址取自 site.email，未配置时点击给出提示 */
+        /* 邮件联系：地址取自 config.json → site.email，点击弹出邮件卡片 */
         if (item.type === 'email') {
           const mail = contactEmail || String(item.email || '').trim();
           if (!mail) {
             return `<a class="quick-item" href="#" data-no-email="1" aria-label="${label}">${iconHtml}<span class="quick-label">${label}</span></a>`;
           }
-          return `<a class="quick-item" href="mailto:${mail}" title="${mail}" aria-label="${label}">${iconHtml}<span class="quick-label">${label}</span></a>`;
+          return `<button class="quick-item" type="button" data-ql-email="1" aria-label="${label}">${iconHtml}<span class="quick-label">${label}</span></button>`;
         }
 
         return `<a class="quick-item" href="${item.url || '#'}" target="_blank" rel="noopener noreferrer" aria-label="${label}">${iconHtml}<span class="quick-label">${label}</span></a>`;
       }).join('');
 
-      box.querySelectorAll('[data-ql-modal]').forEach(b => {
-        b.addEventListener('click', () => {
-          const idx = parseInt(b.getAttribute('data-ql-modal'), 10);
-          openQuickModal(QUICK_LINKS[idx] || {});
-        });
+      box.querySelectorAll('[data-ql-email]').forEach(b => {
+        b.addEventListener('click', openMailModal);
       });
 
       box.querySelectorAll('[data-no-email]').forEach(a => {
@@ -1852,49 +1885,83 @@
       });
     }
 
-    function openQuickModal(item) {
-      const modal = document.getElementById('zsmModal');
-      const img = document.getElementById('zsmModalImg');
-      const tip = document.getElementById('zsmModalTip');
-      const title = document.getElementById('zsmModalTitle');
-      if (!modal || !img) return;
+    /* ---------- 电子邮件联系弹窗 ---------- */
+    function openMailModal() {
+      const modal = document.getElementById('mailModal');
+      const addr = document.getElementById('mailAddress');
+      if (!modal || !addr) return;
 
-      if (title) title.textContent = item.title || item.label || '赞赏码';
-      if (tip) tip.innerHTML = item.tip || '';
-      if (item.image) {
-        img.style.display = '';
-        img.onerror = function () {
-          this.style.display = 'none';
-          if (tip) tip.textContent = '图片未找到，请检查 ' + item.image;
-        };
-        img.src = item.image;
-      } else {
-        img.style.display = 'none';
+      const mail = getContactEmail();
+      if (!mail) {
+        alert('站长尚未配置联系邮箱，请稍后再试。');
+        return;
       }
+      addr.textContent = mail;
+
+      const copyBtn = document.getElementById('mailCopyBtn');
+      if (copyBtn) copyBtn.textContent = '复制邮箱地址';
 
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
-      const closeBtn = modal.querySelector('.zsm-modal-close');
+      const closeBtn = modal.querySelector('.mail-modal-close');
       if (closeBtn) closeBtn.focus();
     }
 
-    function closeQuickModal() {
-      const modal = document.getElementById('zsmModal');
+    function closeMailModal() {
+      const modal = document.getElementById('mailModal');
       if (!modal) return;
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
     }
 
-    (function initQuickModal() {
-      const modal = document.getElementById('zsmModal');
+    function copyText(text, onDone) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(onDone).catch(() => fallbackCopy(text, onDone));
+      } else {
+        fallbackCopy(text, onDone);
+      }
+    }
+
+    function fallbackCopy(text, onDone) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); onDone(); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+
+    (function initMailModal() {
+      const modal = document.getElementById('mailModal');
       if (!modal) return;
+
       modal.addEventListener('click', function (e) {
-        if (e.target.hasAttribute('data-close')) closeQuickModal();
+        if (e.target.hasAttribute('data-close')) closeMailModal();
       });
+
       document.addEventListener('keydown', function (e) {
-        if ((e.key === 'Escape' || e.keyCode === 27) && modal.classList.contains('open')) closeQuickModal();
+        if ((e.key === 'Escape' || e.keyCode === 27) && modal.classList.contains('open')) closeMailModal();
+      });
+
+      const openBtn = document.getElementById('mailOpenBtn');
+      if (openBtn) openBtn.addEventListener('click', function () {
+        const mail = getContactEmail();
+        if (mail) window.location.href = 'mailto:' + mail;
+      });
+
+      const copyBtn = document.getElementById('mailCopyBtn');
+      if (copyBtn) copyBtn.addEventListener('click', function () {
+        const mail = getContactEmail();
+        if (!mail) return;
+        copyText(mail, function () {
+          copyBtn.textContent = '已复制 ✓';
+          setTimeout(function () { copyBtn.textContent = '复制邮箱地址'; }, 1600);
+        });
       });
     })();
 
