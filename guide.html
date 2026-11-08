@@ -42,26 +42,13 @@
     .baipiao-quote { font-size: 0.95rem; font-weight: 700; color: #4a9eff; line-height: 1.6; margin: 4px 0 2px; }
     .baipiao-em { color: #0a1a2b; font-weight: 700; }
 
-    /* 完成页 · 提示次数卡片 */
-    .finish-lead { margin-bottom: 14px; }
-    .quota-card { background: linear-gradient(180deg, #f8fbff 0%, #eff6fe 100%); border: 1px solid #e0ecfa; border-radius: 14px; padding: 14px; text-align: left; }
-    .quota-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
-    .quota-top > span:first-child { font-size: 0.74rem; color: #8b9eb0; letter-spacing: 0.02em; }
-    .quota-chip { font-size: 0.66rem; font-weight: 600; color: #3b82d6; background: #e5f1ff; border-radius: 20px; padding: 3px 9px; white-space: nowrap; }
-    .quota-chip.done { color: #15803d; background: #e7f8ee; }
-    .quota-dots { display: flex; gap: 6px; margin-bottom: 11px; }
-    .quota-dots i { flex: 1; height: 6px; border-radius: 99px; background: #dde8f4; transition: background 0.3s, box-shadow 0.3s; }
-    .quota-dots i.on { background: linear-gradient(90deg, #4a9eff, #7cc0ff); box-shadow: 0 1px 5px rgba(74, 158, 255, 0.4); }
-    .quota-grid { display: flex; align-items: stretch; background: #fff; border: 1px solid #e8f1fb; border-radius: 10px; overflow: hidden; }
-    .quota-cell { flex: 1; padding: 9px 4px; text-align: center; }
-    .quota-cell + .quota-cell { border-left: 1px solid #eef4fb; }
-    .quota-num { display: block; font-size: 1.05rem; font-weight: 800; color: #0a1a2b; line-height: 1.25; font-variant-numeric: tabular-nums; }
-    .quota-num .unit { font-size: 0.64rem; font-weight: 600; color: #9aabbd; margin-left: 2px; }
-    .quota-num.accent { color: #e08a00; }
-    .quota-num.done { color: #16a34a; }
-    .quota-label { display: block; font-size: 0.66rem; color: #9aabbd; margin-top: 1px; }
-    .quota-tip { margin-top: 10px; font-size: 0.72rem; color: #8b9eb0; line-height: 1.5; }
-    .quota-tip b { color: #5a6f88; }
+    /* 完成页 · 提示次数 */
+    .quota-card { background: linear-gradient(180deg, #f8fbff 0%, #eff6fe 100%); border: 1px solid #e0ecfa; border-radius: 14px; padding: 18px 14px; text-align: center; }
+    .quota-main { font-size: 0.92rem; font-weight: 700; color: #0a1a2b; line-height: 1.55; }
+    .quota-main b { color: #e08a00; }
+    .quota-main.done b { color: #16a34a; }
+    .quota-sub { margin-top: 7px; font-size: 0.74rem; color: #8b9eb0; }
+    .quota-sub b { color: #5a6f88; font-weight: 700; }
   </style>
 </head>
 <body>
@@ -127,29 +114,9 @@
           <div class="app-modal-title">致敬白嫖精神</div>
         </div>
         <div class="app-modal-content">
-          <p class="finish-lead">非常欣赏你的领悟力，<br>你能完美继承站长的白嫖精神。<br>资源随便拿，用得开心，这个站就没白建。</p>
-
           <div class="quota-card">
-            <div class="quota-top">
-              <span>风险告警提示</span>
-              <span class="quota-chip" id="quotaChip">今日额度</span>
-            </div>
-            <div class="quota-dots" id="quotaDots"><i></i><i></i><i></i></div>
-            <div class="quota-grid">
-              <div class="quota-cell">
-                <span class="quota-num" id="qTotal">3<span class="unit">次</span></span>
-                <span class="quota-label">共出现</span>
-              </div>
-              <div class="quota-cell">
-                <span class="quota-num" id="qNth">1<span class="unit">次</span></span>
-                <span class="quota-label">本次第</span>
-              </div>
-              <div class="quota-cell">
-                <span class="quota-num accent" id="qLeft">2<span class="unit">次</span></span>
-                <span class="quota-label">还剩</span>
-              </div>
-            </div>
-            <p class="quota-tip" id="quotaTip">短期重复提示只为提醒风险，不是催你付费。<b>本站永久免费，无任何收费项目。</b></p>
+            <p class="quota-main" id="quotaMain">风险告警提示 3 次，<b>还有 2 次</b></p>
+            <p class="quota-sub" id="quotaSub">第 <b>1</b> 次 / 共 <b>3</b> 次</p>
           </div>
         </div>
         <div class="app-modal-footer">
@@ -180,9 +147,9 @@
 
     /* 三个周期：每日 / 每周 / 每月，各自 3 次 */
     const PHASES = {
-      daily:   { days: 1,  chip: '今日额度', overdue: '本次提示已完成，短期内不再出现。' },
-      weekly:  { days: 7,  chip: '本周额度', overdue: '本次提示已完成，一个月内不再出现。' },
-      monthly: { days: 30, chip: '本月额度', overdue: '本次提示已完成，下个周期见。' }
+      daily:   { days: 1 },
+      weekly:  { days: 7 },
+      monthly: { days: 30 }
     };
 
     function getState() {
@@ -209,30 +176,23 @@
       return s;
     }
 
-    /* 渲染最后一步的次数卡片 */
+    /* 渲染最后一步的次数提示 */
     function renderQuota() {
       const state = resetIfNewPeriod(getState());
       const nth = Math.min(state.count + 1, MAX_TIMES);
       const left = Math.max(0, MAX_TIMES - nth);
-      const phase = PHASES[state.phase];
 
-      const dots = document.querySelectorAll('#quotaDots i');
-      dots.forEach((d, i) => d.classList.toggle('on', i < nth));
+      const main = document.getElementById('quotaMain');
+      if (left > 0) {
+        main.className = 'quota-main';
+        main.innerHTML = '风险告警提示 ' + MAX_TIMES + ' 次，<b>还有 ' + left + ' 次</b>';
+      } else {
+        main.className = 'quota-main done';
+        main.innerHTML = '风险告警提示 ' + MAX_TIMES + ' 次，<b>本次已完成</b>';
+      }
 
-      document.getElementById('qTotal').innerHTML = MAX_TIMES + '<span class="unit">次</span>';
-      document.getElementById('qNth').innerHTML = nth + '<span class="unit">次</span>';
-
-      const leftEl = document.getElementById('qLeft');
-      leftEl.innerHTML = left + '<span class="unit">次</span>';
-      leftEl.className = 'quota-num ' + (left > 0 ? 'accent' : 'done');
-
-      const chip = document.getElementById('quotaChip');
-      chip.textContent = left > 0 ? phase.chip : '已完成';
-      chip.className = 'quota-chip' + (left > 0 ? '' : ' done');
-
-      document.getElementById('quotaTip').innerHTML = left > 0
-        ? '短期重复提示只为提醒风险，不是催你付费。<br><b>本站永久免费，无任何收费项目。</b>'
-        : phase.overdue + '<br><b>本站永久免费，无任何收费项目。</b>';
+      document.getElementById('quotaSub').innerHTML =
+        '第 <b>' + nth + '</b> 次 / 共 <b>' + MAX_TIMES + '</b> 次';
     }
 
     function goStep(step) {
