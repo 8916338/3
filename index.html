@@ -23,6 +23,10 @@
 
     const ENABLE_GUIDE = true;
     const GUIDE_COOLDOWN_MINUTES = 8;
+    const GUIDE_MAX_TIMES = 3;
+
+    /* 与 guide.html 保持一致：每日 / 每周 / 每月，各自 3 次 */
+    const GUIDE_PHASES = { daily: 1, weekly: 7, monthly: 30 };
 
     function checkGuideStatus() {
       if (!ENABLE_GUIDE) return;
@@ -32,38 +36,38 @@
       const STATE_KEY = 'guide_prompt_state';
       let state = null;
       try {
-        state = JSON.parse(localStorage.getItem(STATE_KEY));
-      } catch (e) {}
+        state = JSON.parse(localStorage.getItem(STATE_KEY) || 'null');
+      } catch (e) { state = null; }
 
       const now = Date.now();
       const DAY_MS = 24 * 60 * 60 * 1000;
       const COOLDOWN_MS = GUIDE_COOLDOWN_MINUTES * 60 * 1000;
 
-      if (!state) {
-        sessionStorage.setItem('guide_pending_time', now);
-        window.location.replace('guide.html?t=' + now);
-        return;
+      if (!state || typeof state !== 'object') {
+        state = { phase: 'daily', count: 0, lastShow: 0 };
+        try { localStorage.setItem(STATE_KEY, JSON.stringify(state)); } catch (e) {}
+      }
+      if (!GUIDE_PHASES[state.phase]) state.phase = 'daily';
+      if (typeof state.count !== 'number' || !isFinite(state.count) || state.count < 0) state.count = 0;
+      if (!state.lastShow) state.lastShow = 0;
+
+      const periodDays = GUIDE_PHASES[state.phase];
+      const diffDays = state.lastShow ? (now - state.lastShow) / DAY_MS : Infinity;
+
+      /* 周期到期：额度归零，重新开始计数 */
+      if (state.count > 0 && diffDays >= periodDays) {
+        state.count = 0;
+        try { localStorage.setItem(STATE_KEY, JSON.stringify(state)); } catch (e) {}
       }
 
-      if (now - state.lastShow < COOLDOWN_MS) {
-        return;
-      }
+      const needGuide = !state.lastShow || state.count < GUIDE_MAX_TIMES || diffDays >= periodDays;
+      if (!needGuide) return;
 
-      const diffDays = (now - state.lastShow) / DAY_MS;
-      let needGuide = false;
+      /* 冷却期内不重复打断用户 */
+      if (state.lastShow && now - state.lastShow < COOLDOWN_MS) return;
 
-      if (state.phase === 'daily') {
-        if (state.count < 3 || diffDays >= 1) needGuide = true;
-      } else if (state.phase === 'weekly') {
-        if (state.count < 3 || diffDays >= 7) needGuide = true;
-      } else if (state.phase === 'monthly') {
-        if (state.count < 3 || diffDays >= 30) needGuide = true;
-      }
-
-      if (needGuide) {
-        sessionStorage.setItem('guide_pending_time', now);
-        window.location.replace('guide.html?t=' + now);
-      }
+      sessionStorage.setItem('guide_pending_time', now);
+      window.location.replace('guide.html?t=' + now);
     }
 
     checkGuideStatus();
@@ -2187,6 +2191,43 @@
       </div>`;
     }
 
+    // 自适应解析本地包 JSON：
+    // 1) 优先按标准 JSON 直接解析，不做任何字符改动（避免破坏含中文引号/逗号的字符串值，
+    //    如 ry/奇奇下载.json 中的 "“南风”线路补丁"）；
+    // 2) 失败时按"字符串感知"方式容错：逐字符扫描并跟踪是否处于 JSON 字符串内部，
+    //    仅把结构位上的中文引号/冒号/逗号替换为 ASCII 等价物，字符串内容原样保留；
+    // 3) 仍失败则抛出原始错误（由调用方展示 error-msg）。
+    function parseLocalPackageJSON(text) {
+      text = String(text).replace(/^\uFEFF/, '').trim();
+      try { return JSON.parse(text); } catch (e) { /* 继续容错清洗 */ }
+
+      let out = '';
+      let inStr = false;   // 当前是否在字符串内
+      let quote = '';      // 当前字符串的定界符
+      const isDq = c => c === '"' || c === '\u201c' || c === '\u201d';   // 双引号类
+      const isSq = c => c === "'" || c === '\u2018' || c === '\u2019';   // 单引号类
+      for (let i = 0; i < text.length; i++) {
+        const ch = text[i];
+        if (inStr) {
+          if (ch === '\\') {                       // 转义序列整体保留
+            out += ch + (text[i + 1] || ''); i++; continue;
+          }
+          // 命中定界符（中英文引号互相匹配均视为闭合）-> 字符串结束
+          const closed = (quote === '"' && isDq(ch)) ||
+                         (quote === "'" && isSq(ch));
+          if (closed) { inStr = false; quote = ''; out += '"'; continue; }
+          out += ch; continue;                     // 字符串内容原样保留
+        }
+        if (isDq(ch) || isSq(ch)) {                // 结构位 -> 字符串开始，统一输出 ASCII 引号
+          inStr = true; quote = isDq(ch) ? '"' : "'"; out += '"'; continue;
+        }
+        if (ch === '\uff1a') { out += ':'; continue; }   // ：
+        if (ch === '\uff0c') { out += ','; continue; }   // ，
+        out += ch;
+      }
+      return JSON.parse(out);
+    }
+
     async function renderDynamicPanel(rawTabs, containerId, defaultType = 'api') {
       const container = document.getElementById(containerId);
       if (!container) return;
@@ -2241,8 +2282,7 @@
             const res = await fetch(t.file + '?t=' + Date.now() + '&r=' + Math.random(), { cache: 'no-store' });
             if (!res.ok) throw new Error('HTTP ' + res.status);
             const raw = await res.text();
-            const cleaned = raw.replace(/[\u201c\u201d]/g, '"').replace(/[\u2018\u2019]/g, "'").replace(/：/g, ':').replace(/，/g, ',');
-            const data = JSON.parse(cleaned);
+            const data = parseLocalPackageJSON(raw);
             let groups = [];
             const arr = data.list || data;
             if (Array.isArray(arr)) {
